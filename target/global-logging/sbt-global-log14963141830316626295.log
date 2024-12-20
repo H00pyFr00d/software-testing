@@ -1,0 +1,6 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(compile, Some(86cbb98d-aa0a-44e1-8e3e-3b001c48e90a), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources to /home/h00pyfr00d/Documents/software-testing/target/scala-3.3.4/classes ...[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 7 s, completed 20 Dec 2024, 14:56:51[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
