@@ -28,6 +28,7 @@ jobs:
         cache: 'sbt'
         
   unit-tests:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +37,7 @@ jobs:
       run: sbt coverage test
       
   generate-coverage:
+    needs: unit-tests
     runs-on: ubuntu-latest
     steps:
     - name: Generate Coverage Report
