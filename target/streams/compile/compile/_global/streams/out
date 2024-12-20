@@ -1,0 +1,161 @@
+[0m[[0m[0minfo[0m] [0m[0mscoverage excludedSymbols: List(scala.reflect.api.Exprs.Expr, scala.reflect.api.Trees.Tree, scala.reflect.macros.Universe.Tree)[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:20:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      def go(e: Expr): Expr = e match {[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:111:14: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m          if x == y then e2 else Var(y)[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:112:9: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m        case Let(y, e1, e2) =>[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:140:11: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m          val (x, e) = entry[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:202:7: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      }[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:272:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      val (x, e) = entry[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:313:5: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:323:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (NumV(v1), NumV(v2)) => NumV (v1 + v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:324:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to addition are non-numeric")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:327:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (NumV(v1), NumV(v2)) => NumV (v1 - v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:328:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to subtraction are non-numeric")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:331:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (NumV(v1), NumV(v2)) => NumV (v1 * v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:332:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to multiplication are non-numeric")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:335:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (NumV(v1), NumV(v2)) => BoolV (v1 == v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:336:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case (BoolV(v1), BoolV(v2)) => BoolV (v1 == v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:337:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case (StringV(v1), StringV(v2)) => BoolV (v1 == v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:338:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case (PairV(v11, v12), PairV(v21, v22)) => BoolV (v11 == v21 && v12 == v22)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:339:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case (VariantV(l1, v1), VariantV(l2, v2)) => BoolV (l1 == l2 && v1 == v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:341:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to = are not comparable")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:344:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (NumV(v1), NumV(v2)) => BoolV (v1 < v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:345:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to < are not comparable")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:348:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case StringV(v1) => NumV(v1.length)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:349:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("argument to length is not a string")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:352:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (StringV(v1), NumV(v2)) => StringV(v1.charAt(v2).toString)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:353:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to index are not valid")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:356:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (StringV(v1), StringV(v2)) => StringV(v1 ++ v2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:357:7: illegal start of definition[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("arguments to concat are not strings")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:393:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case BoolV(b) => if b then eval(e1) else eval(e2)[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:417:9: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m        case FunV(x, e) => eval(subst(e, v, x))[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:423:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case PairV(v1, _) => v1[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:425:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case PairV(_, v2) => v2[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:431:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case RecordV(vs) => vs.get(l) match[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:439:7: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case VariantV(l, v) => cls.get(l) match[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:454:39: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case (BoolV(b), BagV(es)) => if b then BagV(es) else BagV(BagImpl.fromList(Nil))[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala:455:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      case _ => sys.error("eval: when expects a boolean and a bag")[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala:80:14: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m          if fun1 != fun then sys.error("Function name mismatch")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala:82:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      }[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala:88:14: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m          if fun1 != fun then sys.error("Function name mismatch")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala:90:7: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m      }[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Syntax.scala:144:8: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m    if x == y then z else if x == z then y else x[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Syntax.scala:147:3: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m  trait Substitutable[A] {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:147:11: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m          val (l, (x, e)) = entry[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:153:5: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:174:11: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m          val (label, name) = lx[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:181:5: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:187:10: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m      if subtype(ty1, ty) then ()[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:190:3: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:291:9: '{' expected but 'case' found.[0m
+[0m[[0m[31merror[0m] [0m[0m        case None => sys.error("tyOf: label" ++ l ++ " not found in the record")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:305:11: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m          val (label, (x, e)) = entry[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:334:14: '(' expected but identifier found.[0m
+[0m[[0m[31merror[0m] [0m[0m          if ty1 == ty11 then TyBag(ty2) else sys.error("tyInfer: flatMap mismatch")[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:335:9: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m        case _ => sys.error("tyInfer: flatMap expects function type")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:409:11: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m          val (label, name) = lx[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Typer.scala:416:5: ')' expected but '}' found.[0m
+[0m[[0m[31merror[0m] [0m[0m    }[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m53 errors found[0m
