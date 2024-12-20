@@ -36,9 +36,5 @@ jobs:
     - name: Run SBT Tests
       run: sbt coverage test
       
-  generate-coverage:
-    needs: unit-tests
-    runs-on: ubuntu-latest
-    steps:
     - name: Generate Coverage Report
       run: sbt coverageReport
