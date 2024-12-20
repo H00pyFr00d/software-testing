@@ -1,0 +1,6 @@
+[debug] downloaded https://repo1.maven.org/maven2/org/scoverage/sbt-scoverage_3/2.2.2/sbt-scoverage_3-2.2.2.pom
+[debug] downloaded https://repo1.maven.org/maven2/org/scoverage/sbt-scoverage_3/2.2.2/sbt-scoverage_3-2.2.2.pom.sha1
+[debug] downloaded https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scoverage/sbt-scoverage_3/2.2.2/ivys/ivy.xml
+[debug] downloaded https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.scoverage/sbt-scoverage_3/2.2.2/ivys/ivy.xml.sha1
+[debug] downloaded https://repo.typesafe.com/typesafe/ivy-releases/org.scoverage/sbt-scoverage_3/2.2.2/ivys/ivy.xml
+[debug] downloaded https://repo.typesafe.com/typesafe/ivy-releases/org.scoverage/sbt-scoverage_3/2.2.2/ivys/ivy.xml.sha1
