@@ -1,9 +1,54 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/h00pyfr00d/Documents/software-testing/target/scala-3.3.4/test-classes.bak[0m
 [0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ArithTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariantTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ArithTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariantTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/h00pyfr00d/Documents/software-testing/target/scala-3.3.4/test-classes.bak[0m
-[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
-[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ArithTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariantTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ArithTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyperTests$package$.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VariantTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.class[0m

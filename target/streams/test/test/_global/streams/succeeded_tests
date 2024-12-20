@@ -1,12 +1,12 @@
 #Successful Tests
-#Fri Dec 20 14:57:46 GMT 2024
-RecordTypeTests=1734706665985
-VariantTypeTests=1734706665985
-PairTypeTests=1734706665992
-VariableTypeTests=1734706665985
-ArithTypeTests=1734706665990
-StringTypeTests=1734706665990
-BagTypeTests=1734706666030
-FunctionTypeTests=1734706665985
-BooleanTypeTests=1734706665996
-SyntacticSugarTypeTests=1734706666051
+#Fri Dec 20 15:02:55 GMT 2024
+RecordTypeTests=1734706975784
+VariantTypeTests=1734706975774
+PairTypeTests=1734706975822
+VariableTypeTests=1734706975781
+StringTypeTests=1734706975815
+ArithTypeTests=1734706975816
+BagTypeTests=1734706975869
+FunctionTypeTests=1734706975774
+BooleanTypeTests=1734706975822
+SyntacticSugarTypeTests=1734706975853
