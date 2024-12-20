@@ -16,7 +16,6 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -27,5 +26,17 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: 'sbt'
-    - name: Run Tests
+        
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run SBT Tests
       run: sbt coverage test
+      
+  generate-coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate Coverage Report
+      run: sbt coverageReport
