@@ -10,10 +10,10 @@
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources to /home/h00pyfr00d/Documents/software-testing/target/scala-3.6.2/classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /home/h00pyfr00d/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.6.2/scala3-sbt-bridge-3.6.2.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 26e3f421 for Scala Compiler version 3.6.2[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 2fcd99c8 for Scala Compiler version 3.6.2[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-coverage-out:/home/h00pyfr00d/Documents/software-testing/target/scala-3.6.2/scoverage-data[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/home/h00pyfr00d/Documents/software-testing/target/scala-3.6.2/classes:/home/h00pyfr00d/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_3/2.4.0/scala-parser-combinators_3-2.4.0.jar:/home/h00pyfr00d/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.6.2/scala3-library_3-3.6.2.jar:/home/h00pyfr00d/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.15/scala-library-2.13.15.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 7.626859319 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 7.673210058 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
