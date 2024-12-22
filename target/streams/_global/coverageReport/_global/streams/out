@@ -5,7 +5,7 @@
 [0m[[0m[0minfo[0m] [0m[0mWritten Cobertura report [/home/h00pyfr00d/Documents/software-testing/target/scala-3.6.2/coverage-report/cobertura.xml][0m
 [0m[[0m[0minfo[0m] [0m[0mWritten XML coverage report [/home/h00pyfr00d/Documents/software-testing/target/scala-3.6.2/scoverage-report/scoverage.xml][0m
 [0m[[0m[0minfo[0m] [0m[0mWritten HTML coverage report [/home/h00pyfr00d/Documents/software-testing/target/scala-3.6.2/scoverage-report/index.html][0m
-[0m[[0m[0minfo[0m] [0m[0mStatement coverage.: 55.25%[0m
-[0m[[0m[0minfo[0m] [0m[0mBranch coverage....: 42.45%[0m
+[0m[[0m[0minfo[0m] [0m[0mStatement coverage.: 55.51%[0m
+[0m[[0m[0minfo[0m] [0m[0mBranch coverage....: 42.66%[0m
 [0m[[0m[0minfo[0m] [0m[0mCoverage reports completed[0m
-[0m[[0m[0minfo[0m] [0m[0mAll done. Coverage was stmt=[55.25%] branch=[42.45%][0m
+[0m[[0m[0minfo[0m] [0m[0mAll done. Coverage was stmt=[55.51%] branch=[42.66%][0m

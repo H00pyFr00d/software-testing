@@ -45,8 +45,8 @@
 </span>21 <span style=''>    // BEGIN ANSWER
 </span>22 <span style=''>    type T[A] = ListMap[A,Int]
 </span>23 <span style=''>
-</span>24 <span style=''>    </span><span style='background: #F0ADAD'>def toList</span><span style=''>[A](bag: T[A]): List[A] =
-</span>25 <span style=''>      </span><span style='background: #F0ADAD'>bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }.toList</span><span style=''>
+</span>24 <span style=''>    </span><span style='background: #AEF1AE'>def toList</span><span style=''>[A](bag: T[A]): List[A] =
+</span>25 <span style=''>      </span><span style='background: #AEF1AE'>bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }.toList</span><span style=''>
 </span>26 <span style=''>
 </span>27 <span style=''>    </span><span style='background: #AEF1AE'>def fromList</span><span style=''>[A](l: List[A]): T[A] = l match {
 </span>28 <span style=''>      case Nil </span><span style='background: #AEF1AE'>=&gt; new ListMap[A,Int]()</span><span style=''>
@@ -183,7 +183,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           def toList
         </td>
       </tr><tr>
@@ -207,7 +207,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; List.fill(v)(k)
         </td>
       </tr><tr>
@@ -231,7 +231,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           List.fill(v)(k)
         </td>
       </tr><tr>
@@ -255,7 +255,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }
         </td>
       </tr><tr>
@@ -279,7 +279,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }.toList
         </td>
       </tr><tr>

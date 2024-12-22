@@ -1,7 +1,7 @@
 <scoverage 
-statement-count="1886" statements-invoked="1042" statement-rate="55.25" branch-rate="42.45" version="1.0" timestamp="1734789684519">
+statement-count="1886" statements-invoked="1047" statement-rate="55.51" branch-rate="42.66" version="1.0" timestamp="1734827790728">
     <packages>
-        <package name="FrogInterpreter" statement-count="1886" statements-invoked="1042" statement-rate="55.25">
+        <package name="FrogInterpreter" statement-count="1886" statements-invoked="1047" statement-rate="55.51">
             <classes>
                 <class 
                 name="FrogInterpreter.Bag" filename="FrogInterpreter/Bags.scala" statement-count="3" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
@@ -4814,7 +4814,7 @@ statement-count="1886" statements-invoked="1042" statement-rate="55.25" branch-r
                     </methods>
 </class>
                 <class 
-                name="FrogInterpreter.BagImpl" filename="FrogInterpreter/Bags.scala" statement-count="36" statements-invoked="31" statement-rate="86.11" branch-rate="83.33">
+                name="FrogInterpreter.BagImpl" filename="FrogInterpreter/Bags.scala" statement-count="36" statements-invoked="36" statement-rate="100.00" branch-rate="100.00">
                     <methods>
                         <method 
                         name="FrogInterpreter/BagImpl/flatMap" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
@@ -4879,21 +4879,21 @@ statement-count="1886" statements-invoked="1042" statement-rate="55.25" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/BagImpl/toList" statement-count="3" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                        name="FrogInterpreter/BagImpl/toList" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="toList" start="599" end="609" line="24" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="toList" start="599" end="609" line="24" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="toList" start="641" end="686" line="25" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="toList" start="641" end="686" line="25" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="toList" start="641" end="693" line="25" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="toList" start="641" end="693" line="25" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/BagImpl/$anonfun" statement-count="13" statements-invoked="11" statement-rate="84.62" branch-rate="75.00">
+                        name="FrogInterpreter/BagImpl/$anonfun" statement-count="13" statements-invoked="13" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="1359" end="1403" line="46" branch="false" invocation-count="1" ignored="false">
@@ -4908,10 +4908,10 @@ statement-count="1886" statements-invoked="1042" statement-rate="55.25" branch-r
                                 package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="1020" end="1039" line="37" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="666" end="684" line="25" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="666" end="684" line="25" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="669" end="684" line="25" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="669" end="684" line="25" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="BagImpl" class-type="Object" full-class-name="FrogInterpreter.BagImpl" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Bags.scala" method="$anonfun" start="1157" end="1188" line="41" branch="false" invocation-count="1" ignored="false">

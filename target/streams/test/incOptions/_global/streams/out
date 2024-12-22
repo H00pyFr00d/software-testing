@@ -13,6 +13,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests.class[0m
@@ -34,6 +35,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests.tasty[0m

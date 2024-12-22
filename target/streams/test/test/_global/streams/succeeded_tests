@@ -1,21 +1,22 @@
 #Successful Tests
-#Sat Dec 21 14:01:24 GMT 2024
-PairInterpreterTests=1734789684083
-VariantInterpreterTests=1734789684087
-RecordInterpreterTests=1734789684051
-VariantTypeTests=1734789684067
-PairTypeTests=1734789684130
-VariableTypeTests=1734789684094
-FunctionTypeTests=1734789684066
-SyntacticSugarTypeTests=1734789684184
-BooleanInterpreterTests=1734789684067
-FunctionInterpreterTests=1734789684128
-RecordTypeTests=1734789684079
-StringInterpreterTests=1734789684078
-ArithInterpreterTests=1734789684051
-StringTypeTests=1734789684106
-ArithTypeTests=1734789684121
-BagTypeTests=1734789684175
-LetBindingInterpreterTests=1734789684066
-BooleanTypeTests=1734789684144
-BagInterpreterTests=1734789684175
+#Sun Dec 22 00:36:30 GMT 2024
+PairInterpreterTests=1734827790120
+RecordInterpreterTests=1734827790119
+VariantInterpreterTests=1734827790145
+VariantTypeTests=1734827790056
+BagTests=1734827789784
+PairTypeTests=1734827790120
+VariableTypeTests=1734827790050
+FunctionTypeTests=1734827790025
+SyntacticSugarTypeTests=1734827790264
+FunctionInterpreterTests=1734827790091
+BooleanInterpreterTests=1734827790049
+RecordTypeTests=1734827790068
+StringInterpreterTests=1734827790056
+StringTypeTests=1734827790071
+ArithInterpreterTests=1734827790072
+ArithTypeTests=1734827790163
+BagTypeTests=1734827790194
+LetBindingInterpreterTests=1734827790059
+BooleanTypeTests=1734827790166
+BagInterpreterTests=1734827790203

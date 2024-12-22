@@ -8,7 +8,7 @@ import scala.annotation.tailrec
 // ====================================== Initialising ======================================
 val parser: Parser = Interpreter.parser
 
-// [ Typer Tests ]
+// [ Typer ]
 val tyCheck: (Env, Expr, Type) => Unit = Typer.tyCheck
 val tyInfer: (Env, Expr) => Type = Typer.tyInfer
 val emptyEnv: Env = ListMap[Variable, Type]()
@@ -31,7 +31,7 @@ def typeTest(pack: (() => Expr, () => Type)): (Boolean, String) = {
   (err, msg)
 }
 
-// [ Interpreter Tests ]
+// [ Interpreter ]
 val subst = Interpreter.SubstExpr.subst
 val desugar = Interpreter.desugar
 val eval = Interpreter.eval
@@ -103,8 +103,46 @@ def aequiv(e1: Expr, e2:Expr): Boolean = {
 }
 
 // ======================================= Unit Tests ======================================
+// Bags
+class BagTests extends AnyFunSuite {
+  test("toList") {
+    assert(Bags.BagImpl.toList(ListMap(1 -> 1, 2 -> 1, 3 -> 1)) == List(1,2,3))
+  }
 
-// [ Typer Tests ]
+  test("fromList") {
+    assert(Bags.BagImpl.fromList(List(1,2,3)) == ListMap(1 -> 1, 2 -> 1, 3 -> 1))
+  }
+
+  test("add") {
+    assert(Bags.BagImpl.add(ListMap(1 -> 1, 2 -> 1, 3 -> 1), 4) == ListMap(1 -> 1, 2 -> 1, 3 -> 1, 4 -> 1))
+  }
+
+  test("sum") {
+    assert(Bags.BagImpl.sum(ListMap(1 -> 1, 2 -> 1, 3 -> 1), ListMap(2 -> 1, 3 -> 1, 4 -> 1)) == ListMap(1 -> 1, 2 -> 2, 3 -> 2, 4 -> 1))
+  }
+
+  test("diff") {
+    assert(Bags.BagImpl.diff(ListMap(1 -> 1, 2 -> 1, 3 -> 1), ListMap(2 -> 1, 3 -> 1)) == ListMap(1 -> 1))
+  }
+
+  test("flatMap") {
+    assert(Bags.BagImpl.flatMap(ListMap(1 -> 1, 2 -> 1, 3 -> 1), (x: Int) => ListMap(x + 1 -> 1)) == ListMap(2 -> 1, 3 -> 1, 4 -> 1))
+  }
+
+  test("count") {
+    assert(Bags.BagImpl.count(ListMap(1 -> 1, 2 -> 1, 3 -> 1), 2) == 1)
+  }
+}
+
+// Interpreter
+
+// Parser
+
+// Syntax
+
+// Typer
+
+// =================================== Integration Tests ===================================
 // Arithmetic expressions
 class ArithTypeTests extends AnyFunSuite {
   test("var int") {
@@ -125,6 +163,19 @@ class ArithTypeTests extends AnyFunSuite {
   test("times") {
     val (err, msg) = typeTest(() => exp("let x = 2 in let y = 3 in x * y"), () => typ("int"))
     assert(!err, msg)
+  }
+}
+class ArithInterpreterTests extends AnyFunSuite {
+  test("plus") {
+    assert(eval(parser.parseStr("1 + 2")) == NumV(3))
+  }
+
+  test("minus") {
+    assert(eval(parser.parseStr("1 - 2")) == NumV(-1))
+  }
+
+  test("times") {
+    assert(eval(parser.parseStr("2 * 3")) == NumV(6))
   }
 }
 
@@ -155,6 +206,19 @@ class BooleanTypeTests extends AnyFunSuite {
     assert(!err, msg)
   }
 }
+class BooleanInterpreterTests extends AnyFunSuite {
+  test("eq") {
+    assert(eval(parser.parseStr("1 == 1")) == BoolV(true))
+  }
+
+  test("ifThenElse (True)") {
+    assert(eval(parser.parseStr("if true then 1 else 2")) == NumV(1))
+  }
+
+  test("ifThenElse (False)") {
+    assert(eval(parser.parseStr("if false then 1 else 2")) == NumV(2))
+  }
+}
 
 // Strings
 class StringTypeTests extends AnyFunSuite {
@@ -178,6 +242,19 @@ class StringTypeTests extends AnyFunSuite {
     assert(!err, msg)
   }
 }
+class StringInterpreterTests extends AnyFunSuite {
+  test("length") {
+    assert(eval(parser.parseStr("length(\"hello\")")) == NumV(5))
+  }
+
+  test("index") {
+    assert(eval(parser.parseStr("index(\"hello\", 1)")) == StringV("e"))
+  }
+
+  test("concat") {
+    assert(eval(parser.parseStr("concat(\"hello \", \"world\")")) == StringV("hello world"))
+  }
+}
 
 // Variables and let-binding
 class VariableTypeTests extends AnyFunSuite {
@@ -191,12 +268,34 @@ class VariableTypeTests extends AnyFunSuite {
     assert(!err, msg)
   }
 }
+class LetBindingInterpreterTests extends AnyFunSuite {
+  test("let int") {
+    assert(eval(parser.parseStr("let x = 1 in x")) == NumV(1))
+  }
+
+  test("let bool") {
+    assert(eval(parser.parseStr("let x = true in x")) == BoolV(true))
+  }
+
+  test("let str") {
+    assert(eval(parser.parseStr("let x = \"hello\" in x")) == StringV("hello"))
+  }
+}
 
 // Functions
 class FunctionTypeTests extends AnyFunSuite {
   test("lambda") {
     val (err, msg) = typeTest(() => exp("\\x . x + 1"), () => typ("int -> int"))
     assert(!err, msg)
+  }
+}
+class FunctionInterpreterTests extends AnyFunSuite {
+  test("lambda") {
+    assert(eval(parser.parseStr("\\x. x + 1")) == FunV("x",Plus(Var("x"),Num(1))))
+  }
+
+  test("rec") {
+    assert(eval(desugar(parser.parseStr("""sig f : int -> int let rec f(x) = if (x == 0) then 1 else f(x - 1) in f(10)"""))) == NumV(1))
   }
 }
 
@@ -217,6 +316,19 @@ class PairTypeTests extends AnyFunSuite {
     assert(!err, msg)
   }
 }
+class PairInterpreterTests extends AnyFunSuite {
+  test("pair") {
+    assert(eval(parser.parseStr("(1, 2)")) == PairV(NumV(1),NumV(2)))
+  }
+
+  test("first") {
+    assert(eval(parser.parseStr("fst((1, 2))")) == NumV(1))
+  }
+
+  test("second") {
+    assert(eval(parser.parseStr("snd((1, 2))")) == NumV(2))
+  }
+}
 
 // Records
 class RecordTypeTests extends AnyFunSuite {
@@ -230,12 +342,30 @@ class RecordTypeTests extends AnyFunSuite {
     assert(!err, msg)
   }
 }
+class RecordInterpreterTests extends AnyFunSuite {
+  test("record") {
+    assert(eval(parser.parseStr("<foo = 1, bar = true>")) == RecordV(ListMap("foo" -> NumV(1), "bar" -> BoolV(true))))
+  }
+
+  test("projection") {
+    assert(eval(parser.parseStr("let x = <foo = 1, bar = true> in x.foo")) == NumV(1))
+  }
+}
 
 // Variants
 class VariantTypeTests extends AnyFunSuite {
   test("variant") {
     val (err, msg) = typeTest(() => exp("select foo 1"), () => typ("[foo: int]"))
     assert(!err, msg)
+  }
+}
+class VariantInterpreterTests extends AnyFunSuite {
+  test("variant") {
+    assert(eval(parser.parseStr("select x 1")) == VariantV("x",NumV(1)))
+  }
+
+  test("case statement") {
+    assert(eval(desugar(parser.parseStr("sig f : [some: int, none: unit] -> int let fun f(x) = case x of {some y -> y, none z -> 0} in f(select some 42)"))) == NumV(42))
   }
 }
 
@@ -276,6 +406,39 @@ class BagTypeTests extends AnyFunSuite {
     assert(!err, msg)
   }
 }
+class BagInterpreterTests extends AnyFunSuite {
+  test("bag") {
+    assert(eval(parser.parseStr("{| 1, 2, 3 |}")) == BagV(Bags.BagImpl.fromList(List(NumV(1),NumV(2),NumV(3)))))
+  }
+
+  test("flatMap (lambda)") {
+    assert(eval(desugar(parser.parseStr("sig f : int -> {| int |} let fun f(x) = {|x + 1|} in flatMap({|1, 2, 3|}, f)"))) == BagV(Bags.BagImpl.fromList(List(NumV(2), NumV(3), NumV(4)))))
+  }
+
+  test("flatMap (rec)") {
+    assert(eval(desugar(parser.parseStr("sig f : int -> {| int |} let rec f(x) = {|x + 1|} in flatMap({|1, 2, 3|}, f)"))) == BagV(Bags.BagImpl.fromList(List(NumV(2), NumV(3), NumV(4)))))
+  }
+
+  test("when (True)") {
+    assert(eval(parser.parseStr("when(true, {| 1, 2, 3 |})")) == BagV(Bags.BagImpl.fromList(List(NumV(1), NumV(2), NumV(3)))))
+  }
+
+  test("when (False)") {
+    assert(eval(parser.parseStr("when(false, {| 1, 2, 3 |})")) == BagV(Bags.BagImpl.fromList(List())))
+  }
+
+  test("count") {
+    assert(eval(parser.parseStr("count({| 1, 2, 2, 3 |}, 2)")) == NumV(2))
+  }
+
+  test("sum") {
+    assert(eval(parser.parseStr("sum({| 1, 2, 2, 3 |}, {| 1, 2 |})")) == BagV(Bags.BagImpl.fromList(List(NumV(1), NumV(2), NumV(2), NumV(3), NumV(1), NumV(2)))))
+  }
+
+  test("diff") {
+    assert(eval(parser.parseStr("diff({| 1, 2, 2, 3|}, {| 1, 2 |})")) == BagV(Bags.BagImpl.fromList(List(NumV(2), NumV(3)))))
+  }
+}
 
 // Syntactic sugar
 class SyntacticSugarTypeTests extends AnyFunSuite {
@@ -312,142 +475,5 @@ class SyntacticSugarTypeTests extends AnyFunSuite {
   test("comprehension w/ let") {
     val (err, msg) = typeTest(() => exp("{| x + y | let x = 1, y <- {| 1, 2, 3 |} |}"), () => typ("{|int|}"))
     assert(!err, msg)
-  }
-}
-
-// [ Interpreter Tests ]
-// Evaluation
-
-class ArithInterpreterTests extends AnyFunSuite {
-  test("plus") {
-    assert(eval(parser.parseStr("1 + 2")) == NumV(3))
-  }
-
-  test("minus") {
-    assert(eval(parser.parseStr("1 - 2")) == NumV(-1))
-  }
-
-  test("times") {
-    assert(eval(parser.parseStr("2 * 3")) == NumV(6))
-  }
-}
-
-class BooleanInterpreterTests extends AnyFunSuite {
-  test("eq") {
-    assert(eval(parser.parseStr("1 == 1")) == BoolV(true))
-  }
-
-  test("ifThenElse (True)") {
-    assert(eval(parser.parseStr("if true then 1 else 2")) == NumV(1))
-  }
-
-  test("ifThenElse (False)") {
-    assert(eval(parser.parseStr("if false then 1 else 2")) == NumV(2))
-  }
-}
-
-class LetBindingInterpreterTests extends AnyFunSuite {
-  test("let int") {
-    assert(eval(parser.parseStr("let x = 1 in x")) == NumV(1))
-  }
-
-  test("let bool") {
-    assert(eval(parser.parseStr("let x = true in x")) == BoolV(true))
-  }
-
-  test("let str") {
-    assert(eval(parser.parseStr("let x = \"hello\" in x")) == StringV("hello"))
-  }
-}
-
-class StringInterpreterTests extends AnyFunSuite {
-  test("length") {
-    assert(eval(parser.parseStr("length(\"hello\")")) == NumV(5))
-  }
-
-  test("index") {
-    assert(eval(parser.parseStr("index(\"hello\", 1)")) == StringV("e"))
-  }
-
-  test("concat") {
-    assert(eval(parser.parseStr("concat(\"hello \", \"world\")")) == StringV("hello world"))
-  }
-}
-
-class FunctionInterpreterTests extends AnyFunSuite {
-  test("lambda") {
-    assert(eval(parser.parseStr("\\x. x + 1")) == FunV("x",Plus(Var("x"),Num(1))))
-  }
-
-  test("rec") {
-    assert(eval(desugar(parser.parseStr("""sig f : int -> int let rec f(x) = if (x == 0) then 1 else f(x - 1) in f(10)"""))) == NumV(1))
-  }
-}
-
-class PairInterpreterTests extends AnyFunSuite {
-  test("pair") {
-    assert(eval(parser.parseStr("(1, 2)")) == PairV(NumV(1),NumV(2)))
-  }
-
-  test("first") {
-    assert(eval(parser.parseStr("fst((1, 2))")) == NumV(1))
-  }
-
-  test("second") {
-    assert(eval(parser.parseStr("snd((1, 2))")) == NumV(2))
-  }
-}
-
-class RecordInterpreterTests extends AnyFunSuite {
-  test("record") {
-    assert(eval(parser.parseStr("<foo = 1, bar = true>")) == RecordV(ListMap("foo" -> NumV(1), "bar" -> BoolV(true))))
-  }
-
-  test("projection") {
-    assert(eval(parser.parseStr("let x = <foo = 1, bar = true> in x.foo")) == NumV(1))
-  }
-}
-
-class VariantInterpreterTests extends AnyFunSuite {
-  test("variant") {
-    assert(eval(parser.parseStr("select x 1")) == VariantV("x",NumV(1)))
-  }
-
-  test("case statement") {
-    assert(eval(desugar(parser.parseStr("sig f : [some: int, none: unit] -> int let fun f(x) = case x of {some y -> y, none z -> 0} in f(select some 42)"))) == NumV(42))
-  }
-}
-
-class BagInterpreterTests extends AnyFunSuite {
-  test("bag") {
-    assert(eval(parser.parseStr("{| 1, 2, 3 |}")) == BagV(Bags.BagImpl.fromList(List(NumV(1),NumV(2),NumV(3)))))
-  }
-
-  test("flatMap (lambda)") {
-    assert(eval(desugar(parser.parseStr("sig f : int -> {| int |} let fun f(x) = {|x + 1|} in flatMap({|1, 2, 3|}, f)"))) == BagV(Bags.BagImpl.fromList(List(NumV(2), NumV(3), NumV(4)))))
-  }
-
-  test("flatMap (rec)") {
-    assert(eval(desugar(parser.parseStr("sig f : int -> {| int |} let rec f(x) = {|x + 1|} in flatMap({|1, 2, 3|}, f)"))) == BagV(Bags.BagImpl.fromList(List(NumV(2), NumV(3), NumV(4)))))
-  }
-
-  test("when (True)") {
-    assert(eval(parser.parseStr("when(true, {| 1, 2, 3 |})")) == BagV(Bags.BagImpl.fromList(List(NumV(1), NumV(2), NumV(3)))))
-  }
-
-  test("when (False)") {
-    assert(eval(parser.parseStr("when(false, {| 1, 2, 3 |})")) == BagV(Bags.BagImpl.fromList(List())))
-  }
-
-  test("count") {
-    assert(eval(parser.parseStr("count({| 1, 2, 2, 3 |}, 2)")) == NumV(2))
-  }
-
-  test("sum") {
-    assert(eval(parser.parseStr("sum({| 1, 2, 2, 3 |}, {| 1, 2 |})")) == BagV(Bags.BagImpl.fromList(List(NumV(1), NumV(2), NumV(2), NumV(3), NumV(1), NumV(2)))))
-  }
-
-  test("diff") {
-    assert(eval(parser.parseStr("diff({| 1, 2, 2, 3|}, {| 1, 2 |})")) == BagV(Bags.BagImpl.fromList(List(NumV(2), NumV(3)))))
   }
 }
