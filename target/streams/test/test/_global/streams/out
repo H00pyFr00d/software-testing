@@ -1,27 +1,58 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariableTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SyntacticSugarTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(LetBindingInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanTypeTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairInterpreterTests, org.scalatest.tools.Framework$$anon$1@afd584b, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBooleanInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (True)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (False)[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SubtypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(IsEqTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagImplTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(LetBindingInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ValueTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SymGeneratorTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithInterpreterTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SwapVarTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SyntacticSugarTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariableTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairTypeTests, org.scalatest.tools.Framework$$anon$1@69ab5974, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSubtypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unit <: Unit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unit !<: Non-Unit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int <: Int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int !<: Non-Int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bool <: Bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bool !<: Non-Bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- String <: String[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- String !<: Non-String[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair <: Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair !<: Non-Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Function <: Function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Function !<: Non-Function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Record - Same[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Record - Different Order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Smaller Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record !<: Bigger Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record !<: Non-Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Variant - Same[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Variant - Different Order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Smaller Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant !<: Bigger Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant !<: Non-Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag <: Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag !<: Non-Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mIsEqTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Simple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyPair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Non-EqType[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mStringInterpreterTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
@@ -31,13 +62,56 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mValueTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- BagV.toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSymGeneratorTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- genVar[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- freshVar[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRecordInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariantTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVariantInterpreterTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- case statement[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBagImplTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- toList[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- fromList[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- add[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRecordTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFunctionInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- rec[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mLetBindingInterpreterTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- let int[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- let bool[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- let str[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBooleanInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (True)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (False)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBooleanTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- var bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- are eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- are not eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- less[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if then else[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPairInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- first[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- second[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSwapVarTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x == y)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x != y and x == z)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x != y and x != z)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mBagInterpreterTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- bag[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- flatMap (lambda)[0m[0m
@@ -47,34 +121,33 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mVariableTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- var let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- anno[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mArithInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBagTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- toList[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- fromList[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- add[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mPairTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- first[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mFunctionTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mArithTypeTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- var int[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mVariantTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mArithInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFunctionTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- rec *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.RuntimeException: tyInfer: cannot infer function types[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.sys.package$.error(package.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at FrogInterpreter.Typer$.tyInfer(Typer.scala:263)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at FrogInterpreter.Typer$.tyCheck(Typer.scala:134)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at UnitTests$package$.$init$$$anonfun$109(UnitTests.scala:12)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.function.JProcedure3.apply(JProcedure3.java:15)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.function.JProcedure3.apply(JProcedure3.java:10)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at FunctionTypeTests.testFun$proxy71$1(UnitTests.scala:515)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at FunctionTypeTests.$init$$$anonfun$71(UnitTests.scala:514)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariableTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- var let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- anno[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mBagTypeTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- bag[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- flat map (lambda)[0m[0m
@@ -83,25 +156,10 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mFunctionInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- rec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRecordTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRecordInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mPairInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPairTypeTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- pair[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- first[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBooleanTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- var bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- are eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- are not eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- less[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- if then else[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSyntacticSugarTypeTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- let pair[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- let fun[0m[0m
@@ -110,29 +168,36 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ bind[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ guard[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 772 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 72[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 20, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 72, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 763 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 108[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 25, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 107, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	IsEqTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BooleanInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariantTypeTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	BagImplTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairInterpreterTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SubtypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariantInterpreterTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	BagTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SymGeneratorTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ValueTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	LetBindingInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SwapVarTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionInterpreterTests[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	FunctionTypeTests[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

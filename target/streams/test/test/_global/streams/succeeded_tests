@@ -1,22 +1,26 @@
 #Successful Tests
-#Sun Dec 22 00:36:30 GMT 2024
-PairInterpreterTests=1734827790120
-RecordInterpreterTests=1734827790119
-VariantInterpreterTests=1734827790145
-VariantTypeTests=1734827790056
-BagTests=1734827789784
-PairTypeTests=1734827790120
-VariableTypeTests=1734827790050
-FunctionTypeTests=1734827790025
-SyntacticSugarTypeTests=1734827790264
-FunctionInterpreterTests=1734827790091
-BooleanInterpreterTests=1734827790049
-RecordTypeTests=1734827790068
-StringInterpreterTests=1734827790056
-StringTypeTests=1734827790071
-ArithInterpreterTests=1734827790072
-ArithTypeTests=1734827790163
-BagTypeTests=1734827790194
-LetBindingInterpreterTests=1734827790059
-BooleanTypeTests=1734827790166
-BagInterpreterTests=1734827790203
+#Mon Dec 23 19:17:41 GMT 2024
+RecordInterpreterTests=1734981461385
+FunctionInterpreterTests=1734981461472
+BooleanInterpreterTests=1734981461492
+RecordTypeTests=1734981461472
+StringInterpreterTests=1734981461473
+ArithInterpreterTests=1734981461409
+LetBindingInterpreterTests=1734981461409
+SymGeneratorTests=1734981461211
+BooleanTypeTests=1734981461500
+PairInterpreterTests=1734981461404
+BagImplTests=1734981461215
+VariantInterpreterTests=1734981461403
+VariantTypeTests=1734981461391
+PairTypeTests=1734981461510
+SwapVarTests=1734981461271
+VariableTypeTests=1734981461492
+SubtypeTests=1734981461236
+ValueTests=1734981461211
+IsEqTypeTests=1734981461208
+SyntacticSugarTypeTests=1734981461550
+StringTypeTests=1734981461477
+ArithTypeTests=1734981461492
+BagTypeTests=1734981461543
+BagInterpreterTests=1734981461520
