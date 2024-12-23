@@ -1,0 +1,1034 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          FrogInterpreter/Bags.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package FrogInterpreter
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.collection.immutable.ListMap
+</span>4 <span style=''>
+</span>5 <span style=''>object Bags {
+</span>6 <span style=''>  trait Bag {
+</span>7 <span style=''>    type T[_]
+</span>8 <span style=''>    def toList[A](b: T[A]): List[A]
+</span>9 <span style=''>    def fromList[A](l: List[A]): T[A]
+</span>10 <span style=''>    </span><span style='background: #AEF1AE'>def toString</span><span style=''>[A](b: T[A]) : String = </span><span style='background: #AEF1AE'>toList(b).mkString(&quot;Bag(&quot;, &quot;, &quot;, &quot;)&quot;)</span><span style=''>
+</span>11 <span style=''>    def sum[A](b1: T[A], b2: T[A]): T[A]
+</span>12 <span style=''>    def diff[A](b1: T[A], b2: T[A]): T[A]
+</span>13 <span style=''>    def flatMap[A,B](b: T[A], f: A =&gt; T[B]): T[B]
+</span>14 <span style=''>    def count[A](b: T[A], x: A): Int
+</span>15 <span style=''>  }
+</span>16 <span style=''>
+</span>17 <span style=''>    ////////////////////
+</span>18 <span style=''>    // EXERCISE 1     //
+</span>19 <span style=''>    ////////////////////
+</span>20 <span style=''>  object BagImpl extends Bag {
+</span>21 <span style=''>    // BEGIN ANSWER
+</span>22 <span style=''>    type T[A] = ListMap[A,Int]
+</span>23 <span style=''>
+</span>24 <span style=''>    </span><span style='background: #AEF1AE'>def toList</span><span style=''>[A](bag: T[A]): List[A] =
+</span>25 <span style=''>      </span><span style='background: #AEF1AE'>bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }.toList</span><span style=''>
+</span>26 <span style=''>
+</span>27 <span style=''>    </span><span style='background: #AEF1AE'>def fromList</span><span style=''>[A](l: List[A]): T[A] = l match {
+</span>28 <span style=''>      case Nil </span><span style='background: #AEF1AE'>=&gt; new ListMap[A,Int]()</span><span style=''>
+</span>29 <span style=''>      case x::xs </span><span style='background: #AEF1AE'>=&gt; add(fromList(xs),x)</span><span style=''>
+</span>30 <span style=''>    }
+</span>31 <span style=''>    
+</span>32 <span style=''>    </span><span style='background: #AEF1AE'>def add</span><span style=''>[A](bag: T[A], x: A): T[A] =
+</span>33 <span style=''>      </span><span style='background: #AEF1AE'>bag.updated(x, bag.getOrElse(x, 0) + 1)</span><span style=''>
+</span>34 <span style=''>
+</span>35 <span style=''>    </span><span style='background: #AEF1AE'>def sum</span><span style=''>[A](bag: T[A], other: T[A]): T[A] =
+</span>36 <span style=''>      </span><span style='background: #AEF1AE'>(bag ++ other).map { (k, _) =&gt;
+</span>37 <span style=''></span><span style='background: #AEF1AE'>        k -&gt; (bag.getOrElse(k, 0) + other.getOrElse(k, 0))
+</span>38 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
+</span>39 <span style=''>
+</span>40 <span style=''>    </span><span style='background: #AEF1AE'>def diff</span><span style=''>[A](bag: T[A], other: T[A]): T[A] = </span><span style='background: #AEF1AE'>bag.map { case (k, v) =&gt;
+</span>41 <span style=''></span><span style='background: #AEF1AE'>          k -&gt; (v - other.getOrElse(k, 0))
+</span>42 <span style=''></span><span style='background: #AEF1AE'>        }.filter { case (_, v) =&gt; v &gt; 0 }</span><span style=''>
+</span>43 <span style=''>
+</span>44 <span style=''>    </span><span style='background: #AEF1AE'>def flatMap</span><span style=''>[A,B](bag: T[A],f: A =&gt; T[B]): T[B] =
+</span>45 <span style=''>      </span><span style='background: #AEF1AE'>bag.foldLeft(new ListMap[B,Int]()) {
+</span>46 <span style=''></span><span style='background: #AEF1AE'>        case (acc, (k, v)) =&gt; sum(acc, f(k).map((k1, v1) =&gt; (k1, v * v1)))
+</span>47 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>48 <span style=''>
+</span>49 <span style=''>    </span><span style='background: #AEF1AE'>def count</span><span style=''>[A](bag: T[A],x: A): Int = </span><span style='background: #AEF1AE'>bag.getOrElse(x, 0)</span><span style=''>
+</span>50 <span style=''>
+</span>51 <span style=''>    // END ANSWER
+</span>52 <span style=''>
+</span>53 <span style=''>  }
+</span>54 <span style=''>
+</span>55 <span style=''>
+</span>56 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          188
+          -
+          200
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          toString
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def toString
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          224
+          -
+          233
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          toList
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          toList(b)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          0
+        </td>
+        <td>
+          224
+          -
+          261
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          mkString
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          toList(b).mkString(&quot;Bag(&quot;, &quot;, &quot;, &quot;)&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          599
+          -
+          609
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          toList
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def toList
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          666
+          -
+          684
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;none&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          =&gt; List.fill(v)(k)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          669
+          -
+          684
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fill
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          List.fill(v)(k)
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          641
+          -
+          686
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          flatMap
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }
+        </td>
+      </tr><tr>
+        <td>
+          25
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          641
+          -
+          693
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          toList
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.flatMap{ case (k, v) =&gt; List.fill(v)(k) }.toList
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          699
+          -
+          711
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          fromList
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def fromList
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          763
+          -
+          783
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          &lt;init&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          new ListMap[A,Int]()
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          760
+          -
+          783
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;none&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          =&gt; new ListMap[A,Int]()
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          808
+          -
+          820
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fromList
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          fromList(xs)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          804
+          -
+          823
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          add
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          add(fromList(xs),x)
+        </td>
+      </tr><tr>
+        <td>
+          29
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          801
+          -
+          823
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;none&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          =&gt; add(fromList(xs),x)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          839
+          -
+          846
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          add
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def add
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          881
+          -
+          920
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          updated
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.updated(x, bag.getOrElse(x, 0) + 1)
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          896
+          -
+          915
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          getOrElse
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.getOrElse(x, 0)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          926
+          -
+          933
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          sum
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def sum
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          975
+          -
+          1072
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          map
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          (bag ++ other).map { (k, _) =&gt;\n        k -&gt; (bag.getOrElse(k, 0) + other.getOrElse(k, 0))\n      }
+        </td>
+      </tr><tr>
+        <td>
+          36
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          976
+          -
+          988
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          ++
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag ++ other
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          1020
+          -
+          1039
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          getOrElse
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.getOrElse(k, 0)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          1014
+          -
+          1063
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          -&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          k -&gt; (bag.getOrElse(k, 0) + other.getOrElse(k, 0)
+        </td>
+      </tr><tr>
+        <td>
+          37
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          1042
+          -
+          1063
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          getOrElse
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          other.getOrElse(k, 0)
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          1078
+          -
+          1086
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          diff
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def diff
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          1144
+          -
+          1189
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;none&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          =&gt;\n          k -&gt; (v - other.getOrElse(k, 0))
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          1122
+          -
+          1199
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          map
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.map { case (k, v) =&gt;\n          k -&gt; (v - other.getOrElse(k, 0))\n        }
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          1167
+          -
+          1188
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          getOrElse
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          other.getOrElse(k, 0)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          1157
+          -
+          1188
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          -&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          k -&gt; (v - other.getOrElse(k, 0)
+        </td>
+      </tr><tr>
+        <td>
+          42
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          1122
+          -
+          1231
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          filter
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.map { case (k, v) =&gt;\n          k -&gt; (v - other.getOrElse(k, 0))\n        }.filter { case (_, v) =&gt; v &gt; 0 }
+        </td>
+      </tr><tr>
+        <td>
+          42
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          1221
+          -
+          1229
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;none&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          =&gt; v &gt; 0
+        </td>
+      </tr><tr>
+        <td>
+          44
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          1237
+          -
+          1248
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          flatMap
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def flatMap
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          1305
+          -
+          1325
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          &lt;init&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          new ListMap[B,Int]()
+        </td>
+      </tr><tr>
+        <td>
+          45
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          1292
+          -
+          1409
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          foldLeft
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.foldLeft(new ListMap[B,Int]()) {\n        case (acc, (k, v)) =&gt; sum(acc, f(k).map((k1, v1) =&gt; (k1, v * v1)))\n    }
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          1359
+          -
+          1403
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          sum
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          sum(acc, f(k).map((k1, v1) =&gt; (k1, v * v1)))
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          1356
+          -
+          1403
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          &lt;none&gt;
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          =&gt; sum(acc, f(k).map((k1, v1) =&gt; (k1, v * v1)))
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          1368
+          -
+          1372
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          apply
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          f(k)
+        </td>
+      </tr><tr>
+        <td>
+          46
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          1368
+          -
+          1402
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          map
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          f(k).map((k1, v1) =&gt; (k1, v * v1))
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          1415
+          -
+          1424
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          count
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def count
+        </td>
+      </tr><tr>
+        <td>
+          49
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          1451
+          -
+          1470
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          getOrElse
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          bag.getOrElse(x, 0)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

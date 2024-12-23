@@ -141,6 +141,351 @@ class BagImplTests extends AnyFunSuite {
 // Interpreter
 
 // Parser
+class ParseStrArithTests extends AnyFunSuite {
+  test("Unit") {
+    assert(parser.parseStr("()") == Unit)
+  }
+
+  test("Num") {
+    assert(parser.parseStr("1") == Num(1))
+  }
+
+  test("Plus") {
+    assert(parser.parseStr("1 + 2") == Plus(Num(1), Num(2)))
+  }
+
+  test("Minus") {
+    assert(parser.parseStr("1 - 2") == Minus(Num(1), Num(2)))
+  }
+
+  test("Times") {
+    assert(parser.parseStr("1 * 2") == Times(Num(1), Num(2)))
+  }
+}
+
+class ParseStrBoolTests extends AnyFunSuite {
+  test("Bool") {
+    assert(parser.parseStr("true") == Bool(true))
+  }
+
+  test("Eq") {
+    assert(parser.parseStr("1 == 1") == Eq(Num(1), Num(1)))
+  }
+
+  test("Less") {
+    assert(parser.parseStr("1 < 2") == Less(Num(1), Num(2)))
+  }
+
+  test("IfThenElse") {
+    assert(parser.parseStr("if true then 1 else 2") == IfThenElse(Bool(true), Num(1), Num(2)))
+  }
+
+  test("Str") {
+    assert(parser.parseStr("\"hello\"") == Str("hello"))
+  }
+}
+
+class ParseStrStringTests extends AnyFunSuite{
+  test("String") {
+    assert(parser.parseStr("\"hello\"") == Str("hello"))
+  }
+
+  test("Length") {
+    assert(parser.parseStr("length(\"hello\")") == Length(Str("hello")))
+  }
+
+  test("Index") {
+    assert(parser.parseStr("index(\"hello\", 0)") == Index(Str("hello"), Num(0)))
+  }
+
+  test("Concat") {
+    assert(parser.parseStr("concat(\"hello\", \"world\")") == Concat(Str("hello"), Str("world")))
+  }
+}
+
+class ParseStrVarTests extends AnyFunSuite {
+  test("Var") {
+    assert(parser.parseStr("x") == Var("x"))
+  }
+
+  test("Let") {
+    assert(parser.parseStr("let x = 1 in x") == Let("x", Num(1), Var("x")))
+  }
+}
+
+class ParseStrAnnoTests extends AnyFunSuite {
+  test("Anno") {
+    assert(parser.parseStr("1 : int") == Anno(Num(1), TyInt))
+  }
+}
+
+class ParseStrFunctionTests extends AnyFunSuite {
+  test("Lambda") {
+    assert(parser.parseStr("\\x . x") == Lambda("x", Var("x")))
+  }
+
+  test("Apply") {
+    assert(parser.parseStr("f(x)") == Apply(Var("f"), Var("x")))
+  }
+}
+
+class ParseStrPairTests extends AnyFunSuite {
+  test("Pair") {
+    assert(parser.parseStr("(1, 2)") == Pair(Num(1), Num(2)))
+  }
+
+  test("First") {
+    assert(parser.parseStr("fst((1, 2))") == First(Pair(Num(1), Num(2))))
+  }
+
+  test("Second") {
+    assert(parser.parseStr("snd((1, 2))") == Second(Pair(Num(1), Num(2))))
+  }
+}
+
+class ParseStrRecordTests extends AnyFunSuite {
+  test("Record") {
+    assert(parser.parseStr("<l=42>") == Record(ListMap("l" -> Num(42))))
+  }
+
+  test("Proj") {
+    assert(parser.parseStr("r.foo") == Proj(Var("r"), "foo"))
+  }
+}
+
+class ParseStrVariantTests extends AnyFunSuite {
+  test("Case") {
+    assert(parser.parseStr("case v of {foo x -> 1, bar y -> 2}") == Case(Var("v"), ListMap("foo" -> ("x", Num(1)), "bar" -> ("y", Num(2)))))
+  }
+}
+
+// class ParseStrBagTests extends AnyFunSuite {
+//
+// }
+
+class ParseStrErrorTests extends AnyFunSuite {
+  test("Malformed Plus") {
+    assertThrows[Exception] {
+      parser.parseStr("1 +")
+    }
+  }
+
+  test("Malformed Let") {
+    assertThrows[Exception] {
+      parser.parseStr("let x = 1")
+    }
+  }
+
+  test("Malformed Anno") {
+    assertThrows[Exception] {
+      parser.parseStr("1 :")
+    }
+  }
+
+  test("Malformed Lambda") {
+    assertThrows[Exception] {
+      parser.parseStr("\\x")
+    }
+  }
+
+  test("Malformed Apply") {
+    assertThrows[Exception] {
+      parser.parseStr("f(x")
+    }
+  }
+
+  test("Malformed Pair") {
+    assertThrows[Exception] {
+      parser.parseStr("(1,")
+    }
+  }
+
+  test("Malformed First") {
+    assertThrows[Exception] {
+      parser.parseStr("fst((1, 2")
+    }
+  }
+
+  test("Malformed Second") {
+    assertThrows[Exception] {
+      parser.parseStr("snd((1, 2")
+    }
+  }
+
+  test("Malformed Record") {
+    assertThrows[Exception] {
+      parser.parseStr("<l=42")
+    }
+  }
+
+  test("Malformed Proj") {
+    assertThrows[Exception] {
+      parser.parseStr("r.")
+    }
+  }
+
+  test("Malformed Case") {
+    assertThrows[Exception] {
+      parser.parseStr("case v of {foo x -> 1, bar y -> 2")
+    }
+  }
+
+  test("Malformed Bag") {
+    assertThrows[Exception] {
+      parser.parseStr("Bag(1, 2, 3")
+    }
+  }
+
+  test("Malformed FlatMap") {
+    assertThrows[Exception] {
+      parser.parseStr("flatMap(Bag(1, 2, 3), (x) => Bag(x + 1))")
+    }
+  }
+
+  test("Malformed When") {
+    assertThrows[Exception] {
+      parser.parseStr("when(Bag(1, 2, 3), (x) => x > 1)")
+    }
+  }
+
+  test("Malformed Count") {
+    assertThrows[Exception] {
+      parser.parseStr("count(Bag(1, 2, 3), 2")
+    }
+  }
+
+  test("Malformed Sum") {
+    assertThrows[Exception] {
+      parser.parseStr("sum(Bag(1, 2, 3), Bag(2, 3, 4")
+    }
+  }
+
+  test("Malformed Diff") {
+    assertThrows[Exception] {
+      parser.parseStr("diff(Bag(1, 2, 3), Bag(2, 3, 4")
+    }
+  }
+
+  test("Malformed LetPair") {
+    assertThrows[Exception] {
+      parser.parseStr("let (x, y) = (1, ) in x")
+    }
+  }
+
+  test("Malformed LetRecord") {
+    assertThrows[Exception] {
+      parser.parseStr("let <l=1, m=2> in l")
+    }
+  }
+
+  test("Malformed Comprehension") {
+    assertThrows[Exception] {
+      parser.parseStr("comprehension(Bag(1, 2, 3), (x) => Bag(x + 1))")
+    }
+  }
+
+  test("Malformed Bind") {
+    assertThrows[Exception] {
+      parser.parseStr("bind(x, Bag(1, 2, 3))")
+    }
+  }
+
+  test("Malformed Guard") {
+    assertThrows[Exception] {
+      parser.parseStr("guard(Bag(1, 2, 3))")
+    }
+  }
+
+  test("Malformed CLet") {
+    assertThrows[Exception] {
+      parser.parseStr("clet(x, Bag(1, 2, 3))")
+    }
+  }
+}
+
+class ParseTyStrTests extends AnyFunSuite{
+  test("TyUnit") {
+    assert(parser.parseTyStr("unit") == TyUnit)
+  }
+
+  test("TyInt") {
+    assert(parser.parseTyStr("int") == TyInt)
+  }
+
+  test("TyBool") {
+    assert(parser.parseTyStr("bool") == TyBool)
+  }
+
+  test("TyString") {
+    assert(parser.parseTyStr("string") == TyString)
+  }
+
+  test("TyPair") {
+    assert(parser.parseTyStr("int * bool") == TyPair(TyInt, TyBool))
+  }
+
+  test("TyFun") {
+    assert(parser.parseTyStr("int -> bool") == TyFun(TyInt, TyBool))
+  }
+
+  test("TyRecord") {
+    assert(parser.parseTyStr("<foo:int, bar:bool>") == TyRecord(ListMap("foo" -> TyInt, "bar" -> TyBool)))
+  }
+
+  test("TyVariant") {
+    assert(parser.parseTyStr("[some: int, none: unit]") == TyVariant(ListMap("some" -> TyInt, "none" -> TyUnit)))
+  }
+
+  test("TyBag") {
+    assert(parser.parseTyStr("{|int|}") == TyBag(TyInt))
+  }
+}
+
+class ParseTyStrErrorTests extends AnyFunSuite {
+  test("Malformed TyPair") {
+    assertThrows[Exception] {
+      parser.parseTyStr("int *")
+    }
+  }
+
+  test("Malformed TyFun") {
+    assertThrows[Exception] {
+      parser.parseTyStr("int ->")
+    }
+  }
+
+  test("Malformed TyRecord") {
+    assertThrows[Exception] {
+      parser.parseTyStr("<foo:int, bar:bool")
+    }
+  }
+
+  test("Malformed TyVariant") {
+    assertThrows[Exception] {
+      parser.parseTyStr("[some: int, none: unit")
+    }
+  }
+
+  test("Malformed TyBag") {
+    assertThrows[Exception] {
+      parser.parseTyStr("{|int|")
+    }
+  }
+}
+
+class ParseTests extends AnyFunSuite {
+  test("Parse examples/simple.frog") {
+    val file = "examples/simple.frog"
+    val parsed = parser.parse(file)
+    assert(parsed == Let("x", Num(1), Plus(Var("x"), Num(1))))
+  }
+}
+
+// class FunctionNameMismatch extends AnyFunSuite {
+//
+// }
+
+
 
 // Syntax
 class ValueTests extends AnyFunSuite {
