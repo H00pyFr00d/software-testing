@@ -161,21 +161,23 @@
 </span>137 <span style=''>      id = id + 1
 </span>138 <span style=''>      fresh_s
 </span>139 <span style=''>    }
-</span>140 <span style=''>  }
-</span>141 <span style=''>
-</span>142 <span style=''>  // swap y and z in x
-</span>143 <span style=''>  </span><span style='background: #AEF1AE'>def swapVar</span><span style=''>(x: Variable, y: Variable, z: Variable): Variable =
-</span>144 <span style=''>    if x == y then </span><span style='background: #AEF1AE'>z</span><span style=''> else </span><span style='background: #AEF1AE'>if x == z then y else x</span><span style=''>
-</span>145 <span style=''>
-</span>146 <span style=''>  // a trait for substitutable things, e.g., expressions and types
-</span>147 <span style=''>  trait Substitutable[A] {
-</span>148 <span style=''>    // swap y and z in t
-</span>149 <span style=''>    def swap(t: A, y: Variable, z: Variable): A
-</span>150 <span style=''>
-</span>151 <span style=''>    // subst x in t1 with t2, i.e., t1[t2/x]
-</span>152 <span style=''>    def subst(t1: A, t2: A, x: Variable): A
-</span>153 <span style=''>  }
-</span>154 <span style=''>}
+</span>140 <span style=''>    // reset the counter
+</span>141 <span style=''>    </span><span style='background: #AEF1AE'>def reset</span><span style=''>(): Unit = {id = 0}
+</span>142 <span style=''>  }
+</span>143 <span style=''>
+</span>144 <span style=''>  // swap y and z in x
+</span>145 <span style=''>  </span><span style='background: #AEF1AE'>def swapVar</span><span style=''>(x: Variable, y: Variable, z: Variable): Variable =
+</span>146 <span style=''>    if x == y then </span><span style='background: #AEF1AE'>z</span><span style=''> else </span><span style='background: #AEF1AE'>if x == z then y else x</span><span style=''>
+</span>147 <span style=''>
+</span>148 <span style=''>  // a trait for substitutable things, e.g., expressions and types
+</span>149 <span style=''>  trait Substitutable[A] {
+</span>150 <span style=''>    // swap y and z in t
+</span>151 <span style=''>    def swap(t: A, y: Variable, z: Variable): A
+</span>152 <span style=''>
+</span>153 <span style=''>    // subst x in t1 with t2, i.e., t1[t2/x]
+</span>154 <span style=''>    def subst(t1: A, t2: A, x: Variable): A
+</span>155 <span style=''>  }
+</span>156 <span style=''>}
 </span></pre>
           </div>
           <div class="tab-pane" id="statementlist">
@@ -193,7 +195,7 @@
           99
         </td>
         <td>
-          1384
+          1300
         </td>
         <td>
           3604
@@ -217,7 +219,7 @@
           99
         </td>
         <td>
-          1385
+          1301
         </td>
         <td>
           3572
@@ -241,7 +243,7 @@
           129
         </td>
         <td>
-          1388
+          1304
         </td>
         <td>
           4681
@@ -265,7 +267,7 @@
           130
         </td>
         <td>
-          1387
+          1303
         </td>
         <td>
           4739
@@ -289,7 +291,7 @@
           130
         </td>
         <td>
-          1386
+          1302
         </td>
         <td>
           4739
@@ -313,7 +315,7 @@
           135
         </td>
         <td>
-          1390
+          1306
         </td>
         <td>
           4840
@@ -337,7 +339,7 @@
           136
         </td>
         <td>
-          1389
+          1305
         </td>
         <td>
           4889
@@ -358,15 +360,39 @@
         </td>
       </tr><tr>
         <td>
-          143
+          141
         </td>
         <td>
-          1395
+          1307
         </td>
         <td>
-          4966
+          4965
           -
-          4977
+          4974
+        </td>
+        <td>
+          DefDef
+        </td>
+        <td>
+          reset
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          def reset
+        </td>
+      </tr><tr>
+        <td>
+          145
+        </td>
+        <td>
+          1312
+        </td>
+        <td>
+          5024
+          -
+          5035
         </td>
         <td>
           DefDef
@@ -382,39 +408,15 @@
         </td>
       </tr><tr>
         <td>
-          144
+          146
         </td>
         <td>
-          1393
+          1309
         </td>
         <td>
-          5077
+          5128
           -
-          5078
-        </td>
-        <td>
-          Ident
-        </td>
-        <td>
-          x
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #AEF1AE">
-          x
-        </td>
-      </tr><tr>
-        <td>
-          144
-        </td>
-        <td>
-          1392
-        </td>
-        <td>
-          5070
-          -
-          5071
+          5129
         </td>
         <td>
           Ident
@@ -430,15 +432,39 @@
         </td>
       </tr><tr>
         <td>
-          144
+          146
         </td>
         <td>
-          1394
+          1308
         </td>
         <td>
-          5055
+          5106
           -
-          5078
+          5107
+        </td>
+        <td>
+          Ident
+        </td>
+        <td>
+          z
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #AEF1AE">
+          z
+        </td>
+      </tr><tr>
+        <td>
+          146
+        </td>
+        <td>
+          1311
+        </td>
+        <td>
+          5113
+          -
+          5136
         </td>
         <td>
           If
@@ -454,27 +480,27 @@
         </td>
       </tr><tr>
         <td>
-          144
+          146
         </td>
         <td>
-          1391
+          1310
         </td>
         <td>
-          5048
+          5135
           -
-          5049
+          5136
         </td>
         <td>
           Ident
         </td>
         <td>
-          z
+          x
         </td>
         <td>
           
         </td>
         <td style="background: #AEF1AE">
-          z
+          x
         </td>
       </tr>
     </table>

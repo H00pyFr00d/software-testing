@@ -43,66 +43,66 @@
 </span>19 <span style=''>    </span><span style='background: #AEF1AE'>def swap</span><span style=''>(e: Expr, y: Variable, z: Variable): Expr =
 </span>20 <span style=''>      </span><span style='background: #AEF1AE'>def go</span><span style=''>(e: Expr): Expr = e match {
 </span>21 <span style=''>        // Value must be closed
-</span>22 <span style=''>        case v: Value </span><span style='background: #F0ADAD'>=&gt; v</span><span style=''>
+</span>22 <span style=''>        case v: Value </span><span style='background: #AEF1AE'>=&gt; v</span><span style=''>
 </span>23 <span style=''>
-</span>24 <span style=''>        case Unit </span><span style='background: #F0ADAD'>=&gt; Unit</span><span style=''>
+</span>24 <span style=''>        case Unit </span><span style='background: #AEF1AE'>=&gt; Unit</span><span style=''>
 </span>25 <span style=''>
 </span>26 <span style=''>        case Num(n) </span><span style='background: #AEF1AE'>=&gt; Num(n)</span><span style=''>
-</span>27 <span style=''>        case Plus(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Plus(go(e1), go(e2))</span><span style=''>
-</span>28 <span style=''>        case Minus(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Minus(go(e1), go(e2))</span><span style=''>
-</span>29 <span style=''>        case Times(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Times(go(e1), go(e2))</span><span style=''>
+</span>27 <span style=''>        case Plus(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Plus(go(e1), go(e2))</span><span style=''>
+</span>28 <span style=''>        case Minus(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Minus(go(e1), go(e2))</span><span style=''>
+</span>29 <span style=''>        case Times(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Times(go(e1), go(e2))</span><span style=''>
 </span>30 <span style=''>
-</span>31 <span style=''>        case Bool(b) </span><span style='background: #F0ADAD'>=&gt; Bool(b)</span><span style=''>
-</span>32 <span style=''>        case Eq(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Eq(go(e1), go(e2))</span><span style=''>
-</span>33 <span style=''>        case Less(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Less(go(e1), go(e2))</span><span style=''>
-</span>34 <span style=''>        case IfThenElse(e, e1, e2) </span><span style='background: #F0ADAD'>=&gt; IfThenElse(go(e), go(e1), go(e2))</span><span style=''>
+</span>31 <span style=''>        case Bool(b) </span><span style='background: #AEF1AE'>=&gt; Bool(b)</span><span style=''>
+</span>32 <span style=''>        case Eq(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Eq(go(e1), go(e2))</span><span style=''>
+</span>33 <span style=''>        case Less(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Less(go(e1), go(e2))</span><span style=''>
+</span>34 <span style=''>        case IfThenElse(e, e1, e2) </span><span style='background: #AEF1AE'>=&gt; IfThenElse(go(e), go(e1), go(e2))</span><span style=''>
 </span>35 <span style=''>
-</span>36 <span style=''>        case Str(s) </span><span style='background: #F0ADAD'>=&gt; Str(s)</span><span style=''>
-</span>37 <span style=''>        case Length(e) </span><span style='background: #F0ADAD'>=&gt; Length(go(e))</span><span style=''>
-</span>38 <span style=''>        case Index(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Index(go(e1), go(e2))</span><span style=''>
-</span>39 <span style=''>        case Concat(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Concat(go(e1), go(e2))</span><span style=''>
+</span>36 <span style=''>        case Str(s) </span><span style='background: #AEF1AE'>=&gt; Str(s)</span><span style=''>
+</span>37 <span style=''>        case Length(e) </span><span style='background: #AEF1AE'>=&gt; Length(go(e))</span><span style=''>
+</span>38 <span style=''>        case Index(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Index(go(e1), go(e2))</span><span style=''>
+</span>39 <span style=''>        case Concat(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Concat(go(e1), go(e2))</span><span style=''>
 </span>40 <span style=''>
 </span>41 <span style=''>        case Var(x) </span><span style='background: #AEF1AE'>=&gt; Var(swapVar(x,y,z))</span><span style=''>
-</span>42 <span style=''>        case Let(x,e1,e2) </span><span style='background: #F0ADAD'>=&gt; Let(swapVar(x,y,z),go(e1),go(e2))</span><span style=''>
+</span>42 <span style=''>        case Let(x,e1,e2) </span><span style='background: #AEF1AE'>=&gt; Let(swapVar(x,y,z),go(e1),go(e2))</span><span style=''>
 </span>43 <span style=''>
-</span>44 <span style=''>        case Anno(e, ty) </span><span style='background: #F0ADAD'>=&gt; Anno(go(e), ty)</span><span style=''>
+</span>44 <span style=''>        case Anno(e, ty) </span><span style='background: #AEF1AE'>=&gt; Anno(go(e), ty)</span><span style=''>
 </span>45 <span style=''>        // case Inst(e, ty) =&gt; Inst(go(e), ty)
 </span>46 <span style=''>
-</span>47 <span style=''>        case Pair(e1,e2) </span><span style='background: #F0ADAD'>=&gt; Pair(go(e1),go(e2))</span><span style=''>
-</span>48 <span style=''>        case First(e) </span><span style='background: #F0ADAD'>=&gt; First(go(e))</span><span style=''>
-</span>49 <span style=''>        case Second(e) </span><span style='background: #F0ADAD'>=&gt; Second(go(e))</span><span style=''>
+</span>47 <span style=''>        case Pair(e1,e2) </span><span style='background: #AEF1AE'>=&gt; Pair(go(e1),go(e2))</span><span style=''>
+</span>48 <span style=''>        case First(e) </span><span style='background: #AEF1AE'>=&gt; First(go(e))</span><span style=''>
+</span>49 <span style=''>        case Second(e) </span><span style='background: #AEF1AE'>=&gt; Second(go(e))</span><span style=''>
 </span>50 <span style=''>
-</span>51 <span style=''>        case Lambda(x,e) </span><span style='background: #F0ADAD'>=&gt; Lambda(swapVar(x,y,z),go(e))</span><span style=''>
-</span>52 <span style=''>        case Apply(e1,e2) </span><span style='background: #F0ADAD'>=&gt; Apply(go(e1),go(e2))</span><span style=''>
-</span>53 <span style=''>        case Rec(f,x,e) </span><span style='background: #F0ADAD'>=&gt; Rec(swapVar(f,y,z), swapVar(x,y,z), go(e))</span><span style=''>
+</span>51 <span style=''>        case Lambda(x,e) </span><span style='background: #AEF1AE'>=&gt; Lambda(swapVar(x,y,z),go(e))</span><span style=''>
+</span>52 <span style=''>        case Apply(e1,e2) </span><span style='background: #AEF1AE'>=&gt; Apply(go(e1),go(e2))</span><span style=''>
+</span>53 <span style=''>        case Rec(f,x,e) </span><span style='background: #AEF1AE'>=&gt; Rec(swapVar(f,y,z), swapVar(x,y,z), go(e))</span><span style=''>
 </span>54 <span style=''>
-</span>55 <span style=''>        case Record(es) </span><span style='background: #F0ADAD'>=&gt; Record(es.map((x, e) =&gt; (x, go(e))))</span><span style=''>
-</span>56 <span style=''>        case Proj(e, l) </span><span style='background: #F0ADAD'>=&gt; Proj(go(e), l)</span><span style=''>
+</span>55 <span style=''>        case Record(es) </span><span style='background: #AEF1AE'>=&gt; Record(es.map((x, e) =&gt; (x, go(e))))</span><span style=''>
+</span>56 <span style=''>        case Proj(e, l) </span><span style='background: #AEF1AE'>=&gt; Proj(go(e), l)</span><span style=''>
 </span>57 <span style=''>
-</span>58 <span style=''>        case Variant(l, e) </span><span style='background: #F0ADAD'>=&gt; Variant(l, go(e))</span><span style=''>
-</span>59 <span style=''>        case Case(e, cls) </span><span style='background: #F0ADAD'>=&gt; Case(go(e), cls.map((l, entry) =&gt;
-</span>60 <span style=''></span><span style='background: #F0ADAD'>          val (x, e) = entry
-</span>61 <span style=''></span><span style='background: #F0ADAD'>          (l, (swapVar(x,y,z), go(e)))))</span><span style=''>
+</span>58 <span style=''>        case Variant(l, e) </span><span style='background: #AEF1AE'>=&gt; Variant(l, go(e))</span><span style=''>
+</span>59 <span style=''>        case Case(e, cls) </span><span style='background: #AEF1AE'>=&gt; Case(go(e), cls.map((l, entry) =&gt;
+</span>60 <span style=''></span><span style='background: #AEF1AE'>          val (x, e) = entry
+</span>61 <span style=''></span><span style='background: #AEF1AE'>          (l, (swapVar(x,y,z), go(e)))))</span><span style=''>
 </span>62 <span style=''>
-</span>63 <span style=''>        case Bag(es) </span><span style='background: #F0ADAD'>=&gt; Bag(es.map(e =&gt; go(e)))</span><span style=''>
-</span>64 <span style=''>        case FlatMap(e1, e2) </span><span style='background: #F0ADAD'>=&gt; FlatMap(go(e1), go(e2))</span><span style=''>
-</span>65 <span style=''>        case When(e1, e2) </span><span style='background: #F0ADAD'>=&gt; When(go(e1), go(e2))</span><span style=''>
-</span>66 <span style=''>        case Sum(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Sum(go(e1), go(e2))</span><span style=''>
-</span>67 <span style=''>        case Diff(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Diff(go(e1), go(e2))</span><span style=''>
-</span>68 <span style=''>        case Comprehension(e, es) </span><span style='background: #F0ADAD'>=&gt; Comprehension(go(e), es.map(e =&gt; go(e)))</span><span style=''>
-</span>69 <span style=''>        case Bind(x, e) </span><span style='background: #F0ADAD'>=&gt; Bind(swapVar(x,y,z), go(e))</span><span style=''>
-</span>70 <span style=''>        case Guard(e) </span><span style='background: #F0ADAD'>=&gt; Guard(go(e))</span><span style=''>
-</span>71 <span style=''>        case CLet(x, e) </span><span style='background: #F0ADAD'>=&gt; CLet(swapVar(x,y,z), go(e))</span><span style=''>
-</span>72 <span style=''>        case Count(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Count(go(e1), go(e2))</span><span style=''>
+</span>63 <span style=''>        case Bag(es) </span><span style='background: #AEF1AE'>=&gt; Bag(es.map(e =&gt; go(e)))</span><span style=''>
+</span>64 <span style=''>        case FlatMap(e1, e2) </span><span style='background: #AEF1AE'>=&gt; FlatMap(go(e1), go(e2))</span><span style=''>
+</span>65 <span style=''>        case When(e1, e2) </span><span style='background: #AEF1AE'>=&gt; When(go(e1), go(e2))</span><span style=''>
+</span>66 <span style=''>        case Sum(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Sum(go(e1), go(e2))</span><span style=''>
+</span>67 <span style=''>        case Diff(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Diff(go(e1), go(e2))</span><span style=''>
+</span>68 <span style=''>        case Comprehension(e, es) </span><span style='background: #AEF1AE'>=&gt; Comprehension(go(e), es.map(e =&gt; go(e)))</span><span style=''>
+</span>69 <span style=''>        case Bind(x, e) </span><span style='background: #AEF1AE'>=&gt; Bind(swapVar(x,y,z), go(e))</span><span style=''>
+</span>70 <span style=''>        case Guard(e) </span><span style='background: #AEF1AE'>=&gt; Guard(go(e))</span><span style=''>
+</span>71 <span style=''>        case CLet(x, e) </span><span style='background: #AEF1AE'>=&gt; CLet(swapVar(x,y,z), go(e))</span><span style=''>
+</span>72 <span style=''>        case Count(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Count(go(e1), go(e2))</span><span style=''>
 </span>73 <span style=''>
-</span>74 <span style=''>        case LetPair(x1,x2,e1,e2) </span><span style='background: #F0ADAD'>=&gt;
-</span>75 <span style=''></span><span style='background: #F0ADAD'>          LetPair(swapVar(x1,y,z),swapVar(x2,y,z),go(e1),go(e2))</span><span style=''>
-</span>76 <span style=''>        case LetFun(f,ty,x,e1,e2) </span><span style='background: #F0ADAD'>=&gt;
-</span>77 <span style=''></span><span style='background: #F0ADAD'>          LetFun(swapVar(f,y,z),ty,swapVar(x,y,z),go(e1),go(e2))</span><span style=''>
-</span>78 <span style=''>        case LetRec(f,ty,x,e1,e2) </span><span style='background: #F0ADAD'>=&gt;
-</span>79 <span style=''></span><span style='background: #F0ADAD'>          LetRec(swapVar(f,y,z),ty,swapVar(x,y,z),go(e1),go(e2))</span><span style=''>
-</span>80 <span style=''>        case LetRecord(xs,e1,e2) </span><span style='background: #F0ADAD'>=&gt;
-</span>81 <span style=''></span><span style='background: #F0ADAD'>          LetRecord(xs.map((l,x) =&gt; (l, swapVar(x,y,z))),go(e1),go(e2))</span><span style=''>
+</span>74 <span style=''>        case LetPair(x1,x2,e1,e2) </span><span style='background: #AEF1AE'>=&gt;
+</span>75 <span style=''></span><span style='background: #AEF1AE'>          LetPair(swapVar(x1,y,z),swapVar(x2,y,z),go(e1),go(e2))</span><span style=''>
+</span>76 <span style=''>        case LetFun(f,ty,x,e1,e2) </span><span style='background: #AEF1AE'>=&gt;
+</span>77 <span style=''></span><span style='background: #AEF1AE'>          LetFun(swapVar(f,y,z),ty,swapVar(x,y,z),go(e1),go(e2))</span><span style=''>
+</span>78 <span style=''>        case LetRec(f,ty,x,e1,e2) </span><span style='background: #AEF1AE'>=&gt;
+</span>79 <span style=''></span><span style='background: #AEF1AE'>          LetRec(swapVar(f,y,z),ty,swapVar(x,y,z),go(e1),go(e2))</span><span style=''>
+</span>80 <span style=''>        case LetRecord(xs,e1,e2) </span><span style='background: #AEF1AE'>=&gt;
+</span>81 <span style=''></span><span style='background: #AEF1AE'>          LetRecord(xs.map((l,x) =&gt; (l, swapVar(x,y,z))),go(e1),go(e2))</span><span style=''>
 </span>82 <span style=''>        }
 </span>83 <span style=''>      </span><span style='background: #AEF1AE'>go(e)</span><span style=''>
 </span>84 <span style=''>
@@ -114,49 +114,49 @@
 </span>90 <span style=''>      </span><span style='background: #AEF1AE'>def go</span><span style=''>(e: Expr): Expr = e match {
 </span>91 <span style=''>        // Value must be closed
 </span>92 <span style=''>        case v: Value </span><span style='background: #AEF1AE'>=&gt; v</span><span style=''>
-</span>93 <span style=''>        case Unit </span><span style='background: #F0ADAD'>=&gt; Unit</span><span style=''>
+</span>93 <span style=''>        case Unit </span><span style='background: #AEF1AE'>=&gt; Unit</span><span style=''>
 </span>94 <span style=''>
 </span>95 <span style=''>        case Num(e) </span><span style='background: #AEF1AE'>=&gt; Num(e)</span><span style=''>
 </span>96 <span style=''>        case Plus(e1, e2)  </span><span style='background: #AEF1AE'>=&gt; Plus(go(e1), go(e2))</span><span style=''>
 </span>97 <span style=''>        case Minus(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Minus(go(e1), go(e2))</span><span style=''>
-</span>98 <span style=''>        case Times(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Times(go(e1), go(e2))</span><span style=''>
+</span>98 <span style=''>        case Times(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Times(go(e1), go(e2))</span><span style=''>
 </span>99 <span style=''>
-</span>100 <span style=''>        case Bool(b) </span><span style='background: #F0ADAD'>=&gt; Bool(b)</span><span style=''>
+</span>100 <span style=''>        case Bool(b) </span><span style='background: #AEF1AE'>=&gt; Bool(b)</span><span style=''>
 </span>101 <span style=''>        case Eq(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Eq(go(e1), go(e2))</span><span style=''>
-</span>102 <span style=''>        case Less(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Less(go(e1), go(e2))</span><span style=''>
+</span>102 <span style=''>        case Less(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Less(go(e1), go(e2))</span><span style=''>
 </span>103 <span style=''>        case IfThenElse(e, e1, e2) </span><span style='background: #AEF1AE'>=&gt; IfThenElse(go(e), go(e1), go(e2))</span><span style=''>
 </span>104 <span style=''>
-</span>105 <span style=''>        case Str(s) </span><span style='background: #F0ADAD'>=&gt; Str(s)</span><span style=''>
-</span>106 <span style=''>        case Length(e) </span><span style='background: #F0ADAD'>=&gt; Length(go(e))</span><span style=''>
-</span>107 <span style=''>        case Index(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Index(go(e1), go(e2))</span><span style=''>
-</span>108 <span style=''>        case Concat(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Concat(go(e1), go(e2))</span><span style=''>
+</span>105 <span style=''>        case Str(s) </span><span style='background: #AEF1AE'>=&gt; Str(s)</span><span style=''>
+</span>106 <span style=''>        case Length(e) </span><span style='background: #AEF1AE'>=&gt; Length(go(e))</span><span style=''>
+</span>107 <span style=''>        case Index(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Index(go(e1), go(e2))</span><span style=''>
+</span>108 <span style=''>        case Concat(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Concat(go(e1), go(e2))</span><span style=''>
 </span>109 <span style=''>
 </span>110 <span style=''>        case Var(y) </span><span style='background: #AEF1AE'>=&gt;
 </span>111 <span style=''></span><span style='background: #AEF1AE'>          if x == y then e2 else Var(y)</span><span style=''>
 </span>112 <span style=''>        case Let(y, e1, e2) =&gt;
-</span>113 <span style=''>          </span><span style='background: #F0ADAD'>val fresh_y = generator.genVar(y)
-</span>114 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e2 = swap(e2, y, fresh_y)
-</span>115 <span style=''></span><span style='background: #F0ADAD'>          Let(fresh_y, go(e1), go(fresh_e2))</span><span style=''>
+</span>113 <span style=''>          </span><span style='background: #AEF1AE'>val fresh_y = generator.genVar(y)
+</span>114 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e2 = swap(e2, y, fresh_y)
+</span>115 <span style=''></span><span style='background: #AEF1AE'>          Let(fresh_y, go(e1), go(fresh_e2))</span><span style=''>
 </span>116 <span style=''>
-</span>117 <span style=''>        case Anno(e, ty) </span><span style='background: #F0ADAD'>=&gt; Anno(go(e), ty)</span><span style=''>
+</span>117 <span style=''>        case Anno(e, ty) </span><span style='background: #AEF1AE'>=&gt; Anno(go(e), ty)</span><span style=''>
 </span>118 <span style=''>        // case Inst(e, ty) =&gt; Inst(go(e), ty)
 </span>119 <span style=''>
 </span>120 <span style=''>        case Lambda(x, e) =&gt;
-</span>121 <span style=''>          </span><span style='background: #F0ADAD'>val fresh_x = generator.genVar(x)
-</span>122 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e = swap(e, x, fresh_x)
-</span>123 <span style=''></span><span style='background: #F0ADAD'>          Lambda(fresh_x, go(fresh_e))</span><span style=''>
+</span>121 <span style=''>          </span><span style='background: #AEF1AE'>val fresh_x = generator.genVar(x)
+</span>122 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e = swap(e, x, fresh_x)
+</span>123 <span style=''></span><span style='background: #AEF1AE'>          Lambda(fresh_x, go(fresh_e))</span><span style=''>
 </span>124 <span style=''>        case Apply(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Apply(go(e1), go(e2))</span><span style=''>
 </span>125 <span style=''>        case Rec(f, x, e) =&gt;
-</span>126 <span style=''>          </span><span style='background: #F0ADAD'>val fresh_f = generator.genVar(f)
-</span>127 <span style=''></span><span style='background: #F0ADAD'>          val fresh_x = generator.genVar(x)
-</span>128 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e = swap(swap(e, x, fresh_x), f, fresh_f)
-</span>129 <span style=''></span><span style='background: #F0ADAD'>          Rec(fresh_f, fresh_x, go(fresh_e))</span><span style=''>
+</span>126 <span style=''>          </span><span style='background: #AEF1AE'>val fresh_f = generator.genVar(f)
+</span>127 <span style=''></span><span style='background: #AEF1AE'>          val fresh_x = generator.genVar(x)
+</span>128 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e = swap(swap(e, x, fresh_x), f, fresh_f)
+</span>129 <span style=''></span><span style='background: #AEF1AE'>          Rec(fresh_f, fresh_x, go(fresh_e))</span><span style=''>
 </span>130 <span style=''>
-</span>131 <span style=''>        case Pair(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Pair(go(e1), go(e2))</span><span style=''>
-</span>132 <span style=''>        case First(e) </span><span style='background: #F0ADAD'>=&gt; First(go(e))</span><span style=''>
-</span>133 <span style=''>        case Second(e) </span><span style='background: #F0ADAD'>=&gt; Second(go(e))</span><span style=''>
+</span>131 <span style=''>        case Pair(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Pair(go(e1), go(e2))</span><span style=''>
+</span>132 <span style=''>        case First(e) </span><span style='background: #AEF1AE'>=&gt; First(go(e))</span><span style=''>
+</span>133 <span style=''>        case Second(e) </span><span style='background: #AEF1AE'>=&gt; Second(go(e))</span><span style=''>
 </span>134 <span style=''>
-</span>135 <span style=''>        case Record(es) </span><span style='background: #F0ADAD'>=&gt; Record(es.map((l, e) =&gt; (l, go(e))))</span><span style=''>
+</span>135 <span style=''>        case Record(es) </span><span style='background: #AEF1AE'>=&gt; Record(es.map((l, e) =&gt; (l, go(e))))</span><span style=''>
 </span>136 <span style=''>        case Proj(e, l) </span><span style='background: #AEF1AE'>=&gt; Proj(go(e), l)</span><span style=''>
 </span>137 <span style=''>
 </span>138 <span style=''>        case Variant(l, e) </span><span style='background: #AEF1AE'>=&gt; Variant(l, go(e))</span><span style=''>
@@ -168,25 +168,25 @@
 </span>144 <span style=''>
 </span>145 <span style=''>        case Bag(es) </span><span style='background: #AEF1AE'>=&gt; Bag(es.map(e =&gt; go(e)))</span><span style=''>
 </span>146 <span style=''>        case FlatMap(e1, e2) </span><span style='background: #AEF1AE'>=&gt; FlatMap(go(e1), go(e2))</span><span style=''>
-</span>147 <span style=''>        case When(e1, e2) </span><span style='background: #F0ADAD'>=&gt; When(go(e1), go(e2))</span><span style=''>
-</span>148 <span style=''>        case Sum(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Sum(go(e1), go(e2))</span><span style=''>
-</span>149 <span style=''>        case Diff(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Diff(go(e1), go(e2))</span><span style=''>
+</span>147 <span style=''>        case When(e1, e2) </span><span style='background: #AEF1AE'>=&gt; When(go(e1), go(e2))</span><span style=''>
+</span>148 <span style=''>        case Sum(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Sum(go(e1), go(e2))</span><span style=''>
+</span>149 <span style=''>        case Diff(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Diff(go(e1), go(e2))</span><span style=''>
 </span>150 <span style=''>        case Comprehension(e, es) =&gt;
-</span>151 <span style=''>          </span><span style='background: #F0ADAD'>def help(es: List[Expr]): List[Expr] = es match
-</span>152 <span style=''></span><span style='background: #F0ADAD'>            case Nil =&gt; Nil
-</span>153 <span style=''></span><span style='background: #F0ADAD'>            case p :: ps =&gt; p match {
-</span>154 <span style=''></span><span style='background: #F0ADAD'>              case Bind(x, e) =&gt;
-</span>155 <span style=''></span><span style='background: #F0ADAD'>                val fresh_x = generator.genVar(x)
-</span>156 <span style=''></span><span style='background: #F0ADAD'>                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))
-</span>157 <span style=''></span><span style='background: #F0ADAD'>                Bind(fresh_x, go(e)) :: help(fresh_ps)
-</span>158 <span style=''></span><span style='background: #F0ADAD'>              case CLet(x, e) =&gt;
-</span>159 <span style=''></span><span style='background: #F0ADAD'>                val fresh_x = generator.genVar(x)
-</span>160 <span style=''></span><span style='background: #F0ADAD'>                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))
-</span>161 <span style=''></span><span style='background: #F0ADAD'>                CLet(fresh_x, go(e)) :: help(fresh_ps)
-</span>162 <span style=''></span><span style='background: #F0ADAD'>              case Guard(e) =&gt; Guard(go(e)) :: help(ps)
-</span>163 <span style=''></span><span style='background: #F0ADAD'>              case _ =&gt; sys.error(&quot;subst: unexpected pattern in comprehension&quot;)
-</span>164 <span style=''></span><span style='background: #F0ADAD'>            }
-</span>165 <span style=''></span><span style='background: #F0ADAD'>          Comprehension(go(e), help(es))</span><span style=''>
+</span>151 <span style=''>          </span><span style='background: #AEF1AE'>def help(es: List[Expr]): List[Expr] = es match
+</span>152 <span style=''></span><span style='background: #AEF1AE'>            case Nil =&gt; Nil
+</span>153 <span style=''></span><span style='background: #AEF1AE'>            case p :: ps =&gt; p match {
+</span>154 <span style=''></span><span style='background: #AEF1AE'>              case Bind(x, e) =&gt;
+</span>155 <span style=''></span><span style='background: #AEF1AE'>                val fresh_x = generator.genVar(x)
+</span>156 <span style=''></span><span style='background: #AEF1AE'>                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))
+</span>157 <span style=''></span><span style='background: #AEF1AE'>                Bind(fresh_x, go(e)) :: help(fresh_ps)
+</span>158 <span style=''></span><span style='background: #AEF1AE'>              case CLet(x, e) =&gt;
+</span>159 <span style=''></span><span style='background: #AEF1AE'>                val fresh_x = generator.genVar(x)
+</span>160 <span style=''></span><span style='background: #AEF1AE'>                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))
+</span>161 <span style=''></span><span style='background: #AEF1AE'>                CLet(fresh_x, go(e)) :: help(fresh_ps)
+</span>162 <span style=''></span><span style='background: #AEF1AE'>              case Guard(e) =&gt; Guard(go(e)) :: help(ps)
+</span>163 <span style=''></span><span style='background: #AEF1AE'>              case _ =&gt; sys.error(&quot;subst: unexpected pattern in comprehension&quot;)
+</span>164 <span style=''></span><span style='background: #AEF1AE'>            }
+</span>165 <span style=''></span><span style='background: #AEF1AE'>          Comprehension(go(e), help(es))</span><span style=''>
 </span>166 <span style=''>        // case Bind(x, e) =&gt;
 </span>167 <span style=''>        //   val fresh_x = generator.genVar(x)
 </span>168 <span style=''>        //   val fresh_e = swap(e, x, fresh_x)
@@ -196,33 +196,33 @@
 </span>172 <span style=''>        //   val fresh_e = swap(e, x, fresh_x)
 </span>173 <span style=''>        //   CLet(fresh_x, go(fresh_e))
 </span>174 <span style=''>        // case Guard(e) =&gt; Guard(go(e))
-</span>175 <span style=''>        case Bind(_, _) </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;subst: unexpected Bind&quot;)</span><span style=''>
-</span>176 <span style=''>        case CLet(_, _) </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;subst: unexpected CLet&quot;)</span><span style=''>
-</span>177 <span style=''>        case Guard(_) </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;subst: unexpected Guard&quot;)</span><span style=''>
-</span>178 <span style=''>        case Count(e1, e2) </span><span style='background: #F0ADAD'>=&gt; Count(go(e1), go(e2))</span><span style=''>
+</span>175 <span style=''>        case Bind(_, _) </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;subst: unexpected Bind&quot;)</span><span style=''>
+</span>176 <span style=''>        case CLet(_, _) </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;subst: unexpected CLet&quot;)</span><span style=''>
+</span>177 <span style=''>        case Guard(_) </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;subst: unexpected Guard&quot;)</span><span style=''>
+</span>178 <span style=''>        case Count(e1, e2) </span><span style='background: #AEF1AE'>=&gt; Count(go(e1), go(e2))</span><span style=''>
 </span>179 <span style=''>
 </span>180 <span style=''>        case LetPair(x1,x2,e1,e2) =&gt;
-</span>181 <span style=''>          </span><span style='background: #F0ADAD'>val fresh_x1 = generator.genVar(x1)
-</span>182 <span style=''></span><span style='background: #F0ADAD'>          val fresh_x2 = generator.genVar(x2)
-</span>183 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e2 = swap(swap(e2,x1,fresh_x1),x2,fresh_x2)
-</span>184 <span style=''></span><span style='background: #F0ADAD'>          LetPair(fresh_x1,fresh_x2,go(e1),go(fresh_e2))</span><span style=''>
+</span>181 <span style=''>          </span><span style='background: #AEF1AE'>val fresh_x1 = generator.genVar(x1)
+</span>182 <span style=''></span><span style='background: #AEF1AE'>          val fresh_x2 = generator.genVar(x2)
+</span>183 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e2 = swap(swap(e2,x1,fresh_x1),x2,fresh_x2)
+</span>184 <span style=''></span><span style='background: #AEF1AE'>          LetPair(fresh_x1,fresh_x2,go(e1),go(fresh_e2))</span><span style=''>
 </span>185 <span style=''>        case LetFun(f,ty,x,e1,e2) =&gt;
-</span>186 <span style=''>          </span><span style='background: #F0ADAD'>val fresh_f = generator.genVar(f)
-</span>187 <span style=''></span><span style='background: #F0ADAD'>          val fresh_x = generator.genVar(x)
-</span>188 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e1 = swap(e1,x,fresh_x)
-</span>189 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e2 = swap(e2,f,fresh_f)
-</span>190 <span style=''></span><span style='background: #F0ADAD'>          LetFun(fresh_f,ty,fresh_x,go(fresh_e1),go(fresh_e2))</span><span style=''>
+</span>186 <span style=''>          </span><span style='background: #AEF1AE'>val fresh_f = generator.genVar(f)
+</span>187 <span style=''></span><span style='background: #AEF1AE'>          val fresh_x = generator.genVar(x)
+</span>188 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e1 = swap(e1,x,fresh_x)
+</span>189 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e2 = swap(e2,f,fresh_f)
+</span>190 <span style=''></span><span style='background: #AEF1AE'>          LetFun(fresh_f,ty,fresh_x,go(fresh_e1),go(fresh_e2))</span><span style=''>
 </span>191 <span style=''>        case LetRec(f,ty,x,e1,e2) =&gt;
-</span>192 <span style=''>          </span><span style='background: #F0ADAD'>val fresh_f = generator.genVar(f)
-</span>193 <span style=''></span><span style='background: #F0ADAD'>          val fresh_x = generator.genVar(x)
-</span>194 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e1 = swap(swap(e1,x,fresh_x),f,fresh_f)
-</span>195 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e2 = swap(e2,f,fresh_f)
-</span>196 <span style=''></span><span style='background: #F0ADAD'>          LetRec(fresh_f,ty,fresh_x,go(fresh_e1),go(fresh_e2))</span><span style=''>
+</span>192 <span style=''>          </span><span style='background: #AEF1AE'>val fresh_f = generator.genVar(f)
+</span>193 <span style=''></span><span style='background: #AEF1AE'>          val fresh_x = generator.genVar(x)
+</span>194 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e1 = swap(swap(e1,x,fresh_x),f,fresh_f)
+</span>195 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e2 = swap(e2,f,fresh_f)
+</span>196 <span style=''></span><span style='background: #AEF1AE'>          LetRec(fresh_f,ty,fresh_x,go(fresh_e1),go(fresh_e2))</span><span style=''>
 </span>197 <span style=''>        case LetRecord(xs,e1,e2) =&gt;
-</span>198 <span style=''>          </span><span style='background: #F0ADAD'>val swaps = xs.map{ case (l,x) =&gt; (l,(x,generator.genVar(x)))}
-</span>199 <span style=''></span><span style='background: #F0ADAD'>          val fresh_e2 = swaps.foldLeft(e2){case (e,(l,(x,fx))) =&gt; swap(e,x,fx)}
-</span>200 <span style=''></span><span style='background: #F0ADAD'>          val fresh_xs = swaps.map{ case (l,(x,fresh_x)) =&gt; (l,fresh_x)}
-</span>201 <span style=''></span><span style='background: #F0ADAD'>          LetRecord(fresh_xs,go(e1),go(fresh_e2))</span><span style=''>
+</span>198 <span style=''>          </span><span style='background: #AEF1AE'>val swaps = xs.map{ case (l,x) =&gt; (l,(x,generator.genVar(x)))}
+</span>199 <span style=''></span><span style='background: #AEF1AE'>          val fresh_e2 = swaps.foldLeft(e2){case (e,(l,(x,fx))) =&gt; swap(e,x,fx)}
+</span>200 <span style=''></span><span style='background: #AEF1AE'>          val fresh_xs = swaps.map{ case (l,(x,fresh_x)) =&gt; (l,fresh_x)}
+</span>201 <span style=''></span><span style='background: #AEF1AE'>          LetRecord(fresh_xs,go(e1),go(fresh_e2))</span><span style=''>
 </span>202 <span style=''>      }
 </span>203 <span style=''>      </span><span style='background: #AEF1AE'>go(e1)</span><span style=''>
 </span>204 <span style=''>    // END ANSWER
@@ -514,116 +514,7 @@
 </span>490 <span style=''></span><span style='background: #F0ADAD'>      sys.error(&quot;eval: comprehension should be desugared&quot;)</span><span style=''>
 </span>491 <span style=''>  // END ANSWER
 </span>492 <span style=''>  }
-</span>493 <span style=''>
-</span>494 <span style=''>  /////////////////////////////////////////////////////////
-</span>495 <span style=''>  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
-</span>496 <span style=''>  // THE REST OF THIS FILE SHOULD NOT NEED TO BE CHANGED //
-</span>497 <span style=''>  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
-</span>498 <span style=''>  /////////////////////////////////////////////////////////
-</span>499 <span style=''>  
-</span>500 <span style=''>  // ======================================================================
-</span>501 <span style=''>  // Some simple programs
-</span>502 <span style=''>  // ======================================================================
-</span>503 <span style=''>
-</span>504 <span style=''>  // The following examples illustrate how to embed Frog source code into
-</span>505 <span style=''>  // Scala using multi-line comments, and parse it using parser.parseStr.
-</span>506 <span style=''>
-</span>507 <span style=''>  // Example 1: the swap function
-</span>508 <span style=''>  </span><span style='background: #F0ADAD'>def example1</span><span style=''>: Expr = </span><span style='background: #F0ADAD'>parser.parseStr(&quot;&quot;&quot;
-</span>509 <span style=''></span><span style='background: #F0ADAD'>    let swap = \ x . (snd(x), fst(x)) in
-</span>510 <span style=''></span><span style='background: #F0ADAD'>    swap(42,17)
-</span>511 <span style=''></span><span style='background: #F0ADAD'>    &quot;&quot;&quot;)</span><span style=''>
-</span>512 <span style=''>
-</span>513 <span style=''>  val parser = </span><span style='background: #AEF1AE'>new Parser</span><span style=''>
-</span>514 <span style=''>
-</span>515 <span style=''>  // ======================================================================
-</span>516 <span style=''>  // Main
-</span>517 <span style=''>  // ======================================================================
-</span>518 <span style=''>
-</span>519 <span style=''>  object Main {
-</span>520 <span style=''>    </span><span style='background: #F0ADAD'>def typecheck</span><span style=''>(ast: Expr):Type =
-</span>521 <span style=''>      </span><span style='background: #F0ADAD'>Typer.tyInfer(ListMap(), ast)</span><span style=''>;
-</span>522 <span style=''>
-</span>523 <span style=''>    </span><span style='background: #F0ADAD'>def evaluate</span><span style=''>(ast: Expr):Value =
-</span>524 <span style=''>      </span><span style='background: #F0ADAD'>eval(ast)</span><span style=''>
-</span>525 <span style=''>
-</span>526 <span style=''>    </span><span style='background: #F0ADAD'>def showResult</span><span style=''>(ast: Expr): Unit = {
-</span>527 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;AST:  &quot; + ast.toString + &quot;\n&quot;)</span><span style=''>
-</span>528 <span style=''>
-</span>529 <span style=''>      try </span><span style='background: #F0ADAD'>{
-</span>530 <span style=''></span><span style='background: #F0ADAD'>        print(&quot;Type Checking...&quot;)
-</span>531 <span style=''></span><span style='background: #F0ADAD'>        val ty = typecheck(ast)
-</span>532 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Done!&quot;)
-</span>533 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Type of Expression: &quot; + ty.toString + &quot;\n&quot;) ;
-</span>534 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style=''> catch {
-</span>535 <span style=''>          case e:Throwable </span><span style='background: #F0ADAD'>=&gt; println(&quot;Error: &quot; + e)</span><span style=''>
-</span>536 <span style=''>      }
-</span>537 <span style=''>      try </span><span style='background: #F0ADAD'>{
-</span>538 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Desugaring...&quot;)
-</span>539 <span style=''></span><span style='background: #F0ADAD'>        val core_ast = desugar(ast)
-</span>540 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Done!&quot;)
-</span>541 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Desugared AST: &quot; + core_ast.toString + &quot;\n&quot;) ;
-</span>542 <span style=''></span><span style='background: #F0ADAD'>
-</span>543 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Evaluating...&quot;)
-</span>544 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Result: &quot; + evaluate(core_ast))
-</span>545 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style=''> catch {
-</span>546 <span style=''>        case e:Throwable =&gt;
-</span>547 <span style=''>          </span><span style='background: #F0ADAD'>println(&quot;Error: &quot; + e)
-</span>548 <span style=''></span><span style='background: #F0ADAD'>          println(&quot;Evaluating raw AST...&quot;)
-</span>549 <span style=''></span><span style='background: #F0ADAD'>          println(&quot;Result: &quot; + evaluate(ast))</span><span style=''>
-</span>550 <span style=''>      }
-</span>551 <span style=''>    }
-</span>552 <span style=''>
-</span>553 <span style=''>    </span><span style='background: #F0ADAD'>def start</span><span style=''>(): Unit = {
-</span>554 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;Welcome to Frog! (V1.0, October 22, 2024)&quot;)</span><span style=''>
-</span>555 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;Enter expressions to evaluate, :load &lt;filename.fish&gt; to load a file, or :quit to quit.&quot;)</span><span style=''>
-</span>556 <span style=''>      </span><span style='background: #F0ADAD'>println(&quot;This REPL can only read one line at a time, use :load to load larger expressions.&quot;)</span><span style=''>
-</span>557 <span style=''>      </span><span style='background: #F0ADAD'>repl()</span><span style=''>
-</span>558 <span style=''>    }
-</span>559 <span style=''>
-</span>560 <span style=''>    </span><span style='background: #F0ADAD'>@tailrec
-</span>561 <span style=''></span><span style='background: #F0ADAD'>    def repl</span><span style=''>(): Unit = {
-</span>562 <span style=''>      </span><span style='background: #F0ADAD'>print(&quot;Frog&gt; &quot;)</span><span style=''>
-</span>563 <span style=''>      val input = </span><span style='background: #F0ADAD'>scala.io.StdIn.readLine()</span><span style=''>
-</span>564 <span style=''>      if(input == &quot;:quit&quot;) </span><span style='background: #F0ADAD'>{
-</span>565 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Goodbye!&quot;)
-</span>566 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style=''>
-</span>567 <span style=''>      else </span><span style='background: #F0ADAD'>if (input.startsWith(&quot;:load&quot;)) {
-</span>568 <span style=''></span><span style='background: #F0ADAD'>        try {
-</span>569 <span style=''></span><span style='background: #F0ADAD'>          val ast = parser.parse(input.substring(6))
-</span>570 <span style=''></span><span style='background: #F0ADAD'>          showResult(ast)
-</span>571 <span style=''></span><span style='background: #F0ADAD'>        } catch {
-</span>572 <span style=''></span><span style='background: #F0ADAD'>          case e:Throwable =&gt; println(&quot;Error: &quot; + e)
-</span>573 <span style=''></span><span style='background: #F0ADAD'>        }
-</span>574 <span style=''></span><span style='background: #F0ADAD'>        repl()
-</span>575 <span style=''></span><span style='background: #F0ADAD'>      } else {
-</span>576 <span style=''></span><span style='background: #F0ADAD'>        try {
-</span>577 <span style=''></span><span style='background: #F0ADAD'>          val ast = parser.parseStr(input)
-</span>578 <span style=''></span><span style='background: #F0ADAD'>          showResult(ast)
-</span>579 <span style=''></span><span style='background: #F0ADAD'>        } catch {
-</span>580 <span style=''></span><span style='background: #F0ADAD'>          case e:Throwable =&gt; println(&quot;Error: &quot; + e)
-</span>581 <span style=''></span><span style='background: #F0ADAD'>        }
-</span>582 <span style=''></span><span style='background: #F0ADAD'>        repl()
-</span>583 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style=''>
-</span>584 <span style=''>    }
-</span>585 <span style=''>  }
-</span>586 <span style=''>
-</span>587 <span style=''>  </span><span style='background: #F0ADAD'>def main</span><span style=''>( args:Array[String] ):Unit = {
-</span>588 <span style=''>    if(</span><span style='background: #F0ADAD'>args.length</span><span style=''> == 0) </span><span style='background: #F0ADAD'>{
-</span>589 <span style=''></span><span style='background: #F0ADAD'>      Main.start()
-</span>590 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''> else </span><span style='background: #F0ADAD'>{
-</span>591 <span style=''></span><span style='background: #F0ADAD'>      try {
-</span>592 <span style=''></span><span style='background: #F0ADAD'>        print(&quot;Parsing...&quot;)
-</span>593 <span style=''></span><span style='background: #F0ADAD'>        val ast = parser.parse(args.head)
-</span>594 <span style=''></span><span style='background: #F0ADAD'>        println(&quot;Done!&quot;)
-</span>595 <span style=''></span><span style='background: #F0ADAD'>        Main.showResult(ast)
-</span>596 <span style=''></span><span style='background: #F0ADAD'>      } catch {
-</span>597 <span style=''></span><span style='background: #F0ADAD'>        case e:Throwable =&gt; println(&quot;Error: &quot; + e)
-</span>598 <span style=''></span><span style='background: #F0ADAD'>      }
-</span>599 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
-</span>600 <span style=''>  }
-</span>601 <span style=''>
-</span>602 <span style=''>}
+</span>493 <span style=''>}
 </span></pre>
           </div>
           <div class="tab-pane" id="statementlist">
@@ -729,7 +620,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; v
         </td>
       </tr><tr>
@@ -753,7 +644,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Unit
         </td>
       </tr><tr>
@@ -801,7 +692,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -825,7 +716,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -849,7 +740,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Plus(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -873,7 +764,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -897,7 +788,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -921,7 +812,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Minus(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -945,7 +836,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -969,7 +860,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -993,7 +884,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Times(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -1017,7 +908,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Bool(b)
         </td>
       </tr><tr>
@@ -1041,7 +932,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1065,7 +956,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Eq(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -1089,7 +980,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1113,7 +1004,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1137,7 +1028,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Less(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -1161,7 +1052,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1185,7 +1076,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -1209,7 +1100,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; IfThenElse(go(e), go(e1), go(e2))
         </td>
       </tr><tr>
@@ -1233,7 +1124,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1257,7 +1148,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1281,7 +1172,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Str(s)
         </td>
       </tr><tr>
@@ -1305,7 +1196,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Length(go(e))
         </td>
       </tr><tr>
@@ -1329,7 +1220,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -1353,7 +1244,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Index(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -1377,7 +1268,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1401,7 +1292,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1425,7 +1316,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Concat(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -1449,7 +1340,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1473,7 +1364,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1545,7 +1436,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Let(swapVar(x,y,z),go(e1),go(e2))
         </td>
       </tr><tr>
@@ -1569,7 +1460,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -1593,7 +1484,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1617,7 +1508,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1641,7 +1532,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Anno(go(e), ty)
         </td>
       </tr><tr>
@@ -1665,7 +1556,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -1689,7 +1580,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -1713,7 +1604,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Pair(go(e1),go(e2))
         </td>
       </tr><tr>
@@ -1737,7 +1628,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1761,7 +1652,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -1785,7 +1676,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; First(go(e))
         </td>
       </tr><tr>
@@ -1809,7 +1700,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Second(go(e))
         </td>
       </tr><tr>
@@ -1833,7 +1724,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -1857,7 +1748,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Lambda(swapVar(x,y,z),go(e))
         </td>
       </tr><tr>
@@ -1881,7 +1772,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -1905,7 +1796,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -1929,7 +1820,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Apply(go(e1),go(e2))
         </td>
       </tr><tr>
@@ -1953,7 +1844,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -1977,7 +1868,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -2001,7 +1892,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2025,7 +1916,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -2049,7 +1940,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Rec(swapVar(f,y,z), swapVar(x,y,z), go(e))
         </td>
       </tr><tr>
@@ -2073,7 +1964,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(f,y,z)
         </td>
       </tr><tr>
@@ -2097,7 +1988,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2121,7 +2012,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           es.map((x, e) =&gt; (x, go(e)))
         </td>
       </tr><tr>
@@ -2145,7 +2036,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Record(es.map((x, e) =&gt; (x, go(e))))
         </td>
       </tr><tr>
@@ -2169,7 +2060,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Proj(go(e), l)
         </td>
       </tr><tr>
@@ -2193,7 +2084,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2217,7 +2108,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Variant(l, go(e))
         </td>
       </tr><tr>
@@ -2241,7 +2132,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2265,7 +2156,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2289,7 +2180,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Case(go(e), cls.map((l, entry) =&gt;\n          val (x, e) = entry\n          (l, (swapVar(x,y,z), go(e)))))
         </td>
       </tr><tr>
@@ -2313,7 +2204,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           cls.map((l, entry) =&gt;\n          val (x, e) = entry\n          (l, (swapVar(x,y,z), go(e))))
         </td>
       </tr><tr>
@@ -2337,7 +2228,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           
         </td>
       </tr><tr>
@@ -2361,7 +2252,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -2385,7 +2276,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2409,7 +2300,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           es.map(e =&gt; go(e))
         </td>
       </tr><tr>
@@ -2433,7 +2324,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Bag(es.map(e =&gt; go(e)))
         </td>
       </tr><tr>
@@ -2457,7 +2348,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2481,7 +2372,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -2505,7 +2396,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; FlatMap(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -2529,7 +2420,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -2553,7 +2444,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -2577,7 +2468,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; When(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -2601,7 +2492,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -2625,7 +2516,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -2649,7 +2540,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Sum(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -2673,7 +2564,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -2697,7 +2588,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -2721,7 +2612,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Diff(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -2745,7 +2636,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -2769,7 +2660,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Comprehension(go(e), es.map(e =&gt; go(e)))
         </td>
       </tr><tr>
@@ -2793,7 +2684,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2817,7 +2708,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2841,7 +2732,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           es.map(e =&gt; go(e))
         </td>
       </tr><tr>
@@ -2865,7 +2756,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Bind(swapVar(x,y,z), go(e))
         </td>
       </tr><tr>
@@ -2889,7 +2780,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2913,7 +2804,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -2937,7 +2828,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Guard(go(e))
         </td>
       </tr><tr>
@@ -2961,7 +2852,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -2985,7 +2876,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -3009,7 +2900,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; CLet(swapVar(x,y,z), go(e))
         </td>
       </tr><tr>
@@ -3033,7 +2924,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -3057,7 +2948,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -3081,7 +2972,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Count(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -3105,7 +2996,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -3129,7 +3020,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          LetPair(swapVar(x1,y,z),swapVar(x2,y,z),go(e1),go(e2))
         </td>
       </tr><tr>
@@ -3153,7 +3044,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x1,y,z)
         </td>
       </tr><tr>
@@ -3177,7 +3068,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -3201,7 +3092,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x2,y,z)
         </td>
       </tr><tr>
@@ -3225,7 +3116,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -3249,7 +3140,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          LetFun(swapVar(f,y,z),ty,swapVar(x,y,z),go(e1),go(e2))
         </td>
       </tr><tr>
@@ -3273,7 +3164,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -3297,7 +3188,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(f,y,z)
         </td>
       </tr><tr>
@@ -3321,7 +3212,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -3345,7 +3236,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -3369,7 +3260,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          LetRec(swapVar(f,y,z),ty,swapVar(x,y,z),go(e1),go(e2))
         </td>
       </tr><tr>
@@ -3393,7 +3284,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -3417,7 +3308,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(f,y,z)
         </td>
       </tr><tr>
@@ -3441,7 +3332,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -3465,7 +3356,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -3489,7 +3380,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          LetRecord(xs.map((l,x) =&gt; (l, swapVar(x,y,z))),go(e1),go(e2))
         </td>
       </tr><tr>
@@ -3513,7 +3404,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           xs.map((l,x) =&gt; (l, swapVar(x,y,z)))
         </td>
       </tr><tr>
@@ -3537,7 +3428,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -3561,7 +3452,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -3585,7 +3476,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swapVar(x,y,z)
         </td>
       </tr><tr>
@@ -3705,7 +3596,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Unit
         </td>
       </tr><tr>
@@ -3897,7 +3788,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -3921,7 +3812,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -3945,7 +3836,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Times(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -3969,7 +3860,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Bool(b)
         </td>
       </tr><tr>
@@ -4065,7 +3956,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Less(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -4089,7 +3980,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -4113,7 +4004,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -4233,7 +4124,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Str(s)
         </td>
       </tr><tr>
@@ -4257,7 +4148,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -4281,7 +4172,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Length(go(e))
         </td>
       </tr><tr>
@@ -4305,7 +4196,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Index(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -4329,7 +4220,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -4353,7 +4244,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -4377,7 +4268,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Concat(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -4401,7 +4292,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -4425,7 +4316,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -4521,7 +4412,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_y = generator.genVar(y)\n          val fresh_e2 = swap(e2, y, fresh_y)\n          Let(fresh_y, go(e1), go(fresh_e2))
         </td>
       </tr><tr>
@@ -4545,7 +4436,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(y)
         </td>
       </tr><tr>
@@ -4569,7 +4460,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e2, y, fresh_y)
         </td>
       </tr><tr>
@@ -4593,7 +4484,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -4617,7 +4508,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e2)
         </td>
       </tr><tr>
@@ -4641,7 +4532,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Anno(go(e), ty)
         </td>
       </tr><tr>
@@ -4665,7 +4556,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -4689,7 +4580,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -4713,7 +4604,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_x = generator.genVar(x)\n          val fresh_e = swap(e, x, fresh_x)\n          Lambda(fresh_x, go(fresh_e))
         </td>
       </tr><tr>
@@ -4737,7 +4628,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e, x, fresh_x)
         </td>
       </tr><tr>
@@ -4761,7 +4652,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e)
         </td>
       </tr><tr>
@@ -4857,7 +4748,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_f = generator.genVar(f)\n          val fresh_x = generator.genVar(x)\n          val fresh_e = swap(swap(e, x, fresh_x), f, fresh_f)\n          Rec(fresh_f, fresh_x, go(fresh_e))
         </td>
       </tr><tr>
@@ -4881,7 +4772,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(f)
         </td>
       </tr><tr>
@@ -4905,7 +4796,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -4929,7 +4820,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(swap(e, x, fresh_x), f, fresh_f)
         </td>
       </tr><tr>
@@ -4953,7 +4844,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e, x, fresh_x)
         </td>
       </tr><tr>
@@ -4977,7 +4868,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e)
         </td>
       </tr><tr>
@@ -5001,7 +4892,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -5025,7 +4916,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Pair(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -5049,7 +4940,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -5073,7 +4964,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; First(go(e))
         </td>
       </tr><tr>
@@ -5097,7 +4988,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -5121,7 +5012,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -5145,7 +5036,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Second(go(e))
         </td>
       </tr><tr>
@@ -5169,7 +5060,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Record(es.map((l, e) =&gt; (l, go(e))))
         </td>
       </tr><tr>
@@ -5193,7 +5084,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -5217,7 +5108,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           es.map((l, e) =&gt; (l, go(e)))
         </td>
       </tr><tr>
@@ -5649,7 +5540,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -5673,7 +5564,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; When(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -5697,7 +5588,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -5721,7 +5612,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Sum(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -5745,7 +5636,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -5769,7 +5660,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -5793,7 +5684,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Diff(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -5817,7 +5708,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -5841,7 +5732,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -5865,7 +5756,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           def help
         </td>
       </tr><tr>
@@ -5889,7 +5780,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           def help(es: List[Expr]): List[Expr] = es match\n            case Nil =&gt; Nil\n            case p :: ps =&gt; p match {\n              case Bind(x, e) =&gt;\n                val fresh_x = generator.genVar(x)\n                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))\n                Bind(fresh_x, go(e)) :: help(fresh_ps)\n              case CLet(x, e) =&gt;\n                val fresh_x = generator.genVar(x)\n                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))\n                CLet(fresh_x, go(e)) :: help(fresh_ps)\n              case Guard(e) =&gt; Guard(go(e)) :: help(ps)\n              case _ =&gt; sys.error(&quot;subst: unexpected pattern in comprehension&quot;)\n            }\n          Comprehension(go(e), help(es))
         </td>
       </tr><tr>
@@ -5913,7 +5804,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Nil
         </td>
       </tr><tr>
@@ -5937,7 +5828,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; p match {\n              case Bind(x, e) =&gt;\n                val fresh_x = generator.genVar(x)\n                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))\n                Bind(fresh_x, go(e)) :: help(fresh_ps)\n              case CLet(x, e) =&gt;\n                val fresh_x = generator.genVar(x)\n                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))\n                CLet(fresh_x, go(e)) :: help(fresh_ps)\n              case Guard(e) =&gt; Guard(go(e)) :: help(ps)\n              case _ =&gt; sys.error(&quot;subst: unexpected pattern in comprehension&quot;)\n            }
         </td>
       </tr><tr>
@@ -5961,7 +5852,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_x = generator.genVar(x)\n                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))\n                Bind(fresh_x, go(e)) :: help(fresh_ps)
         </td>
       </tr><tr>
@@ -5985,7 +5876,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -6009,7 +5900,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ps.map(p =&gt; swap(p, x, fresh_x))
         </td>
       </tr><tr>
@@ -6033,7 +5924,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(p, x, fresh_x)
         </td>
       </tr><tr>
@@ -6057,7 +5948,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           Bind(fresh_x, go(e)) :: help(fresh_ps)
         </td>
       </tr><tr>
@@ -6081,7 +5972,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -6105,7 +5996,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           help(fresh_ps)
         </td>
       </tr><tr>
@@ -6129,7 +6020,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -6153,7 +6044,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_x = generator.genVar(x)\n                val fresh_ps = ps.map(p =&gt; swap(p, x, fresh_x))\n                CLet(fresh_x, go(e)) :: help(fresh_ps)
         </td>
       </tr><tr>
@@ -6177,7 +6068,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(p, x, fresh_x)
         </td>
       </tr><tr>
@@ -6201,7 +6092,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ps.map(p =&gt; swap(p, x, fresh_x))
         </td>
       </tr><tr>
@@ -6225,7 +6116,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -6249,7 +6140,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           help(fresh_ps)
         </td>
       </tr><tr>
@@ -6273,7 +6164,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           CLet(fresh_x, go(e)) :: help(fresh_ps)
         </td>
       </tr><tr>
@@ -6297,7 +6188,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           help(ps)
         </td>
       </tr><tr>
@@ -6321,7 +6212,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           Guard(go(e)) :: help(ps)
         </td>
       </tr><tr>
@@ -6345,7 +6236,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Guard(go(e)) :: help(ps)
         </td>
       </tr><tr>
@@ -6369,7 +6260,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -6393,7 +6284,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;subst: unexpected pattern in comprehension&quot;)
         </td>
       </tr><tr>
@@ -6417,7 +6308,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;subst: unexpected pattern in comprehension&quot;)
         </td>
       </tr><tr>
@@ -6441,7 +6332,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e)
         </td>
       </tr><tr>
@@ -6465,7 +6356,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           help(es)
         </td>
       </tr><tr>
@@ -6489,7 +6380,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;subst: unexpected Bind&quot;)
         </td>
       </tr><tr>
@@ -6513,7 +6404,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;subst: unexpected Bind&quot;)
         </td>
       </tr><tr>
@@ -6537,7 +6428,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;subst: unexpected CLet&quot;)
         </td>
       </tr><tr>
@@ -6561,7 +6452,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;subst: unexpected CLet&quot;)
         </td>
       </tr><tr>
@@ -6585,7 +6476,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;subst: unexpected Guard&quot;)
         </td>
       </tr><tr>
@@ -6609,7 +6500,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;subst: unexpected Guard&quot;)
         </td>
       </tr><tr>
@@ -6633,7 +6524,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -6657,7 +6548,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Count(go(e1), go(e2))
         </td>
       </tr><tr>
@@ -6681,7 +6572,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e2)
         </td>
       </tr><tr>
@@ -6705,7 +6596,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_x1 = generator.genVar(x1)\n          val fresh_x2 = generator.genVar(x2)\n          val fresh_e2 = swap(swap(e2,x1,fresh_x1),x2,fresh_x2)\n          LetPair(fresh_x1,fresh_x2,go(e1),go(fresh_e2))
         </td>
       </tr><tr>
@@ -6729,7 +6620,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x1)
         </td>
       </tr><tr>
@@ -6753,7 +6644,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x2)
         </td>
       </tr><tr>
@@ -6777,7 +6668,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e2,x1,fresh_x1)
         </td>
       </tr><tr>
@@ -6801,7 +6692,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(swap(e2,x1,fresh_x1),x2,fresh_x2)
         </td>
       </tr><tr>
@@ -6825,7 +6716,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e2)
         </td>
       </tr><tr>
@@ -6849,7 +6740,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -6873,7 +6764,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_f = generator.genVar(f)\n          val fresh_x = generator.genVar(x)\n          val fresh_e1 = swap(e1,x,fresh_x)\n          val fresh_e2 = swap(e2,f,fresh_f)\n          LetFun(fresh_f,ty,fresh_x,go(fresh_e1),go(fresh_e2))
         </td>
       </tr><tr>
@@ -6897,7 +6788,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(f)
         </td>
       </tr><tr>
@@ -6921,7 +6812,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -6945,7 +6836,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e1,x,fresh_x)
         </td>
       </tr><tr>
@@ -6969,7 +6860,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e2,f,fresh_f)
         </td>
       </tr><tr>
@@ -6993,7 +6884,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e2)
         </td>
       </tr><tr>
@@ -7017,7 +6908,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e1)
         </td>
       </tr><tr>
@@ -7041,7 +6932,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val fresh_f = generator.genVar(f)\n          val fresh_x = generator.genVar(x)\n          val fresh_e1 = swap(swap(e1,x,fresh_x),f,fresh_f)\n          val fresh_e2 = swap(e2,f,fresh_f)\n          LetRec(fresh_f,ty,fresh_x,go(fresh_e1),go(fresh_e2))
         </td>
       </tr><tr>
@@ -7065,7 +6956,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(f)
         </td>
       </tr><tr>
@@ -7089,7 +6980,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -7113,7 +7004,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e1,x,fresh_x)
         </td>
       </tr><tr>
@@ -7137,7 +7028,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(swap(e1,x,fresh_x),f,fresh_f)
         </td>
       </tr><tr>
@@ -7161,7 +7052,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e2,f,fresh_f)
         </td>
       </tr><tr>
@@ -7185,7 +7076,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e2)
         </td>
       </tr><tr>
@@ -7209,7 +7100,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e1)
         </td>
       </tr><tr>
@@ -7233,7 +7124,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; (l,(x,generator.genVar(x)))
         </td>
       </tr><tr>
@@ -7257,7 +7148,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           generator.genVar(x)
         </td>
       </tr><tr>
@@ -7281,7 +7172,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val swaps = xs.map{ case (l,x) =&gt; (l,(x,generator.genVar(x)))}\n          val fresh_e2 = swaps.foldLeft(e2){case (e,(l,(x,fx))) =&gt; swap(e,x,fx)}\n          val fresh_xs = swaps.map{ case (l,(x,fresh_x)) =&gt; (l,fresh_x)}\n          LetRecord(fresh_xs,go(e1),go(fresh_e2))
         </td>
       </tr><tr>
@@ -7305,7 +7196,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           xs.map{ case (l,x) =&gt; (l,(x,generator.genVar(x)))}
         </td>
       </tr><tr>
@@ -7329,7 +7220,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; swap(e,x,fx)
         </td>
       </tr><tr>
@@ -7353,7 +7244,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swap(e,x,fx)
         </td>
       </tr><tr>
@@ -7377,7 +7268,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swaps.foldLeft(e2){case (e,(l,(x,fx))) =&gt; swap(e,x,fx)}
         </td>
       </tr><tr>
@@ -7401,7 +7292,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; (l,fresh_x)
         </td>
       </tr><tr>
@@ -7425,7 +7316,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           swaps.map{ case (l,(x,fresh_x)) =&gt; (l,fresh_x)}
         </td>
       </tr><tr>
@@ -7449,7 +7340,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(e1)
         </td>
       </tr><tr>
@@ -7473,7 +7364,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           go(fresh_e2)
         </td>
       </tr><tr>
@@ -15755,2022 +15646,6 @@
         </td>
         <td style="background: #F0ADAD">
           sys.error(&quot;eval: comprehension should be desugared&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          508
-        </td>
-        <td>
-          669
-        </td>
-        <td>
-          18585
-          -
-          18670
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          parseStr
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          parser.parseStr(&quot;&quot;&quot;\n    let swap = \\ x . (snd(x), fst(x)) in\n    swap(42,17)\n    &quot;&quot;&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          508
-        </td>
-        <td>
-          670
-        </td>
-        <td>
-          18564
-          -
-          18576
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          example1
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          def example1
-        </td>
-      </tr><tr>
-        <td>
-          513
-        </td>
-        <td>
-          671
-        </td>
-        <td>
-          18687
-          -
-          18697
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          &lt;init&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #AEF1AE">
-          new Parser
-        </td>
-      </tr><tr>
-        <td>
-          520
-        </td>
-        <td>
-          674
-        </td>
-        <td>
-          18882
-          -
-          18895
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          typecheck
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          def typecheck
-        </td>
-      </tr><tr>
-        <td>
-          521
-        </td>
-        <td>
-          672
-        </td>
-        <td>
-          18920
-          -
-          18949
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          tyInfer
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          Typer.tyInfer(ListMap(), ast)
-        </td>
-      </tr><tr>
-        <td>
-          521
-        </td>
-        <td>
-          673
-        </td>
-        <td>
-          18934
-          -
-          18943
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          apply
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          ListMap()
-        </td>
-      </tr><tr>
-        <td>
-          523
-        </td>
-        <td>
-          676
-        </td>
-        <td>
-          18956
-          -
-          18968
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          evaluate
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          def evaluate
-        </td>
-      </tr><tr>
-        <td>
-          524
-        </td>
-        <td>
-          675
-        </td>
-        <td>
-          18994
-          -
-          19003
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          eval
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          eval(ast)
-        </td>
-      </tr><tr>
-        <td>
-          526
-        </td>
-        <td>
-          708
-        </td>
-        <td>
-          19009
-          -
-          19023
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          showResult
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          def showResult
-        </td>
-      </tr><tr>
-        <td>
-          527
-        </td>
-        <td>
-          678
-        </td>
-        <td>
-          19059
-          -
-          19089
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;AST:  &quot; + ast.toString + &quot;\\n&quot;
-        </td>
-      </tr><tr>
-        <td>
-          527
-        </td>
-        <td>
-          677
-        </td>
-        <td>
-          19051
-          -
-          19090
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;AST:  &quot; + ast.toString + &quot;\\n&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          527
-        </td>
-        <td>
-          679
-        </td>
-        <td>
-          19059
-          -
-          19082
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;AST:  &quot; + ast.toString
-        </td>
-      </tr><tr>
-        <td>
-          529
-        </td>
-        <td>
-          686
-        </td>
-        <td>
-          19102
-          -
-          19265
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n        print(&quot;Type Checking...&quot;)\n        val ty = typecheck(ast)\n        println(&quot;Done!&quot;)\n        println(&quot;Type of Expression: &quot; + ty.toString + &quot;\\n&quot;) ;\n      }
-        </td>
-      </tr><tr>
-        <td>
-          530
-        </td>
-        <td>
-          680
-        </td>
-        <td>
-          19112
-          -
-          19137
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          print
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          print(&quot;Type Checking...&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          531
-        </td>
-        <td>
-          681
-        </td>
-        <td>
-          19155
-          -
-          19169
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          typecheck
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          typecheck(ast)
-        </td>
-      </tr><tr>
-        <td>
-          532
-        </td>
-        <td>
-          682
-        </td>
-        <td>
-          19178
-          -
-          19194
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Done!&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          533
-        </td>
-        <td>
-          684
-        </td>
-        <td>
-          19211
-          -
-          19254
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Type of Expression: &quot; + ty.toString + &quot;\\n&quot;
-        </td>
-      </tr><tr>
-        <td>
-          533
-        </td>
-        <td>
-          683
-        </td>
-        <td>
-          19203
-          -
-          19255
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Type of Expression: &quot; + ty.toString + &quot;\\n&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          533
-        </td>
-        <td>
-          685
-        </td>
-        <td>
-          19211
-          -
-          19247
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Type of Expression: &quot; + ty.toString
-        </td>
-      </tr><tr>
-        <td>
-          535
-        </td>
-        <td>
-          687
-        </td>
-        <td>
-          19304
-          -
-          19326
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          535
-        </td>
-        <td>
-          689
-        </td>
-        <td>
-          19301
-          -
-          19326
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          =&gt; println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          535
-        </td>
-        <td>
-          688
-        </td>
-        <td>
-          19312
-          -
-          19325
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Error: &quot; + e
-        </td>
-      </tr><tr>
-        <td>
-          537
-        </td>
-        <td>
-          700
-        </td>
-        <td>
-          19345
-          -
-          19595
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n        println(&quot;Desugaring...&quot;)\n        val core_ast = desugar(ast)\n        println(&quot;Done!&quot;)\n        println(&quot;Desugared AST: &quot; + core_ast.toString + &quot;\\n&quot;) ;\n\n        println(&quot;Evaluating...&quot;)\n        println(&quot;Result: &quot; + evaluate(core_ast))\n      }
-        </td>
-      </tr><tr>
-        <td>
-          538
-        </td>
-        <td>
-          690
-        </td>
-        <td>
-          19355
-          -
-          19379
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Desugaring...&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          539
-        </td>
-        <td>
-          691
-        </td>
-        <td>
-          19403
-          -
-          19415
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          desugar
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          desugar(ast)
-        </td>
-      </tr><tr>
-        <td>
-          540
-        </td>
-        <td>
-          692
-        </td>
-        <td>
-          19424
-          -
-          19440
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Done!&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          541
-        </td>
-        <td>
-          693
-        </td>
-        <td>
-          19449
-          -
-          19502
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Desugared AST: &quot; + core_ast.toString + &quot;\\n&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          541
-        </td>
-        <td>
-          695
-        </td>
-        <td>
-          19457
-          -
-          19494
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Desugared AST: &quot; + core_ast.toString
-        </td>
-      </tr><tr>
-        <td>
-          541
-        </td>
-        <td>
-          694
-        </td>
-        <td>
-          19457
-          -
-          19501
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Desugared AST: &quot; + core_ast.toString + &quot;\\n&quot;
-        </td>
-      </tr><tr>
-        <td>
-          543
-        </td>
-        <td>
-          696
-        </td>
-        <td>
-          19514
-          -
-          19538
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Evaluating...&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          544
-        </td>
-        <td>
-          699
-        </td>
-        <td>
-          19568
-          -
-          19586
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          evaluate
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          evaluate(core_ast)
-        </td>
-      </tr><tr>
-        <td>
-          544
-        </td>
-        <td>
-          698
-        </td>
-        <td>
-          19555
-          -
-          19586
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Result: &quot; + evaluate(core_ast)
-        </td>
-      </tr><tr>
-        <td>
-          544
-        </td>
-        <td>
-          697
-        </td>
-        <td>
-          19547
-          -
-          19587
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Result: &quot; + evaluate(core_ast))
-        </td>
-      </tr><tr>
-        <td>
-          547
-        </td>
-        <td>
-          702
-        </td>
-        <td>
-          19650
-          -
-          19663
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Error: &quot; + e
-        </td>
-      </tr><tr>
-        <td>
-          547
-        </td>
-        <td>
-          701
-        </td>
-        <td>
-          19642
-          -
-          19664
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          547
-        </td>
-        <td>
-          707
-        </td>
-        <td>
-          19642
-          -
-          19753
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Error: &quot; + e)\n          println(&quot;Evaluating raw AST...&quot;)\n          println(&quot;Result: &quot; + evaluate(ast))
-        </td>
-      </tr><tr>
-        <td>
-          548
-        </td>
-        <td>
-          703
-        </td>
-        <td>
-          19675
-          -
-          19707
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Evaluating raw AST...&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          549
-        </td>
-        <td>
-          705
-        </td>
-        <td>
-          19726
-          -
-          19752
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Result: &quot; + evaluate(ast)
-        </td>
-      </tr><tr>
-        <td>
-          549
-        </td>
-        <td>
-          704
-        </td>
-        <td>
-          19718
-          -
-          19753
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Result: &quot; + evaluate(ast))
-        </td>
-      </tr><tr>
-        <td>
-          549
-        </td>
-        <td>
-          706
-        </td>
-        <td>
-          19739
-          -
-          19752
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          evaluate
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          evaluate(ast)
-        </td>
-      </tr><tr>
-        <td>
-          553
-        </td>
-        <td>
-          713
-        </td>
-        <td>
-          19773
-          -
-          19782
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          start
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          def start
-        </td>
-      </tr><tr>
-        <td>
-          554
-        </td>
-        <td>
-          709
-        </td>
-        <td>
-          19801
-          -
-          19853
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Welcome to Frog! (V1.0, October 22, 2024)&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          555
-        </td>
-        <td>
-          710
-        </td>
-        <td>
-          19860
-          -
-          19957
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Enter expressions to evaluate, :load &lt;filename.fish&gt; to load a file, or :quit to quit.&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          556
-        </td>
-        <td>
-          711
-        </td>
-        <td>
-          19964
-          -
-          20056
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;This REPL can only read one line at a time, use :load to load larger expressions.&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          557
-        </td>
-        <td>
-          712
-        </td>
-        <td>
-          20063
-          -
-          20069
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          repl
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          repl()
-        </td>
-      </tr><tr>
-        <td>
-          561
-        </td>
-        <td>
-          737
-        </td>
-        <td>
-          20081
-          -
-          20102
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          repl
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          @tailrec\n    def repl
-        </td>
-      </tr><tr>
-        <td>
-          562
-        </td>
-        <td>
-          714
-        </td>
-        <td>
-          20121
-          -
-          20136
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          print
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          print(&quot;Frog&gt; &quot;)
-        </td>
-      </tr><tr>
-        <td>
-          563
-        </td>
-        <td>
-          715
-        </td>
-        <td>
-          20155
-          -
-          20180
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          readLine
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          scala.io.StdIn.readLine()
-        </td>
-      </tr><tr>
-        <td>
-          564
-        </td>
-        <td>
-          717
-        </td>
-        <td>
-          20208
-          -
-          20245
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n        println(&quot;Goodbye!&quot;)\n      }
-        </td>
-      </tr><tr>
-        <td>
-          565
-        </td>
-        <td>
-          716
-        </td>
-        <td>
-          20218
-          -
-          20237
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Goodbye!&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          567
-        </td>
-        <td>
-          727
-        </td>
-        <td>
-          20288
-          -
-          20486
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n        try {\n          val ast = parser.parse(input.substring(6))\n          showResult(ast)\n        } catch {\n          case e:Throwable =&gt; println(&quot;Error: &quot; + e)\n        }\n        repl()\n      }
-        </td>
-      </tr><tr>
-        <td>
-          567
-        </td>
-        <td>
-          718
-        </td>
-        <td>
-          20261
-          -
-          20286
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          startsWith
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          input.startsWith(&quot;:load&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          567
-        </td>
-        <td>
-          736
-        </td>
-        <td>
-          20257
-          -
-          20680
-        </td>
-        <td>
-          If
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          if (input.startsWith(&quot;:load&quot;)) {\n        try {\n          val ast = parser.parse(input.substring(6))\n          showResult(ast)\n        } catch {\n          case e:Throwable =&gt; println(&quot;Error: &quot; + e)\n        }\n        repl()\n      } else {\n        try {\n          val ast = parser.parseStr(input)\n          showResult(ast)\n        } catch {\n          case e:Throwable =&gt; println(&quot;Error: &quot; + e)\n        }\n        repl()\n      }
-        </td>
-      </tr><tr>
-        <td>
-          568
-        </td>
-        <td>
-          722
-        </td>
-        <td>
-          20302
-          -
-          20392
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n          val ast = parser.parse(input.substring(6))\n          showResult(ast)\n        }
-        </td>
-      </tr><tr>
-        <td>
-          569
-        </td>
-        <td>
-          720
-        </td>
-        <td>
-          20337
-          -
-          20355
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          substring
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          input.substring(6)
-        </td>
-      </tr><tr>
-        <td>
-          569
-        </td>
-        <td>
-          719
-        </td>
-        <td>
-          20324
-          -
-          20356
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          parse
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          parser.parse(input.substring(6))
-        </td>
-      </tr><tr>
-        <td>
-          570
-        </td>
-        <td>
-          721
-        </td>
-        <td>
-          20367
-          -
-          20382
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          showResult
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          showResult(ast)
-        </td>
-      </tr><tr>
-        <td>
-          572
-        </td>
-        <td>
-          723
-        </td>
-        <td>
-          20431
-          -
-          20453
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          572
-        </td>
-        <td>
-          725
-        </td>
-        <td>
-          20428
-          -
-          20453
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          =&gt; println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          572
-        </td>
-        <td>
-          724
-        </td>
-        <td>
-          20439
-          -
-          20452
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Error: &quot; + e
-        </td>
-      </tr><tr>
-        <td>
-          574
-        </td>
-        <td>
-          726
-        </td>
-        <td>
-          20472
-          -
-          20478
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          repl
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          repl()
-        </td>
-      </tr><tr>
-        <td>
-          575
-        </td>
-        <td>
-          735
-        </td>
-        <td>
-          20492
-          -
-          20680
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n        try {\n          val ast = parser.parseStr(input)\n          showResult(ast)\n        } catch {\n          case e:Throwable =&gt; println(&quot;Error: &quot; + e)\n        }\n        repl()\n      }
-        </td>
-      </tr><tr>
-        <td>
-          576
-        </td>
-        <td>
-          730
-        </td>
-        <td>
-          20506
-          -
-          20586
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n          val ast = parser.parseStr(input)\n          showResult(ast)\n        }
-        </td>
-      </tr><tr>
-        <td>
-          577
-        </td>
-        <td>
-          728
-        </td>
-        <td>
-          20528
-          -
-          20550
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          parseStr
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          parser.parseStr(input)
-        </td>
-      </tr><tr>
-        <td>
-          578
-        </td>
-        <td>
-          729
-        </td>
-        <td>
-          20561
-          -
-          20576
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          showResult
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          showResult(ast)
-        </td>
-      </tr><tr>
-        <td>
-          580
-        </td>
-        <td>
-          732
-        </td>
-        <td>
-          20633
-          -
-          20646
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Error: &quot; + e
-        </td>
-      </tr><tr>
-        <td>
-          580
-        </td>
-        <td>
-          731
-        </td>
-        <td>
-          20625
-          -
-          20647
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          580
-        </td>
-        <td>
-          733
-        </td>
-        <td>
-          20622
-          -
-          20647
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          =&gt; println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          582
-        </td>
-        <td>
-          734
-        </td>
-        <td>
-          20666
-          -
-          20672
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          repl
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          repl()
-        </td>
-      </tr><tr>
-        <td>
-          587
-        </td>
-        <td>
-          752
-        </td>
-        <td>
-          20694
-          -
-          20702
-        </td>
-        <td>
-          DefDef
-        </td>
-        <td>
-          main
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          def main
-        </td>
-      </tr><tr>
-        <td>
-          588
-        </td>
-        <td>
-          738
-        </td>
-        <td>
-          20741
-          -
-          20752
-        </td>
-        <td>
-          Select
-        </td>
-        <td>
-          length
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          args.length
-        </td>
-      </tr><tr>
-        <td>
-          588
-        </td>
-        <td>
-          740
-        </td>
-        <td>
-          20759
-          -
-          20785
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n      Main.start()\n    }
-        </td>
-      </tr><tr>
-        <td>
-          589
-        </td>
-        <td>
-          739
-        </td>
-        <td>
-          20767
-          -
-          20779
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          start
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          Main.start()
-        </td>
-      </tr><tr>
-        <td>
-          590
-        </td>
-        <td>
-          751
-        </td>
-        <td>
-          20791
-          -
-          21009
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n      try {\n        print(&quot;Parsing...&quot;)\n        val ast = parser.parse(args.head)\n        println(&quot;Done!&quot;)\n        Main.showResult(ast)\n      } catch {\n        case e:Throwable =&gt; println(&quot;Error: &quot; + e)\n      }\n    }
-        </td>
-      </tr><tr>
-        <td>
-          591
-        </td>
-        <td>
-          747
-        </td>
-        <td>
-          20803
-          -
-          20936
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          {\n        print(&quot;Parsing...&quot;)\n        val ast = parser.parse(args.head)\n        println(&quot;Done!&quot;)\n        Main.showResult(ast)\n      }
-        </td>
-      </tr><tr>
-        <td>
-          592
-        </td>
-        <td>
-          741
-        </td>
-        <td>
-          20813
-          -
-          20832
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          print
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          print(&quot;Parsing...&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          593
-        </td>
-        <td>
-          744
-        </td>
-        <td>
-          20864
-          -
-          20873
-        </td>
-        <td>
-          Select
-        </td>
-        <td>
-          head
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          args.head
-        </td>
-      </tr><tr>
-        <td>
-          593
-        </td>
-        <td>
-          743
-        </td>
-        <td>
-          20864
-          -
-          20868
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          refArrayOps
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          args
-        </td>
-      </tr><tr>
-        <td>
-          593
-        </td>
-        <td>
-          742
-        </td>
-        <td>
-          20851
-          -
-          20874
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          parse
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          parser.parse(args.head)
-        </td>
-      </tr><tr>
-        <td>
-          594
-        </td>
-        <td>
-          745
-        </td>
-        <td>
-          20883
-          -
-          20899
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Done!&quot;)
-        </td>
-      </tr><tr>
-        <td>
-          595
-        </td>
-        <td>
-          746
-        </td>
-        <td>
-          20908
-          -
-          20928
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          showResult
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          Main.showResult(ast)
-        </td>
-      </tr><tr>
-        <td>
-          597
-        </td>
-        <td>
-          750
-        </td>
-        <td>
-          20970
-          -
-          20995
-        </td>
-        <td>
-          Block
-        </td>
-        <td>
-          &lt;none&gt;
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          =&gt; println(&quot;Error: &quot; + e)
-        </td>
-      </tr><tr>
-        <td>
-          597
-        </td>
-        <td>
-          749
-        </td>
-        <td>
-          20981
-          -
-          20994
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          +
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          &quot;Error: &quot; + e
-        </td>
-      </tr><tr>
-        <td>
-          597
-        </td>
-        <td>
-          748
-        </td>
-        <td>
-          20973
-          -
-          20995
-        </td>
-        <td>
-          Apply
-        </td>
-        <td>
-          println
-        </td>
-        <td>
-          
-        </td>
-        <td style="background: #F0ADAD">
-          println(&quot;Error: &quot; + e)
         </td>
       </tr>
     </table>

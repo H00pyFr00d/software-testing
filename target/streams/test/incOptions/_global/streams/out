@@ -7,6 +7,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairInterpreterTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SwapTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrVarTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrBoolTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariantInterpreterTests.class[0m
@@ -28,6 +29,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrPairTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SubstTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests.class[0m
@@ -47,6 +49,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	BooleanInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairInterpreterTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SwapTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrVarTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrBoolTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariantInterpreterTests.tasty[0m
@@ -68,6 +71,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrPairTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	SubstTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests.tasty[0m

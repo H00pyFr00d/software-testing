@@ -137,6 +137,8 @@ object Syntax {
       id = id + 1
       fresh_s
     }
+    // reset the counter
+    def reset(): Unit = {id = 0}
   }
 
   // swap y and z in x

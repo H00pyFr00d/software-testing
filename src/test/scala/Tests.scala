@@ -6,7 +6,7 @@ import FrogInterpreter.{Interpreter, Parser, Typer, Bags}
 import scala.annotation.tailrec
 
 // ====================================== Initialising ======================================
-val parser: Parser = Interpreter.parser
+val parser: Parser = new Parser
 
 // [ Typer ]
 val tyCheck: (Env, Expr, Type) => Unit = Typer.tyCheck
@@ -139,6 +139,457 @@ class BagImplTests extends AnyFunSuite {
 }
 
 // Interpreter
+class SwapTests extends AnyFunSuite {
+  var swap = Interpreter.SubstExpr.swap
+
+  test("Value") {
+    assert(swap(UnitV, "x", "y") == UnitV)
+    assert(swap(NumV(1), "x", "y") == NumV(1))
+    assert(swap(BoolV(true), "x", "y") == BoolV(true))
+    assert(swap(StringV("hello"), "x", "y") == StringV("hello"))
+    assert(swap(PairV(NumV(1), NumV(2)), "x", "y") == PairV(NumV(1), NumV(2)))
+    assert(swap(RecordV(ListMap("l" -> NumV(42))), "x", "y") == RecordV(ListMap("l" -> NumV(42))))
+    assert(swap(VariantV("foo", NumV(42)), "x", "y") == VariantV("foo", NumV(42)))
+    assert(swap(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)), "x", "y") == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    assert(swap(FunV("x", Var("x")), "x", "y") == FunV("x", Var("x")))
+    assert(swap(RecV("f", "x", Var("x")), "x", "y") == RecV("f", "x", Var("x")))
+  }
+
+  test("Unit") {
+    assert(swap(Unit, "x", "y") == Unit)
+  }
+
+  test("Int") {
+    assert(swap(Num(1), "x", "y") == Num(1))
+  }
+
+  test("Plus") {
+    assert(swap(Plus(Num(1), Num(2)), "x", "y") == Plus(Num(1), Num(2)))
+    assert(swap(Plus(Var("x"), Num(2)), "x", "y") == Plus(Var("y"), Num(2)))
+  }
+
+  test("Minus") {
+    assert(swap(Minus(Num(1), Num(2)), "x", "y") == Minus(Num(1), Num(2)))
+    assert(swap(Minus(Var("x"), Num(2)), "x", "y") == Minus(Var("y"), Num(2)))
+  }
+
+  test("Times") {
+    assert(swap(Times(Num(1), Num(2)), "x", "y") == Times(Num(1), Num(2)))
+    assert(swap(Times(Var("x"), Num(2)), "x", "y") == Times(Var("y"), Num(2)))
+  }
+
+  test("Bool") {
+    assert(swap(Bool(true), "x", "y") == Bool(true))
+  }
+
+  test("Eq") {
+    assert(swap(Eq(Num(1), Num(2)), "x", "y") == Eq(Num(1), Num(2)))
+    assert(swap(Eq(Var("x"), Num(2)), "x", "y") == Eq(Var("y"), Num(2)))
+  }
+
+  test("Less") {
+    assert(swap(Less(Num(1), Num(2)), "x", "y") == Less(Num(1), Num(2)))
+    assert(swap(Less(Var("x"), Num(2)), "x", "y") == Less(Var("y"), Num(2)))
+  }
+
+  test("IfThenElse") {
+    assert(swap(IfThenElse(Bool(true), Num(1), Num(2)), "x", "y") == IfThenElse(Bool(true), Num(1), Num(2)))
+    assert(swap(IfThenElse(Var("x"), Num(1), Num(2)), "x", "y") == IfThenElse(Var("y"), Num(1), Num(2)))
+  }
+
+  test("Str") {
+    assert(swap(Str("hello"), "x", "y") == Str("hello"))
+  }
+
+  test("Length") {
+    assert(swap(Length(Str("hello")), "x", "y") == Length(Str("hello")))
+    assert(swap(Length(Var("x")), "x", "y") == Length(Var("y")))
+  }
+
+  test("Index") {
+    assert(swap(Index(Str("hello"), Num(0)), "x", "y") == Index(Str("hello"), Num(0)))
+    assert(swap(Index(Var("x"), Num(0)), "x", "y") == Index(Var("y"), Num(0)))
+  }
+
+  test("Concat") {
+    assert(swap(Concat(Str("hello"), Str("world")), "x", "y") == Concat(Str("hello"), Str("world")))
+    assert(swap(Concat(Var("x"), Str("world")), "x", "y") == Concat(Var("y"), Str("world")))
+  }
+
+  test("Let") {
+    assert(swap(Let("z", Num(1), Var("z")), "x", "y") == Let("z", Num(1), Var("z")))
+    assert(swap(Let("x", Num(1), Var("x")), "x", "y") == Let("y", Num(1), Var("y")))
+  }
+
+  test("Anno") {
+    assert(swap(Anno(Num(1), TyInt), "x", "y") == Anno(Num(1), TyInt))
+    assert(swap(Anno(Var("x"), TyInt), "x", "y") == Anno(Var("y"), TyInt))
+  }
+
+  test("Pair") {
+    assert(swap(Pair(Num(1), Num(2)), "x", "y") == Pair(Num(1), Num(2)))
+    assert(swap(Pair(Var("x"), Num(2)), "x", "y") == Pair(Var("y"), Num(2)))
+  }
+
+  test("First") {
+    assert(swap(First(Var("z")), "x", "y") == First(Var("z")))
+    assert(swap(First(Var("x")), "x", "y") == First(Var("y")))
+  }
+
+  test("Second") {
+    assert(swap(Second(Var("z")), "x", "y") == Second(Var("z")))
+    assert(swap(Second(Var("x")), "x", "y") == Second(Var("y")))
+  }
+
+  test("Lambda") {
+    assert(swap(Lambda("z", Var("z")), "x", "y") == Lambda("z", Var("z")))
+    assert(swap(Lambda("x", Var("x")), "x", "y") == Lambda("y", Var("y")))
+  }
+
+  test("Apply") {
+    assert(swap(Apply(Var("f"), Var("z")), "x", "y") == Apply(Var("f"), Var("z")))
+    assert(swap(Apply(Var("f"), Var("x")), "x", "y") == Apply(Var("f"), Var("y")))
+  }
+
+  test("Rec") {
+    assert(swap(Rec("f", "z", Var("z")), "x", "y") == Rec("f", "z", Var("z")))
+    assert(swap(Rec("f", "x", Var("x")), "x", "y") == Rec("f", "y", Var("y")))
+  }
+
+  test("Record") {
+    assert(swap(Record(ListMap("l" -> Num(42))), "x", "y") == Record(ListMap("l" -> Num(42))))
+    assert(swap(Record(ListMap("l" -> Var("x"))), "x", "y") == Record(ListMap("l" -> Var("y"))))
+  }
+
+  test("Proj") {
+    assert(swap(Proj(Var("r"), "foo"), "x", "y") == Proj(Var("r"), "foo"))
+  }
+
+  test("Variant") {
+    assert(swap(Variant("foo", Num(42)), "x", "y") == Variant("foo", Num(42)))
+    assert(swap(Variant("foo", Var("x")), "x", "y") == Variant("foo", Var("y")))
+  }
+
+  test("Case") {
+    assert(swap(Case(Var("v"), ListMap("z" -> ("z", NumV(1)))), "x", "y") == Case(Var("v"), ListMap("z" -> ("z", NumV(1)))))
+    assert(swap(Case(Var("v"), ListMap("x" -> ("x", NumV(1)))), "x", "y") == Case(Var("v"), ListMap("x" -> ("y", NumV(1)))))
+  }
+
+  test("Bag") {
+    assert(swap(Bag(List(NumV(1), NumV(2), NumV(3))), "x", "y") == Bag(List(NumV(1), NumV(2), NumV(3))))
+  }
+
+  test("FlatMap") {
+    assert(swap(FlatMap(Var("b"), Lambda("z", Var("z"))), "x", "y") == FlatMap(Var("b"), Lambda("z", Var("z"))))
+    assert(swap(FlatMap(Var("b"), Lambda("x", Var("x"))), "x", "y") == FlatMap(Var("b"), Lambda("y", Var("y"))))
+    assert(swap(FlatMap(Var("x"), Lambda("z", Var("z"))), "x", "y") == FlatMap(Var("y"), Lambda("z", Var("z"))))
+  }
+
+  test("When") {
+    assert(swap(When(Var("b"), Lambda("z", Var("z"))), "x", "y") == When(Var("b"), Lambda("z", Var("z"))))
+    assert(swap(When(Var("b"), Lambda("x", Var("x"))), "x", "y") == When(Var("b"), Lambda("y", Var("y"))))
+    assert(swap(When(Var("x"), Lambda("z", Var("z"))), "x", "y") == When(Var("y"), Lambda("z", Var("z"))))
+  }
+
+  test("Sum") {
+    assert(swap(Sum(Var("b1"), Var("b2")), "x", "y") == Sum(Var("b1"), Var("b2")))
+    assert(swap(Sum(Var("x"), Var("b2")), "x", "y") == Sum(Var("y"), Var("b2")))
+  }
+
+  test("Diff") {
+    assert(swap(Diff(Var("b1"), Var("b2")), "x", "y") == Diff(Var("b1"), Var("b2")))
+    assert(swap(Diff(Var("x"), Var("b2")), "x", "y") == Diff(Var("y"), Var("b2")))
+  }
+
+  test("Empty Comprehension") {
+    assert(swap(Comprehension(Var("z"), List()), "x", "y") == Comprehension(Var("z"), List()))
+    assert(swap(Comprehension(Var("x"), List()), "x", "y") == Comprehension(Var("y"), List()))
+  }
+
+  test("Comprehension w/ Bind") {
+    assert(swap(Comprehension(Var("b"), List(Bind("z", Var("l")))), "x", "y") == Comprehension(Var("b"), List(Bind("z", Var("l")))))
+    assert(swap(Comprehension(Var("b"), List(Bind("x", Var("l")))), "x", "y") == Comprehension(Var("b"), List(Bind("y", Var("l")))))
+  }
+
+  test("Comprehension w/ Guard") {
+    assert(swap(Comprehension(Var("b"), List(Guard(Var("z")))), "x", "y") == Comprehension(Var("b"), List(Guard(Var("z")))))
+    assert(swap(Comprehension(Var("b"), List(Guard(Var("x")))), "x", "y") == Comprehension(Var("b"), List(Guard(Var("y")))))
+  }
+
+  test("Comprehension w/ CLet") {
+    assert(swap(Comprehension(Var("b"), List(CLet("z", Var("l")))), "x", "y") == Comprehension(Var("b"), List(CLet("z", Var("l")))))
+    assert(swap(Comprehension(Var("b"), List(CLet("x", Var("l")))), "x", "y") == Comprehension(Var("b"), List(CLet("y", Var("l")))))
+  }
+
+  test("Count") {
+    assert(swap(Count(Var("b"), Num(2)), "x", "y") == Count(Var("b"), Num(2)))
+    assert(swap(Count(Var("x"), Num(2)), "x", "y") == Count(Var("y"), Num(2)))
+  }
+
+  test("LetPair") {
+    assert(swap(LetPair("z", "w", Var("p"), Var("p")), "x", "y") == LetPair("z", "w", Var("p"), Var("p")))
+    assert(swap(LetPair("x", "w", Var("p"), Var("p")), "x", "y") == LetPair("y", "w", Var("p"), Var("p")))
+    assert(swap(LetPair("z", "x", Var("p"), Var("p")), "x", "y") == LetPair("z", "y", Var("p"), Var("p")))
+  }
+
+  test("LetFun") {
+    assert(swap(LetFun("f", TyInt, "z", Var("f"), Var("f")), "x", "y") == LetFun("f", TyInt, "z", Var("f"), Var("f")))
+    assert(swap(LetFun("f", TyInt, "x", Var("f"), Var("f")), "x", "y") == LetFun("f", TyInt, "y", Var("f"), Var("f")))
+    assert(swap(LetFun("f", TyInt, "z", Var("x"), Var("f")), "x", "y") == LetFun("f", TyInt, "z", Var("y"), Var("f")))
+  }
+
+  test("LetRec") {
+    assert(swap(LetRec("f", TyInt, "z", Var("f"), Var("f")), "x", "y") == LetRec("f", TyInt, "z", Var("f"), Var("f")))
+    assert(swap(LetRec("f", TyInt, "x", Var("f"), Var("f")), "x", "y") == LetRec("f", TyInt, "y", Var("f"), Var("f")))
+    assert(swap(LetRec("f", TyInt, "z", Var("x"), Var("f")), "x", "y") == LetRec("f", TyInt, "z", Var("y"), Var("f")))
+  }
+
+  test("LetRecord") {
+    assert(swap(LetRecord(ListMap("l" -> "z"), Var("r"), Var("r")), "x", "y") == LetRecord(ListMap("l" -> "z"), Var("r"), Var("r")))
+    assert(swap(LetRecord(ListMap("l" -> "x"), Var("r"), Var("r")), "x", "y") == LetRecord(ListMap("l" -> "y"), Var("r"), Var("r")))
+    assert(swap(LetRecord(ListMap("l" -> "z"), Var("x"), Var("r")), "x", "y") == LetRecord(ListMap("l" -> "z"), Var("y"), Var("r")))
+  }
+}
+
+class SubstTests extends AnyFunSuite {
+  test("Value") {
+    assert(subst(UnitV, Unit, "x") == UnitV)
+    assert(subst(NumV(1), Unit, "x") == NumV(1))
+    assert(subst(BoolV(true), Unit, "x") == BoolV(true))
+    assert(subst(StringV("hello"), Unit, "x") == StringV("hello"))
+    assert(subst(PairV(NumV(1), NumV(2)), Unit, "x") == PairV(NumV(1), NumV(2)))
+    assert(subst(RecordV(ListMap("l" -> NumV(42))), Unit, "x") == RecordV(ListMap("l" -> NumV(42))))
+    assert(subst(VariantV("foo", NumV(42)), Unit, "x") == VariantV("foo", NumV(42)))
+    assert(subst(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)), Unit, "x") == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    assert(subst(FunV("x", Var("x")), Unit, "x") == FunV("x", Var("x")))
+    assert(subst(RecV("f", "x", Var("x")), Unit, "x") == RecV("f", "x", Var("x")))
+  }
+
+  test("Unit") {
+    assert(subst(Unit, Unit, "x") == Unit)
+  }
+
+  test("Int") {
+    assert(subst(Num(1), Unit, "x") == Num(1))
+  }
+
+  test("Plus") {
+    assert(subst(Plus(Num(1), Num(2)), Unit, "x") == Plus(Num(1), Num(2)))
+    assert(subst(Plus(Var("x"), Num(2)), Num(1), "x") == Plus(Num(1), Num(2)))
+  }
+
+  test("Minus") {
+    assert(subst(Minus(Num(1), Num(2)), Unit, "x") == Minus(Num(1), Num(2)))
+    assert(subst(Minus(Var("x"), Num(2)), Num(1), "x") == Minus(Num(1), Num(2)))
+  }
+
+  test("Times") {
+    assert(subst(Times(Num(1), Num(2)), Unit, "x") == Times(Num(1), Num(2)))
+    assert(subst(Times(Var("x"), Num(2)), Num(1), "x") == Times(Num(1), Num(2)))
+  }
+
+  test("Bool") {
+    assert(subst(Bool(true), Unit, "x") == Bool(true))
+  }
+
+  test("Eq") {
+    assert(subst(Eq(Num(1), Num(2)), Unit, "x") == Eq(Num(1), Num(2)))
+    assert(subst(Eq(Var("x"), Num(2)), Num(1), "x") == Eq(Num(1), Num(2)))
+  }
+
+  test("Less") {
+    assert(subst(Less(Num(1), Num(2)), Unit, "x") == Less(Num(1), Num(2)))
+    assert(subst(Less(Var("x"), Num(2)), Num(1), "x") == Less(Num(1), Num(2)))
+  }
+
+  test("IfThenElse") {
+    assert(subst(IfThenElse(Bool(true), Num(1), Num(2)), Unit, "x") == IfThenElse(Bool(true), Num(1), Num(2)))
+    assert(subst(IfThenElse(Var("x"), Num(1), Num(2)), Num(1), "x") == IfThenElse(Num(1), Num(1), Num(2)))
+  }
+
+  test("Str") {
+    assert(subst(Str("hello"), Unit, "x") == Str("hello"))
+  }
+
+  test("Length") {
+    assert(subst(Length(Str("hello")), Unit, "x") == Length(Str("hello")))
+    assert(subst(Length(Var("x")), Num(1), "x") == Length(Num(1)))
+  }
+
+  test("Index") {
+    assert(subst(Index(Str("hello"), Num(0)), Unit, "x") == Index(Str("hello"), Num(0)))
+    assert(subst(Index(Var("x"), Num(0)), Num(1), "x") == Index(Num(1), Num(0)))
+  }
+
+  test("Concat") {
+    assert(subst(Concat(Str("hello"), Str("world")), Unit, "x") == Concat(Str("hello"), Str("world")))
+    assert(subst(Concat(Var("x"), Str("world")), Str("hello"), "x") == Concat(Str("hello"), Str("world")))
+  }
+
+  test("Var") {
+    assert(subst(Var("x"), Num(1), "x") == Num(1))
+    assert(subst(Var("y"), Num(1), "x") == Var("y"))
+  }
+
+  test("Let") {
+    Interpreter.generator.reset()
+    assert(subst(Let("z", Num(1), Var("z")), Unit, "x") == Let("z_0", Num(1), Var("z_0")))
+  }
+
+  test("Anno") {
+    assert(subst(Anno(Num(1), TyInt), Unit, "x") == Anno(Num(1), TyInt))
+    assert(subst(Anno(Var("x"), TyInt), Num(1), "x") == Anno(Num(1), TyInt))
+  }
+
+  test("Lambda") {
+    Interpreter.generator.reset()
+    assert(subst(Lambda("z", Var("z")), Unit, "x") == Lambda("z_0", Var("z_0")))
+  }
+
+  test("Apply") {
+    assert(subst(Apply(Var("f"), Var("z")), Unit, "x") == Apply(Var("f"), Var("z")))
+    assert(subst(Apply(Var("f"), Var("x")), Num(1), "x") == Apply(Var("f"), Num(1)))
+    assert(subst(Apply(Var("f"), Var("x")), Var("g"), "f") == Apply(Var("g"), Var("x")))
+  }
+
+  test("Rec") {
+    Interpreter.generator.reset()
+    assert(subst(Rec("f", "z", Var("z")), Unit, "x") == Rec("f_0", "z_1", Var("z_1")))
+  }
+
+  test("Pair") {
+    assert(subst(Pair(Num(1), Num(2)), Unit, "x") == Pair(Num(1), Num(2)))
+    assert(subst(Pair(Var("x"), Num(2)), Num(1), "x") == Pair(Num(1), Num(2)))
+  }
+
+  test("First") {
+    assert(subst(First(Var("z")), Unit, "x") == First(Var("z")))
+    assert(subst(First(Var("x")), Num(1), "x") == First(Num(1)))
+  }
+
+  test("Second") {
+    assert(subst(Second(Var("z")), Unit, "x") == Second(Var("z")))
+    assert(subst(Second(Var("x")), Num(1), "x") == Second(Num(1)))
+  }
+
+  test("Record") {
+    assert(subst(Record(ListMap("l" -> Num(42))), Unit, "x") == Record(ListMap("l" -> Num(42))))
+    assert(subst(Record(ListMap("l" -> Var("x"))), Num(1), "x") == Record(ListMap("l" -> Num(1))))
+  }
+
+  test("Proj") {
+    assert(subst(Proj(Var("r"), "foo"), Unit, "x") == Proj(Var("r"), "foo"))
+  }
+
+  test("Variant") {
+    assert(subst(Variant("foo", Num(42)), Unit, "x") == Variant("foo", Num(42)))
+    assert(subst(Variant("foo", Var("x")), Num(1), "x") == Variant("foo", Num(1)))
+  }
+
+  test("Case") {
+    Interpreter.generator.reset()
+    assert(subst(Case(Var("v"), ListMap("z" -> ("z", NumV(1)))), Unit, "x") == Case(Var("v"), ListMap("z" -> ("z_0", NumV(1)))))
+  }
+
+  test("Bag") {
+    assert(subst(Bag(List(Num(1), Num(2), Num(3))), Unit, "x") == Bag(List(Num(1), Num(2), Num(3))))
+    assert(subst(Bag(List(Var("x"), Num(2), Num(3))), Num(1), "x") == Bag(List(Num(1), Num(2), Num(3))))
+  }
+
+  test("FlatMap") {
+    Interpreter.generator.reset()
+    assert(subst(FlatMap(Var("b"), Lambda("z", Var("z"))), Unit, "x") == FlatMap(Var("b"), Lambda("z_0", Var("z_0"))))
+  }
+
+  test("When") {
+    Interpreter.generator.reset()
+    assert(subst(When(Var("b"), Lambda("z", Var("z"))), Unit, "x") == When(Var("b"), Lambda("z_0", Var("z_0"))))
+  }
+
+  test("Sum") {
+    assert(subst(Sum(Var("b1"), Var("b2")), Unit, "x") == Sum(Var("b1"), Var("b2")))
+    assert(subst(Sum(Var("x"), Var("b2")), Num(1), "x") == Sum(Num(1), Var("b2")))
+  }
+
+  test("Diff") {
+    assert(subst(Diff(Var("b1"), Var("b2")), Unit, "x") == Diff(Var("b1"), Var("b2")))
+    assert(subst(Diff(Var("x"), Var("b2")), Num(1), "x") == Diff(Num(1), Var("b2")))
+  }
+
+  test("Empty Comprehension") {
+    assert(subst(Comprehension(Var("z"), List()), Unit, "x") == Comprehension(Var("z"), List()))
+    assert(subst(Comprehension(Var("x"), List()), Num(1), "x") == Comprehension(Num(1), List()))
+  }
+
+  test("Comprehension w/ Bind") {
+    Interpreter.generator.reset()
+    assert(subst(Comprehension(Var("b"), List(Bind("z", Var("l")))), Unit, "x") == Comprehension(Var("b"), List(Bind("z_0", Var("l")))))
+  }
+
+  test("Comprehension w/ Guard") {
+    assert(subst(Comprehension(Var("b"), List(Guard(Var("z")))), Unit, "x") == Comprehension(Var("b"), List(Guard(Var("z")))))
+    assert(subst(Comprehension(Var("b"), List(Guard(Var("x")))), Num(1), "x") == Comprehension(Var("b"), List(Guard(Num(1)))))
+  }
+
+  test("Comprehension w/ CLet") {
+    Interpreter.generator.reset()
+    assert(subst(Comprehension(Var("b"), List(CLet("z", Var("l")))), Unit, "x") == Comprehension(Var("b"), List(CLet("z_0", Var("l")))))
+  }
+
+  test("Full Comprehension") {
+    Interpreter.generator.reset()
+    assert(subst(Comprehension(Var("b"), List(Bind("z", Var("l")), CLet("c", Num(1)), Guard(Less(Var("z"), Num(10))))), Unit, "x") == Comprehension(Var("b"), List(Bind("z_0", Var("l")), CLet("c_1", Num(1)), Guard(Less(Var("z_0"), Num(10))))))
+  }
+
+  test("Bind w/o Comprehension") {
+    assertThrows[Exception] {
+      subst(Bind("x", Num(1)), Unit, "x")
+    }
+  }
+
+  test("Guard w/o Comprehension") {
+    assertThrows[Exception] {
+      subst(Guard(Num(1)), Unit, "x")
+    }
+  }
+
+  test("CLet w/o Comprehension") {
+    assertThrows[Exception] {
+      subst(CLet("x", Num(1)), Unit, "x")
+    }
+  }
+
+  test("Unexpected Pattern in Comprehension") {
+    assertThrows[Exception] {
+      subst(Comprehension(Var("b"), List(Num(1))), Unit, "x")
+    }
+  }
+
+  test("Count") {
+    assert(subst(Count(Var("b"), Num(2)), Unit, "x") == Count(Var("b"), Num(2)))
+    assert(subst(Count(Var("x"), Num(2)), Num(1), "x") == Count(Num(1), Num(2)))
+  }
+
+  test("LetPair") {
+    Interpreter.generator.reset()
+    assert(subst(LetPair("z", "w", Num(1), Num(2)), Unit, "x") == LetPair("z_0", "w_1", Num(1), Num(2)))
+  }
+
+  test("LetFun") {
+    Interpreter.generator.reset()
+    assert(subst(LetFun("f", TyInt, "z", Var("g"), Num(1)), Unit, "x") == LetFun("f_0", TyInt, "z_1", Var("g"), Num(1)))
+  }
+
+  test("LetRec") {
+    Interpreter.generator.reset()
+    assert(subst(LetRec("f", TyInt, "z", Var("g"), Num(1)), Unit, "x") == LetRec("f_0", TyInt, "z_1", Var("g"), Num(1)))
+  }
+
+  test("LetRecord") {
+    Interpreter.generator.reset()
+    assert(subst(LetRecord(ListMap("l" -> "z"), Var("r"), Unit), Unit, "x") == LetRecord(ListMap("l" -> "z_0"), Var("r"), Unit))
+  }
+}
 
 // Parser
 class ParseStrArithTests extends AnyFunSuite {
