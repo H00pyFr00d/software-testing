@@ -22244,6 +22244,23 @@ SymGenerator
 Class
 FrogInterpreter.SymGenerator
 reset
+4993
+5010
+142
+sleep
+Apply
+false
+0
+false
+Thread.sleep(100)
+
+1308
+src/main/scala/FrogInterpreter/Syntax.scala
+FrogInterpreter
+SymGenerator
+Class
+FrogInterpreter.SymGenerator
+reset
 4965
 4974
 141
@@ -22254,23 +22271,6 @@ false
 false
 def reset
 
-1308
-src/main/scala/FrogInterpreter/Syntax.scala
-FrogInterpreter
-Syntax
-Object
-FrogInterpreter.Syntax
-swapVar
-5106
-5107
-146
-z
-Ident
-true
-0
-false
-z
-
 1309
 src/main/scala/FrogInterpreter/Syntax.scala
 FrogInterpreter
@@ -22278,15 +22278,15 @@ Syntax
 Object
 FrogInterpreter.Syntax
 swapVar
-5128
-5129
-146
-y
+5142
+5143
+149
+z
 Ident
 true
 0
 false
-y
+z
 
 1310
 src/main/scala/FrogInterpreter/Syntax.scala
@@ -22295,15 +22295,15 @@ Syntax
 Object
 FrogInterpreter.Syntax
 swapVar
-5135
-5136
-146
-x
+5164
+5165
+149
+y
 Ident
 true
 0
 false
-x
+y
 
 1311
 src/main/scala/FrogInterpreter/Syntax.scala
@@ -22312,15 +22312,15 @@ Syntax
 Object
 FrogInterpreter.Syntax
 swapVar
-5113
-5136
-146
-<none>
-If
+5171
+5172
+149
+x
+Ident
 true
 0
 false
-if x == z then y else x
+x
 
 1312
 src/main/scala/FrogInterpreter/Syntax.scala
@@ -22329,9 +22329,26 @@ Syntax
 Object
 FrogInterpreter.Syntax
 swapVar
-5024
-5035
-145
+5149
+5172
+149
+<none>
+If
+true
+0
+false
+if x == z then y else x
+
+1313
+src/main/scala/FrogInterpreter/Syntax.scala
+FrogInterpreter
+Syntax
+Object
+FrogInterpreter.Syntax
+swapVar
+5060
+5071
+148
 swapVar
 DefDef
 false
@@ -22339,7 +22356,7 @@ false
 false
 def swapVar
 
-1313
+1314
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22356,7 +22373,7 @@ false
 false
 SymGenerator()
 
-1314
+1315
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22373,7 +22390,7 @@ true
 false
 => true
 
-1315
+1316
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22390,7 +22407,7 @@ false
 false
 tys.forall((l, ty0) => isEqType(ty0))
 
-1316
+1317
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22407,7 +22424,7 @@ false
 false
 isEqType(ty0)
 
-1317
+1318
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22424,7 +22441,7 @@ true
 false
 => tys.forall((l, ty0) => isEqType(ty0))
 
-1318
+1319
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22441,7 +22458,7 @@ false
 false
 isEqType(ty1)
 
-1319
+1320
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22458,7 +22475,7 @@ false
 false
 isEqType(ty2)
 
-1320
+1321
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22475,7 +22492,7 @@ true
 false
 => isEqType(ty1) && isEqType(ty2)
 
-1321
+1322
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22492,7 +22509,7 @@ true
 false
 => false
 
-1322
+1323
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22509,7 +22526,7 @@ false
 false
 def isEqType
 
-1323
+1324
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22526,7 +22543,7 @@ true
 false
 => true
 
-1324
+1325
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22543,7 +22560,7 @@ true
 false
 => true
 
-1325
+1326
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22560,7 +22577,7 @@ true
 false
 => true
 
-1326
+1327
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22577,7 +22594,7 @@ true
 false
 => true
 
-1327
+1328
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22594,7 +22611,7 @@ false
 false
 subtype(ty11, ty21)
 
-1328
+1329
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22611,7 +22628,7 @@ false
 false
 subtype(ty12, ty22)
 
-1329
+1330
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22628,7 +22645,7 @@ true
 false
 =>\n      subtype(ty11, ty21) && subtype(ty12, ty22)
 
-1330
+1331
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22645,7 +22662,7 @@ false
 false
 subtype(ty21, ty11)
 
-1331
+1332
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22662,7 +22679,7 @@ false
 false
 subtype(ty12, ty22)
 
-1332
+1333
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22679,7 +22696,7 @@ true
 false
 =>\n      subtype(ty21, ty11) && subtype(ty12, ty22)
 
-1333
+1334
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22696,7 +22713,7 @@ false
 false
 tys2.forall((l, ty2) => tys1.get(l) match {\n        case None => false\n        case Some(ty1) => subtype(ty1, ty2)\n      })
 
-1334
+1335
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22713,7 +22730,7 @@ false
 false
 tys1.get(l)
 
-1335
+1336
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22730,7 +22747,7 @@ true
 false
 => false
 
-1336
+1337
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22747,7 +22764,7 @@ false
 false
 subtype(ty1, ty2)
 
-1337
+1338
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22764,7 +22781,7 @@ true
 false
 => subtype(ty1, ty2)
 
-1338
+1339
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22781,7 +22798,7 @@ true
 false
 =>\n      // tys2 should be smaller than tys1\n      tys2.forall((l, ty2) => tys1.get(l) match {\n        case None => false\n        case Some(ty1) => subtype(ty1, ty2)\n      })
 
-1339
+1340
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22798,7 +22815,7 @@ false
 false
 tys1.forall((l, ty1) => tys2.get(l) match {\n        case None => false\n        case Some(ty2) => subtype(ty1, ty2)\n      })
 
-1340
+1341
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22815,7 +22832,7 @@ false
 false
 tys2.get(l)
 
-1341
+1342
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22832,7 +22849,7 @@ true
 false
 => false
 
-1342
+1343
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22849,7 +22866,7 @@ false
 false
 subtype(ty1, ty2)
 
-1343
+1344
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22866,7 +22883,7 @@ true
 false
 => subtype(ty1, ty2)
 
-1344
+1345
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22883,7 +22900,7 @@ true
 false
 =>\n      // tys1 should be smaller than tys2\n      tys1.forall((l, ty1) => tys2.get(l) match {\n        case None => false\n        case Some(ty2) => subtype(ty1, ty2)\n      })
 
-1345
+1346
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22900,7 +22917,7 @@ false
 false
 subtype(ty1, ty2)
 
-1346
+1347
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22917,7 +22934,7 @@ true
 false
 =>\n      subtype(ty1, ty2)
 
-1347
+1348
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22934,7 +22951,7 @@ true
 false
 => false
 
-1348
+1349
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22951,7 +22968,7 @@ false
 false
 def subtype
 
-1349
+1350
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22968,7 +22985,7 @@ false
 false
 tyCheck(ctx + (x -> ty1), e, ty2)
 
-1350
+1351
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -22985,7 +23002,7 @@ false
 false
 ctx + (x -> ty1
 
-1351
+1352
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23002,7 +23019,7 @@ false
 false
 x -> ty1
 
-1352
+1353
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23019,7 +23036,7 @@ true
 false
 =>\n      tyCheck(ctx + (x -> ty1), e, ty2)
 
-1353
+1354
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23036,7 +23053,7 @@ false
 false
 tyCheck(ctx + (f -> ty) + (x -> ty1), e, ty2)
 
-1354
+1355
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23053,7 +23070,7 @@ false
 false
 ctx + (f -> ty) + (x -> ty1
 
-1355
+1356
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23070,7 +23087,7 @@ false
 false
 ctx + (f -> ty
 
-1356
+1357
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23087,7 +23104,7 @@ false
 false
 f -> ty
 
-1357
+1358
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23104,7 +23121,7 @@ false
 false
 x -> ty1
 
-1358
+1359
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23121,7 +23138,7 @@ true
 false
 =>\n        tyCheck(ctx + (f -> ty) + (x -> ty1), e, ty2)
 
-1359
+1360
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23138,7 +23155,7 @@ false
 false
 sys.error("tyCheck: expected (polymorphic) function type")
 
-1360
+1361
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23155,7 +23172,7 @@ true
 false
 => sys.error("tyCheck: expected (polymorphic) function type")
 
-1361
+1362
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23172,7 +23189,7 @@ true
 false
 => ty match {\n      case TyFun(ty1, ty2) =>\n        tyCheck(ctx + (f -> ty) + (x -> ty1), e, ty2)\n      case _ => sys.error("tyCheck: expected (polymorphic) function type")\n    }
 
-1362
+1363
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23189,7 +23206,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1363
+1364
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23206,7 +23223,7 @@ false
 false
 tyCheck(ctx, e2, TyFun(ty1, TyBag(ty)))
 
-1364
+1365
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23223,7 +23240,7 @@ true
 false
 => tyCheck(ctx, e2, TyFun(ty1, TyBag(ty)))
 
-1365
+1366
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23240,7 +23257,7 @@ false
 false
 sys.error("tyInfer: flatMap expects bag type")
 
-1366
+1367
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23257,7 +23274,7 @@ true
 false
 => sys.error("tyInfer: flatMap expects bag type")
 
-1367
+1368
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23274,7 +23291,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyBag(ty1) => tyCheck(ctx, e2, TyFun(ty1, TyBag(ty)))\n      case _ => sys.error("tyInfer: flatMap expects bag type")\n    }
 
-1368
+1369
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23291,7 +23308,7 @@ false
 false
 tyCheck(ctx, e1, TyBool)
 
-1369
+1370
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23308,7 +23325,7 @@ false
 false
 tyCheck(ctx, e2, TyBag(ty))
 
-1370
+1371
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23325,7 +23342,7 @@ true
 false
 tyCheck(ctx, e1, TyBool)\n      tyCheck(ctx, e2, TyBag(ty))
 
-1371
+1372
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23342,7 +23359,7 @@ false
 false
 tyCheck(ctx, e1, TyBag(ty))
 
-1372
+1373
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23359,7 +23376,7 @@ false
 false
 tyCheck(ctx, e2, TyBag(ty))
 
-1373
+1374
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23376,7 +23393,7 @@ true
 false
 tyCheck(ctx, e1, TyBag(ty))\n      tyCheck(ctx, e2, TyBag(ty))
 
-1374
+1375
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23393,7 +23410,7 @@ false
 false
 isEqType(ty)
 
-1375
+1376
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23410,7 +23427,7 @@ false
 false
 sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)
 
-1376
+1377
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23427,7 +23444,7 @@ false
 false
 "tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString
 
-1377
+1378
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23444,7 +23461,7 @@ false
 false
 "tyInfer: difference expects bags of elements of equality type, not "
 
-1378
+1379
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23461,7 +23478,7 @@ true
 false
 {\n        sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)\n      }
 
-1379
+1380
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23478,7 +23495,7 @@ true
 false
 
 
-1380
+1381
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23495,7 +23512,7 @@ false
 false
 tyCheck(ctx, e1, TyBag(ty))
 
-1381
+1382
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23512,7 +23529,7 @@ false
 false
 tyCheck(ctx, e2, TyBag(ty))
 
-1382
+1383
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23529,7 +23546,7 @@ true
 false
 if (!isEqType(ty)) {\n        sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)\n      }\n      tyCheck(ctx, e1, TyBag(ty))\n      tyCheck(ctx, e2, TyBag(ty))
 
-1383
+1384
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23546,7 +23563,7 @@ false
 false
 es.foreach(e => tyCheck(ctx, e, ty))
 
-1384
+1385
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23563,7 +23580,7 @@ false
 false
 tyCheck(ctx, e, ty)
 
-1385
+1386
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23580,7 +23597,7 @@ true
 false
 =>\n      es.foreach(e => tyCheck(ctx, e, ty))
 
-1386
+1387
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23597,7 +23614,7 @@ false
 false
 tyCheck(ctx, e, ty)
 
-1387
+1388
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23614,7 +23631,7 @@ true
 false
 => tyCheck(ctx, e, ty)
 
-1388
+1389
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23631,7 +23648,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1389
+1390
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23648,7 +23665,7 @@ false
 false
 tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))
 
-1390
+1391
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23665,7 +23682,7 @@ false
 false
 ctx + (x -> ty1
 
-1391
+1392
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23682,7 +23699,7 @@ false
 false
 x -> ty1
 
-1392
+1393
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23699,7 +23716,7 @@ true
 false
 =>\n            tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))
 
-1393
+1394
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23716,7 +23733,7 @@ false
 false
 sys.error("tyCheck: expected bag type")
 
-1394
+1395
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23733,7 +23750,7 @@ true
 false
 => sys.error("tyCheck: expected bag type")
 
-1395
+1396
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23750,7 +23767,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n          case TyBag(ty1) =>\n            tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))\n          case _ => sys.error("tyCheck: expected bag type")\n        }
 
-1396
+1397
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23767,7 +23784,7 @@ false
 false
 tyCheck(ctx, e1, TyBool)
 
-1397
+1398
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23784,7 +23801,7 @@ false
 false
 tyCheck(ctx, Comprehension(e, oth), TyBag(ty))
 
-1398
+1399
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23801,7 +23818,7 @@ true
 false
 tyCheck(ctx, e1, TyBool)\n          tyCheck(ctx, Comprehension(e, oth), TyBag(ty))
 
-1399
+1400
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23818,7 +23835,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1400
+1401
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23835,7 +23852,7 @@ false
 false
 tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))
 
-1401
+1402
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23852,7 +23869,7 @@ false
 false
 ctx + (x -> ty1
 
-1402
+1403
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23869,7 +23886,7 @@ false
 false
 x -> ty1
 
-1403
+1404
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23886,7 +23903,7 @@ true
 false
 val ty1 = tyInfer(ctx, e1)\n          tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))
 
-1404
+1405
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23903,7 +23920,7 @@ false
 false
 sys.error("tyCheck: expected comprehension clause")
 
-1405
+1406
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23920,7 +23937,7 @@ true
 false
 =>\n          sys.error("tyCheck: expected comprehension clause")
 
-1406
+1407
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23937,7 +23954,7 @@ true
 false
 => p match {\n        case Bind(x, e1) => tyInfer(ctx, e1) match {\n          case TyBag(ty1) =>\n            tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))\n          case _ => sys.error("tyCheck: expected bag type")\n        }\n        case Guard(e1) =>\n          tyCheck(ctx, e1, TyBool)\n          tyCheck(ctx, Comprehension(e, oth), TyBag(ty))\n        case CLet(x, e1) =>\n          val ty1 = tyInfer(ctx, e1)\n          tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))\n        case _ =>\n          sys.error("tyCheck: expected comprehension clause")\n      }
 
-1407
+1408
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23954,7 +23971,7 @@ true
 false
 => es match {\n      case Nil => tyCheck(ctx, e, ty)\n      case p::oth => p match {\n        case Bind(x, e1) => tyInfer(ctx, e1) match {\n          case TyBag(ty1) =>\n            tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))\n          case _ => sys.error("tyCheck: expected bag type")\n        }\n        case Guard(e1) =>\n          tyCheck(ctx, e1, TyBool)\n          tyCheck(ctx, Comprehension(e, oth), TyBag(ty))\n        case CLet(x, e1) =>\n          val ty1 = tyInfer(ctx, e1)\n          tyCheck(ctx + (x -> ty1), Comprehension(e, oth), TyBag(ty))\n        case _ =>\n          sys.error("tyCheck: expected comprehension clause")\n      }\n    }
 
-1408
+1409
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23971,7 +23988,7 @@ false
 false
 tyCheck(ctx, e1, ty1)
 
-1409
+1410
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -23988,7 +24005,7 @@ false
 false
 tyCheck(ctx, e2, ty2)
 
-1410
+1411
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24005,7 +24022,7 @@ true
 false
 tyCheck(ctx, e1, ty1)\n      tyCheck(ctx, e2, ty2)
 
-1411
+1412
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24022,7 +24039,7 @@ false
 false
 tys.foreach((l, ty) => es.get(l) match { // subtyping also appears here\n        case None => sys.error("tyCheck: label " ++ l ++ " not found in the record type")\n        case Some(e) => tyCheck(ctx, e, ty)\n      })
 
-1412
+1413
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24039,7 +24056,7 @@ false
 false
 es.get(l)
 
-1413
+1414
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24056,7 +24073,7 @@ false
 false
 sys.error("tyCheck: label " ++ l ++ " not found in the record type")
 
-1414
+1415
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24073,7 +24090,7 @@ false
 false
 "tyCheck: label " ++ l ++ " not found in the record type"
 
-1415
+1416
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24090,7 +24107,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1416
+1417
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24107,7 +24124,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1417
+1418
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24124,7 +24141,7 @@ false
 false
 "tyCheck: label "
 
-1418
+1419
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24141,7 +24158,7 @@ true
 false
 => sys.error("tyCheck: label " ++ l ++ " not found in the record type")
 
-1419
+1420
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24158,7 +24175,7 @@ false
 false
 tyCheck(ctx, e, ty)
 
-1420
+1421
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24175,7 +24192,7 @@ true
 false
 => tyCheck(ctx, e, ty)
 
-1421
+1422
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24192,7 +24209,7 @@ false
 false
 es.foreach((l, e) => tys.get(l) match {\n        case None =>\n          tyInfer(ctx, e)\n          ()\n        case Some(ty) => ()\n      })
 
-1422
+1423
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24209,7 +24226,7 @@ false
 false
 tys.get(l)
 
-1423
+1424
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24226,7 +24243,7 @@ false
 false
 tyInfer(ctx, e)
 
-1424
+1425
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24243,7 +24260,7 @@ true
 false
 tyInfer(ctx, e)\n          ()
 
-1425
+1426
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24260,7 +24277,7 @@ true
 false
 => ()
 
-1426
+1427
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24277,7 +24294,7 @@ true
 false
 tys.foreach((l, ty) => es.get(l) match { // subtyping also appears here\n        case None => sys.error("tyCheck: label " ++ l ++ " not found in the record type")\n        case Some(e) => tyCheck(ctx, e, ty)\n      })\n      es.foreach((l, e) => tys.get(l) match {\n        case None =>\n          tyInfer(ctx, e)\n          ()\n        case Some(ty) => ()\n      })
 
-1427
+1428
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24294,7 +24311,7 @@ false
 false
 tys.get(l)
 
-1428
+1429
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24311,7 +24328,7 @@ false
 false
 sys.error("tyCheck: label " ++ l ++ " not found in the variant type")
 
-1429
+1430
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24328,7 +24345,7 @@ false
 false
 "tyCheck: label " ++ l ++ " not found in the variant type"
 
-1430
+1431
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24345,7 +24362,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1431
+1432
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24362,7 +24379,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1432
+1433
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24379,7 +24396,7 @@ false
 false
 "tyCheck: label "
 
-1433
+1434
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24396,7 +24413,7 @@ true
 false
 => sys.error("tyCheck: label " ++ l ++ " not found in the variant type")
 
-1434
+1435
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24413,7 +24430,7 @@ false
 false
 tyCheck(ctx, e, ty)
 
-1435
+1436
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24430,7 +24447,7 @@ true
 false
 => tyCheck(ctx, e, ty)
 
-1436
+1437
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24447,7 +24464,7 @@ true
 false
 =>\n      tys.get(l) match {\n        case None => sys.error("tyCheck: label " ++ l ++ " not found in the variant type")\n        case Some(ty) => tyCheck(ctx, e, ty)\n      }
 
-1437
+1438
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24464,7 +24481,7 @@ false
 false
 tyCheck(ctx, e, TyRecord(ListMap(l -> ty)))
 
-1438
+1439
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24481,7 +24498,7 @@ false
 false
 ListMap(l -> ty)
 
-1439
+1440
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24498,7 +24515,7 @@ false
 false
 l -> ty
 
-1440
+1441
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24515,7 +24532,7 @@ true
 false
 => tyCheck(ctx, e, TyRecord(ListMap(l -> ty)))
 
-1441
+1442
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24532,7 +24549,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1442
+1443
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24549,7 +24566,7 @@ false
 false
 tyCheck(ctx + (x -> ty), e2, ty2)
 
-1443
+1444
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24566,7 +24583,7 @@ false
 false
 ctx + (x -> ty
 
-1444
+1445
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24583,7 +24600,7 @@ false
 false
 x -> ty
 
-1445
+1446
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24600,7 +24617,7 @@ true
 false
 val ty = tyInfer(ctx, e1)\n      tyCheck(ctx + (x -> ty), e2, ty2)
 
-1446
+1447
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24617,7 +24634,7 @@ false
 false
 tyCheck(ctx, e, TyBool)
 
-1447
+1448
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24634,7 +24651,7 @@ false
 false
 tyCheck(ctx, e1, ty)
 
-1448
+1449
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24651,7 +24668,7 @@ false
 false
 tyCheck(ctx, e2, ty)
 
-1449
+1450
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24668,7 +24685,7 @@ true
 false
 tyCheck(ctx, e, TyBool)\n      tyCheck(ctx, e1, ty)\n      tyCheck(ctx, e2, ty)
 
-1450
+1451
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24685,7 +24702,7 @@ false
 false
 tyInfer(ctx, e)
 
-1451
+1452
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24702,7 +24719,7 @@ false
 false
 tys.foreach((l, _) => cls.get(l) match {\n          case None => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")\n          case Some((_, _)) => ()\n        })
 
-1452
+1453
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24719,7 +24736,7 @@ false
 false
 cls.get(l)
 
-1453
+1454
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24736,7 +24753,7 @@ false
 false
 sys.error("tyCheck: label " ++ l ++ " not found in the case clause")
 
-1454
+1455
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24753,7 +24770,7 @@ false
 false
 "tyCheck: label " ++ l ++ " not found in the case clause"
 
-1455
+1456
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24770,7 +24787,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1456
+1457
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24787,7 +24804,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1457
+1458
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24804,7 +24821,7 @@ false
 false
 "tyCheck: label "
 
-1458
+1459
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24821,7 +24838,7 @@ true
 false
 => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")
 
-1459
+1460
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24838,7 +24855,7 @@ true
 false
 => ()
 
-1460
+1461
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24855,7 +24872,7 @@ false
 false
 cls.foreach(entry =>\n          val (l, (x, e)) = entry\n          tys.get(l) match {\n            case None => sys.error("tyCheck: label " ++ l ++ " not found in the variant type")\n            case Some(argty) => tyCheck(ctx + (x -> argty), e, ty)\n          })
 
-1461
+1462
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24872,7 +24889,7 @@ true
 false
 
 
-1462
+1463
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24889,7 +24906,7 @@ false
 false
 tys.get(l)
 
-1463
+1464
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24906,7 +24923,7 @@ false
 false
 sys.error("tyCheck: label " ++ l ++ " not found in the variant type")
 
-1464
+1465
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24923,7 +24940,7 @@ false
 false
 "tyCheck: label " ++ l ++ " not found in the variant type"
 
-1465
+1466
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24940,7 +24957,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1466
+1467
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24957,7 +24974,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1467
+1468
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24974,7 +24991,7 @@ false
 false
 "tyCheck: label "
 
-1468
+1469
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -24991,7 +25008,7 @@ true
 false
 => sys.error("tyCheck: label " ++ l ++ " not found in the variant type")
 
-1469
+1470
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25008,7 +25025,7 @@ false
 false
 tyCheck(ctx + (x -> argty), e, ty)
 
-1470
+1471
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25025,7 +25042,7 @@ false
 false
 ctx + (x -> argty
 
-1471
+1472
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25042,7 +25059,7 @@ false
 false
 x -> argty
 
-1472
+1473
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25059,7 +25076,7 @@ true
 false
 => tyCheck(ctx + (x -> argty), e, ty)
 
-1473
+1474
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25076,7 +25093,7 @@ true
 false
 tys.foreach((l, _) => cls.get(l) match {\n          case None => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")\n          case Some((_, _)) => ()\n        })\n        cls.foreach(entry =>\n          val (l, (x, e)) = entry\n          tys.get(l) match {\n            case None => sys.error("tyCheck: label " ++ l ++ " not found in the variant type")\n            case Some(argty) => tyCheck(ctx + (x -> argty), e, ty)\n          })
 
-1474
+1475
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25093,7 +25110,7 @@ false
 false
 sys.error("tyInfer: expected variant type")
 
-1475
+1476
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25110,7 +25127,7 @@ true
 false
 => sys.error("tyInfer: expected variant type")
 
-1476
+1477
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25127,7 +25144,7 @@ true
 false
 => tyInfer(ctx, e) match {\n      case TyVariant(tys) =>\n        tys.foreach((l, _) => cls.get(l) match {\n          case None => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")\n          case Some((_, _)) => ()\n        })\n        cls.foreach(entry =>\n          val (l, (x, e)) = entry\n          tys.get(l) match {\n            case None => sys.error("tyCheck: label " ++ l ++ " not found in the variant type")\n            case Some(argty) => tyCheck(ctx + (x -> argty), e, ty)\n          })\n      case _ => sys.error("tyInfer: expected variant type")\n    }
 
-1477
+1478
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25144,7 +25161,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1478
+1479
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25161,7 +25178,7 @@ false
 false
 tyCheck(ctx + (x -> ty1) + (y -> ty2), e2, input)
 
-1479
+1480
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25178,7 +25195,7 @@ false
 false
 ctx + (x -> ty1) + (y -> ty2
 
-1480
+1481
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25195,7 +25212,7 @@ false
 false
 ctx + (x -> ty1
 
-1481
+1482
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25212,7 +25229,7 @@ false
 false
 x -> ty1
 
-1482
+1483
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25229,7 +25246,7 @@ false
 false
 y -> ty2
 
-1483
+1484
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25246,7 +25263,7 @@ true
 false
 => tyCheck(ctx + (x -> ty1) + (y -> ty2), e2, input)
 
-1484
+1485
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25263,7 +25280,7 @@ false
 false
 sys.error("tyInfer: expected pair type")
 
-1485
+1486
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25280,7 +25297,7 @@ true
 false
 => sys.error("tyInfer: expected pair type")
 
-1486
+1487
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25297,7 +25314,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyPair(ty1, ty2) => tyCheck(ctx + (x -> ty1) + (y -> ty2), e2, input)\n      case _ => sys.error("tyInfer: expected pair type")\n    }
 
-1487
+1488
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25314,7 +25331,7 @@ false
 false
 tyCheck(ctx + (x -> ty1), e1, ty2)
 
-1488
+1489
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25331,7 +25348,7 @@ false
 false
 ctx + (x -> ty1
 
-1489
+1490
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25348,7 +25365,7 @@ false
 false
 x -> ty1
 
-1490
+1491
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25365,7 +25382,7 @@ false
 false
 tyCheck(ctx + (f -> ty), e2, input)
 
-1491
+1492
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25382,7 +25399,7 @@ false
 false
 ctx + (f -> ty
 
-1492
+1493
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25399,7 +25416,7 @@ false
 false
 f -> ty
 
-1493
+1494
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25416,7 +25433,7 @@ true
 false
 tyCheck(ctx + (x -> ty1), e1, ty2)\n        tyCheck(ctx + (f -> ty), e2, input)
 
-1494
+1495
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25433,7 +25450,7 @@ false
 false
 sys.error("tyInfer: expected function type")
 
-1495
+1496
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25450,7 +25467,7 @@ true
 false
 => sys.error("tyInfer: expected function type")
 
-1496
+1497
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25467,7 +25484,7 @@ true
 false
 => ty match {\n      case TyFun(ty1, ty2) =>\n        tyCheck(ctx + (x -> ty1), e1, ty2)\n        tyCheck(ctx + (f -> ty), e2, input)\n      case _ => sys.error("tyInfer: expected function type")\n    }
 
-1497
+1498
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25484,7 +25501,7 @@ false
 false
 tyCheck(ctx + (f -> ty) + (x -> ty1), e1, ty2)
 
-1498
+1499
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25501,7 +25518,7 @@ false
 false
 ctx + (f -> ty) + (x -> ty1
 
-1499
+1500
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25518,7 +25535,7 @@ false
 false
 ctx + (f -> ty
 
-1500
+1501
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25535,7 +25552,7 @@ false
 false
 f -> ty
 
-1501
+1502
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25552,7 +25569,7 @@ false
 false
 x -> ty1
 
-1502
+1503
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25569,7 +25586,7 @@ false
 false
 tyCheck(ctx + (f -> ty), e2, input)
 
-1503
+1504
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25586,7 +25603,7 @@ false
 false
 ctx + (f -> ty
 
-1504
+1505
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25603,7 +25620,7 @@ false
 false
 f -> ty
 
-1505
+1506
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25620,7 +25637,7 @@ true
 false
 tyCheck(ctx + (f -> ty) + (x -> ty1), e1, ty2)\n        tyCheck(ctx + (f -> ty), e2, input)
 
-1506
+1507
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25637,7 +25654,7 @@ false
 false
 sys.error("tyInfer: expected (polymorphic) function type")
 
-1507
+1508
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25654,7 +25671,7 @@ true
 false
 => sys.error("tyInfer: expected (polymorphic) function type")
 
-1508
+1509
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25671,7 +25688,7 @@ true
 false
 => ty match {\n      case TyFun(ty1, ty2) =>\n        tyCheck(ctx + (f -> ty) + (x -> ty1), e1, ty2)\n        tyCheck(ctx + (f -> ty), e2, input)\n      case _ => sys.error("tyInfer: expected (polymorphic) function type")\n    }
 
-1509
+1510
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25688,7 +25705,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1510
+1511
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25705,7 +25722,7 @@ false
 false
 xs.foldLeft(ctx)((curctx, lx) => \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) => curctx + (name -> ty)\n            case None => sys.error("tyInfer: label " ++ label ++ " not found in the record type")\n          })
 
-1511
+1512
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25722,7 +25739,7 @@ true
 false
 
 
-1512
+1513
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25739,7 +25756,7 @@ false
 false
 tys.get(label)
 
-1513
+1514
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25756,7 +25773,7 @@ false
 false
 curctx + (name -> ty
 
-1514
+1515
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25773,7 +25790,7 @@ false
 false
 name -> ty
 
-1515
+1516
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25790,7 +25807,7 @@ true
 false
 => curctx + (name -> ty)
 
-1516
+1517
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25807,7 +25824,7 @@ false
 false
 sys.error("tyInfer: label " ++ label ++ " not found in the record type")
 
-1517
+1518
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25824,7 +25841,7 @@ false
 false
 "tyInfer: label " ++ label ++ " not found in the record type"
 
-1518
+1519
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25841,7 +25858,7 @@ false
 false
 "tyInfer: label " ++ label
 
-1519
+1520
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25858,7 +25875,7 @@ false
 false
 "tyInfer: label " ++ label
 
-1520
+1521
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25875,7 +25892,7 @@ false
 false
 "tyInfer: label "
 
-1521
+1522
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25892,7 +25909,7 @@ true
 false
 => sys.error("tyInfer: label " ++ label ++ " not found in the record type")
 
-1522
+1523
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25909,7 +25926,7 @@ false
 false
 tyCheck(newctx, e2, input)
 
-1523
+1524
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25926,7 +25943,7 @@ true
 false
 val newctx = xs.foldLeft(ctx)((curctx, lx) => \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) => curctx + (name -> ty)\n            case None => sys.error("tyInfer: label " ++ label ++ " not found in the record type")\n          })\n        tyCheck(newctx, e2, input)
 
-1524
+1525
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25943,7 +25960,7 @@ false
 false
 sys.error("tyInfer: expected record type")
 
-1525
+1526
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25960,7 +25977,7 @@ true
 false
 => sys.error("tyInfer: expected record type")
 
-1526
+1527
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25977,7 +25994,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyRecord(tys) =>\n        val newctx = xs.foldLeft(ctx)((curctx, lx) => \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) => curctx + (name -> ty)\n            case None => sys.error("tyInfer: label " ++ label ++ " not found in the record type")\n          })\n        tyCheck(newctx, e2, input)\n      case _ => sys.error("tyInfer: expected record type")\n    }
 
-1527
+1528
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -25994,7 +26011,7 @@ false
 false
 tyInfer(ctx, e)
 
-1528
+1529
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26011,7 +26028,7 @@ false
 false
 subtype(ty1, ty)
 
-1529
+1530
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26028,7 +26045,7 @@ true
 false
 ()
 
-1530
+1531
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26045,7 +26062,7 @@ false
 false
 sys.error("tyCheck: fail for " ++ ty1.toString ++ " and " ++ ty.toString)
 
-1531
+1532
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26062,23 +26079,6 @@ false
 false
 "tyCheck: fail for " ++ ty1.toString ++ " and " ++ ty.toString
 
-1532
-src/main/scala/FrogInterpreter/Typer.scala
-FrogInterpreter
-Typer
-Object
-FrogInterpreter.Typer
-tyCheck
-6831
-6878
-188
-augmentString
-Apply
-false
-0
-false
-"tyCheck: fail for " ++ ty1.toString ++ " and "
-
 1533
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
@@ -26089,7 +26089,7 @@ tyCheck
 6831
 6878
 188
-++
+augmentString
 Apply
 false
 0
@@ -26104,6 +26104,23 @@ Object
 FrogInterpreter.Typer
 tyCheck
 6831
+6878
+188
+++
+Apply
+false
+0
+false
+"tyCheck: fail for " ++ ty1.toString ++ " and "
+
+1535
+src/main/scala/FrogInterpreter/Typer.scala
+FrogInterpreter
+Typer
+Object
+FrogInterpreter.Typer
+tyCheck
+6831
 6867
 188
 augmentString
@@ -26113,7 +26130,7 @@ false
 false
 "tyCheck: fail for " ++ ty1.toString
 
-1535
+1536
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26130,7 +26147,7 @@ false
 false
 "tyCheck: fail for " ++ ty1.toString
 
-1536
+1537
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26147,7 +26164,7 @@ false
 false
 "tyCheck: fail for "
 
-1537
+1538
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26164,7 +26181,7 @@ true
 false
 sys.error("tyCheck: fail for " ++ ty1.toString ++ " and " ++ ty.toString)
 
-1538
+1539
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26181,7 +26198,7 @@ true
 false
 val ty1 = tyInfer(ctx, e)\n      if subtype(ty1, ty) then ()\n      else sys.error("tyCheck: fail for " ++ ty1.toString ++ " and " ++ ty.toString)
 
-1539
+1540
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26198,7 +26215,7 @@ false
 false
 def tyCheck
 
-1540
+1541
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26215,7 +26232,7 @@ false
 false
 sys.error("tyCheck: values should not appear at this stage")
 
-1541
+1542
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26232,7 +26249,7 @@ true
 false
 => sys.error("tyCheck: values should not appear at this stage")
 
-1542
+1543
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26249,7 +26266,7 @@ true
 false
 => TyUnit
 
-1543
+1544
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26266,7 +26283,7 @@ true
 false
 => TyInt
 
-1544
+1545
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26283,7 +26300,7 @@ false
 false
 tyCheck(ctx, e1, TyInt)
 
-1545
+1546
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26300,7 +26317,7 @@ false
 false
 tyCheck(ctx, e2, TyInt)
 
-1546
+1547
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26317,7 +26334,7 @@ true
 false
 tyCheck(ctx, e1, TyInt)\n      tyCheck(ctx, e2, TyInt)\n      TyInt
 
-1547
+1548
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26334,7 +26351,7 @@ false
 false
 tyCheck(ctx, e1, TyInt)
 
-1548
+1549
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26351,7 +26368,7 @@ false
 false
 tyCheck(ctx, e2, TyInt)
 
-1549
+1550
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26368,7 +26385,7 @@ true
 false
 tyCheck(ctx, e1, TyInt)\n      tyCheck(ctx, e2, TyInt)\n      TyInt
 
-1550
+1551
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26385,7 +26402,7 @@ false
 false
 tyCheck(ctx, e1, TyInt)
 
-1551
+1552
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26402,7 +26419,7 @@ false
 false
 tyCheck(ctx, e2, TyInt)
 
-1552
+1553
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26419,7 +26436,7 @@ true
 false
 tyCheck(ctx, e1, TyInt)\n      tyCheck(ctx, e2, TyInt)\n      TyInt
 
-1553
+1554
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26436,7 +26453,7 @@ true
 false
 => TyBool
 
-1554
+1555
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26453,7 +26470,7 @@ false
 false
 tyInfer(ctx,e1)
 
-1555
+1556
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26470,7 +26487,7 @@ false
 false
 isEqType(ty)
 
-1556
+1557
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26487,7 +26504,7 @@ false
 false
 sys.error("tyCheck: cannot test equality of type " ++ ty.toString)
 
-1557
+1558
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26504,7 +26521,7 @@ false
 false
 "tyCheck: cannot test equality of type " ++ ty.toString
 
-1558
+1559
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26521,7 +26538,7 @@ false
 false
 "tyCheck: cannot test equality of type "
 
-1559
+1560
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26538,7 +26555,7 @@ true
 false
 {\n        sys.error("tyCheck: cannot test equality of type " ++ ty.toString)\n      }
 
-1560
+1561
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26555,7 +26572,7 @@ true
 false
 
 
-1561
+1562
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26572,7 +26589,7 @@ false
 false
 tyCheck(ctx, e2, ty)
 
-1562
+1563
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26589,7 +26606,7 @@ true
 false
 val ty = tyInfer(ctx,e1)\n      if (!isEqType(ty)) {\n        sys.error("tyCheck: cannot test equality of type " ++ ty.toString)\n      }\n      tyCheck(ctx, e2, ty)\n      TyBool
 
-1563
+1564
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26606,7 +26623,7 @@ false
 false
 tyCheck(ctx, e1, TyInt)
 
-1564
+1565
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26623,7 +26640,7 @@ false
 false
 tyCheck(ctx, e2, TyInt)
 
-1565
+1566
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26640,7 +26657,7 @@ true
 false
 tyCheck(ctx, e1, TyInt)\n      tyCheck(ctx, e2, TyInt)\n      TyBool
 
-1566
+1567
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26657,7 +26674,7 @@ false
 false
 tyCheck(ctx, e, TyBool)
 
-1567
+1568
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26674,7 +26691,7 @@ false
 false
 tyInfer(ctx,e1)
 
-1568
+1569
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26691,7 +26708,7 @@ false
 false
 tyCheck(ctx, e2, ty)
 
-1569
+1570
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26708,7 +26725,7 @@ true
 false
 tyCheck(ctx, e, TyBool)\n      val ty = tyInfer(ctx,e1)\n      tyCheck(ctx, e2, ty)\n      ty
 
-1570
+1571
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26725,7 +26742,7 @@ true
 false
 => TyString
 
-1571
+1572
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26742,7 +26759,7 @@ false
 false
 tyCheck(ctx, e, TyString)
 
-1572
+1573
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26759,7 +26776,7 @@ true
 false
 tyCheck(ctx, e, TyString)\n      TyInt
 
-1573
+1574
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26776,7 +26793,7 @@ false
 false
 tyCheck(ctx, e1, TyString)
 
-1574
+1575
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26793,7 +26810,7 @@ false
 false
 tyCheck(ctx, e2, TyInt)
 
-1575
+1576
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26810,7 +26827,7 @@ true
 false
 tyCheck(ctx, e1, TyString)\n      tyCheck(ctx, e2, TyInt)\n      TyString
 
-1576
+1577
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26827,7 +26844,7 @@ false
 false
 tyCheck(ctx, e1, TyString)
 
-1577
+1578
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26844,7 +26861,7 @@ false
 false
 tyCheck(ctx, e2, TyString)
 
-1578
+1579
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26861,7 +26878,7 @@ true
 false
 tyCheck(ctx, e1, TyString)\n      tyCheck(ctx, e2, TyString)\n      TyString
 
-1579
+1580
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26878,7 +26895,7 @@ false
 false
 ctx(x)
 
-1580
+1581
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26895,7 +26912,7 @@ true
 false
 => ctx(x)
 
-1581
+1582
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26912,7 +26929,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1582
+1583
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26929,7 +26946,7 @@ false
 false
 tyInfer(ctx + (x -> ty), e2)
 
-1583
+1584
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26946,7 +26963,7 @@ false
 false
 ctx + (x -> ty
 
-1584
+1585
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26963,7 +26980,7 @@ false
 false
 x -> ty
 
-1585
+1586
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26980,7 +26997,7 @@ true
 false
 val ty = tyInfer(ctx, e1)\n      tyInfer(ctx + (x -> ty), e2)
 
-1586
+1587
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -26997,7 +27014,7 @@ false
 false
 sys.error("tyInfer: cannot infer function types")
 
-1587
+1588
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27014,7 +27031,7 @@ true
 false
 =>\n      sys.error("tyInfer: cannot infer function types")
 
-1588
+1589
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27031,7 +27048,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1589
+1590
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27048,7 +27065,7 @@ false
 false
 tyCheck(ctx, e2, ty1)
 
-1590
+1591
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27065,7 +27082,7 @@ true
 false
 tyCheck(ctx, e2, ty1)\n        ty2
 
-1591
+1592
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27082,7 +27099,7 @@ false
 false
 sys.error("tyInfer: expected function type")
 
-1592
+1593
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27099,7 +27116,7 @@ true
 false
 => sys.error("tyInfer: expected function type")
 
-1593
+1594
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27116,7 +27133,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyFun(ty1, ty2) =>\n        tyCheck(ctx, e2, ty1)\n        ty2\n      case _ => sys.error("tyInfer: expected function type")\n    }
 
-1594
+1595
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27133,7 +27150,7 @@ false
 false
 sys.error("tyInfer: cannot infer function types")
 
-1595
+1596
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27150,7 +27167,7 @@ true
 false
 =>\n      sys.error("tyInfer: cannot infer function types")
 
-1596
+1597
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27167,7 +27184,7 @@ false
 false
 tyCheck(ctx, e, ty)
 
-1597
+1598
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27184,7 +27201,7 @@ true
 false
 tyCheck(ctx, e, ty)\n      ty
 
-1598
+1599
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27201,7 +27218,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1599
+1600
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27218,7 +27235,7 @@ false
 false
 tyInfer(ctx, e2)
 
-1600
+1601
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27235,7 +27252,7 @@ true
 false
 val ty1 = tyInfer(ctx, e1)\n      val ty2 = tyInfer(ctx, e2)\n      TyPair(ty1, ty2)
 
-1601
+1602
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27252,7 +27269,7 @@ false
 false
 tyInfer(ctx, e)
 
-1602
+1603
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27269,7 +27286,7 @@ true
 false
 => ty1
 
-1603
+1604
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27286,7 +27303,7 @@ false
 false
 sys.error("tyInfer: expected pair type")
 
-1604
+1605
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27303,7 +27320,7 @@ true
 false
 => sys.error("tyInfer: expected pair type")
 
-1605
+1606
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27320,7 +27337,7 @@ true
 false
 => tyInfer(ctx, e) match {\n      case TyPair(ty1, _) => ty1\n      case _ => sys.error("tyInfer: expected pair type")\n    }
 
-1606
+1607
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27337,7 +27354,7 @@ false
 false
 tyInfer(ctx, e)
 
-1607
+1608
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27354,7 +27371,7 @@ true
 false
 => ty2
 
-1608
+1609
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27371,7 +27388,7 @@ false
 false
 sys.error("tyInfer: expected pair type")
 
-1609
+1610
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27388,7 +27405,7 @@ true
 false
 => sys.error("tyInfer: expected pair type")
 
-1610
+1611
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27405,7 +27422,7 @@ true
 false
 => tyInfer(ctx, e) match {\n      case TyPair(_, ty2) => ty2\n      case _ => sys.error("tyInfer: expected pair type")\n    }
 
-1611
+1612
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27422,7 +27439,7 @@ false
 false
 es.map((l, e) => (l, tyInfer(ctx, e)))
 
-1612
+1613
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27439,7 +27456,7 @@ false
 false
 tyInfer(ctx, e)
 
-1613
+1614
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27456,7 +27473,7 @@ true
 false
 val tys = es.map((l, e) => (l, tyInfer(ctx, e)))\n      TyRecord(tys)
 
-1614
+1615
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27473,7 +27490,7 @@ false
 false
 tyInfer(ctx, e)
 
-1615
+1616
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27490,7 +27507,7 @@ false
 false
 tys.get(l)
 
-1616
+1617
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27507,7 +27524,7 @@ false
 false
 sys.error("tyOf: label" ++ l ++ " not found in the record")
 
-1617
+1618
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27524,7 +27541,7 @@ false
 false
 "tyOf: label" ++ l ++ " not found in the record"
 
-1618
+1619
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27541,7 +27558,7 @@ false
 false
 "tyOf: label" ++ l
 
-1619
+1620
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27558,7 +27575,7 @@ false
 false
 "tyOf: label" ++ l
 
-1620
+1621
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27575,7 +27592,7 @@ false
 false
 "tyOf: label"
 
-1621
+1622
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27592,7 +27609,7 @@ true
 false
 => sys.error("tyOf: label" ++ l ++ " not found in the record")
 
-1622
+1623
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27609,7 +27626,7 @@ true
 false
 => ty
 
-1623
+1624
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27626,7 +27643,7 @@ true
 false
 => tys.get(l) match\n        case None => sys.error("tyOf: label" ++ l ++ " not found in the record")\n        case Some(ty) => ty
 
-1624
+1625
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27643,7 +27660,7 @@ false
 false
 sys.error("tyOf: expected record type")
 
-1625
+1626
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27660,7 +27677,7 @@ true
 false
 => sys.error("tyOf: expected record type")
 
-1626
+1627
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27677,7 +27694,7 @@ true
 false
 => tyInfer(ctx, e) match {\n      case TyRecord(tys) => tys.get(l) match\n        case None => sys.error("tyOf: label" ++ l ++ " not found in the record")\n        case Some(ty) => ty\n      case _ => sys.error("tyOf: expected record type")\n    }
 
-1627
+1628
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27694,7 +27711,7 @@ false
 false
 ListMap(l -> tyInfer(ctx, e))
 
-1628
+1629
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27711,7 +27728,7 @@ false
 false
 l -> tyInfer(ctx, e)
 
-1629
+1630
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27728,7 +27745,7 @@ false
 false
 tyInfer(ctx, e)
 
-1630
+1631
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27745,7 +27762,7 @@ true
 false
 => TyVariant(ListMap(l -> tyInfer(ctx, e)))
 
-1631
+1632
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27762,7 +27779,7 @@ false
 false
 tyInfer(ctx, e)
 
-1632
+1633
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27779,7 +27796,7 @@ false
 false
 tys.foreach((l, _) => cls.get(l) match {\n          case None => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")\n          case Some((_, _)) => ()\n        })
 
-1633
+1634
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27796,7 +27813,7 @@ false
 false
 cls.get(l)
 
-1634
+1635
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27813,7 +27830,7 @@ false
 false
 sys.error("tyCheck: label " ++ l ++ " not found in the case clause")
 
-1635
+1636
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27830,7 +27847,7 @@ false
 false
 "tyCheck: label " ++ l ++ " not found in the case clause"
 
-1636
+1637
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27847,7 +27864,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1637
+1638
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27864,7 +27881,7 @@ false
 false
 "tyCheck: label " ++ l
 
-1638
+1639
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27881,7 +27898,7 @@ false
 false
 "tyCheck: label "
 
-1639
+1640
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27898,7 +27915,7 @@ true
 false
 => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")
 
-1640
+1641
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27915,7 +27932,7 @@ true
 false
 => ()
 
-1641
+1642
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27932,7 +27949,7 @@ true
 false
 
 
-1642
+1643
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27949,7 +27966,7 @@ false
 false
 tys.get(label)
 
-1643
+1644
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27966,7 +27983,7 @@ false
 false
 sys.error("tyInfer: label " ++ label ++ " not found in the variant type")
 
-1644
+1645
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -27983,7 +28000,7 @@ false
 false
 "tyInfer: label " ++ label ++ " not found in the variant type"
 
-1645
+1646
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28000,7 +28017,7 @@ false
 false
 "tyInfer: label " ++ label
 
-1646
+1647
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28017,7 +28034,7 @@ false
 false
 "tyInfer: label " ++ label
 
-1647
+1648
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28034,7 +28051,7 @@ false
 false
 "tyInfer: label "
 
-1648
+1649
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28051,7 +28068,7 @@ true
 false
 =>\n              sys.error("tyInfer: label " ++ label ++ " not found in the variant type")
 
-1649
+1650
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28068,7 +28085,7 @@ false
 false
 tyInfer(ctx + (x -> argty), e)
 
-1650
+1651
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28085,7 +28102,7 @@ false
 false
 ctx + (x -> argty
 
-1651
+1652
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28102,7 +28119,7 @@ false
 false
 x -> argty
 
-1652
+1653
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28119,7 +28136,7 @@ true
 false
 => Some(tyInfer(ctx + (x -> argty), e))
 
-1653
+1654
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28136,7 +28153,7 @@ false
 false
 tyCheck(ctx + (x -> argty), e, ty)
 
-1654
+1655
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28153,7 +28170,7 @@ false
 false
 ctx + (x -> argty
 
-1655
+1656
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28170,7 +28187,7 @@ false
 false
 x -> argty
 
-1656
+1657
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28187,7 +28204,7 @@ true
 false
 tyCheck(ctx + (x -> argty), e, ty)\n                Some(ty)
 
-1657
+1658
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28204,7 +28221,7 @@ true
 false
 => ty match {\n              case None => Some(tyInfer(ctx + (x -> argty), e))\n              case Some(ty) =>\n                tyCheck(ctx + (x -> argty), e, ty)\n                Some(ty)\n            }
 
-1658
+1659
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28221,7 +28238,7 @@ false
 false
 def help
 
-1659
+1660
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28238,7 +28255,7 @@ false
 false
 cls.foldLeft(None)(help)
 
-1660
+1661
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28255,7 +28272,7 @@ false
 false
 help
 
-1661
+1662
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28272,7 +28289,7 @@ false
 false
 sys.error("tyInfer: empty case clause")
 
-1662
+1663
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28289,7 +28306,7 @@ true
 false
 => sys.error("tyInfer: empty case clause")
 
-1663
+1664
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28306,7 +28323,7 @@ true
 false
 => ty
 
-1664
+1665
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28323,7 +28340,7 @@ true
 false
 tys.foreach((l, _) => cls.get(l) match {\n          case None => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")\n          case Some((_, _)) => ()\n        })\n        def help(ty: Option[Type], entry: (Label, (Variable, Expr))): Option[Type] =\n          val (label, (x, e)) = entry\n          tys.get(label) match {\n            case None =>\n              sys.error("tyInfer: label " ++ label ++ " not found in the variant type")\n            case Some(argty) => ty match {\n              case None => Some(tyInfer(ctx + (x -> argty), e))\n              case Some(ty) =>\n                tyCheck(ctx + (x -> argty), e, ty)\n                Some(ty)\n            }\n          }\n        cls.foldLeft(None)(help) match {\n          case None => sys.error("tyInfer: empty case clause")\n          case Some(ty) => ty\n        }
 
-1665
+1666
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28340,7 +28357,7 @@ false
 false
 sys.error("tyInfer: expected variant type")
 
-1666
+1667
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28357,7 +28374,7 @@ true
 false
 => sys.error("tyInfer: expected variant type")
 
-1667
+1668
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28374,7 +28391,7 @@ true
 false
 => tyInfer(ctx, e) match {\n      case TyVariant(tys) =>\n        tys.foreach((l, _) => cls.get(l) match {\n          case None => sys.error("tyCheck: label " ++ l ++ " not found in the case clause")\n          case Some((_, _)) => ()\n        })\n        def help(ty: Option[Type], entry: (Label, (Variable, Expr))): Option[Type] =\n          val (label, (x, e)) = entry\n          tys.get(label) match {\n            case None =>\n              sys.error("tyInfer: label " ++ label ++ " not found in the variant type")\n            case Some(argty) => ty match {\n              case None => Some(tyInfer(ctx + (x -> argty), e))\n              case Some(ty) =>\n                tyCheck(ctx + (x -> argty), e, ty)\n                Some(ty)\n            }\n          }\n        cls.foldLeft(None)(help) match {\n          case None => sys.error("tyInfer: empty case clause")\n          case Some(ty) => ty\n        }\n      case _ => sys.error("tyInfer: expected variant type")\n    }
 
-1668
+1669
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28391,7 +28408,7 @@ false
 false
 sys.error("tyInfer: cannot infer empty bag")
 
-1669
+1670
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28408,7 +28425,7 @@ true
 false
 => sys.error("tyInfer: cannot infer empty bag")
 
-1670
+1671
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28425,7 +28442,7 @@ false
 false
 tyInfer(ctx, e)
 
-1671
+1672
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28442,7 +28459,7 @@ false
 false
 es.foreach(e => tyCheck(ctx, e, ty))
 
-1672
+1673
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28459,7 +28476,7 @@ false
 false
 tyCheck(ctx, e, ty)
 
-1673
+1674
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28476,7 +28493,7 @@ true
 false
 val ty = tyInfer(ctx, e)\n        es.foreach(e => tyCheck(ctx, e, ty))\n        TyBag(ty)
 
-1674
+1675
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28493,7 +28510,7 @@ true
 false
 => ebag match {\n      case Nil => sys.error("tyInfer: cannot infer empty bag")\n      case e::es => \n        val ty = tyInfer(ctx, e)\n        es.foreach(e => tyCheck(ctx, e, ty))\n        TyBag(ty)\n    }
 
-1675
+1676
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28510,7 +28527,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1676
+1677
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28527,7 +28544,7 @@ false
 false
 tyInfer(ctx, e2)
 
-1677
+1678
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28544,7 +28561,7 @@ true
 false
 TyBag(ty2)
 
-1678
+1679
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28561,7 +28578,7 @@ false
 false
 sys.error("tyInfer: flatMap mismatch")
 
-1679
+1680
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28578,7 +28595,7 @@ true
 false
 sys.error("tyInfer: flatMap mismatch")
 
-1680
+1681
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28595,7 +28612,7 @@ true
 false
 =>\n          if ty1 == ty11 then TyBag(ty2) else sys.error("tyInfer: flatMap mismatch")
 
-1681
+1682
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28612,7 +28629,7 @@ false
 false
 sys.error("tyInfer: flatMap expects function type")
 
-1682
+1683
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28629,7 +28646,7 @@ true
 false
 => sys.error("tyInfer: flatMap expects function type")
 
-1683
+1684
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28646,7 +28663,7 @@ true
 false
 => tyInfer(ctx, e2) match {\n        case TyFun(ty11, TyBag(ty2)) =>\n          if ty1 == ty11 then TyBag(ty2) else sys.error("tyInfer: flatMap mismatch")\n        case _ => sys.error("tyInfer: flatMap expects function type")\n      }
 
-1684
+1685
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28663,7 +28680,7 @@ false
 false
 sys.error("tyInfer: flatMap expects bag type")
 
-1685
+1686
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28680,7 +28697,7 @@ true
 false
 => sys.error("tyInfer: flatMap expects bag type")
 
-1686
+1687
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28697,7 +28714,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyBag(ty1) => tyInfer(ctx, e2) match {\n        case TyFun(ty11, TyBag(ty2)) =>\n          if ty1 == ty11 then TyBag(ty2) else sys.error("tyInfer: flatMap mismatch")\n        case _ => sys.error("tyInfer: flatMap expects function type")\n      }\n      case _ => sys.error("tyInfer: flatMap expects bag type")\n    }
 
-1687
+1688
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28714,7 +28731,7 @@ false
 false
 tyCheck(ctx, e1, TyBool)
 
-1688
+1689
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28731,7 +28748,7 @@ false
 false
 tyInfer(ctx, e2)
 
-1689
+1690
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28748,7 +28765,7 @@ true
 false
 => TyBag(ty)
 
-1690
+1691
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28765,7 +28782,7 @@ false
 false
 sys.error("tyInfer: when expects bag for second argument, instead of " + ty)
 
-1691
+1692
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28782,7 +28799,7 @@ false
 false
 "tyInfer: when expects bag for second argument, instead of " + ty
 
-1692
+1693
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28799,7 +28816,7 @@ true
 false
 => sys.error("tyInfer: when expects bag for second argument, instead of " + ty)
 
-1693
+1694
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28816,7 +28833,7 @@ true
 false
 tyCheck(ctx, e1, TyBool)\n      tyInfer(ctx, e2) match {\n        case TyBag(ty) => TyBag(ty)\n        case ty => sys.error("tyInfer: when expects bag for second argument, instead of " + ty)\n    }
 
-1694
+1695
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28833,7 +28850,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1695
+1696
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28850,7 +28867,7 @@ false
 false
 tyCheck(ctx, e2, TyBag(ty))
 
-1696
+1697
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28867,7 +28884,7 @@ true
 false
 tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)
 
-1697
+1698
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28884,7 +28901,7 @@ false
 false
 sys.error("tyInfer: sum expects bag type")
 
-1698
+1699
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28901,7 +28918,7 @@ true
 false
 => sys.error("tyInfer: sum expects bag type")
 
-1699
+1700
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28918,7 +28935,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyBag(ty) =>\n        tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)\n      case _ => sys.error("tyInfer: sum expects bag type")\n    }
 
-1700
+1701
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28935,7 +28952,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1701
+1702
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28952,7 +28969,7 @@ false
 false
 isEqType(ty)
 
-1702
+1703
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28969,7 +28986,7 @@ false
 false
 sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)
 
-1703
+1704
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -28986,7 +29003,7 @@ false
 false
 "tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString
 
-1704
+1705
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29003,7 +29020,7 @@ false
 false
 "tyInfer: difference expects bags of elements of equality type, not "
 
-1705
+1706
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29020,7 +29037,7 @@ true
 false
 {\n          sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)\n        }
 
-1706
+1707
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29037,7 +29054,7 @@ true
 false
 
 
-1707
+1708
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29054,7 +29071,7 @@ false
 false
 tyCheck(ctx, e2, TyBag(ty))
 
-1708
+1709
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29071,7 +29088,7 @@ true
 false
 if (!isEqType(ty)) {\n          sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)\n        }\n        tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)
 
-1709
+1710
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29088,7 +29105,7 @@ false
 false
 sys.error("tyInfer: diff expects bag type")
 
-1710
+1711
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29105,7 +29122,7 @@ true
 false
 => sys.error("tyInfer: diff expects bag type")
 
-1711
+1712
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29122,7 +29139,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyBag(ty) =>\n        if (!isEqType(ty)) {\n          sys.error("tyInfer: difference expects bags of elements of equality type, not " ++ ty.toString)\n        }\n        tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)\n      case _ => sys.error("tyInfer: diff expects bag type")\n    }
 
-1712
+1713
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29139,7 +29156,7 @@ false
 false
 tyInfer(ctx, e)
 
-1713
+1714
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29156,7 +29173,7 @@ true
 false
 => TyBag(tyInfer(ctx, e))
 
-1714
+1715
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29173,7 +29190,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1715
+1716
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29190,7 +29207,7 @@ false
 false
 tyInfer(ctx + (x -> ty1), Comprehension(e, oth))
 
-1716
+1717
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29207,7 +29224,7 @@ false
 false
 ctx + (x -> ty1
 
-1717
+1718
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29224,7 +29241,7 @@ false
 false
 x -> ty1
 
-1718
+1719
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29241,7 +29258,7 @@ true
 false
 =>\n            tyInfer(ctx + (x -> ty1), Comprehension(e, oth))
 
-1719
+1720
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29258,7 +29275,7 @@ false
 false
 sys.error("tyInfer: comprehension expects bag type")
 
-1720
+1721
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29275,7 +29292,7 @@ true
 false
 => sys.error("tyInfer: comprehension expects bag type")
 
-1721
+1722
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29292,7 +29309,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n          case TyBag(ty1) =>\n            tyInfer(ctx + (x -> ty1), Comprehension(e, oth))\n          case _ => sys.error("tyInfer: comprehension expects bag type")\n        }
 
-1722
+1723
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29309,7 +29326,7 @@ false
 false
 tyCheck(ctx, e1, TyBool)
 
-1723
+1724
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29326,7 +29343,7 @@ false
 false
 tyInfer(ctx, Comprehension(e, oth))
 
-1724
+1725
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29343,7 +29360,7 @@ true
 false
 tyCheck(ctx, e1, TyBool)\n          tyInfer(ctx, Comprehension(e, oth))
 
-1725
+1726
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29360,7 +29377,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1726
+1727
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29377,7 +29394,7 @@ false
 false
 tyInfer(ctx + (x -> ty1), Comprehension(e, oth))
 
-1727
+1728
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29394,7 +29411,7 @@ false
 false
 ctx + (x -> ty1
 
-1728
+1729
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29411,7 +29428,7 @@ false
 false
 x -> ty1
 
-1729
+1730
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29428,7 +29445,7 @@ true
 false
 val ty1 = tyInfer(ctx, e1)\n          tyInfer(ctx + (x -> ty1), Comprehension(e, oth))
 
-1730
+1731
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29445,7 +29462,7 @@ false
 false
 sys.error("tyInfer: expected comprehension clause")
 
-1731
+1732
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29462,7 +29479,7 @@ true
 false
 =>\n          sys.error("tyInfer: expected comprehension clause")
 
-1732
+1733
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29479,7 +29496,7 @@ true
 false
 => p match {\n        case Bind(x, e1) => tyInfer(ctx, e1) match {\n          case TyBag(ty1) =>\n            tyInfer(ctx + (x -> ty1), Comprehension(e, oth))\n          case _ => sys.error("tyInfer: comprehension expects bag type")\n        }\n        case Guard(e1) =>\n          tyCheck(ctx, e1, TyBool)\n          tyInfer(ctx, Comprehension(e, oth))\n        case CLet(x, e1) =>\n          val ty1 = tyInfer(ctx, e1)\n          tyInfer(ctx + (x -> ty1), Comprehension(e, oth))\n        case _ =>\n          sys.error("tyInfer: expected comprehension clause")\n      }
 
-1733
+1734
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29496,7 +29513,7 @@ true
 false
 => es match {\n      case Nil => TyBag(tyInfer(ctx, e))\n      case p::oth => p match {\n        case Bind(x, e1) => tyInfer(ctx, e1) match {\n          case TyBag(ty1) =>\n            tyInfer(ctx + (x -> ty1), Comprehension(e, oth))\n          case _ => sys.error("tyInfer: comprehension expects bag type")\n        }\n        case Guard(e1) =>\n          tyCheck(ctx, e1, TyBool)\n          tyInfer(ctx, Comprehension(e, oth))\n        case CLet(x, e1) =>\n          val ty1 = tyInfer(ctx, e1)\n          tyInfer(ctx + (x -> ty1), Comprehension(e, oth))\n        case _ =>\n          sys.error("tyInfer: expected comprehension clause")\n      }\n    }
 
-1734
+1735
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29513,7 +29530,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1735
+1736
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29530,7 +29547,7 @@ false
 false
 isEqType(ty)
 
-1736
+1737
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29547,7 +29564,7 @@ false
 false
 sys.error("tyInfer: expected equality type in count, not " ++ ty.toString)
 
-1737
+1738
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29564,7 +29581,7 @@ false
 false
 "tyInfer: expected equality type in count, not " ++ ty.toString
 
-1738
+1739
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29581,7 +29598,7 @@ false
 false
 "tyInfer: expected equality type in count, not "
 
-1739
+1740
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29598,7 +29615,7 @@ true
 false
 {\n          sys.error("tyInfer: expected equality type in count, not " ++ ty.toString)\n        }
 
-1740
+1741
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29615,7 +29632,7 @@ true
 false
 
 
-1741
+1742
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29632,7 +29649,7 @@ false
 false
 tyCheck(ctx, e2, ty)
 
-1742
+1743
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29649,7 +29666,7 @@ true
 false
 if (!isEqType(ty)) {\n          sys.error("tyInfer: expected equality type in count, not " ++ ty.toString)\n        }\n        tyCheck(ctx, e2, ty)\n        TyInt
 
-1743
+1744
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29666,7 +29683,7 @@ false
 false
 sys.error("tyInfer: count expects bag type")
 
-1744
+1745
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29683,7 +29700,7 @@ true
 false
 => sys.error("tyInfer: count expects bag type")
 
-1745
+1746
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29700,7 +29717,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyBag(ty) =>\n        if (!isEqType(ty)) {\n          sys.error("tyInfer: expected equality type in count, not " ++ ty.toString)\n        }\n        tyCheck(ctx, e2, ty)\n        TyInt\n      case _ => sys.error("tyInfer: count expects bag type")\n    }
 
-1746
+1747
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29717,7 +29734,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1747
+1748
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29734,7 +29751,7 @@ false
 false
 tyInfer(ctx + (x -> ty1) + (y -> ty2), e2)
 
-1748
+1749
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29751,7 +29768,7 @@ false
 false
 ctx + (x -> ty1) + (y -> ty2
 
-1749
+1750
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29768,7 +29785,7 @@ false
 false
 ctx + (x -> ty1
 
-1750
+1751
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29785,7 +29802,7 @@ false
 false
 x -> ty1
 
-1751
+1752
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29802,7 +29819,7 @@ false
 false
 y -> ty2
 
-1752
+1753
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29819,7 +29836,7 @@ true
 false
 => tyInfer(ctx + (x -> ty1) + (y -> ty2), e2)
 
-1753
+1754
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29836,7 +29853,7 @@ false
 false
 sys.error("tyInfer: expected pair type")
 
-1754
+1755
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29853,7 +29870,7 @@ true
 false
 => sys.error("tyInfer: expected pair type")
 
-1755
+1756
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29870,7 +29887,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyPair(ty1, ty2) => tyInfer(ctx + (x -> ty1) + (y -> ty2), e2)\n      case _ => sys.error("tyInfer: expected pair type")\n    }
 
-1756
+1757
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29887,7 +29904,7 @@ false
 false
 tyCheck(ctx + (x -> ty1), e1, ty2)
 
-1757
+1758
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29904,7 +29921,7 @@ false
 false
 ctx + (x -> ty1
 
-1758
+1759
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29921,7 +29938,7 @@ false
 false
 x -> ty1
 
-1759
+1760
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29938,7 +29955,7 @@ false
 false
 tyInfer(ctx + (f -> ty), e2)
 
-1760
+1761
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29955,7 +29972,7 @@ false
 false
 ctx + (f -> ty
 
-1761
+1762
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29972,7 +29989,7 @@ false
 false
 f -> ty
 
-1762
+1763
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -29989,7 +30006,7 @@ true
 false
 tyCheck(ctx + (x -> ty1), e1, ty2)\n        tyInfer(ctx + (f -> ty), e2)
 
-1763
+1764
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30006,7 +30023,7 @@ false
 false
 sys.error("tyInfer: expected function type")
 
-1764
+1765
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30023,7 +30040,7 @@ true
 false
 => sys.error("tyInfer: expected function type")
 
-1765
+1766
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30040,7 +30057,7 @@ true
 false
 => ty match {\n      case TyFun(ty1, ty2) =>\n        tyCheck(ctx + (x -> ty1), e1, ty2)\n        tyInfer(ctx + (f -> ty), e2)\n      case _ => sys.error("tyInfer: expected function type")\n    }
 
-1766
+1767
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30057,7 +30074,7 @@ false
 false
 tyCheck(ctx + (f -> ty) + (x -> ty1), e1, ty2)
 
-1767
+1768
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30074,7 +30091,7 @@ false
 false
 ctx + (f -> ty) + (x -> ty1
 
-1768
+1769
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30091,7 +30108,7 @@ false
 false
 ctx + (f -> ty
 
-1769
+1770
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30108,7 +30125,7 @@ false
 false
 f -> ty
 
-1770
+1771
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30125,7 +30142,7 @@ false
 false
 x -> ty1
 
-1771
+1772
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30142,7 +30159,7 @@ false
 false
 tyInfer(ctx + (f -> ty), e2)
 
-1772
+1773
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30159,7 +30176,7 @@ false
 false
 ctx + (f -> ty
 
-1773
+1774
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30176,7 +30193,7 @@ false
 false
 f -> ty
 
-1774
+1775
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30193,7 +30210,7 @@ true
 false
 tyCheck(ctx + (f -> ty) + (x -> ty1), e1, ty2)\n        tyInfer(ctx + (f -> ty), e2)
 
-1775
+1776
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30210,7 +30227,7 @@ false
 false
 sys.error("tyInfer: expected (polymorphic) function type")
 
-1776
+1777
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30227,7 +30244,7 @@ true
 false
 => sys.error("tyInfer: expected (polymorphic) function type")
 
-1777
+1778
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30244,7 +30261,7 @@ true
 false
 => ty match {\n      case TyFun(ty1, ty2) =>\n        tyCheck(ctx + (f -> ty) + (x -> ty1), e1, ty2)\n        tyInfer(ctx + (f -> ty), e2)\n      case _ => sys.error("tyInfer: expected (polymorphic) function type")\n    }
 
-1778
+1779
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30261,7 +30278,7 @@ false
 false
 tyInfer(ctx, e1)
 
-1779
+1780
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30278,7 +30295,7 @@ false
 false
 xs.foldLeft(ctx)((curctx, lx) => \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) => curctx + (name -> ty)\n            case None => sys.error("tyInfer: label " ++ label ++ " not found in the record type")\n          })
 
-1780
+1781
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30295,7 +30312,7 @@ true
 false
 
 
-1781
+1782
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30312,7 +30329,7 @@ false
 false
 tys.get(label)
 
-1782
+1783
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30329,7 +30346,7 @@ false
 false
 curctx + (name -> ty
 
-1783
+1784
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30346,7 +30363,7 @@ false
 false
 name -> ty
 
-1784
+1785
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30363,7 +30380,7 @@ true
 false
 => curctx + (name -> ty)
 
-1785
+1786
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30380,7 +30397,7 @@ false
 false
 sys.error("tyInfer: label " ++ label ++ " not found in the record type")
 
-1786
+1787
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30397,7 +30414,7 @@ false
 false
 "tyInfer: label " ++ label ++ " not found in the record type"
 
-1787
+1788
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30414,7 +30431,7 @@ false
 false
 "tyInfer: label " ++ label
 
-1788
+1789
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30431,7 +30448,7 @@ false
 false
 "tyInfer: label " ++ label
 
-1789
+1790
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30448,7 +30465,7 @@ false
 false
 "tyInfer: label "
 
-1790
+1791
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30465,7 +30482,7 @@ true
 false
 => sys.error("tyInfer: label " ++ label ++ " not found in the record type")
 
-1791
+1792
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30482,7 +30499,7 @@ false
 false
 tyInfer(newctx, e2)
 
-1792
+1793
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30499,7 +30516,7 @@ true
 false
 val newctx = xs.foldLeft(ctx)((curctx, lx) => \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) => curctx + (name -> ty)\n            case None => sys.error("tyInfer: label " ++ label ++ " not found in the record type")\n          })\n        tyInfer(newctx, e2)
 
-1793
+1794
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30516,7 +30533,7 @@ false
 false
 sys.error("tyInfer: expected record type")
 
-1794
+1795
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30533,7 +30550,7 @@ true
 false
 => sys.error("tyInfer: expected record type")
 
-1795
+1796
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30550,7 +30567,7 @@ true
 false
 => tyInfer(ctx, e1) match {\n      case TyRecord(tys) =>\n        val newctx = xs.foldLeft(ctx)((curctx, lx) => \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) => curctx + (name -> ty)\n            case None => sys.error("tyInfer: label " ++ label ++ " not found in the record type")\n          })\n        tyInfer(newctx, e2)\n      case _ => sys.error("tyInfer: expected record type")\n    }
 
-1796
+1797
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30567,7 +30584,7 @@ false
 false
 sys.error("tyInfer: unexpected bind")
 
-1797
+1798
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30584,7 +30601,7 @@ true
 false
 => sys.error("tyInfer: unexpected bind")
 
-1798
+1799
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30601,7 +30618,7 @@ false
 false
 sys.error("tyInfer: unexpected guard")
 
-1799
+1800
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30618,7 +30635,7 @@ true
 false
 => sys.error("tyInfer: unexpected guard")
 
-1800
+1801
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30635,7 +30652,7 @@ false
 false
 sys.error("tyInfer: unexpected CLet")
 
-1801
+1802
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer
@@ -30652,7 +30669,7 @@ true
 false
 => sys.error("tyInfer: unexpected CLet")
 
-1802
+1803
 src/main/scala/FrogInterpreter/Typer.scala
 FrogInterpreter
 Typer

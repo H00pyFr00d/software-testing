@@ -138,7 +138,10 @@ object Syntax {
       fresh_s
     }
     // reset the counter
-    def reset(): Unit = {id = 0}
+    def reset(): Unit = {
+      Thread.sleep(100)
+      id = 0
+    }
   }
 
   // swap y and z in x

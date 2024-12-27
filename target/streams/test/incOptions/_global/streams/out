@@ -34,6 +34,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyCheckTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrErrorTests.class[0m
@@ -79,6 +80,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringInterpreterTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyCheckTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package$.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrErrorTests.tasty[0m

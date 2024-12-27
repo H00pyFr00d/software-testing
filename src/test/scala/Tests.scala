@@ -1822,6 +1822,200 @@ class SubtypeTests extends AnyFunSuite {
   }
 }
 
+class TyCheckTests extends AnyFunSuite {
+  test("Lambda") {
+    Typer.tyCheck(emptyEnv, Lambda("x", Var("x")), TyFun(TyInt, TyInt))
+  }
+
+  test("Rec") {
+    Typer.tyCheck(emptyEnv, Rec("f", "x", Var("x")), TyFun(TyInt, TyInt))
+  }
+
+  test("Rec (non-polymorphic function type)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Rec("f", "x", Var("x")), TyInt)
+    }
+  }
+
+  test("FlatMap") {
+    Typer.tyCheck(emptyEnv, FlatMap(Bag(List(Num(1), Num(2), Num(3))), Lambda("x", Bag(List(Var("x"))))), TyBag(TyInt))
+  }
+
+  test("FlatMap (expects bag)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, FlatMap(Num(1), Lambda("x", Bag(List(Var("x"))))), TyBag(TyInt) )
+    }
+  }
+
+  test("When") {
+    Typer.tyCheck(emptyEnv, When(Bool(true), Bag(List(Num(1), Num(2), Num(3)))), TyBag(TyInt))
+  }
+
+  test("Sum") {
+    Typer.tyCheck(emptyEnv, Sum(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(1), Num(2), Num(3)))), TyBag(TyInt))
+  }
+
+  test("Diff") {
+    Typer.tyCheck(emptyEnv, Diff(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(4), Num(5), Num(6)))), TyBag(TyInt))
+  }
+
+  test("Diff (Expects bags of equality type)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Diff(Bag(List(Lambda("x", Var("x")))), Bag(List(Lambda("x", Var("x"))))), TyBag(TyFun(TyInt, TyInt)))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Diff(Bag(List(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))))), Bag(List(Record(ListMap("foo" -> Num(1), "bar" -> Num(2)))))), TyBag(TyRecord(ListMap("foo" -> TyInt, "bar" -> TyInt))))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Diff(Bag(List(Bag(List(Num(1), Num(2), Num(3))))), Bag(List(Bag(List(Num(1), Num(2), Num(3)))))), TyBag(TyBag(TyInt)))
+    }
+  }
+
+  test("Bag") {
+    Typer.tyCheck(emptyEnv, Bag(List(Num(1), Num(2), Num(3))), TyBag(TyInt))
+  }
+
+  test("Comprehension w/ Bind") {
+    Typer.tyCheck(emptyEnv, Comprehension(Var("x"), List(Bind("x", Bag(List(Num(1), Num(2), Num(3)))))), TyBag(TyInt))
+  }
+
+  test("Comprehension w/ Bind (expects bag)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Comprehension(Var("x"), List(Bind("x", Num(1)))), TyBag(TyInt))
+    }
+  }
+
+  test("Comprehension w/ Guard") {
+    Typer.tyCheck(emptyEnv, Comprehension(Num(1), List(Guard(Bool(true)))), TyBag(TyInt))
+  }
+
+  test("Comprehension w/ CLet") {
+    Typer.tyCheck(emptyEnv, Comprehension(Var("x"), List(CLet("x", Num(1)))), TyBag(TyInt))
+  }
+
+  test("Comprehension (expected comprehension clause)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Comprehension(Var("x"), List(Num(1))), TyBag(TyInt))
+    }
+  }
+
+  test("Pair") {
+    Typer.tyCheck(emptyEnv, Pair(Num(1), Num(2)), TyPair(TyInt, TyInt))
+  }
+
+  test("Record") {
+    Typer.tyCheck(emptyEnv, Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), TyRecord(ListMap("foo" -> TyInt, "bar" -> TyInt)))
+  }
+
+  test("Record (label not found)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Record(ListMap("bar" -> Num(1))), TyRecord(ListMap("foo" -> TyInt)))
+    }
+  }
+
+  test("Variant") {
+    Typer.tyCheck(emptyEnv, Variant("foo", Num(1)), TyVariant(ListMap("foo" -> TyInt)))
+  }
+
+  test("Variant (label not found)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Variant("bar", Num(1)), TyVariant(ListMap("foo" -> TyInt)))
+    }
+  }
+
+  test("Proj") {
+    Typer.tyCheck(emptyEnv, Proj(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), "foo"), TyInt)
+  }
+
+  test("Let") {
+    Typer.tyCheck(emptyEnv, Let("x", Num(1), Var("x")), TyInt)
+  }
+
+  test("IfThenElse") {
+    Typer.tyCheck(emptyEnv, IfThenElse(Bool(true), Num(1), Num(2)), TyInt)
+  }
+
+  test("Case") {
+    Typer.tyCheck(emptyEnv, Case(Variant("foo", Num(1)), ListMap("foo" -> ("x", Num(1)))), TyInt)
+  }
+
+  test("Case (label not found)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Case(Variant("bar", Num(1)), ListMap("foo" -> ("x", Num(1)))), TyInt)
+    }
+  }
+
+  test("Case (label in case but not variant)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Case(Variant("foo", Num(1)), ListMap("foo" -> ("x", Num(1)), "bar" -> ("y", Num(2)))), TyInt)
+    }
+  }
+
+  test("Case (expected variant)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Case(Unit, ListMap()), TyInt)
+    }
+  }
+
+  test("LetPair") {
+    Typer.tyCheck(emptyEnv, LetPair("x", "y", Pair(Num(1), Num(2)), Var("x")), TyInt)
+  }
+
+  test("LetPair (expected pair)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, LetPair("x", "y", Num(1), Var("x")), TyInt)
+    }
+  }
+
+  test("LetFun") {
+    Typer.tyCheck(emptyEnv, LetFun("f", TyFun(TyInt, TyInt), "x", Var("x"), Apply(Var("f"), Num(1))), TyInt)
+  }
+
+  test("LetFun (expected function type)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, LetFun("f", TyInt, "x", Var("x"), Apply(Var("f"), Num(1))), TyInt)
+    }
+  }
+
+  test("LetRec") {
+    Typer.tyCheck(emptyEnv, LetRec("f", TyFun(TyInt, TyInt), "x", Var("x"), Apply(Var("f"), Num(1))), TyInt)
+  }
+
+  test("LetRec (expected function type)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, LetRec("f", TyInt, "x", Var("x"), Apply(Var("f"), Num(1))), TyInt)
+    }
+  }
+
+  test("LetRecord") {
+    Typer.tyCheck(emptyEnv, LetRecord(ListMap("foo" -> "x", "bar" -> "y"), Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), Var("x")), TyInt)
+  }
+
+  test("LetRecord (label not found in record type)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, LetRecord(ListMap("foo" -> "x", "bar" -> "y"), Record(ListMap("foo" -> Num(1), "baz" -> Num(2))), Var("x")), TyInt)
+    }
+  }
+
+  test("LetRecord (expected record)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, LetRecord(ListMap("foo" -> "x", "bar" -> "y"), Num(1), Var("x")), TyInt)
+    }
+  }
+
+  test("Otherwise (subtype)") {
+    Typer.tyCheck(emptyEnv, Num(1), TyInt)
+  }
+
+  test("Otherwise (not subtype)") {
+    assertThrows[Exception] {
+      Typer.tyCheck(emptyEnv, Num(1), TyBool)
+    }
+  }
+}
+
 // =================================== Integration Tests ===================================
 // Arithmetic expressions
 class ArithTypeTests extends AnyFunSuite {
