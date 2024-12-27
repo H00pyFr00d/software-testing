@@ -1,7 +1,7 @@
 <scoverage 
-statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-rate="63.62" version="1.0" timestamp="1735230337354">
+statement-count="1803" statements-invoked="1496" statement-rate="82.97" branch-rate="77.75" version="1.0" timestamp="1735298570770">
     <packages>
-        <package name="FrogInterpreter" statement-count="1803" statements-invoked="1334" statement-rate="73.99">
+        <package name="FrogInterpreter" statement-count="1803" statements-invoked="1496" statement-rate="82.97">
             <classes>
                 <class 
                 name="FrogInterpreter.Bag" filename="FrogInterpreter/Bags.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
@@ -933,10 +933,10 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                     </methods>
 </class>
                 <class 
-                name="FrogInterpreter.Value" filename="FrogInterpreter/Interpreter.scala" statement-count="53" statements-invoked="29" statement-rate="54.72" branch-rate="35.00">
+                name="FrogInterpreter.Value" filename="FrogInterpreter/Interpreter.scala" statement-count="53" statements-invoked="53" statement-rate="100.00" branch-rate="100.00">
                     <methods>
                         <method 
-                        name="FrogInterpreter/Value/length" statement-count="6" statements-invoked="4" statement-rate="66.67" branch-rate="50.00">
+                        name="FrogInterpreter/Value/length" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13084" end="13102" line="348" branch="true" invocation-count="1" ignored="false">
@@ -945,13 +945,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13023" end="13033" line="347" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13116" end="13166" line="349" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13116" end="13166" line="349" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13092" end="13101" line="348" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13119" end="13166" line="349" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13119" end="13166" line="349" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="length" start="13092" end="13101" line="348" branch="false" invocation-count="1" ignored="false">
@@ -959,7 +959,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/index" statement-count="6" statements-invoked="4" statement-rate="66.67" branch-rate="50.00">
+                        name="FrogInterpreter/Value/index" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13172" end="13181" line="351" branch="false" invocation-count="1" ignored="false">
@@ -968,13 +968,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13284" end="13286" line="352" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13311" end="13359" line="353" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13311" end="13359" line="353" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13274" end="13287" line="352" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13314" end="13359" line="353" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13314" end="13359" line="353" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="index" start="13263" end="13297" line="352" branch="true" invocation-count="1" ignored="false">
@@ -982,30 +982,30 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/less" statement-count="6" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                        name="FrogInterpreter/Value/less" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12936" end="12954" line="344" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12936" end="12954" line="344" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12951" end="12953" line="344" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12951" end="12953" line="344" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12968" end="13017" line="345" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12968" end="13017" line="345" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12946" end="12948" line="344" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12946" end="12948" line="344" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12971" end="13017" line="345" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12971" end="13017" line="345" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12849" end="12857" line="343" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="less" start="12849" end="12857" line="343" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/subtract" statement-count="7" statements-invoked="5" statement-rate="71.43" branch-rate="50.00">
+                        name="FrogInterpreter/Value/subtract" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12067" end="12084" line="327" branch="true" invocation-count="1" ignored="false">
@@ -1020,10 +1020,10 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12081" end="12083" line="327" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12098" end="12154" line="328" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12098" end="12154" line="328" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12101" end="12154" line="328" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12101" end="12154" line="328" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="subtract" start="12076" end="12078" line="327" branch="false" invocation-count="1" ignored="false">
@@ -1031,16 +1031,16 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/multiply" statement-count="7" statements-invoked="5" statement-rate="71.43" branch-rate="50.00">
+                        name="FrogInterpreter/Value/multiply" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="multiply" start="12282" end="12341" line="332" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="multiply" start="12282" end="12341" line="332" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="multiply" start="12260" end="12262" line="331" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="multiply" start="12285" end="12341" line="332" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="multiply" start="12285" end="12341" line="332" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="multiply" start="12160" end="12172" line="330" branch="false" invocation-count="1" ignored="false">
@@ -1057,42 +1057,42 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/eq" statement-count="8" statements-invoked="2" statement-rate="25.00" branch-rate="16.67">
+                        name="FrogInterpreter/Value/eq" statement-count="8" statements-invoked="8" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12347" end="12353" line="334" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12486" end="12505" line="336" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12486" end="12505" line="336" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12610" end="12645" line="338" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12610" end="12645" line="338" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12794" end="12843" line="341" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12794" end="12843" line="341" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12432" end="12451" line="335" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12544" end="12563" line="337" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12544" end="12563" line="337" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12797" end="12843" line="341" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12797" end="12843" line="341" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12694" end="12725" line="339" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eq" start="12694" end="12725" line="339" branch="true" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/add" statement-count="7" statements-invoked="5" statement-rate="71.43" branch-rate="50.00">
+                        name="FrogInterpreter/Value/add" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11895" end="11897" line="323" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11920" end="11970" line="324" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11920" end="11970" line="324" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11800" end="11807" line="322" branch="false" invocation-count="1" ignored="false">
@@ -1107,12 +1107,12 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11900" end="11902" line="323" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11917" end="11970" line="324" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="add" start="11917" end="11970" line="324" branch="true" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Value/concat" statement-count="6" statements-invoked="4" statement-rate="66.67" branch-rate="50.00">
+                        name="FrogInterpreter/Value/concat" statement-count="6" statements-invoked="6" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13460" end="13480" line="356" branch="true" invocation-count="1" ignored="false">
@@ -1121,13 +1121,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13471" end="13473" line="356" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13494" end="13545" line="357" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13494" end="13545" line="357" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13471" end="13479" line="356" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13497" end="13545" line="357" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13497" end="13545" line="357" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Value" class-type="Object" full-class-name="FrogInterpreter.Value" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="concat" start="13365" end="13375" line="355" branch="false" invocation-count="1" ignored="false">
@@ -4739,64 +4739,64 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                     </methods>
 </class>
                 <class 
-                name="FrogInterpreter.Interpreter" filename="FrogInterpreter/Interpreter.scala" statement-count="292" statements-invoked="154" statement-rate="52.74" branch-rate="52.99">
+                name="FrogInterpreter.Interpreter" filename="FrogInterpreter/Interpreter.scala" statement-count="292" statements-invoked="292" statement-rate="100.00" branch-rate="100.00">
                     <methods>
                         <method 
-                        name="FrogInterpreter/Interpreter/desugar" statement-count="105" statements-invoked="35" statement-rate="33.33" branch-rate="31.71">
+                        name="FrogInterpreter/Interpreter/desugar" statement-count="105" statements-invoked="105" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11090" end="11101" line="302" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11157" end="11344" line="304" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11157" end="11344" line="304" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10832" end="10852" line="297" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10832" end="10852" line="297" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10235" end="10246" line="281" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10235" end="10246" line="281" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11165" end="11185" line="304" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11165" end="11185" line="304" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11427" end="11465" line="310" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11427" end="11465" line="310" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10885" end="10921" line="298" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10885" end="10921" line="298" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9323" end="9333" line="256" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9323" end="9333" line="256" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10121" end="10132" line="279" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10121" end="10132" line="279" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9478" end="9511" line="261" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9478" end="9511" line="261" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9693" end="9715" line="267" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9693" end="9715" line="267" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8814" end="8825" line="239" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9015" end="9026" line="245" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9015" end="9026" line="245" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10011" end="10022" line="277" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9357" end="9381" line="257" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9357" end="9381" line="257" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10177" end="10188" line="280" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10177" end="10188" line="280" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9580" end="9590" line="263" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9580" end="9590" line="263" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8872" end="8881" line="242" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8872" end="8881" line="242" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9091" end="9100" line="248" branch="true" invocation-count="1" ignored="false">
@@ -4811,109 +4811,109 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8682" end="8693" line="236" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11486" end="11526" line="311" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11486" end="11526" line="311" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9812" end="9822" line="271" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10067" end="10078" line="278" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10067" end="10078" line="278" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9405" end="9439" line="258" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8738" end="8749" line="237" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8738" end="8749" line="237" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8955" end="8966" line="244" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8955" end="8966" line="244" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8269" end="8325" line="222" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8269" end="8325" line="222" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9125" end="9160" line="249" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9125" end="9160" line="249" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8505" end="8539" line="231" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8563" end="8597" line="232" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8563" end="8597" line="232" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8416" end="8425" line="229" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11216" end="11227" line="305" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11216" end="11227" line="305" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11489" end="11526" line="311" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11489" end="11526" line="311" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10824" end="10942" line="297" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10824" end="10942" line="297" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9427" end="9438" line="258" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11325" end="11336" line="308" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11325" end="11336" line="308" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10977" end="11029" line="299" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10287" end="10758" line="283" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10287" end="10758" line="283" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10054" end="10065" line="278" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10054" end="10065" line="278" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10222" end="10233" line="281" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10222" end="10233" line="281" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9638" end="9671" line="266" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9638" end="9671" line="266" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9148" end="9159" line="249" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9148" end="9159" line="249" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10879" end="10941" line="298" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10879" end="10941" line="298" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10108" end="10119" line="279" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10108" end="10119" line="279" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9701" end="9711" line="267" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9701" end="9711" line="267" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8946" end="8980" line="244" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8946" end="8980" line="244" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9937" end="9960" line="276" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8585" end="8596" line="232" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8585" end="8596" line="232" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8802" end="8812" line="239" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9499" end="9510" line="261" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9499" end="9510" line="261" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9219" end="9232" line="252" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9219" end="9232" line="252" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11064" end="11116" line="301" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11365" end="11405" line="309" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11365" end="11405" line="309" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8373" end="8380" line="226" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8373" end="8380" line="226" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9005" end="9040" line="245" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9005" end="9040" line="245" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8782" end="8839" line="238" branch="true" invocation-count="1" ignored="false">
@@ -4922,10 +4922,10 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9998" end="10009" line="277" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10164" end="10175" line="280" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10164" end="10175" line="280" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9530" end="9550" line="262" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9530" end="9550" line="262" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9756" end="9781" line="270" branch="true" invocation-count="1" ignored="false">
@@ -4934,7 +4934,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8469" end="8480" line="230" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9370" end="9380" line="257" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9370" end="9380" line="257" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8669" end="8680" line="236" branch="false" invocation-count="1" ignored="false">
@@ -4943,16 +4943,16 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8527" end="8538" line="231" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8725" end="8736" line="237" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8725" end="8736" line="237" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8901" end="8922" line="243" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8901" end="8922" line="243" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11368" end="11405" line="309" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11368" end="11405" line="309" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11204" end="11311" line="305" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11204" end="11311" line="305" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9770" end="9780" line="270" branch="false" invocation-count="1" ignored="false">
@@ -4961,13 +4961,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9930" end="9961" line="276" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11424" end="11465" line="310" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11424" end="11465" line="310" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10891" end="10902" line="298" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10891" end="10902" line="298" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10101" end="10133" line="279" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10101" end="10133" line="279" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8514" end="8525" line="231" branch="false" invocation-count="1" ignored="false">
@@ -4976,7 +4976,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11017" end="11028" line="300" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10156" end="10189" line="280" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10156" end="10189" line="280" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9824" end="9898" line="271" branch="false" invocation-count="1" ignored="false">
@@ -4988,13 +4988,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8663" end="8694" line="236" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10741" end="10758" line="293" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10741" end="10758" line="293" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9570" end="9591" line="263" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9570" end="9591" line="263" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9135" end="9146" line="249" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9135" end="9146" line="249" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9414" end="9425" line="258" branch="false" invocation-count="1" ignored="false">
@@ -5003,52 +5003,52 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8190" end="8201" line="219" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8911" end="8921" line="243" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8911" end="8921" line="243" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9804" end="9899" line="271" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9222" end="9232" line="252" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9222" end="9232" line="252" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8717" end="8750" line="237" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8717" end="8750" line="237" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8968" end="8979" line="244" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8968" end="8979" line="244" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10866" end="10877" line="298" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10866" end="10877" line="298" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="11104" end="11115" line="302" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8260" end="8325" line="221" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8260" end="8325" line="221" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8572" end="8583" line="232" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8572" end="8583" line="232" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9628" end="9672" line="266" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9628" end="9672" line="266" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9486" end="9497" line="261" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9486" end="9497" line="261" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10046" end="10079" line="278" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10046" end="10079" line="278" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10213" end="10247" line="281" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="10213" end="10247" line="281" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9028" end="9039" line="245" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9028" end="9039" line="245" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8632" end="8642" line="235" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8632" end="8642" line="235" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9539" end="9549" line="262" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9539" end="9549" line="262" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8827" end="8838" line="239" branch="false" invocation-count="1" ignored="false">
@@ -5057,7 +5057,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="8456" end="8467" line="230" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9310" end="9334" line="256" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugar" start="9310" end="9334" line="256" branch="true" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
@@ -5070,19 +5070,19 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Interpreter/$anonfun" statement-count="12" statements-invoked="7" statement-rate="58.33" branch-rate="50.00">
+                        name="FrogInterpreter/Interpreter/$anonfun" statement-count="12" statements-invoked="12" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="9949" end="9959" line="276" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="11263" end="11263" line="306" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="11263" end="11263" line="306" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="9885" end="9895" line="273" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="9659" end="9669" line="266" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="9659" end="9669" line="266" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="15401" end="15408" line="429" branch="false" invocation-count="1" ignored="false">
@@ -5100,18 +5100,18 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="16075" end="16091" line="447" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="16145" end="16188" line="449" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="16145" end="16188" line="449" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="11279" end="11310" line="307" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="11279" end="11310" line="307" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="16148" end="16188" line="449" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="$anonfun" start="16148" end="16188" line="449" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Interpreter/eval" statement-count="160" statements-invoked="111" statement-rate="69.38" branch-rate="71.21">
+                        name="FrogInterpreter/Interpreter/eval" statement-count="160" statements-invoked="160" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14805" end="14813" line="408" branch="false" invocation-count="1" ignored="false">
@@ -5126,7 +5126,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14135" end="14169" line="384" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14305" end="14335" line="391" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14305" end="14335" line="391" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="13964" end="13974" line="378" branch="true" invocation-count="1" ignored="false">
@@ -5147,7 +5147,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14026" end="14034" line="380" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17579" end="17631" line="484" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17579" end="17631" line="484" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15866" end="15880" line="442" branch="false" invocation-count="1" ignored="false">
@@ -5159,7 +5159,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16959" end="16979" line="468" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17296" end="17351" line="478" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17296" end="17351" line="478" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16300" end="16492" line="453" branch="true" invocation-count="1" ignored="false">
@@ -5168,7 +5168,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16708" end="16716" line="461" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17652" end="17713" line="485" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17652" end="17713" line="485" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15985" end="16277" line="446" branch="true" invocation-count="1" ignored="false">
@@ -5177,37 +5177,37 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15186" end="15194" line="421" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16807" end="16847" line="463" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16807" end="16847" line="463" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16994" end="17035" line="469" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16994" end="17035" line="469" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15686" end="15881" line="438" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15509" end="15573" line="432" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15509" end="15573" line="432" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15032" end="15052" line="417" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15830" line="441" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15830" line="441" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17823" end="17875" line="490" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17823" end="17875" line="490" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14590" end="14598" line="400" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14716" end="14763" line="405" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14716" end="14763" line="405" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16377" end="16385" line="454" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17383" end="17447" line="479" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17383" end="17447" line="479" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16588" end="16608" line="458" branch="false" invocation-count="1" ignored="false">
@@ -5219,10 +5219,10 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14825" end="14840" line="409" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14326" end="14334" line="391" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14326" end="14334" line="391" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15804" line="441" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15804" line="441" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14472" end="14485" line="396" branch="true" invocation-count="1" ignored="false">
@@ -5234,7 +5234,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16364" end="16418" line="454" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16623" end="16665" line="459" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16623" end="16665" line="459" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14016" end="14024" line="380" branch="false" invocation-count="1" ignored="false">
@@ -5258,7 +5258,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16880" end="16888" line="465" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17103" end="17161" line="473" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17103" end="17161" line="473" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15080" end="15128" line="418" branch="true" invocation-count="1" ignored="false">
@@ -5270,7 +5270,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14505" end="14535" line="397" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14725" end="14763" line="406" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14725" end="14763" line="406" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14245" end="14273" line="389" branch="false" invocation-count="1" ignored="false">
@@ -5285,7 +5285,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14068" end="14102" line="382" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15551" line="433" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15551" line="433" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15689" end="15696" line="438" branch="false" invocation-count="1" ignored="false">
@@ -5300,13 +5300,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14431" end="14439" line="393" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="13920" end="13928" line="375" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="13920" end="13928" line="375" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16391" end="16418" line="454" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16626" end="16665" line="459" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16626" end="16665" line="459" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16694" end="16853" line="461" branch="true" invocation-count="1" ignored="false">
@@ -5315,19 +5315,19 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="13799" end="13807" line="369" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17112" end="17161" line="474" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17112" end="17161" line="474" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17476" end="17540" line="481" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17476" end="17540" line="481" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15094" end="15108" line="418" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17191" end="17255" line="475" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17191" end="17255" line="475" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16432" end="16486" line="455" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16432" end="16486" line="455" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16698" end="16706" line="461" branch="false" invocation-count="1" ignored="false">
@@ -5348,13 +5348,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15283" end="15290" line="424" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15572" line="433" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15572" line="433" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17661" end="17713" line="486" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17661" end="17713" line="486" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16213" end="16271" line="451" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16213" end="16271" line="451" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14264" end="14272" line="389" branch="false" invocation-count="1" ignored="false">
@@ -5369,10 +5369,10 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14093" end="14101" line="382" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17732" end="17793" line="487" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17732" end="17793" line="487" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14735" end="14757" line="406" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14735" end="14757" line="406" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16528" end="16536" line="457" branch="false" invocation-count="1" ignored="false">
@@ -5387,13 +5387,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14580" end="14588" line="400" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15546" line="433" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15546" line="433" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16314" end="16322" line="453" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15780" end="15831" line="441" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15780" end="15831" line="441" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15176" end="15184" line="421" branch="false" invocation-count="1" ignored="false">
@@ -5405,16 +5405,16 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15380" end="15410" line="429" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16997" end="17035" line="469" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16997" end="17035" line="469" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17392" end="17447" line="480" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17392" end="17447" line="480" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15472" end="15599" line="431" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15809" line="441" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15809" line="441" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15217" end="15224" line="422" branch="false" invocation-count="1" ignored="false">
@@ -5438,7 +5438,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14150" end="14158" line="384" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14316" end="14324" line="391" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14316" end="14324" line="391" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14367" end="14439" line="392" branch="true" invocation-count="1" ignored="false">
@@ -5468,19 +5468,19 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16928" end="16980" line="467" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17287" end="17351" line="477" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17287" end="17351" line="477" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17741" end="17793" line="488" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17741" end="17793" line="488" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17485" end="17540" line="482" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17485" end="17540" line="482" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16580" end="16609" line="458" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16804" end="16847" line="463" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16804" end="16847" line="463" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16877" end="17041" line="465" branch="true" invocation-count="1" ignored="false">
@@ -5489,7 +5489,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16396" end="16417" line="454" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15809" line="441" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15790" end="15809" line="441" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15920" end="15958" line="445" branch="false" invocation-count="1" ignored="false">
@@ -5498,25 +5498,25 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15595" end="15599" line="434" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17814" end="17875" line="489" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17814" end="17875" line="489" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15088" end="15127" line="418" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15767" end="15831" line="440" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15767" end="15831" line="440" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14797" end="14841" line="408" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17200" end="17255" line="476" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17200" end="17255" line="476" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15655" end="15662" line="437" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17570" end="17631" line="483" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="17570" end="17631" line="483" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16514" end="16671" line="457" branch="true" invocation-count="1" ignored="false">
@@ -5531,13 +5531,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14656" end="14664" line="402" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16216" end="16271" line="451" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16216" end="16271" line="451" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16435" end="16486" line="455" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16435" end="16486" line="455" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14296" end="14335" line="390" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14296" end="14335" line="390" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15214" end="15260" line="422" branch="true" invocation-count="1" ignored="false">
@@ -5546,7 +5546,7 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15912" end="15959" line="445" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15522" end="15573" line="433" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15522" end="15573" line="433" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="16518" end="16526" line="457" branch="false" invocation-count="1" ignored="false">
@@ -5573,13 +5573,13 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14967" end="15128" line="415" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14735" end="14762" line="406" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14735" end="14762" line="406" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15280" end="15326" line="424" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15551" line="433" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="15532" end="15551" line="433" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="eval" start="14417" end="14425" line="393" branch="true" invocation-count="1" ignored="false">
@@ -5596,49 +5596,49 @@ statement-count="1803" statements-invoked="1334" statement-rate="73.99" branch-r
                             </statements>
 </method>
                         <method 
-                        name="FrogInterpreter/Interpreter/desugarBag" statement-count="14" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                        name="FrogInterpreter/Interpreter/desugarBag" statement-count="14" statements-invoked="14" statement-rate="100.00" branch-rate="100.00">
                             <statements>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10563" end="10587" line="289" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10563" end="10587" line="289" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10373" end="10383" line="284" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10373" end="10383" line="284" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10665" end="10722" line="291" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10665" end="10722" line="291" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10287" end="10301" line="283" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10287" end="10301" line="283" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10507" end="10517" line="288" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10507" end="10517" line="288" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10420" end="10734" line="286" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10420" end="10734" line="286" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10571" end="10581" line="289" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10571" end="10581" line="289" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10368" end="10384" line="284" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10368" end="10384" line="284" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10616" end="10642" line="290" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10616" end="10642" line="290" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10430" end="10447" line="286" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10430" end="10447" line="286" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10662" end="10722" line="291" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10662" end="10722" line="291" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10361" end="10385" line="284" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10361" end="10385" line="284" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10496" end="10534" line="288" branch="true" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10496" end="10534" line="288" branch="true" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10626" end="10636" line="290" branch="false" invocation-count="0" ignored="false">
+                                package="FrogInterpreter" class="Interpreter" class-type="Object" full-class-name="FrogInterpreter.Interpreter" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Interpreter.scala" method="desugarBag" start="10626" end="10636" line="290" branch="false" invocation-count="1" ignored="false">
 </statement>
                             </statements>
 </method>

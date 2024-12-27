@@ -27,6 +27,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagImplTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DesugarTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrPairTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SubstTests.class[0m
@@ -40,7 +41,9 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionInterpreterTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	InterpreterValueTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SwapVarTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	InterpreterEval.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	LetBindingInterpreterTests.class[0m
@@ -69,6 +72,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagImplTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	DesugarTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrPairTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SubstTests.tasty[0m
@@ -82,7 +86,9 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionInterpreterTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	InterpreterValueTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SwapVarTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	InterpreterEval.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	StringTypeTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	LetBindingInterpreterTests.tasty[0m

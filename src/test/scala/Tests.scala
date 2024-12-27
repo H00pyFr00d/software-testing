@@ -591,6 +591,672 @@ class SubstTests extends AnyFunSuite {
   }
 }
 
+class DesugarTests extends AnyFunSuite {
+  test("Value") {
+    assertThrows[Exception] {desugar(UnitV)}
+    assertThrows[Exception] {desugar(NumV(1))}
+    assertThrows[Exception] {desugar(BoolV(true))}
+    assertThrows[Exception] {desugar(StringV("hello"))}
+    assertThrows[Exception] {desugar(PairV(NumV(1), NumV(2)))}
+    assertThrows[Exception] {desugar(RecordV(ListMap("l" -> NumV(42))))}
+    assertThrows[Exception] {desugar(VariantV("foo", NumV(42)))}
+    assertThrows[Exception] {desugar(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))}
+    assertThrows[Exception] {desugar(FunV("x", Var("x")))}
+    assertThrows[Exception] {desugar(RecV("f", "x", Var("x")))}
+  }
+
+  test("Unit") {
+    assert(desugar(Unit) == Unit)
+  }
+
+  test("Int") {
+    assert(desugar(Num(1)) == Num(1))
+  }
+
+  test("Plus") {
+    assert(desugar(Plus(Num(1), Num(2))) == Plus(Num(1), Num(2)))
+  }
+
+  test("Minus") {
+    assert(desugar(Minus(Num(1), Num(2))) == Minus(Num(1), Num(2)))
+  }
+
+  test("Times") {
+    assert(desugar(Times(Num(1), Num(2))) == Times(Num(1), Num(2)))
+  }
+
+  test("Bool") {
+    assert(desugar(Bool(true)) == Bool(true))
+  }
+
+  test("Eq") {
+    assert(desugar(Eq(Num(1), Num(2))) == Eq(Num(1), Num(2)))
+  }
+
+  test("Less") {
+    assert(desugar(Less(Num(1), Num(2))) == Less(Num(1), Num(2)))
+  }
+
+  test("IfThenElse") {
+    assert(desugar(IfThenElse(Bool(true), Num(1), Num(2))) == IfThenElse(Bool(true), Num(1), Num(2)))
+  }
+
+  test("Str") {
+    assert(desugar(Str("hello")) == Str("hello"))
+  }
+
+  test("Length") {
+    assert(desugar(Length(Str("hello"))) == Length(Str("hello")))
+  }
+
+  test("Index") {
+    assert(desugar(Index(Str("hello"), Num(0))) == Index(Str("hello"), Num(0)))
+  }
+
+  test("Concat") {
+    assert(desugar(Concat(Str("hello"), Str("world"))) == Concat(Str("hello"), Str("world")))
+  }
+
+  test("Var") {
+    assert(desugar(Var("x")) == Var("x"))
+  }
+
+  test("Let") {
+    assert(desugar(Let("x", Num(1), Var("x"))) == Let("x", Num(1), Var("x")))
+  }
+
+  test("Anno") {
+    assert(desugar(Anno(Num(1), TyInt)) == Num(1))
+  }
+
+  test("Lambda") {
+    assert(desugar(Lambda("x", Var("x"))) == Lambda("x", Var("x")))
+  }
+
+  test("Apply") {
+    assert(desugar(Apply(Var("f"), Var("x"))) == Apply(Var("f"), Var("x")))
+  }
+
+  test("Rec") {
+    assert(desugar(Rec("f", "x", Var("x"))) == Rec("f", "x", Var("x")))
+  }
+
+  test("Pair") {
+    assert(desugar(Pair(Num(1), Num(2))) == Pair(Num(1), Num(2)))
+  }
+
+  test("First") {
+    assert(desugar(First(Var("x"))) == First(Var("x")))
+  }
+
+  test("Second") {
+    assert(desugar(Second(Var("x"))) == Second(Var("x")))
+  }
+
+  test("Record") {
+    assert(desugar(Record(ListMap("l" -> Num(42)))) == Record(ListMap("l" -> Num(42))))
+  }
+
+  test("Proj") {
+    assert(desugar(Proj(Var("r"), "foo")) == Proj(Var("r"), "foo"))
+  }
+
+  test("Variant") {
+    assert(desugar(Variant("foo", Num(42))) == Variant("foo", Num(42)))
+  }
+
+  test("Case") {
+    assert(desugar(Case(Var("v"), ListMap("z" -> ("z", Var("z_prime"))))) == Case(Var("v"), ListMap("z" -> ("z", Var("z_prime")))))
+  }
+
+  test("Bag") {
+    assert(desugar(Bag(List(Num(1), Num(2), Num(3)))) == Bag(List(Num(1), Num(2), Num(3))))
+  }
+
+  test("FlatMap") {
+    assert(desugar(FlatMap(Var("b"), Lambda("z", Var("z")))) == FlatMap(Var("b"), Lambda("z", Var("z"))))
+  }
+
+  test("When") {
+    assert(desugar(When(Var("b"), Lambda("z", Var("z")))) == When(Var("b"), Lambda("z", Var("z"))))
+  }
+
+  test("Sum") {
+    assert(desugar(Sum(Var("b1"), Var("b2"))) == Sum(Var("b1"), Var("b2")))
+  }
+
+  test("Diff") {
+    assert(desugar(Diff(Var("b1"), Var("b2"))) == Diff(Var("b1"), Var("b2")))
+  }
+
+  test("Count") {
+    assert(desugar(Count(Var("b"), Num(2))) == Count(Var("b"), Num(2)))
+  }
+
+  test("Empty Comprehension") {
+    assert(desugar(Comprehension(Var("z"), List())) == Bag(List(Var("z"))))
+  }
+
+  test("Comprehension w/ Bind") {
+    assert(desugar(Comprehension(Var("b"), List(Bind("z", Var("l"))))) == FlatMap(Var("l"), Lambda("z", Bag(List(Var("b"))))))
+  }
+
+  test("Comprehension w/ Guard") {
+    assert(desugar(Comprehension(Var("b"), List(Guard(Var("z"))))) == When(Var("z"), Bag(List(Var("b")))))
+  }
+
+  test("Comprehension w/ CLet") {
+    assert(desugar(Comprehension(Var("b"), List(CLet("z", Var("l"))))) == Let("z", Var("l"), Bag(List(Var("b")))))
+  }
+
+  test("Unexpected Pattern in Comprehension") {
+    assertThrows[Exception] {
+      desugar(Comprehension(Var("b"), List(Num(1))))
+    }
+  }
+
+  test("LetPair") {
+    Interpreter.generator.reset()
+    assert(desugar(LetPair("z", "w", Pair(Num(1), Num(2)), Var("z"))) == Let("$0", Pair(Num(1), Num(2)), First(Var("$0"))))
+  }
+
+  test("LetFun") {
+    assert(desugar(LetFun("f", TyInt, "z", Var("f"), Var("f"))) == Let("f", Lambda("z", Var("f")), Var("f")))
+  }
+
+  test("LetRec") {
+    assert(desugar(LetRec("f", TyInt, "z", Var("f"), Var("f"))) == Let("f", Rec("f", "z", Var("f")), Var("f")))
+  }
+
+  test("LetRecord") {
+    Interpreter.generator.reset()
+    assert(desugar(LetRecord(ListMap("l" -> "z"), Var("r"), Var("r"))) == Let("$0", Var("r"), Var("r")))
+  }
+
+  test("Bind w/o Comprehension") {
+    assertThrows[Exception] {
+      desugar(Bind("x", Num(1)))
+    }
+  }
+
+  test("Guard w/o Comprehension") {
+    assertThrows[Exception] {
+      desugar(Guard(Num(1)))
+    }
+  }
+
+  test("CLet w/o Comprehension") {
+    assertThrows[Exception] {
+      desugar(CLet("x", Num(1)))
+    }
+  }
+}
+
+class InterpreterValueTests extends AnyFunSuite {
+  test("add") {
+    assert(Interpreter.Value.add(NumV(1), NumV(2)) == NumV(3))
+  }
+
+  test("add with non-NumV") {
+    assertThrows[Exception] {
+      Interpreter.Value.add(NumV(1), BoolV(true))
+    }
+  }
+
+  test("sub") {
+    assert(Interpreter.Value.subtract(NumV(1), NumV(2)) == NumV(-1))
+  }
+
+  test("sub with non-NumV") {
+    assertThrows[Exception] {
+      Interpreter.Value.subtract(NumV(1), BoolV(true))
+    }
+  }
+
+  test("mul") {
+    assert(Interpreter.Value.multiply(NumV(2), NumV(3)) == NumV(6))
+  }
+
+  test("mul with non-NumV") {
+    assertThrows[Exception] {
+      Interpreter.Value.multiply(NumV(1), BoolV(true))
+    }
+  }
+
+  test("eq") {
+    assert(Interpreter.Value.eq(NumV(1), NumV(1)) == BoolV(true))
+    assert(Interpreter.Value.eq(NumV(1), NumV(2)) == BoolV(false))
+    assert(Interpreter.Value.eq(BoolV(true), BoolV(true)) == BoolV(true))
+    assert(Interpreter.Value.eq(BoolV(true), BoolV(false)) == BoolV(false))
+    assert(Interpreter.Value.eq(BoolV(false), BoolV(true)) == BoolV(false))
+    assert(Interpreter.Value.eq(BoolV(false), BoolV(false)) == BoolV(true))
+    assert(Interpreter.Value.eq(StringV("hello"), StringV("hello")) == BoolV(true))
+    assert(Interpreter.Value.eq(StringV("hello"), StringV("world")) == BoolV(false))
+    assert(Interpreter.Value.eq(PairV(NumV(1), NumV(2)), PairV(NumV(1), NumV(2))) == BoolV(true))
+    assert(Interpreter.Value.eq(PairV(NumV(1), NumV(2)), PairV(NumV(2), NumV(1))) == BoolV(false))
+    assert(Interpreter.Value.eq(VariantV("foo", NumV(42)), VariantV("foo", NumV(42))) == BoolV(true))
+    assert(Interpreter.Value.eq(VariantV("foo", NumV(42)), VariantV("bar", NumV(42))) == BoolV(false))
+  }
+
+  test("eq (incomparable)") {
+    assertThrows[Exception] {
+      Interpreter.Value.eq(NumV(1), BoolV(true))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(BoolV(true), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(NumV(1), StringV("hello"))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(StringV("hello"), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(NumV(1), PairV(NumV(1), NumV(2)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(PairV(NumV(1), NumV(2)), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(NumV(1), VariantV("foo", NumV(42)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.eq(VariantV("foo", NumV(42)), NumV(1))
+    }
+  }
+
+  test("less") {
+    assert(Interpreter.Value.less(NumV(1), NumV(2)) == BoolV(true))
+    assert(Interpreter.Value.less(NumV(2), NumV(1)) == BoolV(false))
+  }
+
+  test("less (incomparable)") {
+    assertThrows[Exception] {
+      Interpreter.Value.less(NumV(1), BoolV(true))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(BoolV(true), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(NumV(1), StringV("hello"))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(StringV("hello"), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(NumV(1), PairV(NumV(1), NumV(2)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(PairV(NumV(1), NumV(2)), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(NumV(1), VariantV("foo", NumV(42)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(VariantV("foo", NumV(42)), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(NumV(1), BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)), NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(NumV(1), FunV("x", Var("x")))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.Value.less(FunV("x", Var("x")), NumV(1))
+    }
+  }
+
+  test("length") {
+    assert(Interpreter.Value.length(StringV("hello")) == NumV(5))
+  }
+
+  test("length (non-StringV)") {
+    assertThrows[Exception] {
+      Interpreter.Value.length(NumV(1))
+      Interpreter.Value.length(BoolV(true))
+      Interpreter.Value.length(PairV(NumV(1), NumV(2)))
+      Interpreter.Value.length(RecordV(ListMap("l" -> NumV(42))))
+      Interpreter.Value.length(VariantV("foo", NumV(42)))
+      Interpreter.Value.length(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+      Interpreter.Value.length(FunV("x", Var("x")))
+    }
+  }
+
+  test("index") {
+    assert(Interpreter.Value.index(StringV("hello"), NumV(0)) == StringV("h"))
+    assert(Interpreter.Value.index(StringV("hello"), NumV(1)) == StringV("e"))
+    assert(Interpreter.Value.index(StringV("hello"), NumV(2)) == StringV("l"))
+    assert(Interpreter.Value.index(StringV("hello"), NumV(3)) == StringV("l"))
+    assert(Interpreter.Value.index(StringV("hello"), NumV(4)) == StringV("o"))
+  }
+
+  test("index (non-StringV)") {
+    assertThrows[Exception] {
+      Interpreter.Value.index(NumV(1), NumV(0))
+      Interpreter.Value.index(BoolV(true), NumV(0))
+      Interpreter.Value.index(PairV(NumV(1), NumV(2)), NumV(0))
+      Interpreter.Value.index(RecordV(ListMap("l" -> NumV(42))), NumV(0))
+      Interpreter.Value.index(VariantV("foo", NumV(42)), NumV(0))
+      Interpreter.Value.index(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)), NumV(0))
+      Interpreter.Value.index(FunV("x", Var("x")), NumV(0))
+    }
+  }
+
+  test("concat") {
+    assert(Interpreter.Value.concat(StringV("hello"), StringV("world")) == StringV("helloworld"))
+  }
+
+  test("concat (non-StringV)") {
+    assertThrows[Exception] {
+      Interpreter.Value.concat(StringV("hello"), NumV(1))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(NumV(1), StringV("hello"))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(NumV(1), NumV(1))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(BoolV(true), StringV("hello"))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(StringV("hello"), BoolV(true))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(PairV(NumV(1), NumV(2)), StringV("hello"))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(StringV("hello"), PairV(NumV(1), NumV(2)))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(RecordV(ListMap("l" -> NumV(42))), StringV("hello"))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(StringV("hello"), RecordV(ListMap("l" -> NumV(42))))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(VariantV("foo", NumV(42)), StringV("hello"))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(StringV("hello"), VariantV("foo", NumV(42)))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)), StringV("hello"))
+    }
+    assertThrows[Exception] {
+      Interpreter.Value.concat(StringV("hello"), BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    }
+  }
+}
+
+class InterpreterEval extends AnyFunSuite {
+  test("Value") {
+    assert(Interpreter.eval(UnitV) == UnitV)
+    assert(Interpreter.eval(NumV(1)) == NumV(1))
+    assert(Interpreter.eval(BoolV(true)) == BoolV(true))
+    assert(Interpreter.eval(StringV("hello")) == StringV("hello"))
+    assert(Interpreter.eval(PairV(NumV(1), NumV(2))) == PairV(NumV(1), NumV(2)))
+    assert(Interpreter.eval(RecordV(ListMap("l" -> NumV(42)))) == RecordV(ListMap("l" -> NumV(42))))
+    assert(Interpreter.eval(VariantV("foo", NumV(42))) == VariantV("foo", NumV(42)))
+    assert(Interpreter.eval(BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1))) == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    assert(Interpreter.eval(FunV("x", Var("x"))) == FunV("x", Var("x")))
+    assert(Interpreter.eval(RecV("f", "x", Var("x"))) == RecV("f", "x", Var("x")))
+  }
+
+  test("Unit") {
+    assert(Interpreter.eval(Unit) == UnitV)
+  }
+
+  test("Int") {
+    assert(Interpreter.eval(Num(1)) == NumV(1))
+  }
+
+  test("Plus") {
+    assert(Interpreter.eval(Plus(Num(1), Num(2))) == NumV(3))
+  }
+
+  test("Minus") {
+    assert(Interpreter.eval(Minus(Num(1), Num(2))) == NumV(-1))
+  }
+
+  test("Times") {
+    assert(Interpreter.eval(Times(Num(2), Num(3))) == NumV(6))
+  }
+
+  test("Bool") {
+    assert(Interpreter.eval(Bool(true)) == BoolV(true))
+  }
+
+  test("Eq") { 
+    assert(Interpreter.eval(Eq(Num(1), Num(1))) == BoolV(true))
+    assert(Interpreter.eval(Eq(Num(1), Num(2))) == BoolV(false))
+    assert(Interpreter.eval(Eq(Bool(true), Bool(true))) == BoolV(true))
+    assert(Interpreter.eval(Eq(Bool(true), Bool(false))) == BoolV(false))
+    assert(Interpreter.eval(Eq(Bool(false), Bool(true))) == BoolV(false))
+    assert(Interpreter.eval(Eq(Bool(false), Bool(false))) == BoolV(true))
+    assert(Interpreter.eval(Eq(Str("hello"), Str("hello"))) == BoolV(true))
+    assert(Interpreter.eval(Eq(Str("hello"), Str("world"))) == BoolV(false))
+    assert(Interpreter.eval(Eq(Pair(Num(1), Num(2)), Pair(Num(1), Num(2)))) == BoolV(true))
+    assert(Interpreter.eval(Eq(Pair(Num(1), Num(2)), Pair(Num(2), Num(1)))) == BoolV(false))
+    assert(Interpreter.eval(Eq(Variant("foo", Num(42)), Variant("foo", Num(42)))) == BoolV(true))
+    assert(Interpreter.eval(Eq(Variant("foo", Num(42)), Variant("bar", Num(42)))) == BoolV(false))
+  }
+
+  test("Less") {
+    assert(Interpreter.eval(Less(Num(1), Num(2))) == BoolV(true))
+    assert(Interpreter.eval(Less(Num(2), Num(1))) == BoolV(false))
+  }
+
+  test("IfThenElse") {
+    assert(Interpreter.eval(IfThenElse(Bool(true), Num(1), Num(2))) == NumV(1))
+    assert(Interpreter.eval(IfThenElse(Bool(false), Num(1), Num(2))) == NumV(2))
+  }
+
+  test("Str") {
+    assert(Interpreter.eval(Str("hello")) == StringV("hello"))
+  }
+
+  test("Length") {
+    assert(Interpreter.eval(Length(Str("hello"))) == NumV(5))
+  }
+
+  test("Index") {
+    assert(Interpreter.eval(Index(Str("hello"), Num(0))) == StringV("h"))
+    assert(Interpreter.eval(Index(Str("hello"), Num(1))) == StringV("e"))
+    assert(Interpreter.eval(Index(Str("hello"), Num(2))) == StringV("l"))
+    assert(Interpreter.eval(Index(Str("hello"), Num(3))) == StringV("l"))
+    assert(Interpreter.eval(Index(Str("hello"), Num(4))) == StringV("o"))
+  }
+
+  test("Concat") {
+    assert(Interpreter.eval(Concat(Str("hello"), Str("world"))) == StringV("helloworld"))
+  }
+
+  test("Var") {
+    assertThrows[Exception] {
+      Interpreter.eval(Var("x"))
+    }
+  }
+
+  test("Let") {
+    assert(Interpreter.eval(Let("x", Num(1), Var("x"))) == NumV(1))
+  }
+
+  test("Anno") {
+    assertThrows[Exception] {
+      Interpreter.eval(Anno(Num(1), TyInt))
+    }
+  }
+
+  test("Lambda") {
+    assert(Interpreter.eval(Lambda("x", Var("x"))) == FunV("x", Var("x")))
+  }
+
+  test("Apply") {
+    assert(Interpreter.eval(Apply(Lambda("x", Var("x")), Num(1))) == NumV(1))
+  }
+
+  test("Rec") {
+    assert(Interpreter.eval(Rec("f", "x", Var("x"))) == RecV("f", "x", Var("x")))
+  }
+
+  test("Pair") {
+    assert(Interpreter.eval(Pair(Num(1), Num(2))) == PairV(NumV(1), NumV(2)))
+  }
+
+  test("First") {
+    assert(Interpreter.eval(First(Pair(Num(1), Num(2)))) == NumV(1))
+  }
+
+  test("Second") {
+    assert(Interpreter.eval(Second(Pair(Num(1), Num(2)))) == NumV(2))
+  }
+
+  test("Record") {
+    assert(Interpreter.eval(Record(ListMap("l" -> Num(42)))) == RecordV(ListMap("l" -> NumV(42))))
+  }
+
+  test("Proj") {
+    assert(Interpreter.eval(Proj(Record(ListMap("l" -> Num(42))), "l")) == NumV(42))
+  }
+
+  test("Proj (label not found)") {
+    assertThrows[Exception] {
+      Interpreter.eval(Proj(Record(ListMap("l" -> Num(42))), "foo"))
+    }
+  }
+
+  test("Variant") {
+    assert(Interpreter.eval(Variant("foo", Num(42))) == VariantV("foo", NumV(42)))
+  }
+
+  test("Case") {
+    assert(Interpreter.eval(Case(Variant("foo", Num(42)), ListMap("foo" -> ("x", Var("x"))))) == NumV(42))
+  }
+
+  test("Case (label not found)") {
+    assertThrows[Exception] {
+      Interpreter.eval(Case(Variant("foo", Num(42)), ListMap("bar" -> ("x", Var("x")))))
+    }
+  }
+
+  test("Bag") {
+    assert(Interpreter.eval(Bag(List(Num(1), Num(2), Num(3)))) == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+  }
+
+  test("FlatMap") {
+    assert(Interpreter.eval(FlatMap(Bag(List(Num(1), Num(2), Num(3))), Lambda("x", Bag(List(Var("x")))))) == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+  }
+
+  test("FlatMap (expects function with bag-type return)") {
+    assertThrows[Exception] {
+      Interpreter.eval(FlatMap(Bag(List(Num(1), Num(2), Num(3))), Lambda("x", Var("x"))))
+    }
+  }
+
+  test("FlatMap (expects bag and function)") {
+    assertThrows[Exception] {
+      Interpreter.eval(FlatMap(Num(1), Lambda("x", Bag(List(Var("x"))))))
+    }
+  }
+
+  test("When") {
+    assert(Interpreter.eval(When(Bool(true), Bag(List(Num(1), Num(2), Num(3))))) == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+  }
+
+  test("When (expects boolean and bag)") {
+    assertThrows[Exception] {
+      Interpreter.eval(When(Num(1), Num(1)))
+    }
+  }
+
+  test("Sum") {
+    assert(Interpreter.eval(Sum(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(1), Num(2), Num(3))))) == BagV(ListMap(NumV(1) -> 2, NumV(2) -> 2, NumV(3) -> 2)))
+  }
+
+  test("Sum (expects bags)") {
+    assertThrows[Exception] {
+      Interpreter.eval(Sum(Num(1), Num(1)))
+    }
+  }
+
+  test("Diff") {
+    assert(Interpreter.eval(Diff(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(4), Num(5), Num(6))))) == BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    assert(Interpreter.eval(Diff(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(1), Num(2), Num(3))))) == BagV(ListMap()))
+  }
+
+  test("Diff (expects bags)") {
+    assertThrows[Exception] {
+      Interpreter.eval(Diff(Num(1), Num(1)))
+    }
+  }
+
+  test("Count") {
+    assert(Interpreter.eval(Count(Bag(List(Num(1), Num(2), Num(3))), Num(2))) == NumV(1))
+  }
+
+  test("Count (expects bag)") {
+    assertThrows[Exception] {
+      Interpreter.eval(Count(Num(1), Num(1)))
+    }
+  }
+
+  test("Pattern Matching Should Be Desugared") {
+    assertThrows[Exception] {
+      Interpreter.eval(LetPair("z", "w", Pair(Num(1), Num(2)), Var("z")))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(LetFun("f", TyInt, "z", Var("f"), Var("f")))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(LetRec("f", TyInt, "z", Var("f"), Var("f")))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(LetRecord(ListMap("l" -> "z"), Var("r"), Var("r")))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(Comprehension(Var("z"), List(Num(1))))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(Bind("x", Num(1)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(Guard(Num(1)))
+    }
+
+    assertThrows[Exception] {
+      Interpreter.eval(CLet("x", Num(1)))
+    }
+  }
+}
+
 // Parser
 class ParseStrArithTests extends AnyFunSuite {
   test("Unit") {
@@ -709,10 +1375,6 @@ class ParseStrVariantTests extends AnyFunSuite {
     assert(parser.parseStr("case v of {foo x -> 1, bar y -> 2}") == Case(Var("v"), ListMap("foo" -> ("x", Num(1)), "bar" -> ("y", Num(2)))))
   }
 }
-
-// class ParseStrBagTests extends AnyFunSuite {
-//
-// }
 
 class ParseStrErrorTests extends AnyFunSuite {
   test("Malformed Plus") {
