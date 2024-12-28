@@ -39,6 +39,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrErrorTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyInferTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionInterpreterTests.class[0m
@@ -85,6 +86,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package$.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrErrorTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TyInferTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Tests$package.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionInterpreterTests.tasty[0m

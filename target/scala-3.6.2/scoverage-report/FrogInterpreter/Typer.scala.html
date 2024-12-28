@@ -216,7 +216,7 @@
 </span>192 <span style=''>  // inference mode
 </span>193 <span style=''>  </span><span style='background: #AEF1AE'>def tyInfer</span><span style=''>(ctx: Env, e: Expr): Type = e match {
 </span>194 <span style=''>    // Value
-</span>195 <span style=''>    case v:Value </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyCheck: values should not appear at this stage&quot;)</span><span style=''>
+</span>195 <span style=''>    case v:Value </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;tyCheck: values should not appear at this stage&quot;)</span><span style=''>
 </span>196 <span style=''>
 </span>197 <span style=''>    // Arithmetic
 </span>198 <span style=''>    case Unit </span><span style='background: #AEF1AE'>=&gt; TyUnit</span><span style=''>
@@ -238,9 +238,9 @@
 </span>214 <span style=''>    case Bool(_) </span><span style='background: #AEF1AE'>=&gt; TyBool</span><span style=''>
 </span>215 <span style=''>    case Eq(e1, e2) =&gt;
 </span>216 <span style=''>      </span><span style='background: #AEF1AE'>val ty = tyInfer(ctx,e1)
-</span>217 <span style=''></span><span style='background: #AEF1AE'>      if (!isEqType(ty)) </span><span style='background: #F0ADAD'>{
-</span>218 <span style=''></span><span style='background: #F0ADAD'>        sys.error(&quot;tyCheck: cannot test equality of type &quot; ++ ty.toString)
-</span>219 <span style=''></span><span style='background: #F0ADAD'>      }</span><span style='background: #AEF1AE'>
+</span>217 <span style=''></span><span style='background: #AEF1AE'>      if (!isEqType(ty)) {
+</span>218 <span style=''></span><span style='background: #AEF1AE'>        sys.error(&quot;tyCheck: cannot test equality of type &quot; ++ ty.toString)
+</span>219 <span style=''></span><span style='background: #AEF1AE'>      }
 </span>220 <span style=''></span><span style='background: #AEF1AE'>      tyCheck(ctx, e2, ty)
 </span>221 <span style=''></span><span style='background: #AEF1AE'>      TyBool</span><span style=''>
 </span>222 <span style=''>    case Less(e1, e2) =&gt;
@@ -248,10 +248,10 @@
 </span>224 <span style=''></span><span style='background: #AEF1AE'>      tyCheck(ctx, e2, TyInt)
 </span>225 <span style=''></span><span style='background: #AEF1AE'>      TyBool</span><span style=''>
 </span>226 <span style=''>    case IfThenElse(e, e1, e2) =&gt;
-</span>227 <span style=''>      </span><span style='background: #F0ADAD'>tyCheck(ctx, e, TyBool)
-</span>228 <span style=''></span><span style='background: #F0ADAD'>      val ty = tyInfer(ctx,e1)
-</span>229 <span style=''></span><span style='background: #F0ADAD'>      tyCheck(ctx, e2, ty)
-</span>230 <span style=''></span><span style='background: #F0ADAD'>      ty</span><span style=''>
+</span>227 <span style=''>      </span><span style='background: #AEF1AE'>tyCheck(ctx, e, TyBool)
+</span>228 <span style=''></span><span style='background: #AEF1AE'>      val ty = tyInfer(ctx,e1)
+</span>229 <span style=''></span><span style='background: #AEF1AE'>      tyCheck(ctx, e2, ty)
+</span>230 <span style=''></span><span style='background: #AEF1AE'>      ty</span><span style=''>
 </span>231 <span style=''>
 </span>232 <span style=''>    // Strings
 </span>233 <span style=''>    case Str(s) </span><span style='background: #AEF1AE'>=&gt; TyString</span><span style=''>
@@ -271,20 +271,20 @@
 </span>247 <span style=''>    // Variables and let-binding
 </span>248 <span style=''>    case Var(x) </span><span style='background: #AEF1AE'>=&gt; ctx(x)</span><span style=''>
 </span>249 <span style=''>    case Let(x, e1, e2) =&gt;
-</span>250 <span style=''>      </span><span style='background: #F0ADAD'>val ty = tyInfer(ctx, e1)
-</span>251 <span style=''></span><span style='background: #F0ADAD'>      tyInfer(ctx + (x -&gt; ty), e2)</span><span style=''>
+</span>250 <span style=''>      </span><span style='background: #AEF1AE'>val ty = tyInfer(ctx, e1)
+</span>251 <span style=''></span><span style='background: #AEF1AE'>      tyInfer(ctx + (x -&gt; ty), e2)</span><span style=''>
 </span>252 <span style=''>
 </span>253 <span style=''>    // Functions
-</span>254 <span style=''>    case Lambda(x, e) </span><span style='background: #F0ADAD'>=&gt;
-</span>255 <span style=''></span><span style='background: #F0ADAD'>      sys.error(&quot;tyInfer: cannot infer function types&quot;)</span><span style=''>
+</span>254 <span style=''>    case Lambda(x, e) </span><span style='background: #AEF1AE'>=&gt;
+</span>255 <span style=''></span><span style='background: #AEF1AE'>      sys.error(&quot;tyInfer: cannot infer function types&quot;)</span><span style=''>
 </span>256 <span style=''>    case Apply(e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
 </span>257 <span style=''></span><span style='background: #AEF1AE'>      case TyFun(ty1, ty2) =&gt;
 </span>258 <span style=''></span><span style='background: #AEF1AE'>        tyCheck(ctx, e2, ty1)
 </span>259 <span style=''></span><span style='background: #AEF1AE'>        ty2
-</span>260 <span style=''></span><span style='background: #AEF1AE'>      case _ </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: expected function type&quot;)</span><span style='background: #AEF1AE'>
+</span>260 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected function type&quot;)
 </span>261 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
-</span>262 <span style=''>    case Rec(f, x, e) </span><span style='background: #F0ADAD'>=&gt;
-</span>263 <span style=''></span><span style='background: #F0ADAD'>      sys.error(&quot;tyInfer: cannot infer function types&quot;)</span><span style=''>
+</span>262 <span style=''>    case Rec(f, x, e) </span><span style='background: #AEF1AE'>=&gt;
+</span>263 <span style=''></span><span style='background: #AEF1AE'>      sys.error(&quot;tyInfer: cannot infer function types&quot;)</span><span style=''>
 </span>264 <span style=''>
 </span>265 <span style=''>    // Annotations
 </span>266 <span style=''>    case Anno(e, ty) =&gt;
@@ -299,149 +299,149 @@
 </span>275 <span style=''></span><span style='background: #AEF1AE'>      TyPair(ty1, ty2)</span><span style=''>
 </span>276 <span style=''>    case First(e) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e) match {
 </span>277 <span style=''></span><span style='background: #AEF1AE'>      case TyPair(ty1, _) =&gt; ty1
-</span>278 <span style=''></span><span style='background: #AEF1AE'>      case _ </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: expected pair type&quot;)</span><span style='background: #AEF1AE'>
+</span>278 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
 </span>279 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>280 <span style=''>    case Second(e) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e) match {
 </span>281 <span style=''></span><span style='background: #AEF1AE'>      case TyPair(_, ty2) =&gt; ty2
-</span>282 <span style=''></span><span style='background: #AEF1AE'>      case _ </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: expected pair type&quot;)</span><span style='background: #AEF1AE'>
+</span>282 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
 </span>283 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>284 <span style=''>
 </span>285 <span style=''>    // Records
 </span>286 <span style=''>    case Record(es) =&gt;
 </span>287 <span style=''>      </span><span style='background: #AEF1AE'>val tys = es.map((l, e) =&gt; (l, tyInfer(ctx, e)))
 </span>288 <span style=''></span><span style='background: #AEF1AE'>      TyRecord(tys)</span><span style=''>
-</span>289 <span style=''>    case Proj(e, l) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e) match {
-</span>290 <span style=''></span><span style='background: #F0ADAD'>      case TyRecord(tys) =&gt; tys.get(l) match
-</span>291 <span style=''></span><span style='background: #F0ADAD'>        case None =&gt; sys.error(&quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;)
-</span>292 <span style=''></span><span style='background: #F0ADAD'>        case Some(ty) =&gt; ty
-</span>293 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyOf: expected record type&quot;)
-</span>294 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
+</span>289 <span style=''>    case Proj(e, l) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e) match {
+</span>290 <span style=''></span><span style='background: #AEF1AE'>      case TyRecord(tys) =&gt; tys.get(l) match
+</span>291 <span style=''></span><span style='background: #AEF1AE'>        case None =&gt; sys.error(&quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;)
+</span>292 <span style=''></span><span style='background: #AEF1AE'>        case Some(ty) =&gt; ty
+</span>293 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyOf: expected record type&quot;)
+</span>294 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>295 <span style=''>
 </span>296 <span style=''>    // Variants
 </span>297 <span style=''>    case Variant(l, e) </span><span style='background: #AEF1AE'>=&gt; TyVariant(ListMap(l -&gt; tyInfer(ctx, e)))</span><span style=''>
-</span>298 <span style=''>    case Case(e, cls) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e) match {
-</span>299 <span style=''></span><span style='background: #F0ADAD'>      case TyVariant(tys) =&gt;
-</span>300 <span style=''></span><span style='background: #F0ADAD'>        tys.foreach((l, _) =&gt; cls.get(l) match {
-</span>301 <span style=''></span><span style='background: #F0ADAD'>          case None =&gt; sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)
-</span>302 <span style=''></span><span style='background: #F0ADAD'>          case Some((_, _)) =&gt; ()
-</span>303 <span style=''></span><span style='background: #F0ADAD'>        })
-</span>304 <span style=''></span><span style='background: #F0ADAD'>        def help(ty: Option[Type], entry: (Label, (Variable, Expr))): Option[Type] =
-</span>305 <span style=''></span><span style='background: #F0ADAD'>          val (label, (x, e)) = entry
-</span>306 <span style=''></span><span style='background: #F0ADAD'>          tys.get(label) match {
-</span>307 <span style=''></span><span style='background: #F0ADAD'>            case None =&gt;
-</span>308 <span style=''></span><span style='background: #F0ADAD'>              sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;)
-</span>309 <span style=''></span><span style='background: #F0ADAD'>            case Some(argty) =&gt; ty match {
-</span>310 <span style=''></span><span style='background: #F0ADAD'>              case None =&gt; Some(tyInfer(ctx + (x -&gt; argty), e))
-</span>311 <span style=''></span><span style='background: #F0ADAD'>              case Some(ty) =&gt;
-</span>312 <span style=''></span><span style='background: #F0ADAD'>                tyCheck(ctx + (x -&gt; argty), e, ty)
-</span>313 <span style=''></span><span style='background: #F0ADAD'>                Some(ty)
-</span>314 <span style=''></span><span style='background: #F0ADAD'>            }
-</span>315 <span style=''></span><span style='background: #F0ADAD'>          }
-</span>316 <span style=''></span><span style='background: #F0ADAD'>        cls.foldLeft(None)(help) match {
-</span>317 <span style=''></span><span style='background: #F0ADAD'>          case None =&gt; sys.error(&quot;tyInfer: empty case clause&quot;)
-</span>318 <span style=''></span><span style='background: #F0ADAD'>          case Some(ty) =&gt; ty
-</span>319 <span style=''></span><span style='background: #F0ADAD'>        }
-</span>320 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: expected variant type&quot;)
-</span>321 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
+</span>298 <span style=''>    case Case(e, cls) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e) match {
+</span>299 <span style=''></span><span style='background: #AEF1AE'>      case TyVariant(tys) =&gt;
+</span>300 <span style=''></span><span style='background: #AEF1AE'>        tys.foreach((l, _) =&gt; cls.get(l) match {
+</span>301 <span style=''></span><span style='background: #AEF1AE'>          case None =&gt; sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)
+</span>302 <span style=''></span><span style='background: #AEF1AE'>          case Some((_, _)) =&gt; ()
+</span>303 <span style=''></span><span style='background: #AEF1AE'>        })
+</span>304 <span style=''></span><span style='background: #AEF1AE'>        def help(ty: Option[Type], entry: (Label, (Variable, Expr))): Option[Type] =
+</span>305 <span style=''></span><span style='background: #AEF1AE'>          val (label, (x, e)) = entry
+</span>306 <span style=''></span><span style='background: #AEF1AE'>          tys.get(label) match {
+</span>307 <span style=''></span><span style='background: #AEF1AE'>            case None =&gt;
+</span>308 <span style=''></span><span style='background: #AEF1AE'>              sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;)
+</span>309 <span style=''></span><span style='background: #AEF1AE'>            case Some(argty) =&gt; ty match {
+</span>310 <span style=''></span><span style='background: #AEF1AE'>              case None =&gt; Some(tyInfer(ctx + (x -&gt; argty), e))
+</span>311 <span style=''></span><span style='background: #AEF1AE'>              case Some(ty) =&gt;
+</span>312 <span style=''></span><span style='background: #AEF1AE'>                </span><span style='background: #F0ADAD'>tyCheck(ctx + (x -&gt; argty), e, ty)
+</span>313 <span style=''></span><span style='background: #F0ADAD'>                Some(ty)</span><span style='background: #AEF1AE'>
+</span>314 <span style=''></span><span style='background: #AEF1AE'>            }
+</span>315 <span style=''></span><span style='background: #AEF1AE'>          }
+</span>316 <span style=''></span><span style='background: #AEF1AE'>        cls.foldLeft(None)(help) match {
+</span>317 <span style=''></span><span style='background: #AEF1AE'>          case None </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: empty case clause&quot;)</span><span style='background: #AEF1AE'>
+</span>318 <span style=''></span><span style='background: #AEF1AE'>          case Some(ty) =&gt; ty
+</span>319 <span style=''></span><span style='background: #AEF1AE'>        }
+</span>320 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected variant type&quot;)
+</span>321 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>322 <span style=''>
 </span>323 <span style=''>    // Bags
 </span>324 <span style=''>    case Bag(ebag) </span><span style='background: #AEF1AE'>=&gt; ebag match {
-</span>325 <span style=''></span><span style='background: #AEF1AE'>      case Nil </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: cannot infer empty bag&quot;)</span><span style='background: #AEF1AE'>
+</span>325 <span style=''></span><span style='background: #AEF1AE'>      case Nil =&gt; sys.error(&quot;tyInfer: cannot infer empty bag&quot;)
 </span>326 <span style=''></span><span style='background: #AEF1AE'>      case e::es =&gt; 
 </span>327 <span style=''></span><span style='background: #AEF1AE'>        val ty = tyInfer(ctx, e)
 </span>328 <span style=''></span><span style='background: #AEF1AE'>        es.foreach(e =&gt; tyCheck(ctx, e, ty))
 </span>329 <span style=''></span><span style='background: #AEF1AE'>        TyBag(ty)
 </span>330 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
-</span>331 <span style=''>    case FlatMap(e1, e2) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e1) match {
-</span>332 <span style=''></span><span style='background: #F0ADAD'>      case TyBag(ty1) =&gt; tyInfer(ctx, e2) match {
-</span>333 <span style=''></span><span style='background: #F0ADAD'>        case TyFun(ty11, TyBag(ty2)) =&gt;
-</span>334 <span style=''></span><span style='background: #F0ADAD'>          if ty1 == ty11 then TyBag(ty2) else sys.error(&quot;tyInfer: flatMap mismatch&quot;)
-</span>335 <span style=''></span><span style='background: #F0ADAD'>        case _ =&gt; sys.error(&quot;tyInfer: flatMap expects function type&quot;)
-</span>336 <span style=''></span><span style='background: #F0ADAD'>      }
-</span>337 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: flatMap expects bag type&quot;)
-</span>338 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
+</span>331 <span style=''>    case FlatMap(e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
+</span>332 <span style=''></span><span style='background: #AEF1AE'>      case TyBag(ty1) =&gt; tyInfer(ctx, e2) match {
+</span>333 <span style=''></span><span style='background: #AEF1AE'>        case TyFun(ty11, TyBag(ty2)) =&gt;
+</span>334 <span style=''></span><span style='background: #AEF1AE'>          if ty1 == ty11 then TyBag(ty2) else sys.error(&quot;tyInfer: flatMap mismatch&quot;)
+</span>335 <span style=''></span><span style='background: #AEF1AE'>        case _ =&gt; sys.error(&quot;tyInfer: flatMap expects function type&quot;)
+</span>336 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>337 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: flatMap expects bag type&quot;)
+</span>338 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>339 <span style=''>    case When(e1, e2) =&gt;
-</span>340 <span style=''>      </span><span style='background: #F0ADAD'>tyCheck(ctx, e1, TyBool)
-</span>341 <span style=''></span><span style='background: #F0ADAD'>      tyInfer(ctx, e2) match {
-</span>342 <span style=''></span><span style='background: #F0ADAD'>        case TyBag(ty) =&gt; TyBag(ty)
-</span>343 <span style=''></span><span style='background: #F0ADAD'>        case ty =&gt; sys.error(&quot;tyInfer: when expects bag for second argument, instead of &quot; + ty)
-</span>344 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
-</span>345 <span style=''>    case Sum(e1, e2) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e1) match {
-</span>346 <span style=''></span><span style='background: #F0ADAD'>      case TyBag(ty) =&gt;
-</span>347 <span style=''></span><span style='background: #F0ADAD'>        tyCheck(ctx, e2, TyBag(ty))
-</span>348 <span style=''></span><span style='background: #F0ADAD'>        TyBag(ty)
-</span>349 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: sum expects bag type&quot;)
-</span>350 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
-</span>351 <span style=''>    case Diff(e1, e2) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e1) match {
-</span>352 <span style=''></span><span style='background: #F0ADAD'>      case TyBag(ty) =&gt;
-</span>353 <span style=''></span><span style='background: #F0ADAD'>        if (!isEqType(ty)) {
-</span>354 <span style=''></span><span style='background: #F0ADAD'>          sys.error(&quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString)
-</span>355 <span style=''></span><span style='background: #F0ADAD'>        }
-</span>356 <span style=''></span><span style='background: #F0ADAD'>        tyCheck(ctx, e2, TyBag(ty))
-</span>357 <span style=''></span><span style='background: #F0ADAD'>        TyBag(ty)
-</span>358 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: diff expects bag type&quot;)
-</span>359 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
+</span>340 <span style=''>      </span><span style='background: #AEF1AE'>tyCheck(ctx, e1, TyBool)
+</span>341 <span style=''></span><span style='background: #AEF1AE'>      tyInfer(ctx, e2) match {
+</span>342 <span style=''></span><span style='background: #AEF1AE'>        case TyBag(ty) =&gt; TyBag(ty)
+</span>343 <span style=''></span><span style='background: #AEF1AE'>        case ty =&gt; sys.error(&quot;tyInfer: when expects bag for second argument, instead of &quot; + ty)
+</span>344 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>345 <span style=''>    case Sum(e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
+</span>346 <span style=''></span><span style='background: #AEF1AE'>      case TyBag(ty) =&gt;
+</span>347 <span style=''></span><span style='background: #AEF1AE'>        tyCheck(ctx, e2, TyBag(ty))
+</span>348 <span style=''></span><span style='background: #AEF1AE'>        TyBag(ty)
+</span>349 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: sum expects bag type&quot;)
+</span>350 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>351 <span style=''>    case Diff(e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
+</span>352 <span style=''></span><span style='background: #AEF1AE'>      case TyBag(ty) =&gt;
+</span>353 <span style=''></span><span style='background: #AEF1AE'>        if (!isEqType(ty)) {
+</span>354 <span style=''></span><span style='background: #AEF1AE'>          sys.error(&quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString)
+</span>355 <span style=''></span><span style='background: #AEF1AE'>        }
+</span>356 <span style=''></span><span style='background: #AEF1AE'>        tyCheck(ctx, e2, TyBag(ty))
+</span>357 <span style=''></span><span style='background: #AEF1AE'>        TyBag(ty)
+</span>358 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: diff expects bag type&quot;)
+</span>359 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>360 <span style=''>
-</span>361 <span style=''>    case Comprehension(e, es) </span><span style='background: #F0ADAD'>=&gt; es match {
-</span>362 <span style=''></span><span style='background: #F0ADAD'>      case Nil =&gt; TyBag(tyInfer(ctx, e))
-</span>363 <span style=''></span><span style='background: #F0ADAD'>      case p::oth =&gt; p match {
-</span>364 <span style=''></span><span style='background: #F0ADAD'>        case Bind(x, e1) =&gt; tyInfer(ctx, e1) match {
-</span>365 <span style=''></span><span style='background: #F0ADAD'>          case TyBag(ty1) =&gt;
-</span>366 <span style=''></span><span style='background: #F0ADAD'>            tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
-</span>367 <span style=''></span><span style='background: #F0ADAD'>          case _ =&gt; sys.error(&quot;tyInfer: comprehension expects bag type&quot;)
-</span>368 <span style=''></span><span style='background: #F0ADAD'>        }
-</span>369 <span style=''></span><span style='background: #F0ADAD'>        case Guard(e1) =&gt;
-</span>370 <span style=''></span><span style='background: #F0ADAD'>          tyCheck(ctx, e1, TyBool)
-</span>371 <span style=''></span><span style='background: #F0ADAD'>          tyInfer(ctx, Comprehension(e, oth))
-</span>372 <span style=''></span><span style='background: #F0ADAD'>        case CLet(x, e1) =&gt;
-</span>373 <span style=''></span><span style='background: #F0ADAD'>          val ty1 = tyInfer(ctx, e1)
-</span>374 <span style=''></span><span style='background: #F0ADAD'>          tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
-</span>375 <span style=''></span><span style='background: #F0ADAD'>        case _ =&gt;
-</span>376 <span style=''></span><span style='background: #F0ADAD'>          sys.error(&quot;tyInfer: expected comprehension clause&quot;)
-</span>377 <span style=''></span><span style='background: #F0ADAD'>      }
-</span>378 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
+</span>361 <span style=''>    case Comprehension(e, es) </span><span style='background: #AEF1AE'>=&gt; es match {
+</span>362 <span style=''></span><span style='background: #AEF1AE'>      case Nil =&gt; TyBag(tyInfer(ctx, e))
+</span>363 <span style=''></span><span style='background: #AEF1AE'>      case p::oth =&gt; p match {
+</span>364 <span style=''></span><span style='background: #AEF1AE'>        case Bind(x, e1) =&gt; tyInfer(ctx, e1) match {
+</span>365 <span style=''></span><span style='background: #AEF1AE'>          case TyBag(ty1) =&gt;
+</span>366 <span style=''></span><span style='background: #AEF1AE'>            tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
+</span>367 <span style=''></span><span style='background: #AEF1AE'>          case _ =&gt; sys.error(&quot;tyInfer: comprehension expects bag type&quot;)
+</span>368 <span style=''></span><span style='background: #AEF1AE'>        }
+</span>369 <span style=''></span><span style='background: #AEF1AE'>        case Guard(e1) =&gt;
+</span>370 <span style=''></span><span style='background: #AEF1AE'>          tyCheck(ctx, e1, TyBool)
+</span>371 <span style=''></span><span style='background: #AEF1AE'>          tyInfer(ctx, Comprehension(e, oth))
+</span>372 <span style=''></span><span style='background: #AEF1AE'>        case CLet(x, e1) =&gt;
+</span>373 <span style=''></span><span style='background: #AEF1AE'>          val ty1 = tyInfer(ctx, e1)
+</span>374 <span style=''></span><span style='background: #AEF1AE'>          tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
+</span>375 <span style=''></span><span style='background: #AEF1AE'>        case _ =&gt;
+</span>376 <span style=''></span><span style='background: #AEF1AE'>          sys.error(&quot;tyInfer: expected comprehension clause&quot;)
+</span>377 <span style=''></span><span style='background: #AEF1AE'>      }
+</span>378 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>379 <span style=''>    case Count(e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
 </span>380 <span style=''></span><span style='background: #AEF1AE'>      case TyBag(ty) =&gt;
-</span>381 <span style=''></span><span style='background: #AEF1AE'>        if (!isEqType(ty)) </span><span style='background: #F0ADAD'>{
-</span>382 <span style=''></span><span style='background: #F0ADAD'>          sys.error(&quot;tyInfer: expected equality type in count, not &quot; ++ ty.toString)
-</span>383 <span style=''></span><span style='background: #F0ADAD'>        }</span><span style='background: #AEF1AE'>
+</span>381 <span style=''></span><span style='background: #AEF1AE'>        if (!isEqType(ty)) {
+</span>382 <span style=''></span><span style='background: #AEF1AE'>          sys.error(&quot;tyInfer: expected equality type in count, not &quot; ++ ty.toString)
+</span>383 <span style=''></span><span style='background: #AEF1AE'>        }
 </span>384 <span style=''></span><span style='background: #AEF1AE'>        tyCheck(ctx, e2, ty)
 </span>385 <span style=''></span><span style='background: #AEF1AE'>        TyInt
-</span>386 <span style=''></span><span style='background: #AEF1AE'>      case _ </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: count expects bag type&quot;)</span><span style='background: #AEF1AE'>
+</span>386 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: count expects bag type&quot;)
 </span>387 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>388 <span style=''>
 </span>389 <span style=''>    // Syntactic sugars
-</span>390 <span style=''>    case LetPair(x, y, e1, e2) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e1) match {
-</span>391 <span style=''></span><span style='background: #F0ADAD'>      case TyPair(ty1, ty2) =&gt; tyInfer(ctx + (x -&gt; ty1) + (y -&gt; ty2), e2)
-</span>392 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
-</span>393 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
-</span>394 <span style=''>    case LetFun(f, ty, x, e1, e2) </span><span style='background: #F0ADAD'>=&gt; ty match {
-</span>395 <span style=''></span><span style='background: #F0ADAD'>      case TyFun(ty1, ty2) =&gt;
-</span>396 <span style=''></span><span style='background: #F0ADAD'>        tyCheck(ctx + (x -&gt; ty1), e1, ty2)
-</span>397 <span style=''></span><span style='background: #F0ADAD'>        tyInfer(ctx + (f -&gt; ty), e2)
-</span>398 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: expected function type&quot;)
-</span>399 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
-</span>400 <span style=''>    case LetRec(f, ty, x, e1, e2) </span><span style='background: #F0ADAD'>=&gt; ty match {
-</span>401 <span style=''></span><span style='background: #F0ADAD'>      case TyFun(ty1, ty2) =&gt;
-</span>402 <span style=''></span><span style='background: #F0ADAD'>        tyCheck(ctx + (f -&gt; ty) + (x -&gt; ty1), e1, ty2)
-</span>403 <span style=''></span><span style='background: #F0ADAD'>        tyInfer(ctx + (f -&gt; ty), e2)
-</span>404 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: expected (polymorphic) function type&quot;)
-</span>405 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
-</span>406 <span style=''>    case LetRecord(xs, e1, e2) </span><span style='background: #F0ADAD'>=&gt; tyInfer(ctx, e1) match {
-</span>407 <span style=''></span><span style='background: #F0ADAD'>      case TyRecord(tys) =&gt;
-</span>408 <span style=''></span><span style='background: #F0ADAD'>        val newctx = xs.foldLeft(ctx)((curctx, lx) =&gt; 
-</span>409 <span style=''></span><span style='background: #F0ADAD'>          val (label, name) = lx
-</span>410 <span style=''></span><span style='background: #F0ADAD'>          tys.get(label) match {
-</span>411 <span style=''></span><span style='background: #F0ADAD'>            case Some(ty) =&gt; curctx + (name -&gt; ty)
-</span>412 <span style=''></span><span style='background: #F0ADAD'>            case None =&gt; sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)
-</span>413 <span style=''></span><span style='background: #F0ADAD'>          })
-</span>414 <span style=''></span><span style='background: #F0ADAD'>        tyInfer(newctx, e2)
-</span>415 <span style=''></span><span style='background: #F0ADAD'>      case _ =&gt; sys.error(&quot;tyInfer: expected record type&quot;)
-</span>416 <span style=''></span><span style='background: #F0ADAD'>    }</span><span style=''>
+</span>390 <span style=''>    case LetPair(x, y, e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
+</span>391 <span style=''></span><span style='background: #AEF1AE'>      case TyPair(ty1, ty2) =&gt; tyInfer(ctx + (x -&gt; ty1) + (y -&gt; ty2), e2)
+</span>392 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
+</span>393 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>394 <span style=''>    case LetFun(f, ty, x, e1, e2) </span><span style='background: #AEF1AE'>=&gt; ty match {
+</span>395 <span style=''></span><span style='background: #AEF1AE'>      case TyFun(ty1, ty2) =&gt;
+</span>396 <span style=''></span><span style='background: #AEF1AE'>        tyCheck(ctx + (x -&gt; ty1), e1, ty2)
+</span>397 <span style=''></span><span style='background: #AEF1AE'>        tyInfer(ctx + (f -&gt; ty), e2)
+</span>398 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected function type&quot;)
+</span>399 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>400 <span style=''>    case LetRec(f, ty, x, e1, e2) </span><span style='background: #AEF1AE'>=&gt; ty match {
+</span>401 <span style=''></span><span style='background: #AEF1AE'>      case TyFun(ty1, ty2) =&gt;
+</span>402 <span style=''></span><span style='background: #AEF1AE'>        tyCheck(ctx + (f -&gt; ty) + (x -&gt; ty1), e1, ty2)
+</span>403 <span style=''></span><span style='background: #AEF1AE'>        tyInfer(ctx + (f -&gt; ty), e2)
+</span>404 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected (polymorphic) function type&quot;)
+</span>405 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
+</span>406 <span style=''>    case LetRecord(xs, e1, e2) </span><span style='background: #AEF1AE'>=&gt; tyInfer(ctx, e1) match {
+</span>407 <span style=''></span><span style='background: #AEF1AE'>      case TyRecord(tys) =&gt;
+</span>408 <span style=''></span><span style='background: #AEF1AE'>        val newctx = xs.foldLeft(ctx)((curctx, lx) =&gt; 
+</span>409 <span style=''></span><span style='background: #AEF1AE'>          val (label, name) = lx
+</span>410 <span style=''></span><span style='background: #AEF1AE'>          tys.get(label) match {
+</span>411 <span style=''></span><span style='background: #AEF1AE'>            case Some(ty) =&gt; curctx + (name -&gt; ty)
+</span>412 <span style=''></span><span style='background: #AEF1AE'>            case None =&gt; sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)
+</span>413 <span style=''></span><span style='background: #AEF1AE'>          })
+</span>414 <span style=''></span><span style='background: #AEF1AE'>        tyInfer(newctx, e2)
+</span>415 <span style=''></span><span style='background: #AEF1AE'>      case _ =&gt; sys.error(&quot;tyInfer: expected record type&quot;)
+</span>416 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>417 <span style=''>    // END ANSWER
-</span>418 <span style=''>    case Bind(_, _) </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: unexpected bind&quot;)</span><span style=''>
-</span>419 <span style=''>    case Guard(_) </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: unexpected guard&quot;)</span><span style=''>
-</span>420 <span style=''>    case CLet(_, _) </span><span style='background: #F0ADAD'>=&gt; sys.error(&quot;tyInfer: unexpected CLet&quot;)</span><span style=''>
+</span>418 <span style=''>    case Bind(_, _) </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;tyInfer: unexpected bind&quot;)</span><span style=''>
+</span>419 <span style=''>    case Guard(_) </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;tyInfer: unexpected guard&quot;)</span><span style=''>
+</span>420 <span style=''>    case CLet(_, _) </span><span style='background: #AEF1AE'>=&gt; sys.error(&quot;tyInfer: unexpected CLet&quot;)</span><span style=''>
 </span>421 <span style=''>  }
 </span>422 <span style=''>}
 </span></pre>
@@ -5949,7 +5949,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyCheck: values should not appear at this stage&quot;)
         </td>
       </tr><tr>
@@ -5973,7 +5973,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyCheck: values should not appear at this stage&quot;)
         </td>
       </tr><tr>
@@ -6333,7 +6333,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           {\n        sys.error(&quot;tyCheck: cannot test equality of type &quot; ++ ty.toString)\n      }
         </td>
       </tr><tr>
@@ -6381,7 +6381,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyCheck: cannot test equality of type &quot; ++ ty.toString)
         </td>
       </tr><tr>
@@ -6405,7 +6405,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyCheck: cannot test equality of type &quot;
         </td>
       </tr><tr>
@@ -6429,7 +6429,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyCheck: cannot test equality of type &quot; ++ ty.toString
         </td>
       </tr><tr>
@@ -6573,7 +6573,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e, TyBool)
         </td>
       </tr><tr>
@@ -6597,7 +6597,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e, TyBool)\n      val ty = tyInfer(ctx,e1)\n      tyCheck(ctx, e2, ty)\n      ty
         </td>
       </tr><tr>
@@ -6621,7 +6621,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx,e1)
         </td>
       </tr><tr>
@@ -6645,7 +6645,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e2, ty)
         </td>
       </tr><tr>
@@ -6933,7 +6933,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val ty = tyInfer(ctx, e1)\n      tyInfer(ctx + (x -&gt; ty), e2)
         </td>
       </tr><tr>
@@ -6957,7 +6957,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -6981,7 +6981,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; ty
         </td>
       </tr><tr>
@@ -7005,7 +7005,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (x -&gt; ty), e2)
         </td>
       </tr><tr>
@@ -7029,7 +7029,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; ty
         </td>
       </tr><tr>
@@ -7053,7 +7053,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n      sys.error(&quot;tyInfer: cannot infer function types&quot;)
         </td>
       </tr><tr>
@@ -7077,7 +7077,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: cannot infer function types&quot;)
         </td>
       </tr><tr>
@@ -7197,7 +7197,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected function type&quot;)
         </td>
       </tr><tr>
@@ -7221,7 +7221,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected function type&quot;)
         </td>
       </tr><tr>
@@ -7245,7 +7245,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n      sys.error(&quot;tyInfer: cannot infer function types&quot;)
         </td>
       </tr><tr>
@@ -7269,7 +7269,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: cannot infer function types&quot;)
         </td>
       </tr><tr>
@@ -7485,7 +7485,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
         </td>
       </tr><tr>
@@ -7509,7 +7509,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected pair type&quot;)
         </td>
       </tr><tr>
@@ -7605,7 +7605,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
         </td>
       </tr><tr>
@@ -7629,7 +7629,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected pair type&quot;)
         </td>
       </tr><tr>
@@ -7725,7 +7725,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e)
         </td>
       </tr><tr>
@@ -7749,7 +7749,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e) match {\n      case TyRecord(tys) =&gt; tys.get(l) match\n        case None =&gt; sys.error(&quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;)\n        case Some(ty) =&gt; ty\n      case _ =&gt; sys.error(&quot;tyOf: expected record type&quot;)\n    }
         </td>
       </tr><tr>
@@ -7773,7 +7773,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tys.get(l)
         </td>
       </tr><tr>
@@ -7797,7 +7797,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tys.get(l) match\n        case None =&gt; sys.error(&quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;)\n        case Some(ty) =&gt; ty
         </td>
       </tr><tr>
@@ -7821,7 +7821,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyOf: label&quot; ++ l
         </td>
       </tr><tr>
@@ -7845,7 +7845,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;)
         </td>
       </tr><tr>
@@ -7869,7 +7869,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyOf: label&quot; ++ l
         </td>
       </tr><tr>
@@ -7893,7 +7893,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;)
         </td>
       </tr><tr>
@@ -7917,7 +7917,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyOf: label&quot; ++ l ++ &quot; not found in the record&quot;
         </td>
       </tr><tr>
@@ -7941,7 +7941,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyOf: label&quot;
         </td>
       </tr><tr>
@@ -7965,7 +7965,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; ty
         </td>
       </tr><tr>
@@ -7989,7 +7989,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyOf: expected record type&quot;)
         </td>
       </tr><tr>
@@ -8013,7 +8013,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyOf: expected record type&quot;)
         </td>
       </tr><tr>
@@ -8133,7 +8133,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e) match {\n      case TyVariant(tys) =&gt;\n        tys.foreach((l, _) =&gt; cls.get(l) match {\n          case None =&gt; sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)\n          case Some((_, _)) =&gt; ()\n        })\n        def help(ty: Option[Type], entry: (Label, (Variable, Expr))): Option[Type] =\n          val (label, (x, e)) = entry\n          tys.get(label) match {\n            case None =&gt;\n              sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;)\n            case Some(argty) =&gt; ty match {\n              case None =&gt; Some(tyInfer(ctx + (x -&gt; argty), e))\n              case Some(ty) =&gt;\n                tyCheck(ctx + (x -&gt; argty), e, ty)\n                Some(ty)\n            }\n          }\n        cls.foldLeft(None)(help) match {\n          case None =&gt; sys.error(&quot;tyInfer: empty case clause&quot;)\n          case Some(ty) =&gt; ty\n        }\n      case _ =&gt; sys.error(&quot;tyInfer: expected variant type&quot;)\n    }
         </td>
       </tr><tr>
@@ -8157,7 +8157,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e)
         </td>
       </tr><tr>
@@ -8181,7 +8181,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tys.foreach((l, _) =&gt; cls.get(l) match {\n          case None =&gt; sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)\n          case Some((_, _)) =&gt; ()\n        })\n        def help(ty: Option[Type], entry: (Label, (Variable, Expr))): Option[Type] =\n          val (label, (x, e)) = entry\n          tys.get(label) match {\n            case None =&gt;\n              sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;)\n            case Some(argty) =&gt; ty match {\n              case None =&gt; Some(tyInfer(ctx + (x -&gt; argty), e))\n              case Some(ty) =&gt;\n                tyCheck(ctx + (x -&gt; argty), e, ty)\n                Some(ty)\n            }\n          }\n        cls.foldLeft(None)(help) match {\n          case None =&gt; sys.error(&quot;tyInfer: empty case clause&quot;)\n          case Some(ty) =&gt; ty\n        }
         </td>
       </tr><tr>
@@ -8205,7 +8205,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           cls.get(l)
         </td>
       </tr><tr>
@@ -8229,7 +8229,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tys.foreach((l, _) =&gt; cls.get(l) match {\n          case None =&gt; sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)\n          case Some((_, _)) =&gt; ()\n        })
         </td>
       </tr><tr>
@@ -8253,7 +8253,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyCheck: label &quot; ++ l
         </td>
       </tr><tr>
@@ -8277,7 +8277,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)
         </td>
       </tr><tr>
@@ -8301,7 +8301,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyCheck: label &quot; ++ l
         </td>
       </tr><tr>
@@ -8325,7 +8325,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;)
         </td>
       </tr><tr>
@@ -8349,7 +8349,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyCheck: label &quot; ++ l ++ &quot; not found in the case clause&quot;
         </td>
       </tr><tr>
@@ -8373,7 +8373,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyCheck: label &quot;
         </td>
       </tr><tr>
@@ -8397,7 +8397,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; ()
         </td>
       </tr><tr>
@@ -8421,7 +8421,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           def help
         </td>
       </tr><tr>
@@ -8445,7 +8445,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           
         </td>
       </tr><tr>
@@ -8469,7 +8469,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tys.get(label)
         </td>
       </tr><tr>
@@ -8493,7 +8493,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n              sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;)
         </td>
       </tr><tr>
@@ -8517,7 +8517,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot; ++ label
         </td>
       </tr><tr>
@@ -8541,7 +8541,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;)
         </td>
       </tr><tr>
@@ -8565,7 +8565,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot; ++ label
         </td>
       </tr><tr>
@@ -8589,7 +8589,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot; ++ label ++ &quot; not found in the variant type&quot;
         </td>
       </tr><tr>
@@ -8613,7 +8613,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot;
         </td>
       </tr><tr>
@@ -8637,7 +8637,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; ty match {\n              case None =&gt; Some(tyInfer(ctx + (x -&gt; argty), e))\n              case Some(ty) =&gt;\n                tyCheck(ctx + (x -&gt; argty), e, ty)\n                Some(ty)\n            }
         </td>
       </tr><tr>
@@ -8661,7 +8661,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (x -&gt; argty), e)
         </td>
       </tr><tr>
@@ -8685,7 +8685,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Some(tyInfer(ctx + (x -&gt; argty), e))
         </td>
       </tr><tr>
@@ -8709,7 +8709,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; argty
         </td>
       </tr><tr>
@@ -8733,7 +8733,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; argty
         </td>
       </tr><tr>
@@ -8853,7 +8853,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           help
         </td>
       </tr><tr>
@@ -8877,7 +8877,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           cls.foldLeft(None)(help)
         </td>
       </tr><tr>
@@ -8949,7 +8949,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; ty
         </td>
       </tr><tr>
@@ -8973,7 +8973,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected variant type&quot;)
         </td>
       </tr><tr>
@@ -8997,7 +8997,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected variant type&quot;)
         </td>
       </tr><tr>
@@ -9045,7 +9045,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: cannot infer empty bag&quot;)
         </td>
       </tr><tr>
@@ -9069,7 +9069,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: cannot infer empty bag&quot;)
         </td>
       </tr><tr>
@@ -9189,7 +9189,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -9213,7 +9213,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e1) match {\n      case TyBag(ty1) =&gt; tyInfer(ctx, e2) match {\n        case TyFun(ty11, TyBag(ty2)) =&gt;\n          if ty1 == ty11 then TyBag(ty2) else sys.error(&quot;tyInfer: flatMap mismatch&quot;)\n        case _ =&gt; sys.error(&quot;tyInfer: flatMap expects function type&quot;)\n      }\n      case _ =&gt; sys.error(&quot;tyInfer: flatMap expects bag type&quot;)\n    }
         </td>
       </tr><tr>
@@ -9237,7 +9237,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e2)
         </td>
       </tr><tr>
@@ -9261,7 +9261,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e2) match {\n        case TyFun(ty11, TyBag(ty2)) =&gt;\n          if ty1 == ty11 then TyBag(ty2) else sys.error(&quot;tyInfer: flatMap mismatch&quot;)\n        case _ =&gt; sys.error(&quot;tyInfer: flatMap expects function type&quot;)\n      }
         </td>
       </tr><tr>
@@ -9285,7 +9285,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          if ty1 == ty11 then TyBag(ty2) else sys.error(&quot;tyInfer: flatMap mismatch&quot;)
         </td>
       </tr><tr>
@@ -9309,7 +9309,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: flatMap mismatch&quot;)
         </td>
       </tr><tr>
@@ -9333,7 +9333,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: flatMap mismatch&quot;)
         </td>
       </tr><tr>
@@ -9357,7 +9357,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           TyBag(ty2)
         </td>
       </tr><tr>
@@ -9381,7 +9381,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: flatMap expects function type&quot;)
         </td>
       </tr><tr>
@@ -9405,7 +9405,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: flatMap expects function type&quot;)
         </td>
       </tr><tr>
@@ -9429,7 +9429,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: flatMap expects bag type&quot;)
         </td>
       </tr><tr>
@@ -9453,7 +9453,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: flatMap expects bag type&quot;)
         </td>
       </tr><tr>
@@ -9477,7 +9477,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e1, TyBool)\n      tyInfer(ctx, e2) match {\n        case TyBag(ty) =&gt; TyBag(ty)\n        case ty =&gt; sys.error(&quot;tyInfer: when expects bag for second argument, instead of &quot; + ty)\n    }
         </td>
       </tr><tr>
@@ -9501,7 +9501,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e1, TyBool)
         </td>
       </tr><tr>
@@ -9525,7 +9525,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e2)
         </td>
       </tr><tr>
@@ -9549,7 +9549,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; TyBag(ty)
         </td>
       </tr><tr>
@@ -9573,7 +9573,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: when expects bag for second argument, instead of &quot; + ty
         </td>
       </tr><tr>
@@ -9597,7 +9597,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: when expects bag for second argument, instead of &quot; + ty)
         </td>
       </tr><tr>
@@ -9621,7 +9621,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: when expects bag for second argument, instead of &quot; + ty)
         </td>
       </tr><tr>
@@ -9645,7 +9645,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -9669,7 +9669,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e1) match {\n      case TyBag(ty) =&gt;\n        tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)\n      case _ =&gt; sys.error(&quot;tyInfer: sum expects bag type&quot;)\n    }
         </td>
       </tr><tr>
@@ -9693,7 +9693,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)
         </td>
       </tr><tr>
@@ -9717,7 +9717,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e2, TyBag(ty))
         </td>
       </tr><tr>
@@ -9741,7 +9741,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: sum expects bag type&quot;)
         </td>
       </tr><tr>
@@ -9765,7 +9765,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: sum expects bag type&quot;)
         </td>
       </tr><tr>
@@ -9789,7 +9789,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -9813,7 +9813,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e1) match {\n      case TyBag(ty) =&gt;\n        if (!isEqType(ty)) {\n          sys.error(&quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString)\n        }\n        tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)\n      case _ =&gt; sys.error(&quot;tyInfer: diff expects bag type&quot;)\n    }
         </td>
       </tr><tr>
@@ -9837,7 +9837,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           {\n          sys.error(&quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString)\n        }
         </td>
       </tr><tr>
@@ -9861,7 +9861,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           if (!isEqType(ty)) {\n          sys.error(&quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString)\n        }\n        tyCheck(ctx, e2, TyBag(ty))\n        TyBag(ty)
         </td>
       </tr><tr>
@@ -9885,7 +9885,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           isEqType(ty)
         </td>
       </tr><tr>
@@ -9909,7 +9909,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString
         </td>
       </tr><tr>
@@ -9933,7 +9933,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: difference expects bags of elements of equality type, not &quot; ++ ty.toString)
         </td>
       </tr><tr>
@@ -9957,7 +9957,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: difference expects bags of elements of equality type, not &quot;
         </td>
       </tr><tr>
@@ -9981,7 +9981,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           
         </td>
       </tr><tr>
@@ -10005,7 +10005,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e2, TyBag(ty))
         </td>
       </tr><tr>
@@ -10029,7 +10029,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: diff expects bag type&quot;)
         </td>
       </tr><tr>
@@ -10053,7 +10053,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: diff expects bag type&quot;)
         </td>
       </tr><tr>
@@ -10077,7 +10077,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; es match {\n      case Nil =&gt; TyBag(tyInfer(ctx, e))\n      case p::oth =&gt; p match {\n        case Bind(x, e1) =&gt; tyInfer(ctx, e1) match {\n          case TyBag(ty1) =&gt;\n            tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))\n          case _ =&gt; sys.error(&quot;tyInfer: comprehension expects bag type&quot;)\n        }\n        case Guard(e1) =&gt;\n          tyCheck(ctx, e1, TyBool)\n          tyInfer(ctx, Comprehension(e, oth))\n        case CLet(x, e1) =&gt;\n          val ty1 = tyInfer(ctx, e1)\n          tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))\n        case _ =&gt;\n          sys.error(&quot;tyInfer: expected comprehension clause&quot;)\n      }\n    }
         </td>
       </tr><tr>
@@ -10101,7 +10101,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e)
         </td>
       </tr><tr>
@@ -10125,7 +10125,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; TyBag(tyInfer(ctx, e))
         </td>
       </tr><tr>
@@ -10149,7 +10149,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; p match {\n        case Bind(x, e1) =&gt; tyInfer(ctx, e1) match {\n          case TyBag(ty1) =&gt;\n            tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))\n          case _ =&gt; sys.error(&quot;tyInfer: comprehension expects bag type&quot;)\n        }\n        case Guard(e1) =&gt;\n          tyCheck(ctx, e1, TyBool)\n          tyInfer(ctx, Comprehension(e, oth))\n        case CLet(x, e1) =&gt;\n          val ty1 = tyInfer(ctx, e1)\n          tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))\n        case _ =&gt;\n          sys.error(&quot;tyInfer: expected comprehension clause&quot;)\n      }
         </td>
       </tr><tr>
@@ -10173,7 +10173,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e1) match {\n          case TyBag(ty1) =&gt;\n            tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))\n          case _ =&gt; sys.error(&quot;tyInfer: comprehension expects bag type&quot;)\n        }
         </td>
       </tr><tr>
@@ -10197,7 +10197,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -10221,7 +10221,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n            tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
         </td>
       </tr><tr>
@@ -10245,7 +10245,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
         </td>
       </tr><tr>
@@ -10269,7 +10269,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; ty1
         </td>
       </tr><tr>
@@ -10293,7 +10293,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; ty1
         </td>
       </tr><tr>
@@ -10317,7 +10317,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: comprehension expects bag type&quot;)
         </td>
       </tr><tr>
@@ -10341,7 +10341,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: comprehension expects bag type&quot;)
         </td>
       </tr><tr>
@@ -10365,7 +10365,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e1, TyBool)\n          tyInfer(ctx, Comprehension(e, oth))
         </td>
       </tr><tr>
@@ -10389,7 +10389,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx, e1, TyBool)
         </td>
       </tr><tr>
@@ -10413,7 +10413,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, Comprehension(e, oth))
         </td>
       </tr><tr>
@@ -10437,7 +10437,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val ty1 = tyInfer(ctx, e1)\n          tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
         </td>
       </tr><tr>
@@ -10461,7 +10461,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -10485,7 +10485,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; ty1
         </td>
       </tr><tr>
@@ -10509,7 +10509,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (x -&gt; ty1), Comprehension(e, oth))
         </td>
       </tr><tr>
@@ -10533,7 +10533,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; ty1
         </td>
       </tr><tr>
@@ -10557,7 +10557,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          sys.error(&quot;tyInfer: expected comprehension clause&quot;)
         </td>
       </tr><tr>
@@ -10581,7 +10581,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected comprehension clause&quot;)
         </td>
       </tr><tr>
@@ -10701,7 +10701,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           {\n          sys.error(&quot;tyInfer: expected equality type in count, not &quot; ++ ty.toString)\n        }
         </td>
       </tr><tr>
@@ -10725,7 +10725,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected equality type in count, not &quot; ++ ty.toString)
         </td>
       </tr><tr>
@@ -10749,7 +10749,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: expected equality type in count, not &quot;
         </td>
       </tr><tr>
@@ -10773,7 +10773,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: expected equality type in count, not &quot; ++ ty.toString
         </td>
       </tr><tr>
@@ -10845,7 +10845,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: count expects bag type&quot;)
         </td>
       </tr><tr>
@@ -10869,7 +10869,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: count expects bag type&quot;)
         </td>
       </tr><tr>
@@ -10893,7 +10893,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -10917,7 +10917,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e1) match {\n      case TyPair(ty1, ty2) =&gt; tyInfer(ctx + (x -&gt; ty1) + (y -&gt; ty2), e2)\n      case _ =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)\n    }
         </td>
       </tr><tr>
@@ -10941,7 +10941,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           y -&gt; ty2
         </td>
       </tr><tr>
@@ -10965,7 +10965,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (x -&gt; ty1) + (y -&gt; ty2), e2)
         </td>
       </tr><tr>
@@ -10989,7 +10989,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; ty1
         </td>
       </tr><tr>
@@ -11013,7 +11013,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx + (x -&gt; ty1) + (y -&gt; ty2), e2)
         </td>
       </tr><tr>
@@ -11037,7 +11037,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; ty1
         </td>
       </tr><tr>
@@ -11061,7 +11061,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; ty1) + (y -&gt; ty2
         </td>
       </tr><tr>
@@ -11085,7 +11085,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected pair type&quot;)
         </td>
       </tr><tr>
@@ -11109,7 +11109,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected pair type&quot;)
         </td>
       </tr><tr>
@@ -11133,7 +11133,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; ty match {\n      case TyFun(ty1, ty2) =&gt;\n        tyCheck(ctx + (x -&gt; ty1), e1, ty2)\n        tyInfer(ctx + (f -&gt; ty), e2)\n      case _ =&gt; sys.error(&quot;tyInfer: expected function type&quot;)\n    }
         </td>
       </tr><tr>
@@ -11157,7 +11157,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx + (x -&gt; ty1), e1, ty2)\n        tyInfer(ctx + (f -&gt; ty), e2)
         </td>
       </tr><tr>
@@ -11181,7 +11181,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx + (x -&gt; ty1), e1, ty2)
         </td>
       </tr><tr>
@@ -11205,7 +11205,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; ty1
         </td>
       </tr><tr>
@@ -11229,7 +11229,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (x -&gt; ty1
         </td>
       </tr><tr>
@@ -11253,7 +11253,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (f -&gt; ty
         </td>
       </tr><tr>
@@ -11277,7 +11277,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (f -&gt; ty), e2)
         </td>
       </tr><tr>
@@ -11301,7 +11301,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           f -&gt; ty
         </td>
       </tr><tr>
@@ -11325,7 +11325,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected function type&quot;)
         </td>
       </tr><tr>
@@ -11349,7 +11349,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected function type&quot;)
         </td>
       </tr><tr>
@@ -11373,7 +11373,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; ty match {\n      case TyFun(ty1, ty2) =&gt;\n        tyCheck(ctx + (f -&gt; ty) + (x -&gt; ty1), e1, ty2)\n        tyInfer(ctx + (f -&gt; ty), e2)\n      case _ =&gt; sys.error(&quot;tyInfer: expected (polymorphic) function type&quot;)\n    }
         </td>
       </tr><tr>
@@ -11397,7 +11397,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           f -&gt; ty
         </td>
       </tr><tr>
@@ -11421,7 +11421,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx + (f -&gt; ty) + (x -&gt; ty1), e1, ty2)\n        tyInfer(ctx + (f -&gt; ty), e2)
         </td>
       </tr><tr>
@@ -11445,7 +11445,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (f -&gt; ty
         </td>
       </tr><tr>
@@ -11469,7 +11469,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           x -&gt; ty1
         </td>
       </tr><tr>
@@ -11493,7 +11493,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (f -&gt; ty) + (x -&gt; ty1
         </td>
       </tr><tr>
@@ -11517,7 +11517,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyCheck(ctx + (f -&gt; ty) + (x -&gt; ty1), e1, ty2)
         </td>
       </tr><tr>
@@ -11541,7 +11541,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ctx + (f -&gt; ty
         </td>
       </tr><tr>
@@ -11565,7 +11565,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx + (f -&gt; ty), e2)
         </td>
       </tr><tr>
@@ -11589,7 +11589,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           f -&gt; ty
         </td>
       </tr><tr>
@@ -11613,7 +11613,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected (polymorphic) function type&quot;)
         </td>
       </tr><tr>
@@ -11637,7 +11637,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected (polymorphic) function type&quot;)
         </td>
       </tr><tr>
@@ -11661,7 +11661,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(ctx, e1)
         </td>
       </tr><tr>
@@ -11685,7 +11685,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; tyInfer(ctx, e1) match {\n      case TyRecord(tys) =&gt;\n        val newctx = xs.foldLeft(ctx)((curctx, lx) =&gt; \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) =&gt; curctx + (name -&gt; ty)\n            case None =&gt; sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)\n          })\n        tyInfer(newctx, e2)\n      case _ =&gt; sys.error(&quot;tyInfer: expected record type&quot;)\n    }
         </td>
       </tr><tr>
@@ -11709,7 +11709,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           val newctx = xs.foldLeft(ctx)((curctx, lx) =&gt; \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) =&gt; curctx + (name -&gt; ty)\n            case None =&gt; sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)\n          })\n        tyInfer(newctx, e2)
         </td>
       </tr><tr>
@@ -11733,7 +11733,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           xs.foldLeft(ctx)((curctx, lx) =&gt; \n          val (label, name) = lx\n          tys.get(label) match {\n            case Some(ty) =&gt; curctx + (name -&gt; ty)\n            case None =&gt; sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)\n          })
         </td>
       </tr><tr>
@@ -11757,7 +11757,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           
         </td>
       </tr><tr>
@@ -11781,7 +11781,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tys.get(label)
         </td>
       </tr><tr>
@@ -11805,7 +11805,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           name -&gt; ty
         </td>
       </tr><tr>
@@ -11829,7 +11829,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           curctx + (name -&gt; ty
         </td>
       </tr><tr>
@@ -11853,7 +11853,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; curctx + (name -&gt; ty)
         </td>
       </tr><tr>
@@ -11877,7 +11877,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot; ++ label
         </td>
       </tr><tr>
@@ -11901,7 +11901,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)
         </td>
       </tr><tr>
@@ -11925,7 +11925,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot;
         </td>
       </tr><tr>
@@ -11949,7 +11949,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;
         </td>
       </tr><tr>
@@ -11973,7 +11973,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: label &quot; ++ label ++ &quot; not found in the record type&quot;)
         </td>
       </tr><tr>
@@ -11997,7 +11997,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;tyInfer: label &quot; ++ label
         </td>
       </tr><tr>
@@ -12021,7 +12021,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           tyInfer(newctx, e2)
         </td>
       </tr><tr>
@@ -12045,7 +12045,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: expected record type&quot;)
         </td>
       </tr><tr>
@@ -12069,7 +12069,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: expected record type&quot;)
         </td>
       </tr><tr>
@@ -12093,7 +12093,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: unexpected bind&quot;)
         </td>
       </tr><tr>
@@ -12117,7 +12117,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: unexpected bind&quot;)
         </td>
       </tr><tr>
@@ -12141,7 +12141,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: unexpected guard&quot;)
         </td>
       </tr><tr>
@@ -12165,7 +12165,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: unexpected guard&quot;)
         </td>
       </tr><tr>
@@ -12189,7 +12189,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; sys.error(&quot;tyInfer: unexpected CLet&quot;)
         </td>
       </tr><tr>
@@ -12213,7 +12213,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;tyInfer: unexpected CLet&quot;)
         </td>
       </tr>

@@ -2016,6 +2016,404 @@ class TyCheckTests extends AnyFunSuite {
   }
 }
 
+class TyInferTests extends AnyFunSuite {
+  test("Value") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, NumV(1))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, BoolV(true))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, StringV("hello"))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, PairV(NumV(1), NumV(2)))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, RecordV(ListMap("foo" -> NumV(1), "bar" -> NumV(2))))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, VariantV("foo", NumV(1)))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, BagV(ListMap(NumV(1) -> 1, NumV(2) -> 1, NumV(3) -> 1)))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, FunV("x", Num(1)))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, RecV("f", "x", Num(1)))
+    }
+  }
+
+  test("Unit") {
+    assert(Typer.tyInfer(emptyEnv, Unit) == TyUnit)
+  }
+
+  test("Num") {
+    assert(Typer.tyInfer(emptyEnv, Num(1)) == TyInt)
+  }
+
+  test("Plus") {
+    assert(Typer.tyInfer(emptyEnv, Plus(Num(1), Num(2))) == TyInt)
+  }
+
+  test("Minus") {
+    assert(Typer.tyInfer(emptyEnv, Minus(Num(1), Num(2))) == TyInt)
+  }
+
+  test("Times") {
+    assert(Typer.tyInfer(emptyEnv, Times(Num(1), Num(2))) == TyInt)
+  }
+
+  test("Bool") {
+    assert(Typer.tyInfer(emptyEnv, Bool(true)) == TyBool)
+  }
+
+  test("Eq") {
+    assert(Typer.tyInfer(emptyEnv, Eq(Num(1), Num(2))) == TyBool)
+  }
+
+  test("Eq (non-equality type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Eq(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), Record(ListMap("foo" -> Num(1), "bar" -> Num(2)))))
+    }
+  }
+
+  test("Less") {
+    assert(Typer.tyInfer(emptyEnv, Less(Num(1), Num(2))) == TyBool)
+  }
+
+  test("IfThenElse") {
+    assert(Typer.tyInfer(emptyEnv, IfThenElse(Bool(true), Num(1), Num(2))) == TyInt)
+  }
+
+  test("String") {
+    assert(Typer.tyInfer(emptyEnv, Str("hello")) == TyString)
+  }
+
+  test("Length") {
+    assert(Typer.tyInfer(emptyEnv, Length(Str("hello"))) == TyInt)
+  }
+
+  test("Index") {
+    assert(Typer.tyInfer(emptyEnv, Index(Str("hello"), Num(1))) == TyString)
+  }
+
+  test("Concat") {
+    assert(Typer.tyInfer(emptyEnv, Concat(Str("hello"), Str("world"))) == TyString)
+  }
+
+  test("Var (empty environment)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Var("x"))
+    }
+  }
+
+  test("Var (non-empty environment)") {
+    val env = ListMap("x" -> TyInt)
+    assert(Typer.tyInfer(env, Var("x")) == TyInt)
+  }
+
+  test("Let") {
+    assert(Typer.tyInfer(emptyEnv, Let("x", Num(1), Var("x"))) == TyInt)
+  }
+
+  test("Lambda") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Lambda("x", Var("x")))
+    }
+  }
+
+  test("Apply") {
+    val env = ListMap("f" -> TyFun(TyInt, TyInt))
+    assert(Typer.tyInfer(env, Apply(Var("f"), Num(1))) == TyInt)
+  }
+
+  test("Apply (non-function)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Apply(Num(1), Num(2)))
+    }
+  }
+
+  test("Rec") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Rec("f", "x", Var("x")))
+    }
+  }
+
+  test("Anno") {
+    assert(Typer.tyInfer(emptyEnv, Anno(Num(1), TyInt)) == TyInt)
+  }
+
+  test("Pair") {
+    assert(Typer.tyInfer(emptyEnv, Pair(Num(1), Num(2))) == TyPair(TyInt, TyInt))
+  }
+
+  test("First") {
+    assert(Typer.tyInfer(emptyEnv, First(Pair(Num(1), Num(2)))) == TyInt)
+  }
+
+  test("First (non-pair)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, First(Num(1)))
+    }
+  }
+
+  test("Second") {
+    assert(Typer.tyInfer(emptyEnv, Second(Pair(Num(1), Num(2)))) == TyInt)
+  }
+
+  test("Second (non-pair)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Second(Num(1)))
+    }
+  }
+
+  test("Record") {
+    assert(Typer.tyInfer(emptyEnv, Record(ListMap("foo" -> Num(1), "bar" -> Num(2)))) == TyRecord(ListMap("foo" -> TyInt, "bar" -> TyInt)))
+  }
+
+  test("Proj") {
+    assert(Typer.tyInfer(emptyEnv, Proj(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), "foo")) == TyInt)
+  }
+
+  test("Proj (not in record)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Proj(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), "baz"))
+    }
+  }
+
+  test("Proj (non-record)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Proj(Num(1), "foo"))
+    }
+  }
+
+  test("Variant") {
+    assert(Typer.tyInfer(emptyEnv, Variant("foo", Num(1))) == TyVariant(ListMap("foo" -> TyInt)))
+  }
+
+  test("Case") {
+    assert(Typer.tyInfer(emptyEnv, Case(Variant("foo", Num(1)), ListMap("foo" -> ("x", Num(1))))) == TyInt)
+  }
+
+  test("Case (label not in case clause)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Case(Variant("foo", Num(1)), ListMap("bar" -> ("x", Num(1)))))
+    }
+  }
+
+  test("Case (label not in variant)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Case(Variant("foo", Num(1)), ListMap("foo" -> ("x", Num(1)), "bar" -> ("y", Num(2)))))
+    }
+  }
+
+  test("Case (non-variant)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Case(Num(1), ListMap("foo" -> ("x", Num(1)))))
+    }
+  }
+
+  test("Bag") {
+    assert(Typer.tyInfer(emptyEnv, Bag(List(Num(1), Num(2), Num(3)))) == TyBag(TyInt))
+  }
+
+  test("Bag (empty)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Bag(List()))
+    }
+  }
+
+  test("FlatMap") {
+    val env = ListMap("f" -> TyFun(TyInt, TyBag(TyInt)))
+    assert(Typer.tyInfer(env, FlatMap(Bag(List(Num(1), Num(2), Num(3))), Var("f"))) == TyBag(TyInt))
+  }
+
+  test("FlatMap (flatmap mismatch)") {
+    val env = ListMap("f" -> TyFun(TyBool, TyBag(TyBool)))
+    assertThrows[Exception] {
+      Typer.tyInfer(env, FlatMap(Bag(List(Num(1), Num(2), Num(3))), Var("f")))
+    }
+  }
+
+  test("FlatMap (expects bag)") {
+    val env = ListMap("f" -> TyFun(TyInt, TyBag(TyInt)))
+    assertThrows[Exception] {
+      Typer.tyInfer(env, FlatMap(Num(1), Var("f")))
+    }
+  }
+
+  test("FlatMap (expects function type)") {
+    val env = ListMap("f" -> TyInt)
+    assertThrows[Exception] {
+      Typer.tyInfer(env, FlatMap(Bag(List(Num(1), Num(2), Num(3))), Num(1)))
+    }
+  }
+
+  test("When") {
+    assert(Typer.tyInfer(emptyEnv, When(Bool(true), Bag(List(Num(1), Num(2), Num(3)))) ) == TyBag(TyInt))
+  }
+
+  test("When (expects bag)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, When(Bool(true), Num(1)))
+    }
+  }
+
+  test("Sum") {
+    assert(Typer.tyInfer(emptyEnv, Sum(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(1), Num(2), Num(3))))) == TyBag(TyInt))
+  }
+
+  test("Sum (expects bag type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Sum(Num(1), Bag(List(Num(1), Num(2), Num(3)))))
+    }
+  }
+
+  test("Diff") {
+    assert(Typer.tyInfer(emptyEnv, Diff(Bag(List(Num(1), Num(2), Num(3))), Bag(List(Num(4), Num(5), Num(6))))) == TyBag(TyInt))
+  }
+
+  test("Diff (expects bags of equality types)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Diff(Bag(List(Lambda("x", Var("x")))), Bag(List(Lambda("x", Var("x"))))))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Diff(Bag(List(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))))), Bag(List(Record(ListMap("foo" -> Num(1), "bar" -> Num(2)))))))
+    }
+
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Diff(Bag(List(Bag(List(Num(1), Num(2), Num(3))))), Bag(List(Bag(List(Num(1), Num(2), Num(3)))))))
+    }
+  }
+
+  test("Diff (expects bag type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Diff(Num(1), Bag(List(Num(1), Num(2), Num(3)))))
+    }
+  }
+
+  test("Comprehension (empty)") {
+    assert(Typer.tyInfer(emptyEnv, Comprehension(Num(1), List())) == TyBag(TyInt))
+  }
+
+  test("Comprehension w/ Bind") {
+    assert(Typer.tyInfer(emptyEnv, Comprehension(Var("x"), List(Bind("x", Bag(List(Num(1), Num(2), Num(3)))))) ) == TyBag(TyInt))
+  }
+
+  test("Comprehension w/ Bind (expects bag)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Comprehension(Var("x"), List(Bind("x", Num(1)))))
+    }
+  }
+
+  test("Comprehension w/ Guard") {
+    assert(Typer.tyInfer(emptyEnv, Comprehension(Num(1), List(Guard(Bool(true)))) ) == TyBag(TyInt))
+  }
+
+  test("Comprehension w/ CLet") {
+    assert(Typer.tyInfer(emptyEnv, Comprehension(Var("x"), List(CLet("x", Num(1)))) ) == TyBag(TyInt))
+  }
+
+  test("Comprehension (expected comprehension clause)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Comprehension(Var("x"), List(Num(1))))
+    }
+  }
+
+  test("Count") {
+    assert(Typer.tyInfer(emptyEnv, Count(Bag(List(Num(1), Num(2), Num(3))), Num(1))) == TyInt)
+  }
+
+  test("Count (expected equality type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Count(Bag(List(Record(ListMap("foo" -> Num(1), "bar" -> Num(2))))), Num(1)))
+    }
+  }
+
+  test("Count (expects bag)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Count(Num(1), Num(1)))
+    }
+  }
+
+  test("LetPair") {
+    assert(Typer.tyInfer(emptyEnv, LetPair("x", "y", Pair(Num(1), Num(2)), Var("x"))) == TyInt)
+  }
+
+  test("LetPair (expected pair)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, LetPair("x", "y", Num(1), Var("x")))
+    }
+  }
+
+  test("LetFun") {
+    assert(Typer.tyInfer(emptyEnv, LetFun("f", TyFun(TyInt, TyInt), "x", Var("x"), Apply(Var("f"), Num(1)))) == TyInt)
+  }
+
+  test("LetFun (expected function type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, LetFun("f", TyInt, "x", Var("x"), Apply(Var("f"), Num(1))))
+    }
+  }
+
+  test("LetRec") {
+    assert(Typer.tyInfer(emptyEnv, LetRec("f", TyFun(TyInt, TyInt), "x", Var("x"), Apply(Var("f"), Num(1)))) == TyInt)
+  }
+
+  test("LetRec (expected function type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, LetRec("f", TyInt, "x", Var("x"), Apply(Var("f"), Num(1))))
+    }
+  }
+
+  test("LetRecord") {
+    assert(Typer.tyInfer(emptyEnv, LetRecord(ListMap("foo" -> "x", "bar" -> "y"), Record(ListMap("foo" -> Num(1), "bar" -> Num(2))), Var("x"))) == TyInt)
+  }
+
+  test("LetRecord (label not found in record type)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, LetRecord(ListMap("foo" -> "x", "bar" -> "y"), Record(ListMap("foo" -> Num(1), "baz" -> Num(2))), Var("x")))
+    }
+  }
+
+  test("LetRecord (expected record)") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, LetRecord(ListMap("foo" -> "x", "bar" -> "y"), Num(1), Var("x")))
+    }
+  }
+
+  test("Bind") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Bind("x", Num(1)))
+    }
+  }
+
+  test("Guard") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, Guard(Bool(true)))
+    }
+  }
+
+  test("CLet") {
+    assertThrows[Exception] {
+      Typer.tyInfer(emptyEnv, CLet("x", Num(1)))
+    }
+  }
+}
+
 // =================================== Integration Tests ===================================
 // Arithmetic expressions
 class ArithTypeTests extends AnyFunSuite {
