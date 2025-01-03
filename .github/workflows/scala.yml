@@ -27,7 +27,7 @@ jobs:
         distribution: 'temurin'
         cache: 'sbt'
         
-  unit-tests:
+  sbt-tests:
     needs: build
     runs-on: ubuntu-latest
 
