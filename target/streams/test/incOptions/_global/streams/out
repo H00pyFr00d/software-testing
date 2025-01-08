@@ -27,6 +27,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagImplTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ParseLetTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	DesugarTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrPairTests.class[0m
@@ -74,6 +75,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	BagInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagImplTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ParseLetTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	DesugarTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithInterpreterTests.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrPairTests.tasty[0m

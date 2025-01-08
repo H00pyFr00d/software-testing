@@ -1344,6 +1344,10 @@ class ParseStrFunctionTests extends AnyFunSuite {
   test("Apply") {
     assert(parser.parseStr("f(x)") == Apply(Var("f"), Var("x")))
   }
+
+  test("Rec") {
+    assert(parser.parseStr("rec f(x) . x") == Rec("f", "x", Var("x")))
+  }
 }
 
 class ParseStrPairTests extends AnyFunSuite {
@@ -1373,6 +1377,32 @@ class ParseStrRecordTests extends AnyFunSuite {
 class ParseStrVariantTests extends AnyFunSuite {
   test("Case") {
     assert(parser.parseStr("case v of {foo x -> 1, bar y -> 2}") == Case(Var("v"), ListMap("foo" -> ("x", Num(1)), "bar" -> ("y", Num(2)))))
+  }
+}
+
+class ParseLetTests extends AnyFunSuite {
+  test("Let Var") {
+    assert(parser.parseStr("let x = 1 in x") == Let("x", Num(1), Var("x")))
+  }
+
+  test("Let Fun") {
+    assert(parser.parseStr("sig f : int -> int let fun f(x) = x in f(1)") == LetFun("f", TyFun(TyInt, TyInt), "x", Var("x"), Apply(Var("f"), Num(1))))
+  }
+
+  test("Let Fun (function name mismatch)") {
+    assertThrows[Exception] {
+      parser.parseStr("sig f : int -> int let fun g(x) = x in f(1)")
+    }
+  }
+
+  test("Let Rec") {
+    assert(parser.parseStr("sig f : int -> int let rec f(x) = x in f(1)") == LetRec("f", TyFun(TyInt, TyInt), "x", Var("x"), Apply(Var("f"), Num(1))))
+  }
+
+  test("Let Rec (function name mismatch)") {
+    assertThrows[Exception] {
+      parser.parseStr("sig f : int -> int let rec g(x) = x in f(1)")
+    }
   }
 }
 

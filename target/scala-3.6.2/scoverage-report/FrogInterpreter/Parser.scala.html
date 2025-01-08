@@ -78,11 +78,11 @@
 </span>54 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>55 <span style=''>
 </span>56 <span style=''>  private lazy val rec: P[Expr] =
-</span>57 <span style=''>    </span><span style='background: #AEF1AE'>(&quot;rec&quot; ~&gt; </span><span style='background: #F0ADAD'>ident</span><span style='background: #AEF1AE'>) ~
-</span>58 <span style=''></span><span style='background: #AEF1AE'>      (</span><span style='background: #F0ADAD'>&quot;(&quot; ~&gt; ident &lt;~ &quot;)&quot;</span><span style='background: #AEF1AE'>) ~
-</span>59 <span style=''></span><span style='background: #AEF1AE'>      (</span><span style='background: #F0ADAD'>&quot;.&quot; ~&gt; expression</span><span style='background: #AEF1AE'>) ^^ {
-</span>60 <span style=''></span><span style='background: #AEF1AE'>        case recArg~funArg~body </span><span style='background: #F0ADAD'>=&gt;
-</span>61 <span style=''></span><span style='background: #F0ADAD'>          Rec(recArg, funArg, body)</span><span style='background: #AEF1AE'>
+</span>57 <span style=''>    </span><span style='background: #AEF1AE'>(&quot;rec&quot; ~&gt; ident) ~
+</span>58 <span style=''></span><span style='background: #AEF1AE'>      (&quot;(&quot; ~&gt; ident &lt;~ &quot;)&quot;) ~
+</span>59 <span style=''></span><span style='background: #AEF1AE'>      (&quot;.&quot; ~&gt; expression) ^^ {
+</span>60 <span style=''></span><span style='background: #AEF1AE'>        case recArg~funArg~body =&gt;
+</span>61 <span style=''></span><span style='background: #AEF1AE'>          Rec(recArg, funArg, body)
 </span>62 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
 </span>63 <span style=''>
 </span>64 <span style=''>  private lazy val ifExpr: P[Expr] =
@@ -101,7 +101,7 @@
 </span>77 <span style=''>    </span><span style='background: #AEF1AE'>(&quot;sig&quot; ~&gt; ident  ~ (&quot;:&quot; ~&gt; typ)) ~ (&quot;let&quot; ~ &quot;fun&quot; ~&gt; ident) ~ (&quot;(&quot; ~&gt; ident &lt;~ &quot;)&quot;) ~ (&quot;=&quot; ~&gt; expression) ~
 </span>78 <span style=''></span><span style='background: #AEF1AE'>      (&quot;in&quot; ~&gt; expression) ^^ {
 </span>79 <span style=''></span><span style='background: #AEF1AE'>        case fun1~ty~fun~binder~e1~e2 =&gt;
-</span>80 <span style=''></span><span style='background: #AEF1AE'>          if fun1 != fun then </span><span style='background: #F0ADAD'>sys.error(&quot;Function name mismatch&quot;)</span><span style='background: #AEF1AE'>
+</span>80 <span style=''></span><span style='background: #AEF1AE'>          if fun1 != fun then sys.error(&quot;Function name mismatch&quot;)
 </span>81 <span style=''></span><span style='background: #AEF1AE'>          else LetFun(fun,ty,binder,e1,e2)
 </span>82 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
 </span>83 <span style=''>
@@ -109,7 +109,7 @@
 </span>85 <span style=''>    </span><span style='background: #AEF1AE'>(&quot;sig&quot; ~&gt; ident  ~ (&quot;:&quot; ~&gt; typ)) ~ (&quot;let&quot; ~ &quot;rec&quot; ~&gt; ident) ~ (&quot;(&quot; ~&gt; ident &lt;~ &quot;)&quot;) ~ (&quot;=&quot; ~&gt; expression) ~
 </span>86 <span style=''></span><span style='background: #AEF1AE'>      (&quot;in&quot; ~&gt; expression) ^^ {
 </span>87 <span style=''></span><span style='background: #AEF1AE'>        case fun1~ty~fun~binder~e1~e2 =&gt;
-</span>88 <span style=''></span><span style='background: #AEF1AE'>          if fun1 != fun then </span><span style='background: #F0ADAD'>sys.error(&quot;Function name mismatch&quot;)</span><span style='background: #AEF1AE'>
+</span>88 <span style=''></span><span style='background: #AEF1AE'>          if fun1 != fun then sys.error(&quot;Function name mismatch&quot;)
 </span>89 <span style=''></span><span style='background: #AEF1AE'>          else LetRec(fun,ty,binder,e1,e2)
 </span>90 <span style=''></span><span style='background: #AEF1AE'>      }</span><span style=''>
 </span>91 <span style=''>
@@ -319,7 +319,7 @@
 </span>295 <span style=''>  private lazy val recordLit: P[Expr] =
 </span>296 <span style=''>    </span><span style='background: #AEF1AE'>&quot;&lt;&quot; ~&gt; recordFields &lt;~ &quot;&gt;&quot; ^^ (es =&gt; Record(es)) |
 </span>297 <span style=''></span><span style='background: #AEF1AE'>    &quot;&lt;&quot; ~ &quot;&gt;&quot; ^^ {
-</span>298 <span style=''></span><span style='background: #AEF1AE'>      case _~_ </span><span style='background: #F0ADAD'>=&gt; Record(ListMap())</span><span style='background: #AEF1AE'>
+</span>298 <span style=''></span><span style='background: #AEF1AE'>      case _~_ =&gt; Record(ListMap())
 </span>299 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>300 <span style=''>
 </span>301 <span style=''>  private lazy val recordFields: P[Field[Expr]] =
@@ -1353,7 +1353,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ident
         </td>
       </tr><tr>
@@ -1401,7 +1401,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;)&quot;
         </td>
       </tr><tr>
@@ -1425,7 +1425,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;(&quot; ~&gt; ident
         </td>
       </tr><tr>
@@ -1449,7 +1449,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;(&quot; ~&gt; ident &lt;~ &quot;)&quot;
         </td>
       </tr><tr>
@@ -1473,7 +1473,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ident
         </td>
       </tr><tr>
@@ -1497,7 +1497,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;(&quot;
         </td>
       </tr><tr>
@@ -1521,7 +1521,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;.&quot;
         </td>
       </tr><tr>
@@ -1545,7 +1545,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           &quot;.&quot; ~&gt; expression
         </td>
       </tr><tr>
@@ -1569,7 +1569,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt;\n          Rec(recArg, funArg, body)
         </td>
       </tr><tr>
@@ -2793,7 +2793,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;Function name mismatch&quot;)
         </td>
       </tr><tr>
@@ -2817,7 +2817,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;Function name mismatch&quot;)
         </td>
       </tr><tr>
@@ -3513,7 +3513,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;Function name mismatch&quot;)
         </td>
       </tr><tr>
@@ -3537,7 +3537,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           sys.error(&quot;Function name mismatch&quot;)
         </td>
       </tr><tr>
@@ -12537,7 +12537,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           ListMap()
         </td>
       </tr><tr>
@@ -12561,7 +12561,7 @@
         <td>
           
         </td>
-        <td style="background: #F0ADAD">
+        <td style="background: #AEF1AE">
           =&gt; Record(ListMap())
         </td>
       </tr><tr>
