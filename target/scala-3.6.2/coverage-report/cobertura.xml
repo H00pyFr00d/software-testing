@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "https://cobertura.sourceforge.net/xml/coverage-04.dtd">
 <coverage 
-line-rate="0.99" lines-valid="1804" lines-covered="1791" branches-valid="481" branches-covered="476" branch-rate="0.99" complexity="0" version="1.0" timestamp="1736341633447">
+line-rate="0.99" lines-valid="1804" lines-covered="1789" branches-valid="481" branches-covered="475" branch-rate="0.99" complexity="0" version="1.0" timestamp="1736343448152">
     <sources>
         <source>--source</source>
         <source>/home/h00pyfr00d/Documents/software-testing/src/main/scala</source>
@@ -1805,9 +1805,9 @@ line-rate="0.99" lines-valid="1804" lines-covered="1791" branches-valid="481" br
                     </lines>
 </class>
                 <class 
-                name="FrogInterpreter.Parser" filename="FrogInterpreter/Parser.scala" line-rate="0.99" branch-rate="0.95" complexity="0">
+                name="FrogInterpreter.Parser" filename="FrogInterpreter/Parser.scala" line-rate="0.99" branch-rate="0.93" complexity="0">
                     <methods>
-                        <method name="FrogInterpreter/Parser/$anonfun" signature="()V" line-rate="0.93" branch-rate="0.94" complexity="0">
+                        <method name="FrogInterpreter/Parser/$anonfun" signature="()V" line-rate="0.90" branch-rate="0.92" complexity="0">
                             <lines>
                                 <line number="306" hits="1" branch="false"/>
                                 <line number="311" hits="1" branch="true"/>
@@ -1838,7 +1838,7 @@ line-rate="0.99" lines-valid="1804" lines-covered="1791" branches-valid="481" br
                                 <line number="111" hits="1" branch="true"/>
                                 <line number="131" hits="1" branch="false"/>
                                 <line number="117" hits="1" branch="false"/>
-                                <line number="298" hits="1" branch="false"/>
+                                <line number="298" hits="0" branch="false"/>
                                 <line number="303" hits="1" branch="false"/>
                                 <line number="88" hits="1" branch="false"/>
                                 <line number="222" hits="1" branch="true"/>
@@ -1883,7 +1883,7 @@ line-rate="0.99" lines-valid="1804" lines-covered="1791" branches-valid="481" br
                                 <line number="172" hits="1" branch="true"/>
                                 <line number="158" hits="0" branch="true"/>
                                 <line number="117" hits="1" branch="false"/>
-                                <line number="298" hits="1" branch="true"/>
+                                <line number="298" hits="0" branch="true"/>
                                 <line number="164" hits="0" branch="false"/>
                                 <line number="268" hits="1" branch="false"/>
                                 <line number="131" hits="1" branch="false"/>
@@ -2681,7 +2681,7 @@ line-rate="0.99" lines-valid="1804" lines-covered="1791" branches-valid="481" br
                         <line number="258" hits="1" branch="false"/>
                         <line number="77" hits="1" branch="false"/>
                         <line number="233" hits="1" branch="false"/>
-                        <line number="298" hits="1" branch="false"/>
+                        <line number="298" hits="0" branch="false"/>
                         <line number="105" hits="1" branch="false"/>
                         <line number="287" hits="1" branch="false"/>
                         <line number="77" hits="1" branch="false"/>
@@ -3055,7 +3055,7 @@ line-rate="0.99" lines-valid="1804" lines-covered="1791" branches-valid="481" br
                         <line number="99" hits="1" branch="false"/>
                         <line number="296" hits="1" branch="false"/>
                         <line number="117" hits="1" branch="false"/>
-                        <line number="298" hits="1" branch="true"/>
+                        <line number="298" hits="0" branch="true"/>
                         <line number="105" hits="1" branch="false"/>
                         <line number="344" hits="1" branch="false"/>
                         <line number="162" hits="1" branch="false"/>

@@ -319,7 +319,7 @@
 </span>295 <span style=''>  private lazy val recordLit: P[Expr] =
 </span>296 <span style=''>    </span><span style='background: #AEF1AE'>&quot;&lt;&quot; ~&gt; recordFields &lt;~ &quot;&gt;&quot; ^^ (es =&gt; Record(es)) |
 </span>297 <span style=''></span><span style='background: #AEF1AE'>    &quot;&lt;&quot; ~ &quot;&gt;&quot; ^^ {
-</span>298 <span style=''></span><span style='background: #AEF1AE'>      case _~_ =&gt; Record(ListMap())
+</span>298 <span style=''></span><span style='background: #AEF1AE'>      case _~_ </span><span style='background: #F0ADAD'>=&gt; Record(ListMap())</span><span style='background: #AEF1AE'>
 </span>299 <span style=''></span><span style='background: #AEF1AE'>    }</span><span style=''>
 </span>300 <span style=''>
 </span>301 <span style=''>  private lazy val recordFields: P[Field[Expr]] =
@@ -12537,7 +12537,7 @@
         <td>
           
         </td>
-        <td style="background: #AEF1AE">
+        <td style="background: #F0ADAD">
           ListMap()
         </td>
       </tr><tr>
@@ -12561,7 +12561,7 @@
         <td>
           
         </td>
-        <td style="background: #AEF1AE">
+        <td style="background: #F0ADAD">
           =&gt; Record(ListMap())
         </td>
       </tr><tr>

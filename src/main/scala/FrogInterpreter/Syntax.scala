@@ -63,7 +63,7 @@ object Syntax {
   // Records
   case class Record(es: Field[Expr]) extends Expr
   case class Proj(e: Expr, l: Label) extends Expr
-Construction
+
   // Variants
   case class Variant(l: Label, e: Expr) extends Expr
   case class Case(e: Expr, cls: Field[(Variable, Expr)]) extends Expr

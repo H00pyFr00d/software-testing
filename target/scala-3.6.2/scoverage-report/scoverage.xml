@@ -1,7 +1,7 @@
 <scoverage 
-statement-count="1804" statements-invoked="1791" statement-rate="99.28" branch-rate="98.96" version="1.0" timestamp="1736341633586">
+statement-count="1804" statements-invoked="1789" statement-rate="99.17" branch-rate="98.75" version="1.0" timestamp="1736343448311">
     <packages>
-        <package name="FrogInterpreter" statement-count="1804" statements-invoked="1791" statement-rate="99.28">
+        <package name="FrogInterpreter" statement-count="1804" statements-invoked="1789" statement-rate="99.17">
             <classes>
                 <class 
                 name="FrogInterpreter.Bag" filename="FrogInterpreter/Bags.scala" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
@@ -2647,10 +2647,10 @@ statement-count="1804" statements-invoked="1791" statement-rate="99.28" branch-r
                     </methods>
 </class>
                 <class 
-                name="FrogInterpreter.Parser" filename="FrogInterpreter/Parser.scala" statement-count="631" statements-invoked="624" statement-rate="98.89" branch-rate="94.83">
+                name="FrogInterpreter.Parser" filename="FrogInterpreter/Parser.scala" statement-count="631" statements-invoked="622" statement-rate="98.57" branch-rate="93.10">
                     <methods>
                         <method 
-                        name="FrogInterpreter/Parser/$anonfun" statement-count="83" statements-invoked="77" statement-rate="92.77" branch-rate="94.23">
+                        name="FrogInterpreter/Parser/$anonfun" statement-count="83" statements-invoked="75" statement-rate="90.36" branch-rate="92.31">
                             <statements>
                                 <statement 
                                 package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="8704" end="8719" line="306" branch="false" invocation-count="1" ignored="false">
@@ -2740,7 +2740,7 @@ statement-count="1804" statements-invoked="1791" statement-rate="99.28" branch-r
                                 package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="3821" end="3848" line="117" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="8499" end="8508" line="298" branch="false" invocation-count="1" ignored="false">
+                                package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="8499" end="8508" line="298" branch="false" invocation-count="0" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="8633" end="8648" line="303" branch="false" invocation-count="1" ignored="false">
@@ -2875,7 +2875,7 @@ statement-count="1804" statements-invoked="1791" statement-rate="99.28" branch-r
                                 package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="3829" end="3847" line="117" branch="false" invocation-count="1" ignored="false">
 </statement>
                                 <statement 
-                                package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="8489" end="8509" line="298" branch="true" invocation-count="1" ignored="false">
+                                package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="8489" end="8509" line="298" branch="true" invocation-count="0" ignored="false">
 </statement>
                                 <statement 
                                 package="FrogInterpreter" class="Parser" class-type="Class" full-class-name="FrogInterpreter.Parser" source="/home/h00pyfr00d/Documents/software-testing/src/main/scala/FrogInterpreter/Parser.scala" method="$anonfun" start="5083" end="5092" line="164" branch="false" invocation-count="0" ignored="false">
