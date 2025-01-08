@@ -1,6 +1,6 @@
-package Assign3.Typer
+package FrogInterpreter
 
-import Assign3.Syntax.Syntax._
+import FrogInterpreter.Syntax._
 import scala.collection.immutable.ListMap
 
 object Typer {

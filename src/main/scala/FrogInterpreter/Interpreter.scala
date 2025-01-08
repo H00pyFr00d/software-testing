@@ -1,9 +1,9 @@
-package Assign3.Interpreter
+package FrogInterpreter
 
-import Assign3.Parser.Parser
-import Assign3.Syntax.Syntax._
-import Assign3.Typer.Typer
-import Assign3.Bags.Bags.BagImpl
+import FrogInterpreter.Syntax.*
+import FrogInterpreter.Bags.BagImpl
+
+import scala.annotation.tailrec
 import scala.collection.immutable.ListMap
 
 object Interpreter {
@@ -417,53 +417,31 @@ object Interpreter {
       case _ => sys.error("eval: case of non-variant")
     
     // Bags
-    case Bag(es) => BagV(es.map(e => eval(e)))
-    case FlatMap(e1,e2) => eval(e1) match
-      case BagV(es) => eval(e2) match {
-          case FunV(x,e) => BagV(es.map(v => 
-            eval(Apply(Lambda(x,e),v)))
-            .foldLeft(List())((v1, v2) => 
-              (v1, v2) match {
-                case (v1 : List[Value], BagV(v2)) => v1 ++ v2
-                case (v1 : List[Value], v2 : Value) => v1 :+ v2
-              }))
-          case RecV(f,x,e) => BagV(es.map(v => 
-            eval(Apply(Rec(f,x,e),v)))
-            .foldLeft(List())((v1, v2) => 
-              (v1, v2) match {
-                case (v1 : List[Value], BagV(v2)) => v1 ++ v2
-                case (v1 : List[Value], v2 : Value) => v1 :+ v2
-              }))
-          case _ => sys.error("eval: flatMap did not return a function")
-        }
-      case _ => sys.error("eval: flatMap of non-bag")
-    case When(e1,e2) => eval(e2) match {
-      case BoolV(true) => eval(e1)
-      case BoolV(false) => BagV(List())
-      case v => sys.error("eval: when of non-boolean " + v)
+    case Bag(es) => BagV(BagImpl.fromList(es.map(e => eval(e))))
+    case FlatMap(e1,e2) =>  (eval(e1), eval(e2)) match {
+      case (BagV(es), v) => BagV(BagImpl.flatMap(es,{y => eval(Apply(v,y)) match {
+        case BagV(es3) => es3
+        case _ => sys.error("eval: flatMap expects a bag")
+      }}))
+      case _ => sys.error("eval: flatMap expects a bag and a function")
     }
-    case Count(e1,e2) => eval(e1) match {
-      case BagV(es) => eval(e2) match
-        case NumV(n) => NumV(es.count(e => eval(e) == NumV(n)))
-        case BoolV(b) => NumV(es.count(e => eval(e) == BoolV(b)))
-        case StringV(s) => NumV(es.count(e => eval(e) == StringV(s)))
-        case _ => sys.error("eval: count did not return a boolean")
-      case _ => sys.error("eval: count of non-bag")
+    case When(e1, e2) => (eval(e1), eval(e2)) match {
+      case (BoolV(b), BagV(es)) => if b then BagV(es) else BagV(BagImpl.fromList(Nil))
+      case _ => sys.error("eval: when expects a boolean and a bag")
     }
-    case Sum(e1,e2) => eval(e1) match {
-      case BagV(es1) => eval (e2) match {
-        // Bags are unordered (even though they are shown in order in the sheet)
-        case BagV(es2) => BagV(es1 ++ es2)
-        case _ => sys.error("eval: sum of non-bag")
-      }
-      case _ => sys.error("eval: sum of non-bag")
+    case Sum(e1, e2) => (eval(e1), eval(e2)) match {
+      case (BagV(es1), BagV(es2)) => BagV(BagImpl.sum(es1,es2))
+      case _ => sys.error("eval: sum expects two bags")
     }
-    case Diff(e1,e2) => eval(e1) match {
-      case BagV(es1) => eval(e2) match {
-        case BagV(es2) => BagV(es1 diff es2)
-        case _ => sys.error("eval: diff of non-bag")
-      }
-      case _ => sys.error("eval: diff of non-bag")
+    case Diff(e1, e2) => (eval(e1), eval(e2)) match {
+      case (BagV(es1), BagV(es2)) => BagV(BagImpl.diff(es1,es2))
+      case _ => sys.error("eval: diff expects two bags")
+    }
+    case Count(e1, e2) => eval(e1) match {
+      case BagV(es) =>
+        val v2 = eval(e2)
+        NumV(BagImpl.count(es,v2))
+      case _ => sys.error("eval: count expects a bag")
     }
 
     case fail => sys.error("eval: todo - " + fail)

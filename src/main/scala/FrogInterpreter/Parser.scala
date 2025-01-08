@@ -1,9 +1,8 @@
-package Assign3.Parser
+package FrogInterpreter
 
-import Assign3.Syntax.Syntax._
-import Assign3.Bags.Bags.BagImpl
+import FrogInterpreter.Syntax.*
+
 import scala.collection.immutable.ListMap
-import scala.collection.immutable.Set
 import scala.util.parsing.combinator.PackratParsers
 import scala.util.parsing.combinator.syntactical.StandardTokenParsers
 

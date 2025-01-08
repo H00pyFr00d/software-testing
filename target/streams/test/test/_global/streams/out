@@ -1,56 +1,300 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SwapTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseTyStrTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrArithTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseTyStrErrorTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(IsEqTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(TyInferTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrBoolTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrAnnoTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrStringTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ValueTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(TyCheckTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SymGeneratorTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrRecordTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SwapVarTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(InterpreterValueTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrErrorTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SubstTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariableTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(InterpreterEval, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrPairTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SubtypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrFunctionTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SyntacticSugarTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrVarTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(LetBindingInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionInterpreterTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mPairInterpreterTests:[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SwapVarTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrVariantTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(IsEqTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(TyCheckTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ValueTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SubstTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrFunctionTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseTyStrTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrBoolTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(InterpreterValueTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrArithTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(DesugarTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagImplTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariantTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ArithInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SyntacticSugarTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BooleanInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(PairInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SwapTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SymGeneratorTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(LetBindingInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VariableTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(FunctionInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(RecordInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrAnnoTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagTypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrErrorTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(TyInferTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagInterpreterTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrStringTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrPairTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(SubtypeTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseTyStrErrorTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrRecordTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(InterpreterEval, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrVarTests, org.scalatest.tools.Framework$$anon$1@3661a5f2, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrFunctionTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Apply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrBoolTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Less[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Str[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mStringTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- var str[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInterpreterValueTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- add[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- add with non-NumV[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- sub[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- sub with non-NumV[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- mul[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- mul with non-NumV[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- eq (incomparable)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- less[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- less (incomparable)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- length (non-StringV)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- index (non-StringV)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- concat (non-StringV)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mArithTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- var int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mTyCheckTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Rec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Rec (non-polymorphic function type)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects bag)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Diff (Expects bags of equality type)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind (expects bag)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Guard[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ CLet[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension (expected comprehension clause)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Record (label not found) *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:1913)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant (label not found)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Proj *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.RuntimeException: tyCheck: Record(ListMap(foo -> Num(1), bar -> Num(2))) must be a variable or record projection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.sys.package$.error(package.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at FrogInterpreter.Typer$.tyCheck(Typer.scala:107)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at TyCheckTests.testFun$proxy315$1(Tests.scala:1929)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at TyCheckTests.$init$$$anonfun$316(Tests.scala:1928)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case (label not found)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case (label in case but not variant)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case (expected variant)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetPair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetPair (expected pair)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetFun[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetFun (expected function type)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetRec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetRec (expected function type)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord (label not found in record type)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord (expected record)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Otherwise (subtype)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Otherwise (not subtype)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mIsEqTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Simple[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyPair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Non-EqType[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrVariantTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSwapVarTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x == y)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x != y and x == z)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x != y and x != z)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFunctionTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariantInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- case statement[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBooleanTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- var bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- are eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- are not eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- less[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- if then else[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mValueTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- BagV.toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRecordTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseTyStrTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyUnit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyInt[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyBool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyPair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyFun[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyRecord[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyVariant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- TyBag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPairTypeTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- pair[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- first[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mValueTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- BagV.toString[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mParseStrArithTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Num[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Plus[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Minus[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Times[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBagImplTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- toList[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- fromList[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- toString[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- add[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDesugarTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Plus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Minus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Times[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Less[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Str[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Index[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Var[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Anno[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Apply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Rec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- First[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Second[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Empty Comprehension[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Comprehension w/ Bind *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  FlatMap(Var("l"), Lambda("z", Comprehension(Var("b"), List()))) did not equal FlatMap(Var("l"), Lambda("z", Bag(List(Var("b"))))) (Tests.scala:741)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$FlatMap(e2: Syntax$Lambda(e: Syntax$Comprehension(e: Var(b) -> , es: Nil$(0: -> Var("b")))))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Comprehension w/ Guard *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  When(Var("z"), Comprehension(Var("b"), List())) did not equal When(Var("z"), Bag(List(Var("b")))) (Tests.scala:745)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$When(e2: Syntax$Comprehension(e: Var(b) -> , es: Nil$(0: -> Var("b"))))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Comprehension w/ CLet *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Let("z", Var("l"), Comprehension(Var("b"), List())) did not equal Let("z", Var("l"), Bag(List(Var("b")))) (Tests.scala:749)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$Let(e2: Syntax$Comprehension(e: Var(b) -> , es: Nil$(0: -> Var("b"))))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unexpected Pattern in Comprehension[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- LetPair *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Let("p_0", Pair(Num(1), Num(2)), First(Var("p_0"))) did not equal Let("$0", Pair(Num(1), Num(2)), First(Var("$0"))) (Tests.scala:760)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$Let(e2: Syntax$First(e: Syntax$Var(x: "[p_]0" -> "[$]0")), x: "[p_]0" -> "[$]0")[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetFun[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- LetRec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- LetRecord *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Let("r_0", Var("r"), Record(ListMap("l" -> Var("r")))) did not equal Let("$0", Var("r"), Var("r")) (Tests.scala:773)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$Let(e2: Syntax$Record(es: ListMap(l -> Var(r)) -> , x: -> r), x: "[r_]0" -> "[$]0")[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Bind w/o Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:777)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Guard w/o Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:783)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- CLet w/o Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:789)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariantTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mArithInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBooleanInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- eq[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (True)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (False)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSyntacticSugarTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let fun[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let rec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ bind[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ guard[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSymGeneratorTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- genVar[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- freshVar[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mLetBindingInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- let str[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mPairInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- first[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- second[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariableTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- var let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- anno[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mStringInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Parse examples/simple.frog[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mFunctionInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- rec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRecordInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSwapTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
@@ -94,55 +338,141 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mParseStrAnnoTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Anno[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBooleanInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (True)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- ifThenElse (False)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mIsEqTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Simple[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyPair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Non-EqType[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBagTypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- flat map (lambda)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- flat map (function)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- when[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrStringTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- String[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Index[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Concat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrErrorTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Plus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Anno[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Apply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed First[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Second[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Proj[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed FlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed When[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed LetPair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed LetRecord[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Comprehension[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Bind[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Guard[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed CLet[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrPairTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- First[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Second[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mBagInterpreterTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap (lambda)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap (rec)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- when (True)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- when (False)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrRecordTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mParseTyStrErrorTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Malformed TyPair[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Malformed TyFun[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Malformed TyRecord[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Malformed TyVariant[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Malformed TyBag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mPairTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- first[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRecordInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrBoolTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSubtypeTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unit <: Unit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unit !<: Non-Unit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int <: Int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int !<: Non-Int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bool <: Bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bool !<: Non-Bool[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- String <: String[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- String !<: Non-String[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair <: Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair !<: Non-Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Function <: Function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Function !<: Non-Function[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Record - Same[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Record - Different Order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Record <: Smaller Record *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  FrogInterpreter.Typer.subtype(FrogInterpreter.Syntax.TyRecord.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("bar").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt))), FrogInterpreter.Syntax.TyRecord.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt)))) was false (Tests.scala:1764)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Record !<: Bigger Record *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  FrogInterpreter.Typer.subtype(FrogInterpreter.Syntax.TyRecord.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("bar").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt))), FrogInterpreter.Syntax.TyRecord.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("bar").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("baz").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt)))) was true (Tests.scala:1768)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record !<: Non-Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Variant - Same[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Variant - Different Order[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Variant <: Smaller Variant *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  FrogInterpreter.Typer.subtype(FrogInterpreter.Syntax.TyVariant.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("bar").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt))), FrogInterpreter.Syntax.TyVariant.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("bar").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("baz").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt)))) was false (Tests.scala:1791)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Variant !<: Bigger Variant *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  FrogInterpreter.Typer.subtype(FrogInterpreter.Syntax.TyVariant.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt), scala.Predef.ArrowAssoc[java.lang.String]("bar").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt))), FrogInterpreter.Syntax.TyVariant.apply(scala.collection.immutable.ListMap.apply[java.lang.String, FrogInterpreter.Syntax.TyInt.type](scala.Predef.ArrowAssoc[java.lang.String]("foo").->[FrogInterpreter.Syntax.TyInt.type](FrogInterpreter.Syntax.TyInt)))) was true (Tests.scala:1795)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant !<: Non-Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag <: Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag !<: Non-Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mParseStrVarTests:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Var[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInterpreterEval:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Int[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Plus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Minus[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Times[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Bool[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Eq[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Less[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Str[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseTyStrTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyUnit[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyInt[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyBool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyString[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyPair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyFun[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyRecord[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyVariant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- TyBag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRecordTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- projection[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrStringTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- String[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Length[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Index[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Concat[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(StringTypeTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(BagImplTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(DesugarTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Var[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Anno *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:1107)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Apply[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Rec[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- First[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Second[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Proj (label not found)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Case (label not found)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects function with bag-type return)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects bag and function)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- When (expects boolean and bag)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Sum (expects bags)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Diff (expects bags)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count (expects bag)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Pattern Matching Should Be Desugared[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mTyInferTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
@@ -177,28 +507,54 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Proj (not in record)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Proj (non-record)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Case *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.RuntimeException: todo: tyInfer(ListMap(), Case(Variant(foo,Num(1)),ListMap(foo -> (x,Num(1)))))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.sys.package$.error(package.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at FrogInterpreter.Typer$.tyInfer(Typer.scala:520)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at TyInferTests.testFun$proxy366$1(Tests.scala:2207)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at TyInferTests.$init$$$anonfun$367(Tests.scala:2206)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Case (label not in case clause)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Case (label not in variant)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Case (non-variant)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Bag (empty)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- FlatMap *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  TyBag(TyFun(TyInt, TyBag(TyInt))) did not equal TyBag(TyInt) (Tests.scala:2240)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$TyBag(ty: Syntax$TyFun(ty1: TyInt -> , ty2: TyBag(TyInt) -> ))[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (flatmap mismatch)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects bag)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects function type)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- When (expects bag)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- When *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  TyBag(TyBag(TyInt)) did not equal TyBag(TyInt) (Tests.scala:2265)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$TyBag(ty: Syntax$TyBag(ty: TyInt -> ))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- When (expects bag) *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:2269)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Sum (expects bag type)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Diff (expects bags of equality types)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Diff (expects bag type)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension (empty)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind (expects bag)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Comprehension w/ Bind *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  TyBag(TyBag(TyBag(TyInt))) did not equal TyBag(TyInt) (Tests.scala:2313)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$TyBag(ty: Syntax$TyBag(ty: TyBag(TyInt) -> ))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Comprehension w/ Bind (expects bag) *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:2317)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Guard[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ CLet[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Comprehension w/ CLet *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  TyBag(TyBag(TyInt)) did not equal TyBag(TyInt) (Tests.scala:2327)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$TyBag(ty: Syntax$TyBag(ty: TyInt -> ))[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension (expected comprehension clause)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count (expected equality type)[0m[0m
@@ -215,300 +571,6 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Bind[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Guard[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- CLet[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mFunctionTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mTyCheckTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Rec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Rec (non-polymorphic function type)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects bag)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Diff (Expects bags of equality type)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind (expects bag)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Guard[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ CLet[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension (expected comprehension clause)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record (label not found)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant (label not found)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case (label not found)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case (label in case but not variant)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case (expected variant)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetPair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetPair (expected pair)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetFun[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetFun (expected function type)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRec (expected function type)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord (label not found in record type)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord (expected record)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Otherwise (subtype)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Otherwise (not subtype)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mSymGeneratorTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- genVar[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- freshVar[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrRecordTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mSwapVarTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x == y)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x != y and x == z)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- swapVar (x != y and x != z)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mArithInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mVariantTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mVariantInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- case statement[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInterpreterValueTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- add[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- add with non-NumV[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- sub[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- sub with non-NumV[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- mul[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- mul with non-NumV[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- eq (incomparable)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- less[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- less (incomparable)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- length (non-StringV)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- index (non-StringV)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- concat (non-StringV)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mStringInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBooleanTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- var bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- are eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- are not eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- less[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- if then else[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(ParseStrVariantTests, org.scalatest.tools.Framework$$anon$1@353b684c, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mVariableTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- var let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- anno[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrPairTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- First[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mSubtypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Unit <: Unit[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Unit !<: Non-Unit[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Int <: Int[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Int !<: Non-Int[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bool <: Bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bool !<: Non-Bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- String <: String[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- String !<: Non-String[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pair <: Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pair !<: Non-Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Function <: Function[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Function !<: Non-Function[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Record - Same[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Record - Different Order[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record <: Smaller Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record !<: Bigger Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record !<: Non-Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Variant - Same[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Variant - Different Order[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant <: Smaller Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant !<: Bigger Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant !<: Non-Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bag <: Bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bag !<: Non-Bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBagInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap (lambda)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap (rec)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- when (True)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- when (False)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Parse examples/simple.frog[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrFunctionTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Apply[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrErrorTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Plus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Anno[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Apply[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed First[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Proj[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Case[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed FlatMap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed When[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed LetPair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed LetRecord[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Bind[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed Guard[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Malformed CLet[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBagTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- flat map (lambda)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- flat map (function)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- when[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInterpreterEval:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Int[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Plus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Minus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Times[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Less[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Str[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Length[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Index[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Concat[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Var[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Anno[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Apply[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Rec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- First[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Proj (label not found)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case (label not found)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects function with bag-type return)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap (expects bag and function)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- When (expects boolean and bag)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Sum (expects bags)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Diff (expects bags)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Count (expects bag)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pattern Matching Should Be Desugared[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mArithTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- var int[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- plus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- minus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- times[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mLetBindingInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let int[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let str[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mSyntacticSugarTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let fun[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let rec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- let record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ bind[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ guard[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- comprehension w/ let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrVarTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Var[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mFunctionInterpreterTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- rec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mStringTypeTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- var str[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- length[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- index[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- concat[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mDesugarTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Int[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Plus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Minus[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Times[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bool[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Eq[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Less[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- IfThenElse[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Str[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Length[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Index[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Concat[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Var[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Let[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Anno[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Lambda[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Apply[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Rec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Pair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- First[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Second[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Empty Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Guard[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ CLet[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Unexpected Pattern in Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetPair[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetFun[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bind w/o Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Guard w/o Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- CLet w/o Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mBagImplTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- toList[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- fromList[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- toString[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- add[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- sum[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- diff[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- flatMap[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- count[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mParseStrVariantTests:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSubstTests:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Value[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Unit[0m[0m
@@ -536,7 +598,10 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Record[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Proj[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Variant[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Case[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Case *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Case(Var("v"), ListMap("z" -> ("z", NumV(1)))) did not equal Case(Var("v"), ListMap("z" -> ("z_0", NumV(1)))) (Tests.scala:491)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$Case(cls: ListMap$Node("z": ("z", NumV(1)) -> ("z_0", NumV(1))))[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Bag[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- FlatMap[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- When[0m[0m
@@ -546,21 +611,31 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Bind[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ Guard[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Comprehension w/ CLet[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Full Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Bind w/o Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Guard w/o Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- CLet w/o Comprehension[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Unexpected Pattern in Comprehension[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Full Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Comprehension(Var("b"), List(Bind("z_0", Var("l")), CLet("c_1", Num(1)), Guard(Less(Var("z"), Num(10))))) did not equal Comprehension(Var("b"), List(Bind("z_0", Var("l")), CLet("c_1", Num(1)), Guard(Less(Var("z_0"), Num(10))))) (Tests.scala:541)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$Comprehension(es: List(2: Guard(Less(Var("z"), Num(10))) -> Guard(Less(Var("z_0"), Num(10)))))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Bind w/o Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:545)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Guard w/o Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:551)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- CLet w/o Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:557)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Unexpected Pattern in Comprehension *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Expected exception java.lang.Exception to be thrown, but no exception was thrown (Tests.scala:563)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- LetPair[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- LetFun[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- LetRec[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- LetRecord[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 969 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- LetRecord *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  LetRecord(ListMap("l" -> "$0"), Var("r"), Record(ListMap("l" -> Unit))) did not equal LetRecord(ListMap("l" -> "z_0"), Var("r"), Unit) (Tests.scala:590)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Analysis:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Syntax$LetRecord(e2: Syntax$Record(es: ListMap(l -> Unit) -> ), xs: ListMap$Node("l": "$0" -> "z_0"))[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 681 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 468[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 45, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 468, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 439, failed 29, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 29 TESTS FAILED ***[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTyStrErrorTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrVarTests[0m
@@ -575,7 +650,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrRecordTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ArithTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordTypeTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	TyInferTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	RecordInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SwapTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariantTypeTests[0m
@@ -583,7 +657,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrAnnoTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrFunctionTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	SubtypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariantInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SymGeneratorTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionTypeTests[0m
@@ -595,15 +668,19 @@
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrErrorTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BooleanTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SyntacticSugarTypeTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	InterpreterEval[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrArithTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VariableTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseStrStringTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	BagTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	PairTypeTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	SwapVarTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	DesugarTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	TyCheckTests[0m
-[0m[[0m[0mdebug[0m] [0m[0m	SubstTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionInterpreterTests[0m
 [0m[[0m[0mdebug[0m] [0m[0m	ParseTests[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	TyInferTests[0m
+[0m[[0m[31merror[0m] [0m[0m	SubtypeTests[0m
+[0m[[0m[31merror[0m] [0m[0m	InterpreterEval[0m
+[0m[[0m[31merror[0m] [0m[0m	DesugarTests[0m
+[0m[[0m[31merror[0m] [0m[0m	TyCheckTests[0m
+[0m[[0m[31merror[0m] [0m[0m	SubstTests[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

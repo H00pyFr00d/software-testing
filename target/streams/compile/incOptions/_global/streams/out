@@ -90,6 +90,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$LetRecord.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$Variant$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$Str.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Interpreter$Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$IfThenElse$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$Diff.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$FunV.class[0m
@@ -220,6 +221,7 @@
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$LetRecord.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$Variant$.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$Str.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Interpreter$Main$.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$IfThenElse$.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$Diff.tasty[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Syntax$FunV.tasty[0m

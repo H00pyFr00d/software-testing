@@ -1,58 +1,58 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="marvin" name="TyInferTests" tests="71" errors="0" failures="0" skipped="0" time="0.089" timestamp="2024-12-28T17:39:50">
+<testsuite hostname="marvin" name="TyInferTests" tests="71" errors="0" failures="7" skipped="0" time="0.101" timestamp="2025-01-08T14:06:20">
           <properties>
       <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value=""/><property name="sun.jnu.encoding" value="UTF-8"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="https://adoptium.net/"/><property name="sun.boot.library.path" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%252B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz/jdk-11.0.24+8/lib"/><property name="sun.java.command" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.10.6/sbt-1.10.6.zip/sbt/bin/sbt-launch.jar clean coverage test coverageReport"/><property name="jdk.debug" value="release"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2024-07-16"/><property name="java.home" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.24%252B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.24_8.tar.gz/jdk-11.0.24+8"/><property name="file.separator" value="/"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
-"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.24+8"/><property name="user.name" value="h00pyfr00d"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/home/h00pyfr00d/.cache/JNA/temp/jna18163078279348552662.tmp"/><property name="java.vendor.version" value="Temurin-11.0.24+8"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="11.0.24"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/><property name="java.vendor" value="Eclipse Adoptium"/><property name="java.specification.maintenance.version" value="2"/><property name="scala.ext.dirs" value="/home/h00pyfr00d/.sbt/1.0/java9-rt-ext-eclipse_adoptium_11_0_24"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="gnome"/><property name="java.class.path" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.10.6/sbt-1.10.6.zip/sbt/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Eclipse Adoptium"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/London"/><property name="os.name" value="Linux"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="GB"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/h00pyfr00d"/><property name="user.language" value="en"/><property name="sbt.script" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.10.6/sbt-1.10.6.zip/sbt/bin/sbt"/><property name="sbt.ipcsocket.tmpdir" value="/run/user/1000/.sbte566036d/ipcsocket"/><property name="swoval.tmpdir" value="/run/user/1000/.sbte566036d/swoval"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="6.8.0-51-generic"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu/libfakeroot"/><property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/><property name="user.dir" value="/home/h00pyfr00d/Documents/software-testing"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode"/><property name="java.vm.version" value="11.0.24+8"/><property name="java.class.version" value="55.0"/>
+"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.24+8"/><property name="user.name" value="h00pyfr00d"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="/home/h00pyfr00d/.cache/JNA/temp/jna9032012590144905240.tmp"/><property name="java.vendor.version" value="Temurin-11.0.24+8"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="/tmp"/><property name="java.version" value="11.0.24"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/><property name="sun.os.patch.level" value="unknown"/><property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/><property name="java.vendor" value="Eclipse Adoptium"/><property name="java.specification.maintenance.version" value="2"/><property name="scala.ext.dirs" value="/home/h00pyfr00d/.sbt/1.0/java9-rt-ext-eclipse_adoptium_11_0_24"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="gnome"/><property name="java.class.path" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.10.6/sbt-1.10.6.zip/sbt/bin/sbt-launch.jar"/><property name="java.vm.vendor" value="Eclipse Adoptium"/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/London"/><property name="os.name" value="Linux"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="GB"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="/home/h00pyfr00d"/><property name="user.language" value="en"/><property name="sbt.script" value="/home/h00pyfr00d/.cache/coursier/arc/https/github.com/sbt/sbt/releases/download/v1.10.6/sbt-1.10.6.zip/sbt/bin/sbt"/><property name="sbt.ipcsocket.tmpdir" value="/run/user/1000/.sbte566036d/ipcsocket"/><property name="swoval.tmpdir" value="/run/user/1000/.sbte566036d/swoval"/><property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=":"/><property name="os.version" value="6.8.0-51-generic"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="OpenJDK Runtime Environment"/><property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/><property name="jna.platform.library.path" value="/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu/libfakeroot"/><property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/><property name="user.dir" value="/home/h00pyfr00d/Documents/software-testing"/><property name="os.arch" value="amd64"/><property name="java.vm.info" value="mixed mode"/><property name="java.vm.version" value="11.0.24+8"/><property name="java.class.version" value="55.0"/>
     </properties>
-          <testcase classname="TyInferTests" name="Value" time="0.043">
+          <testcase classname="TyInferTests" name="Value" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Unit" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Num" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="Num" time="0.0">
                       
                     </testcase><testcase classname="TyInferTests" name="Plus" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Minus" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Times" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Times" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Bool" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Eq" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Eq" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Eq (non-equality type)" time="0.002">
+                    </testcase><testcase classname="TyInferTests" name="Eq (non-equality type)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Less" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Less" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="IfThenElse" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="IfThenElse" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="String" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="String" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Length" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Length" time="0.002">
                       
-                    </testcase><testcase classname="TyInferTests" name="Index" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="Index" time="0.005">
                       
                     </testcase><testcase classname="TyInferTests" name="Concat" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Var (empty environment)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Var (empty environment)" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Var (non-empty environment)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Let" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="Let" time="0.002">
                       
-                    </testcase><testcase classname="TyInferTests" name="Lambda" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Lambda" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Apply" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Apply" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Apply (non-function)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Apply (non-function)" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Rec" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Anno" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="Anno" time="0.0">
                       
                     </testcase><testcase classname="TyInferTests" name="Pair" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="First" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="First" time="0.002">
                       
                     </testcase><testcase classname="TyInferTests" name="First (non-pair)" time="0.001">
                       
@@ -60,75 +60,541 @@
                       
                     </testcase><testcase classname="TyInferTests" name="Second (non-pair)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Record" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Record" time="0.031">
                       
-                    </testcase><testcase classname="TyInferTests" name="Proj" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Proj" time="0.003">
                       
-                    </testcase><testcase classname="TyInferTests" name="Proj (not in record)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Proj (not in record)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Proj (non-record)" time="0.005">
+                    </testcase><testcase classname="TyInferTests" name="Proj (non-record)" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Variant" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Variant" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Case" time="0.001">
+                      <failure message="todo: tyInfer(ListMap(), Case(Variant(foo,Num(1)),ListMap(foo -&gt; (x,Num(1)))))" type="java.lang.RuntimeException">java.lang.RuntimeException: todo: tyInfer(ListMap(), Case(Variant(foo,Num(1)),ListMap(foo -&gt; (x,Num(1)))))
+	at scala.sys.package$.error(package.scala:27)
+	at FrogInterpreter.Typer$.tyInfer(Typer.scala:520)
+	at TyInferTests.testFun$proxy366$1(Tests.scala:2207)
+	at TyInferTests.$init$$$anonfun$367(Tests.scala:2206)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+                    </testcase><testcase classname="TyInferTests" name="Case (label not in case clause)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Case (label not in case clause)" time="0.002">
-                      
-                    </testcase><testcase classname="TyInferTests" name="Case (label not in variant)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Case (label not in variant)" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Case (non-variant)" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Bag" time="0.002">
+                    </testcase><testcase classname="TyInferTests" name="Bag" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Bag (empty)" time="0.003">
+                    </testcase><testcase classname="TyInferTests" name="Bag (empty)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="FlatMap" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="FlatMap" time="0.003">
+                      <failure message="TyBag(TyFun(TyInt, TyBag(TyInt))) did not equal TyBag(TyInt)" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: TyBag(TyFun(TyInt, TyBag(TyInt))) did not equal TyBag(TyInt)
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:476)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:421)
+	at org.scalatest.Assertions$.newAssertionFailedException(Assertions.scala:1385)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:1460)
+	at TyInferTests.testFun$proxy372$1(Tests.scala:2240)
+	at TyInferTests.$init$$$anonfun$373(Tests.scala:2238)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+                    </testcase><testcase classname="TyInferTests" name="FlatMap (flatmap mismatch)" time="0.002">
                       
-                    </testcase><testcase classname="TyInferTests" name="FlatMap (flatmap mismatch)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="FlatMap (expects bag)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="FlatMap (expects bag)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="FlatMap (expects function type)" time="0.002">
                       
-                    </testcase><testcase classname="TyInferTests" name="FlatMap (expects function type)" time="0.001">
-                      
-                    </testcase><testcase classname="TyInferTests" name="When" time="0.0">
-                      
-                    </testcase><testcase classname="TyInferTests" name="When (expects bag)" time="0.001">
-                      
+                    </testcase><testcase classname="TyInferTests" name="When" time="0.003">
+                      <failure message="TyBag(TyBag(TyInt)) did not equal TyBag(TyInt)" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: TyBag(TyBag(TyInt)) did not equal TyBag(TyInt)
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:476)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:421)
+	at org.scalatest.Assertions$.newAssertionFailedException(Assertions.scala:1385)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:1460)
+	at TyInferTests.testFun$proxy376$1(Tests.scala:2265)
+	at TyInferTests.$init$$$anonfun$377(Tests.scala:2264)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+                    </testcase><testcase classname="TyInferTests" name="When (expects bag)" time="0.002">
+                      <failure message="Expected exception java.lang.Exception to be thrown, but no exception was thrown" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: Expected exception java.lang.Exception to be thrown, but no exception was thrown
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:476)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:421)
+	at org.scalatest.funsuite.AnyFunSuite.newAssertionFailedException(AnyFunSuite.scala:1563)
+	at org.scalatest.Assertions.assertThrowsImpl(Assertions.scala:842)
+	at org.scalatest.Assertions.org$scalatest$Assertions$$inline$assertThrowsImpl(Assertions.scala:821)
+	at org.scalatest.Assertions.org$scalatest$Assertions$$inline$assertThrowsImpl$(Assertions.scala:421)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$Assertions$$inline$assertThrowsImpl(AnyFunSuite.scala:1563)
+	at TyInferTests.testFun$proxy377$1(Tests.scala:2269)
+	at TyInferTests.$init$$$anonfun$378(Tests.scala:2268)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
                     </testcase><testcase classname="TyInferTests" name="Sum" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Sum (expects bag type)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Diff" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Diff" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="Diff (expects bags of equality types)" time="0.002">
+                    </testcase><testcase classname="TyInferTests" name="Diff (expects bags of equality types)" time="0.004">
                       
                     </testcase><testcase classname="TyInferTests" name="Diff (expects bag type)" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Comprehension (empty)" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="Comprehension (empty)" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Comprehension w/ Bind" time="0.0">
-                      
-                    </testcase><testcase classname="TyInferTests" name="Comprehension w/ Bind (expects bag)" time="0.001">
-                      
+                    </testcase><testcase classname="TyInferTests" name="Comprehension w/ Bind" time="0.001">
+                      <failure message="TyBag(TyBag(TyBag(TyInt))) did not equal TyBag(TyInt)" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: TyBag(TyBag(TyBag(TyInt))) did not equal TyBag(TyInt)
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:476)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:421)
+	at org.scalatest.Assertions$.newAssertionFailedException(Assertions.scala:1385)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:1460)
+	at TyInferTests.testFun$proxy384$1(Tests.scala:2313)
+	at TyInferTests.$init$$$anonfun$385(Tests.scala:2312)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+                    </testcase><testcase classname="TyInferTests" name="Comprehension w/ Bind (expects bag)" time="0.0">
+                      <failure message="Expected exception java.lang.Exception to be thrown, but no exception was thrown" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: Expected exception java.lang.Exception to be thrown, but no exception was thrown
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:476)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:421)
+	at org.scalatest.funsuite.AnyFunSuite.newAssertionFailedException(AnyFunSuite.scala:1563)
+	at org.scalatest.Assertions.assertThrowsImpl(Assertions.scala:842)
+	at org.scalatest.Assertions.org$scalatest$Assertions$$inline$assertThrowsImpl(Assertions.scala:821)
+	at org.scalatest.Assertions.org$scalatest$Assertions$$inline$assertThrowsImpl$(Assertions.scala:421)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$Assertions$$inline$assertThrowsImpl(AnyFunSuite.scala:1563)
+	at TyInferTests.testFun$proxy385$1(Tests.scala:2317)
+	at TyInferTests.$init$$$anonfun$386(Tests.scala:2316)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
                     </testcase><testcase classname="TyInferTests" name="Comprehension w/ Guard" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Comprehension w/ CLet" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Comprehension w/ CLet" time="0.001">
+                      <failure message="TyBag(TyBag(TyInt)) did not equal TyBag(TyInt)" type="org.scalatest.exceptions.TestFailedException">org.scalatest.exceptions.TestFailedException: TyBag(TyBag(TyInt)) did not equal TyBag(TyInt)
+	at org.scalatest.Assertions.newAssertionFailedException(Assertions.scala:476)
+	at org.scalatest.Assertions.newAssertionFailedException$(Assertions.scala:421)
+	at org.scalatest.Assertions$.newAssertionFailedException(Assertions.scala:1385)
+	at org.scalatest.Assertions$AssertionsHelper.macroAssert(Assertions.scala:1460)
+	at TyInferTests.testFun$proxy387$1(Tests.scala:2327)
+	at TyInferTests.$init$$$anonfun$388(Tests.scala:2326)
+	at org.scalatest.Transformer.apply$$anonfun$1(Transformer.scala:22)
+	at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)
+	at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:31)
+	at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)
+	at org.scalatest.Transformer.apply(Transformer.scala:22)
+	at org.scalatest.Transformer.apply(Transformer.scala:21)
+	at org.scalatest.funsuite.AnyFunSuiteLike$$anon$1.apply(AnyFunSuiteLike.scala:206)
+	at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)
+	at org.scalatest.TestSuite.withFixture$(TestSuite.scala:138)
+	at org.scalatest.funsuite.AnyFunSuite.withFixture(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.invokeWithFixture$1(AnyFunSuiteLike.scala:212)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$$anonfun$1(AnyFunSuiteLike.scala:216)
+	at org.scalatest.SuperEngine.runTestImpl(Engine.scala:306)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest(AnyFunSuiteLike.scala:216)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTest$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTest(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$$anonfun$1(AnyFunSuiteLike.scala:249)
+	at org.scalatest.SuperEngine.traverseSubNodes$1$$anonfun$1(Engine.scala:413)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:334)
+	at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:429)
+	at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:396)
+	at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:475)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests(AnyFunSuiteLike.scala:249)
+	at org.scalatest.funsuite.AnyFunSuiteLike.runTests$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.runTests(AnyFunSuite.scala:1563)
+	at org.scalatest.Suite.run(Suite.scala:1114)
+	at org.scalatest.Suite.run$(Suite.scala:564)
+	at org.scalatest.funsuite.AnyFunSuite.org$scalatest$funsuite$AnyFunSuiteLike$$super$run(AnyFunSuite.scala:1563)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$$anonfun$1(AnyFunSuiteLike.scala:253)
+	at org.scalatest.SuperEngine.runImpl(Engine.scala:535)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run(AnyFunSuiteLike.scala:253)
+	at org.scalatest.funsuite.AnyFunSuiteLike.run$(AnyFunSuiteLike.scala:47)
+	at org.scalatest.funsuite.AnyFunSuite.run(AnyFunSuite.scala:1563)
+	at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:321)
+	at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:517)
+	at sbt.TestRunner.runTest$1(TestFramework.scala:153)
+	at sbt.TestRunner.run(TestFramework.scala:168)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:336)
+	at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:296)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFramework$$anon$3$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:336)
+	at sbt.TestFunction.apply(TestFramework.scala:348)
+	at sbt.Tests$.$anonfun$toTask$1(Tests.scala:436)
+	at sbt.std.Transform$$anon$3.$anonfun$apply$2(Transform.scala:47)
+	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+	at sbt.Execute.work(Execute.scala:292)
+	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+</failure>
+                    </testcase><testcase classname="TyInferTests" name="Comprehension (expected comprehension clause)" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Comprehension (expected comprehension clause)" time="0.001">
-                      
-                    </testcase><testcase classname="TyInferTests" name="Count" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="Count" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Count (expected equality type)" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="Count (expects bag)" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="LetPair" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="LetPair" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="LetPair (expected pair)" time="0.0">
                       
                     </testcase><testcase classname="TyInferTests" name="LetFun" time="0.001">
                       
-                    </testcase><testcase classname="TyInferTests" name="LetFun (expected function type)" time="0.0">
+                    </testcase><testcase classname="TyInferTests" name="LetFun (expected function type)" time="0.001">
                       
                     </testcase><testcase classname="TyInferTests" name="LetRec" time="0.001">
                       
@@ -140,7 +606,7 @@
                       
                     </testcase><testcase classname="TyInferTests" name="LetRecord (expected record)" time="0.0">
                       
-                    </testcase><testcase classname="TyInferTests" name="Bind" time="0.001">
+                    </testcase><testcase classname="TyInferTests" name="Bind" time="0.0">
                       
                     </testcase><testcase classname="TyInferTests" name="Guard" time="0.001">
                       
