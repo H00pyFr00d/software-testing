@@ -1,9 +1,10 @@
-package FrogInterpreter
+package Assign3.Syntax
 
+import java.security.Identity
 import scala.language.implicitConversions
 import scala.collection.immutable.ListMap
 import scala.collection.Seq
-import FrogInterpreter.Bags.BagImpl
+import Assign3.Bags.Bags.BagImpl
 
 
 /*======================================================================
@@ -136,11 +137,6 @@ object Syntax {
       val fresh_s = "$" + id
       id = id + 1
       fresh_s
-    }
-    // reset the counter
-    def reset(): Unit = {
-      Thread.sleep(100)
-      id = 0
     }
   }
 

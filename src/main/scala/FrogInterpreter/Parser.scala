@@ -1,8 +1,9 @@
-package FrogInterpreter
+package Assign3.Parser
 
-import FrogInterpreter.Syntax.*
-
+import Assign3.Syntax.Syntax._
+import Assign3.Bags.Bags.BagImpl
 import scala.collection.immutable.ListMap
+import scala.collection.immutable.Set
 import scala.util.parsing.combinator.PackratParsers
 import scala.util.parsing.combinator.syntactical.StandardTokenParsers
 
@@ -13,7 +14,7 @@ import scala.util.parsing.combinator.syntactical.StandardTokenParsers
 
 class Parser extends StandardTokenParsers with PackratParsers {
 
-  private type P[+A] = PackratParser[A]
+  type P[+A] = PackratParser[A]
 
   def parseStr(input: String): Expr = {
     phrase(expression)(new lexical.Scanner(input)) match {
@@ -45,15 +46,15 @@ class Parser extends StandardTokenParsers with PackratParsers {
     "{|", "|}", "<-", "|", "()"
   )
 
-  private lazy val expression: P[Expr] =
+  lazy val expression: P[Expr] =
     simpleExpr
 
-  private lazy val lambda: P[Expr] =
+  lazy val lambda: P[Expr] =
     ("\\" ~> ident) ~ ("." ~> expression) ^^ {
       case arg~body => Lambda(arg, body)
     }
 
-  private lazy val rec: P[Expr] =
+  lazy val rec: P[Expr] =
     ("rec" ~> ident) ~
       ("(" ~> ident <~ ")") ~
       ("." ~> expression) ^^ {
@@ -61,19 +62,19 @@ class Parser extends StandardTokenParsers with PackratParsers {
           Rec(recArg, funArg, body)
       }
 
-  private lazy val ifExpr: P[Expr] =
+  lazy val ifExpr: P[Expr] =
     ("if" ~> expression) ~
       ("then" ~> expression) ~
       ("else" ~> expression) ^^ {
         case cond~e1~e2 => IfThenElse(cond,e1,e2)
       }
 
-  private lazy val letExpr: P[Expr] =
+  lazy val letExpr: P[Expr] =
     ("let" ~> ident) ~ ("=" ~> expression) ~ ("in" ~> expression) ^^ {
       case binder~e1~e2 => Let(binder,e1,e2)
     }
 
-  private lazy val letFun: P[Expr] =
+  lazy val letFun: P[Expr] =
     ("sig" ~> ident  ~ (":" ~> typ)) ~ ("let" ~ "fun" ~> ident) ~ ("(" ~> ident <~ ")") ~ ("=" ~> expression) ~
       ("in" ~> expression) ^^ {
         case fun1~ty~fun~binder~e1~e2 =>
@@ -81,7 +82,7 @@ class Parser extends StandardTokenParsers with PackratParsers {
           else LetFun(fun,ty,binder,e1,e2)
       }
 
-  private lazy val letRec: P[Expr] =
+  lazy val letRec: P[Expr] =
     ("sig" ~> ident  ~ (":" ~> typ)) ~ ("let" ~ "rec" ~> ident) ~ ("(" ~> ident <~ ")") ~ ("=" ~> expression) ~
       ("in" ~> expression) ^^ {
         case fun1~ty~fun~binder~e1~e2 =>
@@ -89,41 +90,43 @@ class Parser extends StandardTokenParsers with PackratParsers {
           else LetRec(fun,ty,binder,e1,e2)
       }
 
-  private lazy val letPair: P[Expr] =
+  lazy val letPair: P[Expr] =
     ("let" ~ "(") ~> ident ~ ("," ~> ident <~ ")") ~
       ("=" ~> expression) ~ ("in" ~> expression) ^^ {
         case x~y~e1~e2 => LetPair(x,y,e1,e2)
       }
 
-  private lazy val letRecord: P[Expr] =
+  lazy val letRecord: P[Expr] =
     ("let" ~> recordPattern) ~
       ("=" ~> expression) ~ ("in" ~> expression) ^^ {
         case xs~e1~e2 => LetRecord(xs,e1,e2)
       }
 
-  private lazy val caseVariant: P[Expr] =
+  lazy val caseVariant: P[Expr] =
     ("case" ~> expression) ~ ("of" ~ "{" ~> caseClauses <~ "}") ^^ {
       case e~cls => Case(e, cls)
     }
   
-  private lazy val caseClauses: P[Field[(Variable, Expr)]] =
+  lazy val caseClauses: P[Field[(Variable, Expr)]] =
     caseClause ~ "," ~ caseClauses ^^ {
       case cls~_~clss => cls ++ clss
     } |
     caseClause
 
-  private lazy val caseClause: P[Field[(Variable, Expr)]] =
+  lazy val caseClause: P[Field[(Variable, Expr)]] =
     ident ~ ident ~ "->" ~ expression ^^ {
       case label~name~_~e => ListMap(label -> (name, e))
     }
 
-  private lazy val recordPattern: P[Field[Variable]] =
-    "<" ~> recordPatternFields <~ ">" ^^ (es => es) |
+  lazy val recordPattern: P[Field[Variable]] =
+    "<" ~> recordPatternFields <~ ">" ^^ {
+      case es => es
+    } |
     "<" ~ ">" ^^ {
       case _~_ => ListMap()
     }
 
-  private lazy val recordPatternFields: P[Field[Variable]] =
+  lazy val recordPatternFields: P[Field[Variable]] =
     recordPatternElem ~ "," ~ recordPatternFields ^^ {
       case (l,e)~_~es => ListMap(l -> e) ++ es
     } |
@@ -131,40 +134,46 @@ class Parser extends StandardTokenParsers with PackratParsers {
       case (l, e) => ListMap(l -> e)
     }
 
-  private lazy val recordPatternElem: P[(Label, Variable)] =
+  lazy val recordPatternElem: P[(Label, Variable)] =
     ident ~ "=" ~ ident ^^ {
       case l~_~e => (l, e)
     }
 
-  private lazy val typ: P[Type] =
+  lazy val typ: P[Type] =
     tyFunp
 
-  private lazy val tyFunp: P[Type] =
+  lazy val tyFunp: P[Type] =
     tyPairp ~ "->" ~ tyFunp ^^ {
       case t1~_~t2 => TyFun(t1, t2)
     } | tyPairp
 
-  private lazy val tyPairp: P[Type] =
+  lazy val tyPairp: P[Type] =
     simpleType ~ "*" ~ tyPairp ^^ {
       case t1~_~t2 => TyPair(t1,t2)
     } | simpleType
 
-  private lazy val tyBag: P[Type] =
-    "{|" ~> typ <~ "|}" ^^ (t => TyBag(t))
+  lazy val tyBag: P[Type] =
+    "{|" ~> typ <~ "|}" ^^ {
+      case t => TyBag(t)
+    }
 
-  private lazy val tyRecordLit: P[Type] =
-    "<" ~> tyRecordFields <~ ">" ^^ (tys => TyRecord(tys)) |
+  lazy val tyRecordLit: P[Type] =
+    "<" ~> tyRecordFields <~ ">" ^^ {
+      case tys => TyRecord(tys)
+    } |
     "<" ~ ">" ^^ {
       case _~_ => TyRecord(ListMap())
     }
 
-  private lazy val tyVariantLit: P[Type] =
-    "[" ~> tyRecordFields <~ "]" ^^ (tys => TyVariant(tys)) |
+  lazy val tyVariantLit: P[Type] =
+    "[" ~> tyRecordFields <~ "]" ^^ {
+      case tys => TyVariant(tys)
+    } |
     "[" ~ "]" ^^ {
       case _~_ => TyVariant(ListMap())
     }
 
-  private lazy val tyRecordFields: P[Field[Type]] =
+  lazy val tyRecordFields: P[Field[Type]] =
     tyRecordElem ~ "," ~ tyRecordFields ^^ {
       case (l,e)~_~es => ListMap(l -> e) ++ es
     } |
@@ -172,20 +181,22 @@ class Parser extends StandardTokenParsers with PackratParsers {
       case (l, e) => ListMap(l -> e)
     }
 
-  private lazy val tyRecordElem: P[(Label, Type)] =
+  lazy val tyRecordElem: P[(Label, Type)] =
     ident ~ ":" ~ typ ^^ {
       case l~_~e => (l, e)
     }
 
-  private lazy val simpleType: P[Type] = tyRecordLit
-  | tyVariantLit
-  | tyBag
-  | primitiveType
+  lazy val simpleType: P[Type] = (
+    tyRecordLit
+    | tyVariantLit
+    | tyBag
+    | primitiveType
+  )
 
-  private lazy val primitiveType: P[Type] =
+  lazy val primitiveType: P[Type] =
     "unit" ^^^ TyUnit | "bool" ^^^ TyBool | "int" ^^^ TyInt | "string" ^^^ TyString |  "("~>typ<~")"
 
-  private lazy val operations: P[Expr] =
+  lazy val operations: P[Expr] =
     application |
     annotation |
     projection |
@@ -199,22 +210,22 @@ class Parser extends StandardTokenParsers with PackratParsers {
       case e1~e2 => Index(e1,e2)
     }
 
-  private lazy val arith: P[Expr] =
+  lazy val arith: P[Expr] =
     comp
 
-  private lazy val prod: P[Expr] =
+  lazy val prod: P[Expr] =
     prod ~ "*" ~ fact ^^ {
       case e1~_~e2 => Times(e1,e2)
     } | fact
 
-  private lazy val summation: P[Expr] =
+  lazy val summation: P[Expr] =
     summation ~ "+" ~ prod ^^ {
       case e1~_~e2 => Plus(e1,e2)
     } | summation ~ "-" ~ prod ^^ {
       case e1~_~e2 => Minus(e1,e2)
     } | prod
 
-  private lazy val comp: P[Expr] =
+  lazy val comp: P[Expr] =
     simpleExpr ~ "==" ~ summation ^^ {
       case e1~_~e2 => Eq(e1,e2)
     } | 
@@ -223,82 +234,96 @@ class Parser extends StandardTokenParsers with PackratParsers {
     } | 
     summation
 
-  private lazy val application: P[Expr] =
+  lazy val application: P[Expr] =
     fact ~ fact ^^ {
       case e1~e2 => Apply(e1,e2)
     }
 
 
-  private lazy val annotation: P[Expr] =
+  lazy val annotation: P[Expr] =
     fact ~ (":" ~> typ) ^^ {
       case e1~e2 => Anno(e1,e2)
     }
 
-  private lazy val projection: P[Expr] =
+  lazy val projection: P[Expr] =
     fact ~ "." ~ ident ^^ {
       case e~_~l => Proj(e, l)
     }
 
 
-  private lazy val simplerExpr: P[Expr] = lambda |
-  rec |
-  letExpr |
-  letFun |
-  letRec |
-  letPair |
-  letRecord |
-  caseVariant |
-  ifExpr |
-  arith |
-  fact
+  lazy val simplerExpr: P[Expr] = (
+    lambda |
+    rec |
+    letExpr |
+    letFun |
+    letRec |
+    letPair |
+    letRecord |
+    caseVariant |
+    ifExpr |
+    arith |
+    fact
+  )
 
-  private lazy val simpleExpr: P[Expr] = simplerExpr
+  lazy val simpleExpr: P[Expr] = (
+    simplerExpr
+  )
 
-  private lazy val pairLit: P[Expr] =
+  lazy val pairLit: P[Expr] =
     "(" ~> expression ~ "," ~ expression <~ ")" ^^ {
       case t1~_~t2 => Pair(t1,t2)
     }
 
-  private lazy val bagLit: P[Expr] =
-    "{|" ~> bagFields <~ "|}" ^^ (e => Bag(e)) |
+  lazy val bagLit: P[Expr] =
+    "{|" ~> bagFields <~ "|}" ^^ {
+      case e => Bag(e)
+    } |
     bagComprehension
 
-  private lazy val bagFields: P[List[Expr]] =
+  lazy val bagFields: P[List[Expr]] =
     expression ~ "," ~ bagFields ^^ {
       case e~_~es => e::es
       // NOTE: We directly use syntactic equivalence here for
       // simplicity. Technically we should consider the equivalence
       // relation of rows.
     } |
-    expression ^^ (e => List(e))
+    expression ^^ {
+      case e => List(e)
+    }
 
-  private lazy val bagComprehension: P[Expr] =
+  lazy val bagComprehension: P[Expr] =
     ("{|" ~> expression <~ "|") ~ compclslist <~ "|}" ^^ {
       case e~es => Comprehension(e, es)
     }
 
-  private lazy val compclslist: P[List[Expr]] =
+  lazy val compclslist: P[List[Expr]] =
     compcls ~ "," ~ compclslist ^^ {
       case e~_~es => e :: es
     } |
-    compcls ^^ (e => List(e))
+    compcls ^^ {
+      case e => List(e)
+    }
 
-  private lazy val compcls: P[Expr] =
+  lazy val compcls: P[Expr] =
     (ident <~ "<-") ~ expression ^^ {
       case x~e => Bind(x, e)
     } |
     ("let" ~> ident <~ "=") ~ expression ^^ {
       case x~e => CLet(x, e)
     } |
-    expression ^^ (e => Guard(e))
+    (expression) ^^ {
+      case e => Guard(e)
+    }
 
-  private lazy val recordLit: P[Expr] =
-    "<" ~> recordFields <~ ">" ^^ (es => Record(es)) |
+  lazy val recordLit: P[Expr] =
+    "<" ~> recordFields <~ ">" ^^ {
+      case es => Record(es)
+    } |
     "<" ~ ">" ^^ {
       case _~_ => Record(ListMap())
     }
 
-  private lazy val recordFields: P[Field[Expr]] =
+  lazy val recordFields: P[Field[Expr]] =
     recordElem ~ "," ~ recordFields ^^ {
       case (l,e)~_~es => ListMap(l -> e) ++ es
     } |
@@ -306,12 +331,12 @@ class Parser extends StandardTokenParsers with PackratParsers {
       case (l, e) => ListMap(l -> e)
     }
 
-  private lazy val recordElem: P[(Label, Expr)] =
+  lazy val recordElem: P[(Label, Expr)] =
     ident ~ "=" ~ expression ^^ {
       case l~_~e => (l, e)
     }
 
-  private lazy val variantLit: P[Expr] =
+  lazy val variantLit: P[Expr] =
     "select" ~> ident ~ fact ^^ {
       case l~e => Variant(l, e)
     }
@@ -321,7 +346,7 @@ class Parser extends StandardTokenParsers with PackratParsers {
       case e1~_~e2 => FlatMap(e1, e2)
     }
 
-  private lazy val when: P[Expr] =
+  lazy val when: P[Expr] =
     "when" ~ "(" ~> expression ~ "," ~ expression <~ ")" ^^ {
       case e1~_~e2 => When(e1, e2)
     }
@@ -341,22 +366,24 @@ class Parser extends StandardTokenParsers with PackratParsers {
       case e1~_~e2 => Count(e1, e2)
     }
 
-  private lazy val fact: P[Expr] = operations |
-    recordLit |
-    variantLit |
-    bagLit |
-    pairLit |
-    flatMap |
-    count |
-    when |
-    sum |
-    diff |
-    (ident ^^ {x => Var(x)}) |
-    (numericLit ^^ {x => Num(x.toInt) }) |
-    (stringLit ^^ {s => Str(s)}) |
-    ("true" ^^^ Bool(true)) |
-    ("false" ^^^ Bool(false)) |
-    ("()" ^^^ Unit) |
-    "("~>expression<~")"
+  lazy val fact: P[Expr] = (
+    operations |
+      recordLit |
+      variantLit |
+      bagLit |
+      pairLit |
+      flatMap |
+      count |
+      when |
+      sum |
+      diff |
+      (ident ^^ {x => Var(x)}) |
+      (numericLit ^^ {x => Num(x.toInt) }) |
+      (stringLit ^^ {s => Str(s)}) |
+      ("true" ^^^ Bool(true)) |
+      ("false" ^^^ Bool(false)) |
+      ("()" ^^^ Unit) |
+      "("~>expression<~")"
+  )
 
 }
